@@ -1,0 +1,2934 @@
+<!DOCTYPE html>
+<html>
+<head>
+  
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery.tablesorter.min.js"></script>
+<script type="text/javascript" src="js/Chart.min.js"></script>
+<script type="text/javascript" src="js/moment.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css"/>
+<link rel="stylesheet" href="css/cucumber.css" type="text/css"/>
+<link rel="stylesheet" href="css/font-awesome.min.css"/>
+<link rel="shortcut icon" href="images/favicon.png"/>
+
+<script type="text/javascript">
+$(document).ready(function() {
+    // this will tell tablesorter to try looking for the data-value attribute
+    // if present, it'll sort by that instead
+    // otherwise, it'll sort by the text content of the table cell
+    $("#tablesorter").tablesorter({
+        textAttribute: 'data-value',
+        // ignores the first row of the header, the 'scenario', 'steps', since
+        // sorting those doesn't make sense
+        selectorHeaders: '> thead tr:not(.dont-sort) th',
+        // use a stable sort
+        sortStable: true
+    });
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+
+  
+<title>Cucumber Reports (no 1) - Steps Overview</title>
+
+</head>
+<body>
+
+<nav class="navbar navbar-default navbar-fixed-top" id="navigation">
+  <div class="container-fluid">
+    <div class="collapse navbar-collapse">
+      <p class="navbar-text navbar-left">Cucumber Report</p>
+      <ul class="nav navbar-nav navbar-right">
+                <li role="presentation" ><a href="overview-features.html">Features</a></li>
+        <li role="presentation" ><a href="overview-tags.html">Tags</a></li>
+        <li role="presentation"     class="active" ><a href="overview-steps.html">Steps</a></li>
+                <li role="presentation" ><a href="overview-failures.html">Failures</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<div class="container-fluid">
+  <div class="col-md-5 col-md-offset-1">
+    
+<table class="table table-bordered" id="build-info">
+  <thead>
+    <tr>
+      <th>Project</th>
+              <th>Number</th>
+            <th>Date</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="info">
+      <td>Academy Account Return - Framework by Aniket Wadkar</td>
+              <td>1</td>
+            <td>08 Nov 2017, 14:25</td>
+    </tr>
+  </tbody>
+</table>
+
+  </div>
+  <div class="col-md-3 col-md-offset-2">
+      </div>
+</div>
+
+
+<div id="report-lead" class="container-fluid">
+  <div class="col-md-10 col-md-offset-1">
+    <h2>Steps Statistics</h2>
+          <p>The following graph shows step statistics for this build. Below list is based on results.
+ step does not provide information about result then is not listed below.
+ Additionally @Before and @After are not counted because they are part of the scenarios, not steps.</p>
+      </div>
+</div>
+
+<div class="container-fluid" id="report">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+      <table id="tablesorter" class="stats-table table-hover">
+
+        <thead>
+          <tr class="header">
+            <th>Implementation</th>
+            <th>Occurrences</th>
+            <th>Duration</th>
+            <th>Average</th>
+            <th>Ratio</th>
+          </tr>
+        </thead>
+
+        <tbody>
+                      <tr>
+              <td class="location">Hooks.setup()</td>
+              <td>111</td>
+              <td class="duration" data-value="202259136794">3m 22s 259ms</td>
+              <td class="duration" data-value="1822154385">1s 822ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Hooks.teardown()</td>
+              <td>111</td>
+              <td class="duration" data-value="13268325984">13s 268ms</td>
+              <td class="duration" data-value="119534468">119ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_AverageStaffNumbers.iEnterValueInRowAdministrationAndSupportAndColumnPEWithAndColumnTEWith(String,String)</td>
+              <td>4</td>
+              <td class="duration" data-value="2536530208">2s 536ms</td>
+              <td class="duration" data-value="634132552">634ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_AverageStaffNumbers.iEnterValueInRowDaysLostToSicknessWith(String)</td>
+              <td>4</td>
+              <td class="duration" data-value="477109292">477ms</td>
+              <td class="duration" data-value="119277323">119ms</td>
+              <td class="failed">75.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_AverageStaffNumbers.iEnterValueInRowManagementAndColumnPEWithAndColumnTISWith(String,String)</td>
+              <td>4</td>
+              <td class="duration" data-value="2536518670">2s 536ms</td>
+              <td class="duration" data-value="634129667">634ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_AverageStaffNumbers.iEnterValueInRowPEGAAccountingOfficeAndColumnMaleWithAndFemalaeWith(String,String)</td>
+              <td>4</td>
+              <td class="duration" data-value="2443544255">2s 443ms</td>
+              <td class="duration" data-value="610886063">610ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_AverageStaffNumbers.iEnterValueInRowPEGAAdministrationAndSupportAndColumnMaleWithAndFemalaeWith(String,String)</td>
+              <td>4</td>
+              <td class="duration" data-value="1893974329">1s 893ms</td>
+              <td class="duration" data-value="473493582">473ms</td>
+              <td class="failed">75.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_AverageStaffNumbers.iEnterValueInRowPEGAManagementAndColumnMaleWithAndFemalaeWith(String,String)</td>
+              <td>4</td>
+              <td class="duration" data-value="1888817936">1s 888ms</td>
+              <td class="duration" data-value="472204484">472ms</td>
+              <td class="failed">75.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_AverageStaffNumbers.iEnterValueInRowPEGAStaffWhoServeAsTrusteesAndColumnMaleWithAndColumnFemaleWith(String,String)</td>
+              <td>4</td>
+              <td class="duration" data-value="2417659108">2s 417ms</td>
+              <td class="duration" data-value="604414777">604ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_AverageStaffNumbers.iEnterValueInRowPEGATeachersAndColumnMaleWithAndFemalaeWith(String,String)</td>
+              <td>4</td>
+              <td class="duration" data-value="1904615233">1s 904ms</td>
+              <td class="duration" data-value="476153808">476ms</td>
+              <td class="failed">75.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_AverageStaffNumbers.iEnterValueInRowTeachersAndColumnPEWithAndColumnTISWith(String,String)</td>
+              <td>4</td>
+              <td class="duration" data-value="2657635590">2s 657ms</td>
+              <td class="duration" data-value="664408897">664ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_AverageStaffNumbers.iMustSeeTheTotalValueForColumnPEIsNOTAndTISIsNOTAndTotalWith(String,String,String)</td>
+              <td>3</td>
+              <td class="duration" data-value="12218154290">12s 218ms</td>
+              <td class="duration" data-value="4072718096">4s 072ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_AverageStaffNumbers.iMustSeeTheTotalValueForColumnPEWithAndTISWithAndTotalWith(String,String,String)</td>
+              <td>1</td>
+              <td class="duration" data-value="4099989126">4s 099ms</td>
+              <td class="duration" data-value="4099989126">4s 099ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_AverageStaffNumbers.iMustSeeTheTotalValueForRowAdministrationAndSupportNOTToBe(String)</td>
+              <td>1</td>
+              <td class="duration" data-value="1356967633">1s 356ms</td>
+              <td class="duration" data-value="1356967633">1s 356ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_AverageStaffNumbers.iMustSeeTheTotalValueForRowAdministrationAndSupportToBe(String)</td>
+              <td>1</td>
+              <td class="duration" data-value="1373652144">1s 373ms</td>
+              <td class="duration" data-value="1373652144">1s 373ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_AverageStaffNumbers.iMustSeeTheTotalValueForRowManagementNOTToBe(String)</td>
+              <td>1</td>
+              <td class="duration" data-value="1378542579">1s 378ms</td>
+              <td class="duration" data-value="1378542579">1s 378ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_AverageStaffNumbers.iMustSeeTheTotalValueForRowManagementToBe(String)</td>
+              <td>1</td>
+              <td class="duration" data-value="1374488372">1s 374ms</td>
+              <td class="duration" data-value="1374488372">1s 374ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_AverageStaffNumbers.iMustSeeTheTotalValueForRowPEGAStaffWhoServeAsTrusteesIsNOT(String)</td>
+              <td>1</td>
+              <td class="duration" data-value="1354610093">1s 354ms</td>
+              <td class="duration" data-value="1354610093">1s 354ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_AverageStaffNumbers.iMustSeeTheTotalValueForRowPEGAStaffWhoServeAsTrusteesToBe(String)</td>
+              <td>1</td>
+              <td class="duration" data-value="35925878862">35s 925ms</td>
+              <td class="duration" data-value="35925878862">35s 925ms</td>
+              <td class="failed">0.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_AverageStaffNumbers.iMustSeeTheTotalValueForRowTeachersNOTToBe(String)</td>
+              <td>1</td>
+              <td class="duration" data-value="1351906497">1s 351ms</td>
+              <td class="duration" data-value="1351906497">1s 351ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_AverageStaffNumbers.iMustSeeTheTotalValueForRowTeachersToBe(String)</td>
+              <td>1</td>
+              <td class="duration" data-value="1364963227">1s 364ms</td>
+              <td class="duration" data-value="1364963227">1s 364ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_AverageStaffNumbers.iNavigateToAverageStaffNumbers()</td>
+              <td>4</td>
+              <td class="duration" data-value="19716306405">19s 716ms</td>
+              <td class="duration" data-value="4929076601">4s 929ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_AverageStaffNumbers.iSeeTheNumberOfErrorsStartingStatingTheInputValueMustBeAPositiveNumberAre(String)</td>
+              <td>1</td>
+              <td class="duration" data-value="79469166">079ms</td>
+              <td class="duration" data-value="79469166">079ms</td>
+              <td class="failed">0.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_AverageStaffNumbers.iSeeTheValueInRowPEGAAccountingOfficerAndColumnTotalIs(String)</td>
+              <td>1</td>
+              <td class="duration" data-value="1367160774">1s 367ms</td>
+              <td class="duration" data-value="1367160774">1s 367ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_AverageStaffNumbers.iSeeTheValueInRowPEGAAccountingOfficerAndColumnTotalIsNOT(String)</td>
+              <td>1</td>
+              <td class="duration" data-value="1366141953">1s 366ms</td>
+              <td class="duration" data-value="1366141953">1s 366ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_AverageStaffNumbers.iSeeTheValueInRowPEGAAdministrationAndSupportAndColumnTotalIs(String)</td>
+              <td>1</td>
+              <td class="duration" data-value="0">000ms</td>
+              <td class="duration" data-value="0">000ms</td>
+              <td class="failed">0.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_AverageStaffNumbers.iSeeTheValueInRowPEGAAdministrationAndSupportAndColumnTotalIsNOT(String)</td>
+              <td>1</td>
+              <td class="duration" data-value="1354330707">1s 354ms</td>
+              <td class="duration" data-value="1354330707">1s 354ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_AverageStaffNumbers.iSeeTheValueInRowPEGAManagementAndColumnTotalIs(String)</td>
+              <td>1</td>
+              <td class="duration" data-value="0">000ms</td>
+              <td class="duration" data-value="0">000ms</td>
+              <td class="failed">0.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_AverageStaffNumbers.iSeeTheValueInRowPEGAManagementAndColumnTotalIsNOT(String)</td>
+              <td>1</td>
+              <td class="duration" data-value="1365653968">1s 365ms</td>
+              <td class="duration" data-value="1365653968">1s 365ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_AverageStaffNumbers.iSeeTheValueInRowPEGATeachersAndColumnTotalIs(String)</td>
+              <td>1</td>
+              <td class="duration" data-value="0">000ms</td>
+              <td class="duration" data-value="0">000ms</td>
+              <td class="failed">0.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_AverageStaffNumbers.iSeeTheValueInRowPEGATeachersAndColumnTotalIsNOT(String)</td>
+              <td>1</td>
+              <td class="duration" data-value="1350782287">1s 350ms</td>
+              <td class="duration" data-value="1350782287">1s 350ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_AverageStaffNumbers.iSeeTheValueInRowPEGATotalAndColumnMaleIsNOTAndFemaleIsNOTAndTotalWith(String,String,String)</td>
+              <td>1</td>
+              <td class="duration" data-value="4087617486">4s 087ms</td>
+              <td class="duration" data-value="4087617486">4s 087ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_AverageStaffNumbers.iSeeTheValueInRowPEGATotalAndColumnMaleWitAndFemaleWithAndTotalWith(String,String,String)</td>
+              <td>1</td>
+              <td class="duration" data-value="0">000ms</td>
+              <td class="duration" data-value="0">000ms</td>
+              <td class="failed">0.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_CapitalGrantsDfEESFA.iEnterValueInRowCentrallyManagedProgrammeFreeSchoolsAndColumnCashReceivedInPeriodPerDFEAndESFARecordWithInDFEESFAPage(String)</td>
+              <td>2</td>
+              <td class="duration" data-value="825025975">825ms</td>
+              <td class="duration" data-value="412512987">412ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_CapitalGrantsDfEESFA.iEnterValueInRowCentrallyManagedProgrammeFreeSchoolsAndColumnCashRecievedInPeriodPerAcademiesRecordIfDifferentToDFEAndESFARecordWithInDFEESFAPage(String)</td>
+              <td>4</td>
+              <td class="duration" data-value="2172104780">2s 172ms</td>
+              <td class="duration" data-value="543026195">543ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_CapitalGrantsDfEESFA.iEnterValueInRowCentrallyManagedProgrammeFreeSchoolsAndColumnExpenditureRecordedInTheAccountsFromThisGrantWithInDFEESFAPage(String)</td>
+              <td>4</td>
+              <td class="duration" data-value="1810436214">1s 810ms</td>
+              <td class="duration" data-value="452609053">452ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_CapitalGrantsDfEESFA.iEnterValueInRowCentrallyManagedProgrammeFreeSchoolsAndColumnGranstValueInAccountsWithInDFEESFAPage(String)</td>
+              <td>4</td>
+              <td class="duration" data-value="2553638569">2s 553ms</td>
+              <td class="duration" data-value="638409642">638ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_CapitalGrantsDfEESFA.iEnterValueInRowConditionalImprovementFundAndColumnCashReceivedInPeriodPerDFEAndESFARecordWithInDFEESFAPage(String)</td>
+              <td>2</td>
+              <td class="duration" data-value="814247111">814ms</td>
+              <td class="duration" data-value="407123555">407ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_CapitalGrantsDfEESFA.iEnterValueInRowConditionalImprovementFundAndColumnCashRecievedInPeriodPerAcademiesRecordIfDifferentToDFEAndESFARecordWithInDFEESFAPage(String)</td>
+              <td>4</td>
+              <td class="duration" data-value="1835305032">1s 835ms</td>
+              <td class="duration" data-value="458826258">458ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_CapitalGrantsDfEESFA.iEnterValueInRowConditionalImprovementFundAndColumnExpenditureRecordedInTheAccountsFromThisGrantWithInDFEESFAPage(String)</td>
+              <td>4</td>
+              <td class="duration" data-value="1761267281">1s 761ms</td>
+              <td class="duration" data-value="440316820">440ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_CapitalGrantsDfEESFA.iEnterValueInRowConditionalImprovementFundAndColumnGranstValueInAccountsWithInDFEESFAPage(String)</td>
+              <td>4</td>
+              <td class="duration" data-value="1855629316">1s 855ms</td>
+              <td class="duration" data-value="463907329">463ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_CapitalGrantsDfEESFA.iEnterValueInRowContinuingCommitmentsBuildingSchoolsForTheFutureAndColumnCashReceivedInPeriodPerDFEAndESFARecordWithInDFEESFAPage(String)</td>
+              <td>2</td>
+              <td class="duration" data-value="809778003">809ms</td>
+              <td class="duration" data-value="404889001">404ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_CapitalGrantsDfEESFA.iEnterValueInRowContinuingCommitmentsBuildingSchoolsForTheFutureAndColumnCashRecievedInPeriodPerAcademiesRecordIfDifferentToDFEAndESFARecordWithInDFEESFAPage(String)</td>
+              <td>4</td>
+              <td class="duration" data-value="1987100465">1s 987ms</td>
+              <td class="duration" data-value="496775116">496ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_CapitalGrantsDfEESFA.iEnterValueInRowContinuingCommitmentsBuildingSchoolsForTheFutureAndColumnExpenditureRecordedInTheAccountsFromThisGrantWithInDFEESFAPage(String)</td>
+              <td>4</td>
+              <td class="duration" data-value="2076956751">2s 076ms</td>
+              <td class="duration" data-value="519239187">519ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_CapitalGrantsDfEESFA.iEnterValueInRowContinuingCommitmentsBuildingSchoolsForTheFutureAndColumnGranstValueInAccountsWithInDFEESFAPage(String)</td>
+              <td>4</td>
+              <td class="duration" data-value="2183276601">2s 183ms</td>
+              <td class="duration" data-value="545819150">545ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_CapitalGrantsDfEESFA.iEnterValueInRowDevolvedFormulaCapitalGrantAndColumnCashReceivedInPeriodPerDFEAndESFARecordWithInDFEESFAPage(String)</td>
+              <td>2</td>
+              <td class="duration" data-value="980392861">980ms</td>
+              <td class="duration" data-value="490196430">490ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_CapitalGrantsDfEESFA.iEnterValueInRowDevolvedFormulaCapitalGrantAndColumnCashRecievedInPeriodPerAcademiesRecordIfDifferentToDFEAndESFARecordWithInDFEESFAPage(String)</td>
+              <td>4</td>
+              <td class="duration" data-value="2519032894">2s 519ms</td>
+              <td class="duration" data-value="629758223">629ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_CapitalGrantsDfEESFA.iEnterValueInRowDevolvedFormulaCapitalGrantAndColumnExpenditureRecordedInTheAccountsFromThisGrantWithInDFEESFAPage(String)</td>
+              <td>4</td>
+              <td class="duration" data-value="2237865446">2s 237ms</td>
+              <td class="duration" data-value="559466361">559ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_CapitalGrantsDfEESFA.iEnterValueInRowDevolvedFormulaCapitalGrantAndColumnGranstValueInAccountsWithInDFEESFAPage(String)</td>
+              <td>4</td>
+              <td class="duration" data-value="2405677573">2s 405ms</td>
+              <td class="duration" data-value="601419393">601ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_CapitalGrantsDfEESFA.iEnterValueInRowMATsSchoolConditionAllowanceAndColumnCashReceivedInPeriodPerDFEAndESFARecordWithInDFEESFAPage(String)</td>
+              <td>2</td>
+              <td class="duration" data-value="839017806">839ms</td>
+              <td class="duration" data-value="419508903">419ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_CapitalGrantsDfEESFA.iEnterValueInRowMATsSchoolConditionAllowanceAndColumnCashRecievedInPeriodPerAcademiesRecordIfDifferentToDFEAndESFARecordWithInDFEESFAPage(String)</td>
+              <td>4</td>
+              <td class="duration" data-value="1750963439">1s 750ms</td>
+              <td class="duration" data-value="437740859">437ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_CapitalGrantsDfEESFA.iEnterValueInRowMATsSchoolConditionAllowanceAndColumnExpenditureRecordedInTheAccountsFromThisGrantWithInDFEESFAPage(String)</td>
+              <td>4</td>
+              <td class="duration" data-value="1793762902">1s 793ms</td>
+              <td class="duration" data-value="448440725">448ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_CapitalGrantsDfEESFA.iEnterValueInRowMATsSchoolConditionAllowanceAndColumnGranstValueInAccountsWithInDFEESFAPage(String)</td>
+              <td>4</td>
+              <td class="duration" data-value="1781714767">1s 781ms</td>
+              <td class="duration" data-value="445428691">445ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_CapitalGrantsDfEESFA.iEnterValueInRowOldSkillsFundingAgencyAndColumnCashReceivedInPeriodPerDFEAndESFARecordWithInDFEESFAPage(String)</td>
+              <td>2</td>
+              <td class="duration" data-value="818738625">818ms</td>
+              <td class="duration" data-value="409369312">409ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_CapitalGrantsDfEESFA.iEnterValueInRowOldSkillsFundingAgencyAndColumnCashRecievedInPeriodPerAcademiesRecordIfDifferentToDFEAndESFARecordWithInDFEESFAPage(String)</td>
+              <td>4</td>
+              <td class="duration" data-value="2415628245">2s 415ms</td>
+              <td class="duration" data-value="603907061">603ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_CapitalGrantsDfEESFA.iEnterValueInRowOldSkillsFundingAgencyAndColumnExpenditureRecordedInTheAccountsFromThisGrantWithInDFEESFAPage(String)</td>
+              <td>4</td>
+              <td class="duration" data-value="2210891639">2s 210ms</td>
+              <td class="duration" data-value="552722909">552ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_CapitalGrantsDfEESFA.iEnterValueInRowOldSkillsFundingAgencyAndColumnGranstValueInAccountsWithInDFEESFAPage(String)</td>
+              <td>4</td>
+              <td class="duration" data-value="2239282864">2s 239ms</td>
+              <td class="duration" data-value="559820716">559ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_CapitalGrantsDfEESFA.iEnterValueInRowOtherAndColumnCashReceivedInPeriodPerDFEAndESFARecordWithInDFEESFAPage(String)</td>
+              <td>2</td>
+              <td class="duration" data-value="831848000">831ms</td>
+              <td class="duration" data-value="415924000">415ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_CapitalGrantsDfEESFA.iEnterValueInRowOtherAndColumnCashRecievedInPeriodPerAcademiesRecordIfDifferentToDFEAndESFARecordWithInDFEESFAPage(String)</td>
+              <td>4</td>
+              <td class="duration" data-value="1925817594">1s 925ms</td>
+              <td class="duration" data-value="481454398">481ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_CapitalGrantsDfEESFA.iEnterValueInRowOtherAndColumnExpenditureRecordedInTheAccountsFromThisGrantWithInDFEESFAPage(String)</td>
+              <td>4</td>
+              <td class="duration" data-value="1707935994">1s 707ms</td>
+              <td class="duration" data-value="426983998">426ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_CapitalGrantsDfEESFA.iEnterValueInRowOtherAndColumnGranstValueInAccountsWithInDFEESFAPage(String)</td>
+              <td>4</td>
+              <td class="duration" data-value="1887374108">1s 887ms</td>
+              <td class="duration" data-value="471843527">471ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_CapitalGrantsDfEESFA.iEnterValueInRowPrioritySchoolBuildingProgrammeAndColumnCashReceivedInPeriodPerDFEAndESFARecordWithInDFEESFAPage(String)</td>
+              <td>2</td>
+              <td class="duration" data-value="826775351">826ms</td>
+              <td class="duration" data-value="413387675">413ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_CapitalGrantsDfEESFA.iEnterValueInRowPrioritySchoolBuildingProgrammeAndColumnCashRecievedInPeriodPerAcademiesRecordIfDifferentToDFEAndESFARecordWithInDFEESFAPage(String)</td>
+              <td>4</td>
+              <td class="duration" data-value="2466207852">2s 466ms</td>
+              <td class="duration" data-value="616551963">616ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_CapitalGrantsDfEESFA.iEnterValueInRowPrioritySchoolBuildingProgrammeAndColumnExpenditureRecordedInTheAccountsFromThisGrantWithInDFEESFAPage(String)</td>
+              <td>4</td>
+              <td class="duration" data-value="2235756228">2s 235ms</td>
+              <td class="duration" data-value="558939057">558ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_CapitalGrantsDfEESFA.iEnterValueInRowPrioritySchoolBuildingProgrammeAndColumnGranstValueInAccountsWithInDFEESFAPage(String)</td>
+              <td>4</td>
+              <td class="duration" data-value="1899465425">1s 899ms</td>
+              <td class="duration" data-value="474866356">474ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_CapitalGrantsDfEESFA.iEnterValueInRowSchoolsSponsorshipDevelopmentFundAndColumnCashReceivedInPeriodPerDFEAndESFARecordWithInDFEESFAPage(String)</td>
+              <td>2</td>
+              <td class="duration" data-value="813366742">813ms</td>
+              <td class="duration" data-value="406683371">406ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_CapitalGrantsDfEESFA.iEnterValueInRowSchoolsSponsorshipDevelopmentFundAndColumnCashRecievedInPeriodPerAcademiesRecordIfDifferentToDFEAndESFARecordWithInDFEESFAPage(String)</td>
+              <td>4</td>
+              <td class="duration" data-value="2326169056">2s 326ms</td>
+              <td class="duration" data-value="581542264">581ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_CapitalGrantsDfEESFA.iEnterValueInRowSchoolsSponsorshipDevelopmentFundAndColumnExpenditureRecordedInTheAccountsFromThisGrantWithInDFEESFAPage(String)</td>
+              <td>4</td>
+              <td class="duration" data-value="1975709522">1s 975ms</td>
+              <td class="duration" data-value="493927380">493ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_CapitalGrantsDfEESFA.iEnterValueInRowSchoolsSponsorshipDevelopmentFundAndColumnGranstValueInAccountsWithInDFEESFAPage(String)</td>
+              <td>4</td>
+              <td class="duration" data-value="2081732222">2s 081ms</td>
+              <td class="duration" data-value="520433055">520ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_CapitalGrantsDfEESFA.iHaveNavigatedToFamilyCapitalGrantsSection()</td>
+              <td>1</td>
+              <td class="duration" data-value="5245933">005ms</td>
+              <td class="duration" data-value="5245933">005ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_CapitalGrantsDfEESFA.iHaveNavigatedToTheDfEAndESFASection()</td>
+              <td>4</td>
+              <td class="duration" data-value="20205084901">20s 205ms</td>
+              <td class="duration" data-value="5051271225">5s 051ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_CapitalGrantsDfEESFA.iSeeValueInRowAndTotalsCashReceivedInPeriodPerDFEAndESFARecordIsNOTInDFEESFAPage(String)</td>
+              <td>1</td>
+              <td class="duration" data-value="591354290">591ms</td>
+              <td class="duration" data-value="591354290">591ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_CapitalGrantsDfEESFA.iSeeValueInRowAndTotalsCashReceivedInPeriodPerDFEAndESFARecordWithInDFEESFAPage(String)</td>
+              <td>1</td>
+              <td class="duration" data-value="606248207">606ms</td>
+              <td class="duration" data-value="606248207">606ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_CapitalGrantsDfEESFA.iSeeValueInRowAndTotalsCashRecievedInPeriodPerAcademiesRecordIfDifferentToDFEAndESFARecordIsNOTInDFEESFAPage(String)</td>
+              <td>1</td>
+              <td class="duration" data-value="626676955">626ms</td>
+              <td class="duration" data-value="626676955">626ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_CapitalGrantsDfEESFA.iSeeValueInRowAndTotalsCashRecievedInPeriodPerAcademiesRecordIfDifferentToDFEAndESFARecordWithInDFEESFAPage(String)</td>
+              <td>1</td>
+              <td class="duration" data-value="590870898">590ms</td>
+              <td class="duration" data-value="590870898">590ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_CapitalGrantsDfEESFA.iSeeValueInRowAndTotalsExpenditureRecordedInTheAccountsFromThisGrantIsNOTInDFEESFAPage(String)</td>
+              <td>1</td>
+              <td class="duration" data-value="590336206">590ms</td>
+              <td class="duration" data-value="590336206">590ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_CapitalGrantsDfEESFA.iSeeValueInRowAndTotalsExpenditureRecordedInTheAccountsFromThisGrantWithInDFEESFAPage(String)</td>
+              <td>1</td>
+              <td class="duration" data-value="630721972">630ms</td>
+              <td class="duration" data-value="630721972">630ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_CapitalGrantsDfEESFA.iSeeValueInRowAndTotalsGranstValueInAccountsIsNOTInDFEESFAPage(String)</td>
+              <td>1</td>
+              <td class="duration" data-value="603390629">603ms</td>
+              <td class="duration" data-value="603390629">603ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_CapitalGrantsDfEESFA.iSeeValueInRowAndTotalsGranstValueInAccountsWithInDFEESFAPage(String)</td>
+              <td>1</td>
+              <td class="duration" data-value="598883500">598ms</td>
+              <td class="duration" data-value="598883500">598ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_CapitalGrantsDfEGroup.iEnterValueInFieldConstructionIndustryTrainingBoardWith(String)</td>
+              <td>4</td>
+              <td class="duration" data-value="568311810">568ms</td>
+              <td class="duration" data-value="142077952">142ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_CapitalGrantsDfEGroup.iEnterValueInFieldEngineeringConstructionIndustryTrainingBoard(String)</td>
+              <td>4</td>
+              <td class="duration" data-value="536796068">536ms</td>
+              <td class="duration" data-value="134199017">134ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_CapitalGrantsDfEGroup.iEnterValueInFieldEqualityAndHumanRightsCommissionWith(String)</td>
+              <td>4</td>
+              <td class="duration" data-value="547539059">547ms</td>
+              <td class="duration" data-value="136884764">136ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_CapitalGrantsDfEGroup.iEnterValueInFieldHigherEducationFundingCouncilForEngland(String)</td>
+              <td>4</td>
+              <td class="duration" data-value="542220182">542ms</td>
+              <td class="duration" data-value="135555045">135ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_CapitalGrantsDfEGroup.iEnterValueInFieldNationalCollegeForTeachingAndLeadershipWith(String)</td>
+              <td>4</td>
+              <td class="duration" data-value="694596230">694ms</td>
+              <td class="duration" data-value="173649057">173ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_CapitalGrantsDfEGroup.iEnterValueInFieldOfficeForFairAccessWith(String)</td>
+              <td>4</td>
+              <td class="duration" data-value="545211317">545ms</td>
+              <td class="duration" data-value="136302829">136ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_CapitalGrantsDfEGroup.iEnterValueInFieldOfficeOfTheChildrenSCommissionerWith(String)</td>
+              <td>4</td>
+              <td class="duration" data-value="535481051">535ms</td>
+              <td class="duration" data-value="133870262">133ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_CapitalGrantsDfEGroup.iEnterValueInFieldSkillsFundingAgencyWith(String)</td>
+              <td>4</td>
+              <td class="duration" data-value="557291869">557ms</td>
+              <td class="duration" data-value="139322967">139ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_CapitalGrantsDfEGroup.iEnterValueInFieldStandardsAndTestingAgencyWith(String)</td>
+              <td>4</td>
+              <td class="duration" data-value="558469001">558ms</td>
+              <td class="duration" data-value="139617250">139ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_CapitalGrantsDfEGroup.iEnterValueInFieldStudentLoanCompanyWith(String)</td>
+              <td>4</td>
+              <td class="duration" data-value="544130108">544ms</td>
+              <td class="duration" data-value="136032527">136ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_CapitalGrantsDfEGroup.iHaveNavigatedToTheCapitalGrantsSection()</td>
+              <td>8</td>
+              <td class="duration" data-value="135217255">135ms</td>
+              <td class="duration" data-value="16902156">016ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_CapitalGrantsDfEGroup.iHaveNavigatedToTheDfEGroupPage()</td>
+              <td>4</td>
+              <td class="duration" data-value="20001224324">20s 001ms</td>
+              <td class="duration" data-value="5000306081">5s</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_CapitalGrantsDfEGroup.iSeeTheValueInFieldTotalIsInFamilyCapitalGrantsPage(String)</td>
+              <td>1</td>
+              <td class="duration" data-value="205844790">205ms</td>
+              <td class="duration" data-value="205844790">205ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_CapitalGrantsDfEGroup.iSeeTheValueInFieldTotalIsNOTInFamilyCapitalGrantsPage(String)</td>
+              <td>1</td>
+              <td class="duration" data-value="202840954">202ms</td>
+              <td class="duration" data-value="202840954">202ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_CapitalGrantsOther.iCanSeeTheValuePopulatedInTheTotalFieldIsNOT(String)</td>
+              <td>1</td>
+              <td class="duration" data-value="205186419">205ms</td>
+              <td class="duration" data-value="205186419">205ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_CapitalGrantsOther.iCanSeeTheValuePopulatedInTheTotalFieldToBe(String)</td>
+              <td>1</td>
+              <td class="duration" data-value="207347582">207ms</td>
+              <td class="duration" data-value="207347582">207ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_CapitalGrantsOther.iEnterValueInLocalAuthorityCapitalGrantWith(String)</td>
+              <td>4</td>
+              <td class="duration" data-value="618313390">618ms</td>
+              <td class="duration" data-value="154578347">154ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_CapitalGrantsOther.iEnterValueInNonGovernmentCapitalGrantsWith(String)</td>
+              <td>4</td>
+              <td class="duration" data-value="524485488">524ms</td>
+              <td class="duration" data-value="131121372">131ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_CapitalGrantsOther.iEnterValueInOtherGovernmentCapitalGrantsWith(String)</td>
+              <td>4</td>
+              <td class="duration" data-value="530642203">530ms</td>
+              <td class="duration" data-value="132660550">132ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_CapitalGrantsOther.iHaveNavigatedToTheOtherPage()</td>
+              <td>1</td>
+              <td class="duration" data-value="19816">000ms</td>
+              <td class="duration" data-value="19816">000ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_CapitalGrantsOther.iNavigateToOtherCapitalGrantsPage()</td>
+              <td>4</td>
+              <td class="duration" data-value="19992258863">19s 992ms</td>
+              <td class="duration" data-value="4998064715">4s 998ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_CharitableActivitiesDirectCostPage.iCanSeeTheTotalFieldIsNOTPopulatedWithInCharitableActivitiesDirectCostPage(String)</td>
+              <td>1</td>
+              <td class="duration" data-value="215103719">215ms</td>
+              <td class="duration" data-value="215103719">215ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_CharitableActivitiesDirectCostPage.iCanSeeTheTotalFieldIsNowPopulatedWith(String)</td>
+              <td>1</td>
+              <td class="duration" data-value="212721621">212ms</td>
+              <td class="duration" data-value="212721621">212ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_CharitableActivitiesDirectCostPage.iEnterValueInAmortisationWith(String)</td>
+              <td>4</td>
+              <td class="duration" data-value="599860897">599ms</td>
+              <td class="duration" data-value="149965224">149ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_CharitableActivitiesDirectCostPage.iEnterValueInDepreciationWith(String)</td>
+              <td>4</td>
+              <td class="duration" data-value="566248274">566ms</td>
+              <td class="duration" data-value="141562068">141ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_CharitableActivitiesDirectCostPage.iEnterValueInEducationalConsultancyWith(String)</td>
+              <td>4</td>
+              <td class="duration" data-value="590426838">590ms</td>
+              <td class="duration" data-value="147606709">147ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_CharitableActivitiesDirectCostPage.iEnterValueInEducationalSuppliesWith(String)</td>
+              <td>4</td>
+              <td class="duration" data-value="540091898">540ms</td>
+              <td class="duration" data-value="135022974">135ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_CharitableActivitiesDirectCostPage.iEnterValueInExaminationFeesWith(String)</td>
+              <td>4</td>
+              <td class="duration" data-value="530242819">530ms</td>
+              <td class="duration" data-value="132560704">132ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_CharitableActivitiesDirectCostPage.iEnterValueInFieldNationalApprenticehipLeveyExpenditureWith(String)</td>
+              <td>4</td>
+              <td class="duration" data-value="547059664">547ms</td>
+              <td class="duration" data-value="136764916">136ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_CharitableActivitiesDirectCostPage.iEnterValueInImpairmentWit(String)</td>
+              <td>4</td>
+              <td class="duration" data-value="602236243">602ms</td>
+              <td class="duration" data-value="150559060">150ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_CharitableActivitiesDirectCostPage.iEnterValueInOtherDirectCostsWith(String)</td>
+              <td>4</td>
+              <td class="duration" data-value="610868060">610ms</td>
+              <td class="duration" data-value="152717015">152ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_CharitableActivitiesDirectCostPage.iEnterValueInOtherStaffCostsWith(String)</td>
+              <td>4</td>
+              <td class="duration" data-value="554011187">554ms</td>
+              <td class="duration" data-value="138502796">138ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_CharitableActivitiesDirectCostPage.iEnterValueInStaffExpensesWith(String)</td>
+              <td>4</td>
+              <td class="duration" data-value="563705902">563ms</td>
+              <td class="duration" data-value="140926475">140ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_CharitableActivitiesDirectCostPage.iEnterValueInStaffRelatedInsuranceWith(String)</td>
+              <td>4</td>
+              <td class="duration" data-value="554075726">554ms</td>
+              <td class="duration" data-value="138518931">138ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_CharitableActivitiesDirectCostPage.iEnterValueInTeachingAndEducationalSupportStaffWith(String)</td>
+              <td>4</td>
+              <td class="duration" data-value="767416398">767ms</td>
+              <td class="duration" data-value="191854099">191ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_CharitableActivitiesDirectCostPage.iEnterValueInTechnologyCostsWith(String)</td>
+              <td>4</td>
+              <td class="duration" data-value="568779085">568ms</td>
+              <td class="duration" data-value="142194771">142ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_CharitableActivitiesDirectCostPage.iNavigateToCharitableActivitiesDirectCostPage()</td>
+              <td>4</td>
+              <td class="duration" data-value="19377673245">19s 377ms</td>
+              <td class="duration" data-value="4844418311">4s 844ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_CharitableActivitiesSupportCosts.iCanSeeTheTotalIsNOTInCharitableActivitiesSupportCostPage(String)</td>
+              <td>1</td>
+              <td class="duration" data-value="205579507">205ms</td>
+              <td class="duration" data-value="205579507">205ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_CharitableActivitiesSupportCosts.iCanSeeTheTotalToBe(String)</td>
+              <td>1</td>
+              <td class="duration" data-value="216561847">216ms</td>
+              <td class="duration" data-value="216561847">216ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_CharitableActivitiesSupportCosts.iEnterGainOrLossOnDisposalOfIntangibleFixedAssets(String)</td>
+              <td>4</td>
+              <td class="duration" data-value="727293339">727ms</td>
+              <td class="duration" data-value="181823334">181ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_CharitableActivitiesSupportCosts.iEnterGainOrLossOnDisposalOfInvestments(String)</td>
+              <td>4</td>
+              <td class="duration" data-value="744562454">744ms</td>
+              <td class="duration" data-value="186140613">186ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_CharitableActivitiesSupportCosts.iEnterGainOrLossOnDisposalOfTangibleFixedAssets(String)</td>
+              <td>4</td>
+              <td class="duration" data-value="749916308">749ms</td>
+              <td class="duration" data-value="187479077">187ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_CharitableActivitiesSupportCosts.iEnterOtherSupportCostsWith(String)</td>
+              <td>4</td>
+              <td class="duration" data-value="729328063">729ms</td>
+              <td class="duration" data-value="182332015">182ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_CharitableActivitiesSupportCosts.iEnterValueInAmortisationFieldWith(String)</td>
+              <td>4</td>
+              <td class="duration" data-value="737498528">737ms</td>
+              <td class="duration" data-value="184374632">184ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_CharitableActivitiesSupportCosts.iEnterValueInAuditorCostsAuditFeesWith(String)</td>
+              <td>4</td>
+              <td class="duration" data-value="777285617">777ms</td>
+              <td class="duration" data-value="194321404">194ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_CharitableActivitiesSupportCosts.iEnterValueInAuditorCostsInternalAuditFeesWith(String)</td>
+              <td>4</td>
+              <td class="duration" data-value="836988294">836ms</td>
+              <td class="duration" data-value="209247073">209ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_CharitableActivitiesSupportCosts.iEnterValueInAuditorCostsOtherFeesWith(String)</td>
+              <td>4</td>
+              <td class="duration" data-value="823466719">823ms</td>
+              <td class="duration" data-value="205866679">205ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_CharitableActivitiesSupportCosts.iEnterValueInCateringWith(String)</td>
+              <td>4</td>
+              <td class="duration" data-value="737805152">737ms</td>
+              <td class="duration" data-value="184451288">184ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_CharitableActivitiesSupportCosts.iEnterValueInCleaningAndCareTakingWith(String)</td>
+              <td>4</td>
+              <td class="duration" data-value="707176778">707ms</td>
+              <td class="duration" data-value="176794194">176ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_CharitableActivitiesSupportCosts.iEnterValueInDepreciationFieldWith(String)</td>
+              <td>4</td>
+              <td class="duration" data-value="737611215">737ms</td>
+              <td class="duration" data-value="184402803">184ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_CharitableActivitiesSupportCosts.iEnterValueInEnergyWith(String)</td>
+              <td>4</td>
+              <td class="duration" data-value="711845506">711ms</td>
+              <td class="duration" data-value="177961376">177ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_CharitableActivitiesSupportCosts.iEnterValueInFinanceLeasesInterestWith(String)</td>
+              <td>4</td>
+              <td class="duration" data-value="851635627">851ms</td>
+              <td class="duration" data-value="212908906">212ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_CharitableActivitiesSupportCosts.iEnterValueInGovernorsReimbursementOtherWith(String)</td>
+              <td>4</td>
+              <td class="duration" data-value="789186755">789ms</td>
+              <td class="duration" data-value="197296688">197ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_CharitableActivitiesSupportCosts.iEnterValueInGovernorsReimbursementTravelAndSubsistenceWith(String)</td>
+              <td>4</td>
+              <td class="duration" data-value="825583841">825ms</td>
+              <td class="duration" data-value="206395960">206ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_CharitableActivitiesSupportCosts.iEnterValueInImpairmentFieldWith(String)</td>
+              <td>4</td>
+              <td class="duration" data-value="756450582">756ms</td>
+              <td class="duration" data-value="189112645">189ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_CharitableActivitiesSupportCosts.iEnterValueInLegalAndProfessionalWith(String)</td>
+              <td>4</td>
+              <td class="duration" data-value="772916415">772ms</td>
+              <td class="duration" data-value="193229103">193ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_CharitableActivitiesSupportCosts.iEnterValueInLoanInterestPaidToDfe_EFAFamilyWith(String)</td>
+              <td>4</td>
+              <td class="duration" data-value="726153227">726ms</td>
+              <td class="duration" data-value="181538306">181ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_CharitableActivitiesSupportCosts.iEnterValueInLoanInterestPaidToOthersWith(String)</td>
+              <td>4</td>
+              <td class="duration" data-value="752512583">752ms</td>
+              <td class="duration" data-value="188128145">188ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_CharitableActivitiesSupportCosts.iEnterValueInMaintenanceOfPremisesWith(String)</td>
+              <td>4</td>
+              <td class="duration" data-value="741125054">741ms</td>
+              <td class="duration" data-value="185281263">185ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_CharitableActivitiesSupportCosts.iEnterValueInNetMovementInProvisionsDuringTheYearWith(String)</td>
+              <td>4</td>
+              <td class="duration" data-value="749810511">749ms</td>
+              <td class="duration" data-value="187452627">187ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_CharitableActivitiesSupportCosts.iEnterValueInNonEducationalConsultancyWith(String)</td>
+              <td>4</td>
+              <td class="duration" data-value="789406476">789ms</td>
+              <td class="duration" data-value="197351619">197ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_CharitableActivitiesSupportCosts.iEnterValueInOperatingLeaseRentalsLandBWith(String)</td>
+              <td>4</td>
+              <td class="duration" data-value="768256505">768ms</td>
+              <td class="duration" data-value="192064126">192ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_CharitableActivitiesSupportCosts.iEnterValueInOperatingLeaseRentalsOthersWith(String)</td>
+              <td>4</td>
+              <td class="duration" data-value="732794642">732ms</td>
+              <td class="duration" data-value="183198660">183ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_CharitableActivitiesSupportCosts.iEnterValueInOtherPremisesCostWith(String)</td>
+              <td>4</td>
+              <td class="duration" data-value="747904444">747ms</td>
+              <td class="duration" data-value="186976111">186ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_CharitableActivitiesSupportCosts.iEnterValueInOtherStaffCostsWith(String)</td>
+              <td>4</td>
+              <td class="duration" data-value="731092798">731ms</td>
+              <td class="duration" data-value="182773199">182ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_CharitableActivitiesSupportCosts.iEnterValueInPFI_ServicesCostsWith(String)</td>
+              <td>4</td>
+              <td class="duration" data-value="790253886">790ms</td>
+              <td class="duration" data-value="197563471">197ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_CharitableActivitiesSupportCosts.iEnterValueInRatesWit(String)</td>
+              <td>4</td>
+              <td class="duration" data-value="736705958">736ms</td>
+              <td class="duration" data-value="184176489">184ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_CharitableActivitiesSupportCosts.iEnterValueInRiskProtectionArrangementFeesWith(String)</td>
+              <td>4</td>
+              <td class="duration" data-value="735127451">735ms</td>
+              <td class="duration" data-value="183781862">183ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_CharitableActivitiesSupportCosts.iEnterValueInSecurityWith(String)</td>
+              <td>4</td>
+              <td class="duration" data-value="728738941">728ms</td>
+              <td class="duration" data-value="182184735">182ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_CharitableActivitiesSupportCosts.iEnterValueInSpecialFacilitiesWith(String)</td>
+              <td>4</td>
+              <td class="duration" data-value="739148237">739ms</td>
+              <td class="duration" data-value="184787059">184ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_CharitableActivitiesSupportCosts.iEnterValueInStaffRelatedInsuranceFieldWith(String)</td>
+              <td>4</td>
+              <td class="duration" data-value="773255146">773ms</td>
+              <td class="duration" data-value="193313786">193ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_CharitableActivitiesSupportCosts.iEnterValueInSupportStaffPayCostsWith(String)</td>
+              <td>4</td>
+              <td class="duration" data-value="1283217414">1s 283ms</td>
+              <td class="duration" data-value="320804353">320ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_CharitableActivitiesSupportCosts.iEnterValueInTechnologyCostWith(String)</td>
+              <td>4</td>
+              <td class="duration" data-value="750470734">750ms</td>
+              <td class="duration" data-value="187617683">187ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_CharitableActivitiesSupportCosts.iEnterValueInTransportWith(String)</td>
+              <td>4</td>
+              <td class="duration" data-value="753379480">753ms</td>
+              <td class="duration" data-value="188344870">188ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_CharitableActivitiesSupportCosts.iEnterValueInTravelExpensesTravelAndSubsistenceWith(String)</td>
+              <td>4</td>
+              <td class="duration" data-value="790431592">790ms</td>
+              <td class="duration" data-value="197607898">197ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_CharitableActivitiesSupportCosts.iEnterValueInTrusteesExpensesOthersWith(String)</td>
+              <td>4</td>
+              <td class="duration" data-value="762121135">762ms</td>
+              <td class="duration" data-value="190530283">190ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_CharitableActivitiesSupportCosts.iNavigateToCharitableActivitiesSupportCostPage()</td>
+              <td>4</td>
+              <td class="duration" data-value="19488638770">19s 488ms</td>
+              <td class="duration" data-value="4872159692">4s 872ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_CostOfRaisingFunds.iEnterValueInOther(String)</td>
+              <td>4</td>
+              <td class="duration" data-value="476277910">476ms</td>
+              <td class="duration" data-value="119069477">119ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_CostOfRaisingFunds.iEnterValueInPayCostWith(String)</td>
+              <td>4</td>
+              <td class="duration" data-value="628298524">628ms</td>
+              <td class="duration" data-value="157074631">157ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_CostOfRaisingFunds.iEnterValueInPremiseCostsWith(String)</td>
+              <td>4</td>
+              <td class="duration" data-value="501850470">501ms</td>
+              <td class="duration" data-value="125462617">125ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_CostOfRaisingFunds.iHaveNavigatedToCostOfRaisingFundsSection()</td>
+              <td>4</td>
+              <td class="duration" data-value="19286080836">19s 286ms</td>
+              <td class="duration" data-value="4821520209">4s 821ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_CostOfRaisingFunds.iSeeTheValueOfTotalsInCostOfRaisingFundsIs(String)</td>
+              <td>1</td>
+              <td class="duration" data-value="205398989">205ms</td>
+              <td class="duration" data-value="205398989">205ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_CostOfRaisingFunds.iSeeTheValueOfTotalsInCostOfRaisingFundsIsNOTInCostOfRaisingFunds(String)</td>
+              <td>1</td>
+              <td class="duration" data-value="205819870">205ms</td>
+              <td class="duration" data-value="205819870">205ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_Donations.iAmInPreProductionEnvironmentAsTestUser()</td>
+              <td>1</td>
+              <td class="duration" data-value="15595248">015ms</td>
+              <td class="duration" data-value="15595248">015ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_Donations.iAmOnSoFASection()</td>
+              <td>111</td>
+              <td class="duration" data-value="2234104334869">37m 14s 104ms</td>
+              <td class="duration" data-value="20127066079">20s 127ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_Donations.iClickOnTheSaveAndNextButtonInDonationsPage()</td>
+              <td>2</td>
+              <td class="duration" data-value="2234567433">2s 234ms</td>
+              <td class="duration" data-value="1117283716">1s 117ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_Donations.iEnterValueInDonatedFixedAssetsWith(String)</td>
+              <td>4</td>
+              <td class="duration" data-value="721004660">721ms</td>
+              <td class="duration" data-value="180251165">180ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_Donations.iEnterValueInDonatedIntangibleAssetsWith(String)</td>
+              <td>4</td>
+              <td class="duration" data-value="619815660">619ms</td>
+              <td class="duration" data-value="154953915">154ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_Donations.iEnterValueInFixedAssetsDonatedWith(String)</td>
+              <td>4</td>
+              <td class="duration" data-value="586232777">586ms</td>
+              <td class="duration" data-value="146558194">146ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_Donations.iEnterValueInOtherDonationsCapitalWith(String)</td>
+              <td>4</td>
+              <td class="duration" data-value="584281209">584ms</td>
+              <td class="duration" data-value="146070302">146ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_Donations.iEnterValueInOtherDonationsRevenue(String)</td>
+              <td>4</td>
+              <td class="duration" data-value="614984915">614ms</td>
+              <td class="duration" data-value="153746228">153ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_Donations.iNavigateToDonationsSection()</td>
+              <td>4</td>
+              <td class="duration" data-value="18416182707">18s 416ms</td>
+              <td class="duration" data-value="4604045676">4s 604ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_Donations.iSeeIHaveNotNavigatedFromDonationsPage()</td>
+              <td>2</td>
+              <td class="duration" data-value="2970873143">2s 970ms</td>
+              <td class="duration" data-value="1485436571">1s 485ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_Donations.iSeeSeeTheNumberOfHelpLinkPresentOnThePageAre(String)</td>
+              <td>4</td>
+              <td class="duration" data-value="60406755">060ms</td>
+              <td class="duration" data-value="15101688">015ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_Donations.iSeeTheNumberOfErrorsStartingWithAllFinancialDataMustBeEnteredAre(String)</td>
+              <td>25</td>
+              <td class="duration" data-value="32435675199">32s 435ms</td>
+              <td class="duration" data-value="1297427007">1s 297ms</td>
+              <td class="failed">88.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_Donations.iSeeTheNumberOfErrorsStartingWithInvalidNumberFormatAre(String)</td>
+              <td>27</td>
+              <td class="duration" data-value="2116269016">2s 116ms</td>
+              <td class="duration" data-value="78380333">078ms</td>
+              <td class="failed">96.30%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_Donations.iSeeTheTotalCapitalFieldIsNotPopulatedWith(String)</td>
+              <td>1</td>
+              <td class="duration" data-value="206515916">206ms</td>
+              <td class="duration" data-value="206515916">206ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_Donations.iSeeTheTotalCapitalFieldIsPopulatedWith(String)</td>
+              <td>1</td>
+              <td class="duration" data-value="211802369">211ms</td>
+              <td class="duration" data-value="211802369">211ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_Donations.iSeeTheTotalFieldIsNotPopulatedWith(String)</td>
+              <td>1</td>
+              <td class="duration" data-value="42801738">042ms</td>
+              <td class="duration" data-value="42801738">042ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_Donations.iSeeTheTotalFieldIsPopulatedWith(String)</td>
+              <td>1</td>
+              <td class="duration" data-value="69367002">069ms</td>
+              <td class="duration" data-value="69367002">069ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_Donations.iSeeTheTotalRevenueFieldIsNotPopulatedWith(String)</td>
+              <td>1</td>
+              <td class="duration" data-value="45371043">045ms</td>
+              <td class="duration" data-value="45371043">045ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_Donations.iSeeTheTotalRevenueFieldIsPopulatedWith(String)</td>
+              <td>1</td>
+              <td class="duration" data-value="63663165">063ms</td>
+              <td class="duration" data-value="63663165">063ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_Donations.iWaitForPageToLoad()</td>
+              <td>45</td>
+              <td class="duration" data-value="2748251388">2s 748ms</td>
+              <td class="duration" data-value="61072253">061ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_ExitPackages.iCanSeeTheBottonTOTALRowValieForColumnNameValueOfOtherAgreedDeparturesNonContractualIsNow(String)</td>
+              <td>1</td>
+              <td class="duration" data-value="5037480361">5s 037ms</td>
+              <td class="duration" data-value="5037480361">5s 037ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_ExitPackages.iCanSeeTheBottonTOTALRowValueForColumnNameNumberOfCompulsoryRedundanciesIsNow(String)</td>
+              <td>1</td>
+              <td class="duration" data-value="36892222">036ms</td>
+              <td class="duration" data-value="36892222">036ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_ExitPackages.iCanSeeTheBottonTOTALRowValueForColumnNameOtherAgreedDeparturesIsNow(String)</td>
+              <td>1</td>
+              <td class="duration" data-value="35020119">035ms</td>
+              <td class="duration" data-value="35020119">035ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_ExitPackages.iCanSeeTheBottonTOTALRowValueForColumnNameValueOfCompulsoryRedundanciesContractualIsNow(String)</td>
+              <td>1</td>
+              <td class="duration" data-value="39855955">039ms</td>
+              <td class="duration" data-value="39855955">039ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_ExitPackages.iCanSeeTheBottonTOTALRowValueForColumnNameValueOfCompulsoryRedundanciesNonContractualIsNow(String)</td>
+              <td>1</td>
+              <td class="duration" data-value="25051173">025ms</td>
+              <td class="duration" data-value="25051173">025ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_ExitPackages.iCanSeeTheBottonTOTALRowValueForColumnNameValueOfOtherAgreedDeparturesContractualIsNow(String)</td>
+              <td>1</td>
+              <td class="duration" data-value="34673962">034ms</td>
+              <td class="duration" data-value="34673962">034ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_ExitPackages.iClickOnAddInstanceNumberOfTimes(String)</td>
+              <td>1</td>
+              <td class="duration" data-value="13378495668">13s 378ms</td>
+              <td class="duration" data-value="13378495668">13s 378ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_ExitPackages.iClickTheRemoveInstanceButton(String)</td>
+              <td>1</td>
+              <td class="duration" data-value="36483629639">36s 483ms</td>
+              <td class="duration" data-value="36483629639">36s 483ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_ExitPackages.iEnterValueInRowOneAndColumnNameNumberOfCompulsoryRedundanciesWith(String)</td>
+              <td>1</td>
+              <td class="duration" data-value="99514065">099ms</td>
+              <td class="duration" data-value="99514065">099ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_ExitPackages.iEnterValueInRowOneAndColumnNameNumberOfOtherAgreedDeparturesWith(String)</td>
+              <td>1</td>
+              <td class="duration" data-value="74165089">074ms</td>
+              <td class="duration" data-value="74165089">074ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_ExitPackages.iEnterValueInRowOneAndColumnNameValueOfCompulsoryRedundanciesContractualWih(String)</td>
+              <td>1</td>
+              <td class="duration" data-value="79515851">079ms</td>
+              <td class="duration" data-value="79515851">079ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_ExitPackages.iEnterValueInRowOneAndColumnNameValueOfCompulsoryRedundanciesNonContractualWith(String)</td>
+              <td>1</td>
+              <td class="duration" data-value="78581261">078ms</td>
+              <td class="duration" data-value="78581261">078ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_ExitPackages.iEnterValueInRowOneAndColumnNameValueOfOtherAgreedDeparturesContractualWith(String)</td>
+              <td>1</td>
+              <td class="duration" data-value="76497653">076ms</td>
+              <td class="duration" data-value="76497653">076ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_ExitPackages.iEnterValueInRowOneAndColumnNameValueOfOtherAgreedDeparturesNonContractualWith(String)</td>
+              <td>1</td>
+              <td class="duration" data-value="78031882">078ms</td>
+              <td class="duration" data-value="78031882">078ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_ExitPackages.iNavigateToExitPackageNonCivilServiceSchemeSection()</td>
+              <td>2</td>
+              <td class="duration" data-value="9735458905">9s 735ms</td>
+              <td class="duration" data-value="4867729452">4s 867ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_ExitPackages.iSeeTheNumberOfInstancesPresentAre(String)</td>
+              <td>1</td>
+              <td class="duration" data-value="68274261">068ms</td>
+              <td class="duration" data-value="68274261">068ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_ExitPackages.iSeeTheNumberOfIntsancesAre(String)</td>
+              <td>1</td>
+              <td class="duration" data-value="87669865">087ms</td>
+              <td class="duration" data-value="87669865">087ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_ExitPackages.iSelectDropDownBandValueWith(String)</td>
+              <td>1</td>
+              <td class="duration" data-value="88706964">088ms</td>
+              <td class="duration" data-value="88706964">088ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_LossOfOfficePayment.iEnterValueInROWLossOfOfficePaymentsLeftDuringTheYearAndColumnAccountingOfficeNumberOfPaymentsWithAValueOf(String)</td>
+              <td>4</td>
+              <td class="duration" data-value="1833767237">1s 833ms</td>
+              <td class="duration" data-value="458441809">458ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_LossOfOfficePayment.iEnterValueInROWLossOfOfficePaymentsLeftDuringTheYearAndColumnAccountingOfficeValueOfPaymentWithAValueOf(String)</td>
+              <td>4</td>
+              <td class="duration" data-value="1221162620">1s 221ms</td>
+              <td class="duration" data-value="305290655">305ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_LossOfOfficePayment.iEnterValueInROWLossOfOfficePaymentsLeftDuringTheYearAndColumnOtherTrusteesNumberOfPaymentsWithAValueOf(String)</td>
+              <td>4</td>
+              <td class="duration" data-value="1147681768">1s 147ms</td>
+              <td class="duration" data-value="286920442">286ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_LossOfOfficePayment.iEnterValueInROWLossOfOfficePaymentsLeftDuringTheYearAndColumnOtherTrusteesValueOfPaymentWithAValueOf(String)</td>
+              <td>4</td>
+              <td class="duration" data-value="1131945982">1s 131ms</td>
+              <td class="duration" data-value="282986495">282ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_LossOfOfficePayment.iEnterValueInROWLossOfOfficePaymentsServingAtYearEndAndColumnAccountingOfficeNumberOfPaymentWithAValueOf(String)</td>
+              <td>4</td>
+              <td class="duration" data-value="1369214482">1s 369ms</td>
+              <td class="duration" data-value="342303620">342ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_LossOfOfficePayment.iEnterValueInROWLossOfOfficePaymentsServingAtYearEndAndColumnAccountingOfficeValueOfPaymentWithAValueOf(String)</td>
+              <td>4</td>
+              <td class="duration" data-value="1226222305">1s 226ms</td>
+              <td class="duration" data-value="306555576">306ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_LossOfOfficePayment.iEnterValueInROWLossOfOfficePaymentsServingAtYearEndAndColumnOtherTrusteesNumberOfPaymentWithAValueOf(String)</td>
+              <td>4</td>
+              <td class="duration" data-value="1214567324">1s 214ms</td>
+              <td class="duration" data-value="303641831">303ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_LossOfOfficePayment.iEnterValueInROWLossOfOfficePaymentsServingAtYearEndAndColumnOtherTrusteesValueOfPaymentWithAValueOf(String)</td>
+              <td>4</td>
+              <td class="duration" data-value="1197591056">1s 197ms</td>
+              <td class="duration" data-value="299397764">299ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_LossOfOfficePayment.iHaveNavigatedToLossOfOfficePaymentsSection()</td>
+              <td>4</td>
+              <td class="duration" data-value="19814006440">19s 814ms</td>
+              <td class="duration" data-value="4953501610">4s 953ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_LossOfOfficePayment.iSeeTheValueInRowTotalAndColumnAccountingOfficeNumberOfPaymentsIsAndValueOfPaymentsIs(String,String)</td>
+              <td>1</td>
+              <td class="duration" data-value="210068575">210ms</td>
+              <td class="duration" data-value="210068575">210ms</td>
+              <td class="failed">0.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_LossOfOfficePayment.iSeeTheValueInRowTotalAndColumnAccountingOfficeNumberOfPaymentsIsNOTAndValueOfPaymentsIsNOT(String,String)</td>
+              <td>1</td>
+              <td class="duration" data-value="261448619">261ms</td>
+              <td class="duration" data-value="261448619">261ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_LossOfOfficePayment.iSeeTheValueInRowTotalAndColumnOtherTrusteesNumberOfPaymentsIsAbdValueOfPaymentIs(String,String)</td>
+              <td>1</td>
+              <td class="duration" data-value="0">000ms</td>
+              <td class="duration" data-value="0">000ms</td>
+              <td class="failed">0.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_LossOfOfficePayment.iSeeTheValueInRowTotalAndColumnOtherTrusteesNumberOfPaymentsIsNOTAbdValueOfPaymentIsNOT(String,String)</td>
+              <td>1</td>
+              <td class="duration" data-value="94448309">094ms</td>
+              <td class="duration" data-value="94448309">094ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_LossOfOfficePayment.iSelectValueInROWLossOfLossOfOfficePaymentsLeftDuringTheYearWithADropDownValueOf(String)</td>
+              <td>4</td>
+              <td class="duration" data-value="320705830">320ms</td>
+              <td class="duration" data-value="80176457">080ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_LossOfOfficePayment.iSelectValueInROWLossOfOfficePaymentsServingAtYearEndWithADropDownValueOf(String)</td>
+              <td>4</td>
+              <td class="duration" data-value="341442392">341ms</td>
+              <td class="duration" data-value="85360598">085ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_NumberOfEmployeesWhoseEmolumentsExceed60K.iCanSeeTheTotalToBeAs(String)</td>
+              <td>1</td>
+              <td class="duration" data-value="5041590983">5s 041ms</td>
+              <td class="duration" data-value="5041590983">5s 041ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_NumberOfEmployeesWhoseEmolumentsExceed60K.iEnterValueInROWAndColumnNamedNumberWith(int,String)</td>
+              <td>1</td>
+              <td class="duration" data-value="144816328">144ms</td>
+              <td class="duration" data-value="144816328">144ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_NumberOfEmployeesWhoseEmolumentsExceed60K.iNavigateToNumbersOfEmployeesWhoseEmolumentsExceed&pound;KSection(int)</td>
+              <td>1</td>
+              <td class="duration" data-value="4996234870">4s 996ms</td>
+              <td class="duration" data-value="4996234870">4s 996ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_NumberOfEmployeesWhoseEmolumentsExceed60K.iSelectDropDownValueInROWAndColumnNamedAnnualisedEmolumentBandsWith(int,String)</td>
+              <td>1</td>
+              <td class="duration" data-value="200217268">200ms</td>
+              <td class="duration" data-value="200217268">200ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_OffPayrollArrangements.iEnterValueInRowOtherOffPayrollArrangementsAndColumnOneWithAndColumnTwoWith(String,String)</td>
+              <td>4</td>
+              <td class="duration" data-value="2217511796">2s 217ms</td>
+              <td class="duration" data-value="554377949">554ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_OffPayrollArrangements.iEnterValueInRowTrusteeOffPayrollArrangementsAndColumnOneWithAndColumnTwoWith(String,String)</td>
+              <td>4</td>
+              <td class="duration" data-value="2246729032">2s 246ms</td>
+              <td class="duration" data-value="561682258">561ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_OffPayrollArrangements.iNavigateToOffPayrollArrangementsPage()</td>
+              <td>4</td>
+              <td class="duration" data-value="20126269809">20s 126ms</td>
+              <td class="duration" data-value="5031567452">5s 031ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_OffPayrollArrangements.iSeeTheValueInRowTotalAndColumnOneWithAndColumnTwoWith(String,String)</td>
+              <td>1</td>
+              <td class="duration" data-value="1179527532">1s 179ms</td>
+              <td class="duration" data-value="1179527532">1s 179ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_OffPayrollArrangements.iSeeTheValueInRowTotalAndColumnOneWithNOTAndColumnTwoWithNOT(String,String)</td>
+              <td>1</td>
+              <td class="duration" data-value="1174474882">1s 174ms</td>
+              <td class="duration" data-value="1174474882">1s 174ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_OtherExpenditure.iEnterValueInFieldOtherExpenditureNotAttributableToASpecificExpenditureHeadingWith(String)</td>
+              <td>26</td>
+              <td class="duration" data-value="3291608204">3s 291ms</td>
+              <td class="duration" data-value="126600315">126ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_OtherExpenditure.iNavigateToTheOtherExpenditurePage()</td>
+              <td>26</td>
+              <td class="duration" data-value="126753447318">2m 6s 753ms</td>
+              <td class="duration" data-value="4875132589">4s 875ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_OtherIncome_OtherIncome.iCanSeeTheTotalFieldIsNOTInOtherIncomePage(String)</td>
+              <td>1</td>
+              <td class="duration" data-value="199032177">199ms</td>
+              <td class="duration" data-value="199032177">199ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_OtherIncome_OtherIncome.iCanSeeTheTotalFieldIsNow(String)</td>
+              <td>1</td>
+              <td class="duration" data-value="359948070">359ms</td>
+              <td class="duration" data-value="359948070">359ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_OtherIncome_OtherIncome.iEnterTheValueInAcademiesWith(String)</td>
+              <td>4</td>
+              <td class="duration" data-value="606281510">606ms</td>
+              <td class="duration" data-value="151570377">151ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_OtherIncome_OtherIncome.iEnterTheValueInGovernmentSourcesNonGrantWith(String)</td>
+              <td>4</td>
+              <td class="duration" data-value="533372207">533ms</td>
+              <td class="duration" data-value="133343051">133ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_OtherIncome_OtherIncome.iEnterTheValueInNonGovernmentRevenueWith(String)</td>
+              <td>4</td>
+              <td class="duration" data-value="520539194">520ms</td>
+              <td class="duration" data-value="130134798">130ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_OtherIncome_OtherIncome.iEnterTheValueInNotionalApprenticeshipLevyIncomeWith(String)</td>
+              <td>4</td>
+              <td class="duration" data-value="510500041">510ms</td>
+              <td class="duration" data-value="127625010">127ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_OtherIncome_OtherIncome.iEnterValueInFieldInvestmenIncomeInterestWithInOtherIncome(String)</td>
+              <td>4</td>
+              <td class="duration" data-value="518299277">518ms</td>
+              <td class="duration" data-value="129574819">129ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_OtherIncome_OtherIncome.iNavigateToTheOtherIncomePage()</td>
+              <td>4</td>
+              <td class="duration" data-value="19328532093">19s 328ms</td>
+              <td class="duration" data-value="4832133023">4s 832ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_OtherIncome_TransferedSoFADisclosures.iClickOnOnTheSaveAndNextButtonInTransferSoFADisclosurePage()</td>
+              <td>3</td>
+              <td class="duration" data-value="22161">000ms</td>
+              <td class="duration" data-value="7387">000ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_OtherIncome_TransferedSoFADisclosures.iEnterValueInFieldWithFieldsetTransferredInExistingAcademiesJoiningTrustWith(String)</td>
+              <td>3</td>
+              <td class="duration" data-value="88742">000ms</td>
+              <td class="duration" data-value="29580">000ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_OtherIncome_TransferedSoFADisclosures.iNavigateToTheTransfersSoFADisclosures()</td>
+              <td>3</td>
+              <td class="duration" data-value="216700">000ms</td>
+              <td class="duration" data-value="72233">000ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_OtherTradingActivities.iEnterValueInFieldCateringIncomeWith(String)</td>
+              <td>4</td>
+              <td class="duration" data-value="512947061">512ms</td>
+              <td class="duration" data-value="128236765">128ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_OtherTradingActivities.iEnterValueInFieldHireOfFacilitiesWith(String)</td>
+              <td>4</td>
+              <td class="duration" data-value="612057573">612ms</td>
+              <td class="duration" data-value="153014393">153ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_OtherTradingActivities.iEnterValueInFieldOthersWith(String)</td>
+              <td>4</td>
+              <td class="duration" data-value="474880290">474ms</td>
+              <td class="duration" data-value="118720072">118ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_OtherTradingActivities.iEnterValueInFieldRecieiptsFromSupplyTeacherInsuranceClaimsWith(String)</td>
+              <td>4</td>
+              <td class="duration" data-value="477122594">477ms</td>
+              <td class="duration" data-value="119280648">119ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_OtherTradingActivities.iEnterValueInFieldRentalIncomeWith(String)</td>
+              <td>4</td>
+              <td class="duration" data-value="504843365">504ms</td>
+              <td class="duration" data-value="126210841">126ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_OtherTradingActivities.iEnterValueInFieldRiskProtectionArrangementsClaimsWith(String)</td>
+              <td>4</td>
+              <td class="duration" data-value="481347125">481ms</td>
+              <td class="duration" data-value="120336781">120ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_OtherTradingActivities.iHaveNavigatedToOtherTradingActivitiesSection()</td>
+              <td>4</td>
+              <td class="duration" data-value="19515239999">19s 515ms</td>
+              <td class="duration" data-value="4878809999">4s 878ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_OtherTradingActivities.iSeeValueInFieldTotalIsNOTInOtherTradingActivitiesPage(String)</td>
+              <td>1</td>
+              <td class="duration" data-value="204339413">204ms</td>
+              <td class="duration" data-value="204339413">204ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_OtherTradingActivities.iSeeValueInFieldTotalIsNowInOtherTradingActivitiesPage(String)</td>
+              <td>1</td>
+              <td class="duration" data-value="208370450">208ms</td>
+              <td class="duration" data-value="208370450">208ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_ProvisionOFBoardingActivitiesIncome.iHaveNavigatesToTheProvisionOfActivitiesIncomePage()</td>
+              <td>4</td>
+              <td class="duration" data-value="19300572779">19s 300ms</td>
+              <td class="duration" data-value="4825143194">4s 825ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_ProvisionOFBoardingActivitiesIncome.iInputValueInFieldWithFieldsetFeeIncomeWith(String)</td>
+              <td>4</td>
+              <td class="duration" data-value="640847993">640ms</td>
+              <td class="duration" data-value="160211998">160ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_ProvisionOFBoardingActivitiesIncome.iInputValueInFieldWithFieldsetGrantsDfEEFAWith(String)</td>
+              <td>4</td>
+              <td class="duration" data-value="525870258">525ms</td>
+              <td class="duration" data-value="131467564">131ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_ProvisionOFBoardingActivitiesIncome.iInputValueInFieldWithFieldsetGrantsEqualityAndHumanRightsCommissionEHRCWith(String)</td>
+              <td>4</td>
+              <td class="duration" data-value="502466476">502ms</td>
+              <td class="duration" data-value="125616619">125ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_ProvisionOFBoardingActivitiesIncome.iInputValueInFieldWithFieldsetGrantsOfficeOfTheChildrenSCommissionerOCCWith(String)</td>
+              <td>4</td>
+              <td class="duration" data-value="539416850">539ms</td>
+              <td class="duration" data-value="134854212">134ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_ProvisionOFBoardingActivitiesIncome.iInputValueInFieldWithFieldsetGrantsOtherGovernmentWith(String)</td>
+              <td>4</td>
+              <td class="duration" data-value="518168478">518ms</td>
+              <td class="duration" data-value="129542119">129ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_ProvisionOFBoardingActivitiesIncome.iInputValueInFieldWithFieldsetGrantsSkillsFundingAgencySFAWith(String)</td>
+              <td>4</td>
+              <td class="duration" data-value="505025475">505ms</td>
+              <td class="duration" data-value="126256368">126ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_ProvisionOFBoardingActivitiesIncome.iInputValueInFieldWithFieldsetGrantsStandardsAndTeachingAgencySTAWith(String)</td>
+              <td>4</td>
+              <td class="duration" data-value="505014725">505ms</td>
+              <td class="duration" data-value="126253681">126ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_ProvisionOFBoardingActivitiesIncome.iInputValueInFieldWithFieldsetOtherIncomeWith(String)</td>
+              <td>4</td>
+              <td class="duration" data-value="532855732">532ms</td>
+              <td class="duration" data-value="133213933">133ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_ProvisionOFBoardingActivitiesIncome.iInputValueInFieldWithGrantsNationalCollegeForTeachingAndLearningNCTLWith(String)</td>
+              <td>4</td>
+              <td class="duration" data-value="514240175">514ms</td>
+              <td class="duration" data-value="128560043">128ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_ProvisionOFBoardingActivitiesIncome.iSeeTheInputValueInFieldWithFieldsetTotalIsNOTWith(String)</td>
+              <td>1</td>
+              <td class="duration" data-value="204740845">204ms</td>
+              <td class="duration" data-value="204740845">204ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_ProvisionOFBoardingActivitiesIncome.iSeeTheInputValueInFieldWithFieldsetTotalWith(String)</td>
+              <td>1</td>
+              <td class="duration" data-value="203166906">203ms</td>
+              <td class="duration" data-value="203166906">203ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_ProvisionOfBoardingActivitiesExpenditure.iEnterValueInFieldDirectCostsForGoodsAndServicesWith(String)</td>
+              <td>4</td>
+              <td class="duration" data-value="550753368">550ms</td>
+              <td class="duration" data-value="137688342">137ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_ProvisionOfBoardingActivitiesExpenditure.iEnterValueInFieldDirectStaffPayWith(String)</td>
+              <td>4</td>
+              <td class="duration" data-value="673738495">673ms</td>
+              <td class="duration" data-value="168434623">168ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_ProvisionOfBoardingActivitiesExpenditure.iEnterValueInFieldIndirectCostsForAmortisationWith(String)</td>
+              <td>4</td>
+              <td class="duration" data-value="530848806">530ms</td>
+              <td class="duration" data-value="132712201">132ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_ProvisionOfBoardingActivitiesExpenditure.iEnterValueInFieldIndirectCostsForDepreciationWith(String)</td>
+              <td>4</td>
+              <td class="duration" data-value="543800647">543ms</td>
+              <td class="duration" data-value="135950161">135ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_ProvisionOfBoardingActivitiesExpenditure.iEnterValueInFieldIndirectCostsForImpairmentWith(String)</td>
+              <td>4</td>
+              <td class="duration" data-value="540933169">540ms</td>
+              <td class="duration" data-value="135233292">135ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_ProvisionOfBoardingActivitiesExpenditure.iEnterValueInFieldIndirectCostsForMaintenanceOfPremisesWith(String)</td>
+              <td>4</td>
+              <td class="duration" data-value="532624155">532ms</td>
+              <td class="duration" data-value="133156038">133ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_ProvisionOfBoardingActivitiesExpenditure.iEnterValueInFieldIndirectCostsForStaffPayWith(String)</td>
+              <td>4</td>
+              <td class="duration" data-value="509974832">509ms</td>
+              <td class="duration" data-value="127493708">127ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_ProvisionOfBoardingActivitiesExpenditure.iEnterValueInFieldIndirectCostsForUtilitiesWith(String)</td>
+              <td>4</td>
+              <td class="duration" data-value="515644248">515ms</td>
+              <td class="duration" data-value="128911062">128ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_ProvisionOfBoardingActivitiesExpenditure.iEnterValueInFieldOtherDirectCostsWith(String)</td>
+              <td>4</td>
+              <td class="duration" data-value="535290562">535ms</td>
+              <td class="duration" data-value="133822640">133ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_ProvisionOfBoardingActivitiesExpenditure.iEnterValueInFieldOtherIndirectCostsWith(String)</td>
+              <td>4</td>
+              <td class="duration" data-value="558116048">558ms</td>
+              <td class="duration" data-value="139529012">139ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_ProvisionOfBoardingActivitiesExpenditure.iHaveNavigatesToTheProvisionOfActivitiesExpenditurePage()</td>
+              <td>4</td>
+              <td class="duration" data-value="19430394392">19s 430ms</td>
+              <td class="duration" data-value="4857598598">4s 857ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_ProvisionOfBoardingActivitiesExpenditure.iSeeTheValueInFieldTotalDirectCostIs(String)</td>
+              <td>1</td>
+              <td class="duration" data-value="205046470">205ms</td>
+              <td class="duration" data-value="205046470">205ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_ProvisionOfBoardingActivitiesExpenditure.iSeeTheValueInFieldTotalDirectCostIsNOT(String)</td>
+              <td>1</td>
+              <td class="duration" data-value="207034445">207ms</td>
+              <td class="duration" data-value="207034445">207ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_ProvisionOfBoardingActivitiesExpenditure.iSeeTheValueInFieldTotalIndirectCostsIs(String)</td>
+              <td>1</td>
+              <td class="duration" data-value="200408390">200ms</td>
+              <td class="duration" data-value="200408390">200ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_ProvisionOfBoardingActivitiesExpenditure.iSeeTheValueInFieldTotalIndirectCostsIsNOT(String)</td>
+              <td>1</td>
+              <td class="duration" data-value="208760151">208ms</td>
+              <td class="duration" data-value="208760151">208ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_RelatedPartyTransactions.iCanSeeTheRowNamedTotalValueForPaidAsStaffIs(String)</td>
+              <td>1</td>
+              <td class="duration" data-value="79125988">079ms</td>
+              <td class="duration" data-value="79125988">079ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_RelatedPartyTransactions.iCanSeeTheRowNamedTotalValueForPaidAsStaffIsNot(String)</td>
+              <td>1</td>
+              <td class="duration" data-value="85222875">085ms</td>
+              <td class="duration" data-value="85222875">085ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_RelatedPartyTransactions.iCanSeeTheRowNamedTotalValueForPaidAsTrusteesIs(String)</td>
+              <td>1</td>
+              <td class="duration" data-value="238850744">238ms</td>
+              <td class="duration" data-value="238850744">238ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_RelatedPartyTransactions.iCanSeeTheRowNamedTotalValueForPaidAsTrusteesIsNot(String)</td>
+              <td>1</td>
+              <td class="duration" data-value="245814023">245ms</td>
+              <td class="duration" data-value="245814023">245ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_RelatedPartyTransactions.iClickOnAddInstanceButton()</td>
+              <td>8</td>
+              <td class="duration" data-value="5533820234">5s 533ms</td>
+              <td class="duration" data-value="691727529">691ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_RelatedPartyTransactions.iClickOnAddInstanceNumberOfTimesRelatedPartyTransactionsPage(String)</td>
+              <td>1</td>
+              <td class="duration" data-value="884772932">884ms</td>
+              <td class="duration" data-value="884772932">884ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_RelatedPartyTransactions.iClickOnRemoveLinkForInstanceInRelatedPartyTransactionsPage(String)</td>
+              <td>1</td>
+              <td class="duration" data-value="2059142909">2s 059ms</td>
+              <td class="duration" data-value="2059142909">2s 059ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_RelatedPartyTransactions.iEnterValueInNumberPaidAsStaffWithForRowNumber(String,String)</td>
+              <td>12</td>
+              <td class="duration" data-value="5520227893">5s 520ms</td>
+              <td class="duration" data-value="460018991">460ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_RelatedPartyTransactions.iEnterValueInNumberPaidAsTrusteesWithForRowNumber(String,String)</td>
+              <td>12</td>
+              <td class="duration" data-value="5619523876">5s 619ms</td>
+              <td class="duration" data-value="468293656">468ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_RelatedPartyTransactions.iNavigateToRelatedPartyTransactionsSection()</td>
+              <td>5</td>
+              <td class="duration" data-value="24935165185">24s 935ms</td>
+              <td class="duration" data-value="4987033037">4s 987ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_RelatedPartyTransactions.iSeeTheNumberOfInstancesPresentAreInNumberOfInstancesToBeAdded(String)</td>
+              <td>1</td>
+              <td class="duration" data-value="70004930">070ms</td>
+              <td class="duration" data-value="70004930">070ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_RelatedPartyTransactions.iSeeTheNumberOfInstancesPresentAreInRelatedPartyTransactionsPage(String)</td>
+              <td>1</td>
+              <td class="duration" data-value="71130197">071ms</td>
+              <td class="duration" data-value="71130197">071ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_RelatedPartyTransactions.iSelectAValueFromTheDropDownMenuForRowNumber(String,String)</td>
+              <td>12</td>
+              <td class="duration" data-value="1922558631">1s 922ms</td>
+              <td class="duration" data-value="160213219">160ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_RevenueGrantsDfEESFA.iEnterValueInRowGeneralAnnualGrantAndColumnCashReceivedInPeriodPerDFEAndESFARecordWithInDFEESFAPage(String)</td>
+              <td>8</td>
+              <td class="duration" data-value="3640436943">3s 640ms</td>
+              <td class="duration" data-value="455054617">455ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_RevenueGrantsDfEESFA.iEnterValueInRowGeneralAnnualGrantAndColumnCashRecievedInPeriodPerAcademiesRecordIfDifferentToDFEAndESFARecordWithInDFEESFAPage(String)</td>
+              <td>8</td>
+              <td class="duration" data-value="3625764789">3s 625ms</td>
+              <td class="duration" data-value="453220598">453ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_RevenueGrantsDfEESFA.iEnterValueInRowGeneralAnnualGrantAndColumnExpenditureRecordedInTheAccountsFromThisGrantWithInDFEESFAPage(String)</td>
+              <td>8</td>
+              <td class="duration" data-value="3824857626">3s 824ms</td>
+              <td class="duration" data-value="478107203">478ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_RevenueGrantsDfEESFA.iEnterValueInRowGeneralAnnualGrantAndColumnGranstValueInAccountsWithInDFEESFAPage(String)</td>
+              <td>8</td>
+              <td class="duration" data-value="4298718737">4s 298ms</td>
+              <td class="duration" data-value="537339842">537ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_RevenueGrantsDfEESFA.iEnterValueInRowInsuranceAndColumnCashReceivedInPeriodPerDFEAndESFARecordWithInDFEESFAPage(String)</td>
+              <td>8</td>
+              <td class="duration" data-value="3935321298">3s 935ms</td>
+              <td class="duration" data-value="491915162">491ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_RevenueGrantsDfEESFA.iEnterValueInRowInsuranceAndColumnCashRecievedInPeriodPerAcademiesRecordIfDifferentToDFEAndESFARecordWithInDFEESFAPage(String)</td>
+              <td>8</td>
+              <td class="duration" data-value="3412463564">3s 412ms</td>
+              <td class="duration" data-value="426557945">426ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_RevenueGrantsDfEESFA.iEnterValueInRowInsuranceAndColumnExpenditureRecordedInTheAccountsFromThisGrantWithInDFEESFAPage(String)</td>
+              <td>8</td>
+              <td class="duration" data-value="3914766342">3s 914ms</td>
+              <td class="duration" data-value="489345792">489ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_RevenueGrantsDfEESFA.iEnterValueInRowInsuranceAndColumnGranstValueInAccountsWithInDFEESFAPage(String)</td>
+              <td>8</td>
+              <td class="duration" data-value="4164776274">4s 164ms</td>
+              <td class="duration" data-value="520597034">520ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_RevenueGrantsDfEESFA.iEnterValueInRowOldSkillsFundingAgencyAndColumnCashReceivedInPeriodPerDFEAndESFARecordWithInRevenueGrantsDFEESFAPage(String)</td>
+              <td>8</td>
+              <td class="duration" data-value="3496547340">3s 496ms</td>
+              <td class="duration" data-value="437068417">437ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_RevenueGrantsDfEESFA.iEnterValueInRowOldSkillsFundingAgencyAndColumnCashRecievedInPeriodPerAcademiesRecordIfDifferentToDFEAndESFARecordWithInRevenueGrantsDFEESFAPage(String)</td>
+              <td>8</td>
+              <td class="duration" data-value="3248534124">3s 248ms</td>
+              <td class="duration" data-value="406066765">406ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_RevenueGrantsDfEESFA.iEnterValueInRowOldSkillsFundingAgencyAndColumnExpenditureRecordedInTheAccountsFromThisGrantWithInRevenueGrantsDFEESFAPage(String)</td>
+              <td>8</td>
+              <td class="duration" data-value="3501626426">3s 501ms</td>
+              <td class="duration" data-value="437703303">437ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_RevenueGrantsDfEESFA.iEnterValueInRowOldSkillsFundingAgencyAndColumnGranstValueInAccountsWithInRevenueGrantsDFEESFAPage(String)</td>
+              <td>8</td>
+              <td class="duration" data-value="3537055162">3s 537ms</td>
+              <td class="duration" data-value="442131895">442ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_RevenueGrantsDfEESFA.iEnterValueInRowOtherAndColumnCashReceivedInPeriodPerDFEAndESFARecordWithInDFEESFAPageInRevenueGrants(String)</td>
+              <td>8</td>
+              <td class="duration" data-value="3895101240">3s 895ms</td>
+              <td class="duration" data-value="486887655">486ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_RevenueGrantsDfEESFA.iEnterValueInRowOtherAndColumnCashRecievedInPeriodPerAcademiesRecordIfDifferentToDFEAndESFARecordWithInDFEESFAPageInRevenueGrants(String)</td>
+              <td>8</td>
+              <td class="duration" data-value="3973999805">3s 973ms</td>
+              <td class="duration" data-value="496749975">496ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_RevenueGrantsDfEESFA.iEnterValueInRowOtherAndColumnExpenditureRecordedInTheAccountsFromThisGrantWithInDFEESFAPageInRevenueGrants(String)</td>
+              <td>8</td>
+              <td class="duration" data-value="3777720722">3s 777ms</td>
+              <td class="duration" data-value="472215090">472ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_RevenueGrantsDfEESFA.iEnterValueInRowOtherAndColumnGranstValueInAccountsWithInDFEESFAPageInRevenueGrants(String)</td>
+              <td>8</td>
+              <td class="duration" data-value="3582350646">3s 582ms</td>
+              <td class="duration" data-value="447793830">447ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_RevenueGrantsDfEESFA.iEnterValueInRowPEAndSportsGrantAndColumnCashReceivedInPeriodPerDFEAndESFARecordWithInDFEESFAPage(String)</td>
+              <td>8</td>
+              <td class="duration" data-value="3505135672">3s 505ms</td>
+              <td class="duration" data-value="438141959">438ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_RevenueGrantsDfEESFA.iEnterValueInRowPEAndSportsGrantAndColumnCashRecievedInPeriodPerAcademiesRecordIfDifferentToDFEAndESFARecordWithInDFEESFAPage(String)</td>
+              <td>8</td>
+              <td class="duration" data-value="3214764302">3s 214ms</td>
+              <td class="duration" data-value="401845537">401ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_RevenueGrantsDfEESFA.iEnterValueInRowPEAndSportsGrantAndColumnExpenditureRecordedInTheAccountsFromThisGrantWithInDFEESFAPage(String)</td>
+              <td>8</td>
+              <td class="duration" data-value="3497045324">3s 497ms</td>
+              <td class="duration" data-value="437130665">437ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_RevenueGrantsDfEESFA.iEnterValueInRowPEAndSportsGrantAndColumnGranstValueInAccountsWithInDFEESFAPage(String)</td>
+              <td>8</td>
+              <td class="duration" data-value="3664147527">3s 664ms</td>
+              <td class="duration" data-value="458018440">458ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_RevenueGrantsDfEESFA.iEnterValueInRowPupilNumberAdjustmentAndColumnCashReceivedInPeriodPerDFEAndESFARecordWithInDFEESFAPage(String)</td>
+              <td>8</td>
+              <td class="duration" data-value="3458728423">3s 458ms</td>
+              <td class="duration" data-value="432341052">432ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_RevenueGrantsDfEESFA.iEnterValueInRowPupilNumberAdjustmentAndColumnCashRecievedInPeriodPerAcademiesRecordIfDifferentToDFEAndESFARecordWithInDFEESFAPage(String)</td>
+              <td>8</td>
+              <td class="duration" data-value="3407025153">3s 407ms</td>
+              <td class="duration" data-value="425878144">425ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_RevenueGrantsDfEESFA.iEnterValueInRowPupilNumberAdjustmentAndColumnExpenditureRecordedInTheAccountsFromThisGrantWithInDFEESFAPage(String)</td>
+              <td>8</td>
+              <td class="duration" data-value="3562844762">3s 562ms</td>
+              <td class="duration" data-value="445355595">445ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_RevenueGrantsDfEESFA.iEnterValueInRowPupilNumberAdjustmentAndColumnGranstValueInAccountsWithInDFEESFAPage(String)</td>
+              <td>8</td>
+              <td class="duration" data-value="3492899266">3s 492ms</td>
+              <td class="duration" data-value="436612408">436ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_RevenueGrantsDfEESFA.iEnterValueInRowPupilPremiumAndServicePremiumAndColumnCashReceivedInPeriodPerDFEAndESFARecordWithInDFEESFAPage(String)</td>
+              <td>8</td>
+              <td class="duration" data-value="3531125756">3s 531ms</td>
+              <td class="duration" data-value="441390719">441ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_RevenueGrantsDfEESFA.iEnterValueInRowPupilPremiumAndServicePremiumAndColumnCashRecievedInPeriodPerAcademiesRecordIfDifferentToDFEAndESFARecordWithInDFEESFAPage(String)</td>
+              <td>8</td>
+              <td class="duration" data-value="3269270308">3s 269ms</td>
+              <td class="duration" data-value="408658788">408ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_RevenueGrantsDfEESFA.iEnterValueInRowPupilPremiumAndServicePremiumAndColumnExpenditureRecordedInTheAccountsFromThisGrantWithInDFEESFAPage(String)</td>
+              <td>8</td>
+              <td class="duration" data-value="3584284818">3s 584ms</td>
+              <td class="duration" data-value="448035602">448ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_RevenueGrantsDfEESFA.iEnterValueInRowPupilPremiumAndServicePremiumAndColumnGranstValueInAccountsWithInDFEESFAPage(String)</td>
+              <td>8</td>
+              <td class="duration" data-value="3694517973">3s 694ms</td>
+              <td class="duration" data-value="461814746">461ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_RevenueGrantsDfEESFA.iEnterValueInRowRatesReclaimAndColumnCashReceivedInPeriodPerDFEAndESFARecordWithInDFEESFAPage(String)</td>
+              <td>8</td>
+              <td class="duration" data-value="3651240150">3s 651ms</td>
+              <td class="duration" data-value="456405018">456ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_RevenueGrantsDfEESFA.iEnterValueInRowRatesReclaimAndColumnCashRecievedInPeriodPerAcademiesRecordIfDifferentToDFEAndESFARecordWithInDFEESFAPage(String)</td>
+              <td>8</td>
+              <td class="duration" data-value="3546613702">3s 546ms</td>
+              <td class="duration" data-value="443326712">443ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_RevenueGrantsDfEESFA.iEnterValueInRowRatesReclaimAndColumnExpenditureRecordedInTheAccountsFromThisGrantWithInDFEESFAPage(String)</td>
+              <td>8</td>
+              <td class="duration" data-value="3757425653">3s 757ms</td>
+              <td class="duration" data-value="469678206">469ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_RevenueGrantsDfEESFA.iEnterValueInRowRatesReclaimAndColumnGranstValueInAccountsWithInDFEESFAPage(String)</td>
+              <td>8</td>
+              <td class="duration" data-value="3680550900">3s 680ms</td>
+              <td class="duration" data-value="460068862">460ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_RevenueGrantsDfEESFA.iEnterValueInRowSponsorCapacityGrantAndColumnCashReceivedInPeriodPerDFEAndESFARecordWithInDFEESFAPage(String)</td>
+              <td>8</td>
+              <td class="duration" data-value="3764839080">3s 764ms</td>
+              <td class="duration" data-value="470604885">470ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_RevenueGrantsDfEESFA.iEnterValueInRowSponsorCapacityGrantAndColumnCashRecievedInPeriodPerAcademiesRecordIfDifferentToDFEAndESFARecordWithInDFEESFAPage(String)</td>
+              <td>8</td>
+              <td class="duration" data-value="3596255210">3s 596ms</td>
+              <td class="duration" data-value="449531901">449ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_RevenueGrantsDfEESFA.iEnterValueInRowSponsorCapacityGrantAndColumnExpenditureRecordedInTheAccountsFromThisGrantWithInDFEESFAPage(String)</td>
+              <td>8</td>
+              <td class="duration" data-value="3821682302">3s 821ms</td>
+              <td class="duration" data-value="477710287">477ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_RevenueGrantsDfEESFA.iEnterValueInRowSponsorCapacityGrantAndColumnGranstValueInAccountsWithInDFEESFAPage(String)</td>
+              <td>8</td>
+              <td class="duration" data-value="3908091004">3s 908ms</td>
+              <td class="duration" data-value="488511375">488ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_RevenueGrantsDfEESFA.iEnterValueInRowStartUpGrantsAndColumnCashReceivedInPeriodPerDFEAndESFARecordWithInDFEESFAPage(String)</td>
+              <td>8</td>
+              <td class="duration" data-value="3740330491">3s 740ms</td>
+              <td class="duration" data-value="467541311">467ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_RevenueGrantsDfEESFA.iEnterValueInRowStartUpGrantsAndColumnCashRecievedInPeriodPerAcademiesRecordIfDifferentToDFEAndESFARecordWithInDFEESFAPage(String)</td>
+              <td>8</td>
+              <td class="duration" data-value="3412593252">3s 412ms</td>
+              <td class="duration" data-value="426574156">426ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_RevenueGrantsDfEESFA.iEnterValueInRowStartUpGrantsAndColumnExpenditureRecordedInTheAccountsFromThisGrantWithInDFEESFAPage(String)</td>
+              <td>8</td>
+              <td class="duration" data-value="3687503521">3s 687ms</td>
+              <td class="duration" data-value="460937940">460ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_RevenueGrantsDfEESFA.iEnterValueInRowStartUpGrantsAndColumnGranstValueInAccountsWithInDFEESFAPage(String)</td>
+              <td>8</td>
+              <td class="duration" data-value="3791004843">3s 791ms</td>
+              <td class="duration" data-value="473875605">473ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_RevenueGrantsDfEESFA.iEnterValueInRowStudentSupportServicesAndColumnCashReceivedInPeriodPerDFEAndESFARecordWithInDFEESFAPage(String)</td>
+              <td>8</td>
+              <td class="duration" data-value="3587861178">3s 587ms</td>
+              <td class="duration" data-value="448482647">448ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_RevenueGrantsDfEESFA.iEnterValueInRowStudentSupportServicesAndColumnCashRecievedInPeriodPerAcademiesRecordIfDifferentToDFEAndESFARecordWithInDFEESFAPage(String)</td>
+              <td>8</td>
+              <td class="duration" data-value="3274372249">3s 274ms</td>
+              <td class="duration" data-value="409296531">409ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_RevenueGrantsDfEESFA.iEnterValueInRowStudentSupportServicesAndColumnExpenditureRecordedInTheAccountsFromThisGrantWithInDFEESFAPage(String)</td>
+              <td>8</td>
+              <td class="duration" data-value="3505167333">3s 505ms</td>
+              <td class="duration" data-value="438145916">438ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_RevenueGrantsDfEESFA.iEnterValueInRowStudentSupportServicesAndColumnGranstValueInAccountsWithInDFEESFAPage(String)</td>
+              <td>8</td>
+              <td class="duration" data-value="3541507594">3s 541ms</td>
+              <td class="duration" data-value="442688449">442ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_RevenueGrantsDfEESFA.iEnterValueInRowUniversalInfantFreeSchoolMealsAndColumnCashReceivedInPeriodPerDFEAndESFARecordWithInDFEESFAPage(String)</td>
+              <td>8</td>
+              <td class="duration" data-value="3799475192">3s 799ms</td>
+              <td class="duration" data-value="474934399">474ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_RevenueGrantsDfEESFA.iEnterValueInRowUniversalInfantFreeSchoolMealsAndColumnCashRecievedInPeriodPerAcademiesRecordIfDifferentToDFEAndESFARecordWithInDFEESFAPage(String)</td>
+              <td>8</td>
+              <td class="duration" data-value="3403708143">3s 403ms</td>
+              <td class="duration" data-value="425463517">425ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_RevenueGrantsDfEESFA.iEnterValueInRowUniversalInfantFreeSchoolMealsAndColumnExpenditureRecordedInTheAccountsFromThisGrantWithInDFEESFAPage(String)</td>
+              <td>8</td>
+              <td class="duration" data-value="3819621995">3s 819ms</td>
+              <td class="duration" data-value="477452749">477ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_RevenueGrantsDfEESFA.iEnterValueInRowUniversalInfantFreeSchoolMealsAndColumnGranstValueInAccountsWithInDFEESFAPage(String)</td>
+              <td>8</td>
+              <td class="duration" data-value="3657098044">3s 657ms</td>
+              <td class="duration" data-value="457137255">457ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_RevenueGrantsDfEESFA.iEnterValueInRowYearSevenCatchUpGrantAndColumnCashReceivedInPeriodPerDFEAndESFARecordWithInDFEESFAPage(String)</td>
+              <td>8</td>
+              <td class="duration" data-value="3453946740">3s 453ms</td>
+              <td class="duration" data-value="431743342">431ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_RevenueGrantsDfEESFA.iEnterValueInRowYearSevenCatchUpGrantAndColumnCashRecievedInPeriodPerAcademiesRecordIfDifferentToDFEAndESFARecordWithInDFEESFAPage(String)</td>
+              <td>8</td>
+              <td class="duration" data-value="3264246427">3s 264ms</td>
+              <td class="duration" data-value="408030803">408ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_RevenueGrantsDfEESFA.iEnterValueInRowYearSevenCatchUpGrantAndColumnExpenditureRecordedInTheAccountsFromThisGrantWithInDFEESFAPage(String)</td>
+              <td>8</td>
+              <td class="duration" data-value="3497367245">3s 497ms</td>
+              <td class="duration" data-value="437170905">437ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_RevenueGrantsDfEESFA.iEnterValueInRowYearSevenCatchUpGrantAndColumnGranstValueInAccountsWithInDFEESFAPage(String)</td>
+              <td>8</td>
+              <td class="duration" data-value="3532355378">3s 532ms</td>
+              <td class="duration" data-value="441544422">441ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_RevenueGrantsDfEESFA.iHaveNavigatedToTheRevenueGrantsDfEAndESFAPage()</td>
+              <td>8</td>
+              <td class="duration" data-value="41444562009">41s 444ms</td>
+              <td class="duration" data-value="5180570251">5s 180ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_RevenueGrantsDfEESFA.iSeeValueInRowAndTotalsCashReceivedInPeriodPerDFEAndESFARecordIsNOTInDFEESFAPageInRevenueGrants(String)</td>
+              <td>2</td>
+              <td class="duration" data-value="1217116764">1s 217ms</td>
+              <td class="duration" data-value="608558382">608ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_RevenueGrantsDfEESFA.iSeeValueInRowAndTotalsCashReceivedInPeriodPerDFEAndESFARecordWithInDFEESFAPageInRevenueGrants(String)</td>
+              <td>2</td>
+              <td class="duration" data-value="1219225454">1s 219ms</td>
+              <td class="duration" data-value="609612727">609ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_RevenueGrantsDfEESFA.iSeeValueInRowAndTotalsCashRecievedInPeriodPerAcademiesRecordIfDifferentToDFEAndESFARecordIsNOTInDFEESFAPageInRevenueGrants(String)</td>
+              <td>2</td>
+              <td class="duration" data-value="1171811881">1s 171ms</td>
+              <td class="duration" data-value="585905940">585ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_RevenueGrantsDfEESFA.iSeeValueInRowAndTotalsCashRecievedInPeriodPerAcademiesRecordIfDifferentToDFEAndESFARecordWithInDFEESFAPageInRevenueGrants(String)</td>
+              <td>2</td>
+              <td class="duration" data-value="1240026043">1s 240ms</td>
+              <td class="duration" data-value="620013021">620ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_RevenueGrantsDfEESFA.iSeeValueInRowAndTotalsExpenditureRecordedInTheAccountsFromThisGrantIsNOTInDFEESFAPageInRevenueGrants(String)</td>
+              <td>2</td>
+              <td class="duration" data-value="1178260298">1s 178ms</td>
+              <td class="duration" data-value="589130149">589ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_RevenueGrantsDfEESFA.iSeeValueInRowAndTotalsExpenditureRecordedInTheAccountsFromThisGrantWithInDFEESFAPageInRevenueGrants(String)</td>
+              <td>2</td>
+              <td class="duration" data-value="1214426565">1s 214ms</td>
+              <td class="duration" data-value="607213282">607ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_RevenueGrantsDfEESFA.iSeeValueInRowAndTotalsGranstValueInAccountsIsNOTInDFEESFAPageInRevenueGrants(String)</td>
+              <td>2</td>
+              <td class="duration" data-value="1245053500">1s 245ms</td>
+              <td class="duration" data-value="622526750">622ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_RevenueGrantsDfEESFA.iSeeValueInRowAndTotalsGranstValueInAccountsWithInDFEESFAPageInRevenueGrants(String)</td>
+              <td>2</td>
+              <td class="duration" data-value="1198984517">1s 198ms</td>
+              <td class="duration" data-value="599492258">599ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_RevenueGrantsDfEGroup.iEnterValueIinFieldHigherEducationFundingCouncilForEnglandWithInRevenueGrantsDfeGroup(String)</td>
+              <td>4</td>
+              <td class="duration" data-value="357970018">357ms</td>
+              <td class="duration" data-value="89492504">089ms</td>
+              <td class="failed">75.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_RevenueGrantsDfEGroup.iEnterValueInFieldConstructionIndustryTrainingBoardWithInRevenueGrantsDfeGroup(String)</td>
+              <td>4</td>
+              <td class="duration" data-value="358434029">358ms</td>
+              <td class="duration" data-value="89608507">089ms</td>
+              <td class="failed">75.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_RevenueGrantsDfEGroup.iEnterValueInFieldEngineeringConstructionIndustryWithInRevenueGrantsDfeGroup(String)</td>
+              <td>4</td>
+              <td class="duration" data-value="353814236">353ms</td>
+              <td class="duration" data-value="88453559">088ms</td>
+              <td class="failed">75.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_RevenueGrantsDfEGroup.iEnterValueInFieldEqualityAndHumanRightsCommissionWithInRevenueGrantsDfeGroup(String)</td>
+              <td>4</td>
+              <td class="duration" data-value="359166543">359ms</td>
+              <td class="duration" data-value="89791635">089ms</td>
+              <td class="failed">75.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_RevenueGrantsDfEGroup.iEnterValueInFieldNationalCollegeForTeachingAndLeadershipWithInRevenueGrantsDfeGroup(String)</td>
+              <td>4</td>
+              <td class="duration" data-value="15503812431">15s 503ms</td>
+              <td class="duration" data-value="3875953107">3s 875ms</td>
+              <td class="failed">75.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_RevenueGrantsDfEGroup.iEnterValueInFieldOfficeForFairAffairsWithInRevenueGrantsDfeGroup(String)</td>
+              <td>4</td>
+              <td class="duration" data-value="361551538">361ms</td>
+              <td class="duration" data-value="90387884">090ms</td>
+              <td class="failed">75.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_RevenueGrantsDfEGroup.iEnterValueInFieldOfficeOfTheChildrenSCommissionerWithInRevenueGrantsDfeGroup(String)</td>
+              <td>4</td>
+              <td class="duration" data-value="348648261">348ms</td>
+              <td class="duration" data-value="87162065">087ms</td>
+              <td class="failed">75.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_RevenueGrantsDfEGroup.iEnterValueInFieldSkillsFundingAgencyWithInRevenueGrantsDfeGroup(String)</td>
+              <td>4</td>
+              <td class="duration" data-value="368457995">368ms</td>
+              <td class="duration" data-value="92114498">092ms</td>
+              <td class="failed">75.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_RevenueGrantsDfEGroup.iEnterValueInFieldStandardsAndTestingAgencyWithInRevenueGrantsDfeGroup(String)</td>
+              <td>4</td>
+              <td class="duration" data-value="365423410">365ms</td>
+              <td class="duration" data-value="91355852">091ms</td>
+              <td class="failed">75.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_RevenueGrantsDfEGroup.iEnterValueInFieldStudentLoanCompanyWithInRevenueGrantsDfeGroup(String)</td>
+              <td>4</td>
+              <td class="duration" data-value="354318621">354ms</td>
+              <td class="duration" data-value="88579655">088ms</td>
+              <td class="failed">75.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_RevenueGrantsDfEGroup.iHaveNavigatedToTheRevenueGrantsDFEGroupPage()</td>
+              <td>3</td>
+              <td class="duration" data-value="15516519285">15s 516ms</td>
+              <td class="duration" data-value="5172173095">5s 172ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_RevenueGrantsDfEGroup.iSeeTheValueInFieldTotalIsInFamilyCapitalGrantsPageInRevenueGrantsDfeGroup(String)</td>
+              <td>1</td>
+              <td class="duration" data-value="207687138">207ms</td>
+              <td class="duration" data-value="207687138">207ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_RevenueGrantsDfEGroup.iSeeTheValueInFieldTotalIsNOTInFamilyCapitalGrantsPageInRevenueGrantsDfeGroup(String)</td>
+              <td>1</td>
+              <td class="duration" data-value="199806783">199ms</td>
+              <td class="duration" data-value="199806783">199ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_RevenueGrantsOther.iEnterTheValueInLocalAuthorityEarlyYearsWith(String)</td>
+              <td>4</td>
+              <td class="duration" data-value="531842952">531ms</td>
+              <td class="duration" data-value="132960738">132ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_RevenueGrantsOther.iEnterTheValueInLocalAuthoritySpecialEducationalNeedsWith(String)</td>
+              <td>4</td>
+              <td class="duration" data-value="602848511">602ms</td>
+              <td class="duration" data-value="150712127">150ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_RevenueGrantsOther.iEnterTheValueInNonGovernmentRevenueGrantsWith(String)</td>
+              <td>4</td>
+              <td class="duration" data-value="483737779">483ms</td>
+              <td class="duration" data-value="120934444">120ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_RevenueGrantsOther.iEnterTheValueInOtherGovernmentRevenueGrantsWith(String)</td>
+              <td>4</td>
+              <td class="duration" data-value="486532462">486ms</td>
+              <td class="duration" data-value="121633115">121ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_RevenueGrantsOther.iEnterTheValueInOtherLocalAuthorityRevenueGrantsWith(String)</td>
+              <td>4</td>
+              <td class="duration" data-value="504791749">504ms</td>
+              <td class="duration" data-value="126197937">126ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_RevenueGrantsOther.iNavigateToTheOtherRevenueGrantsPage()</td>
+              <td>4</td>
+              <td class="duration" data-value="20133007602">20s 133ms</td>
+              <td class="duration" data-value="5033251900">5s 033ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_RevenueGrantsOther.iSeeTheTotalsFieldIsNOTPopulatedWith(String)</td>
+              <td>1</td>
+              <td class="duration" data-value="200645159">200ms</td>
+              <td class="duration" data-value="200645159">200ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_RevenueGrantsOther.iSeeTheTotalsFieldIsNowPopulatedWith(String)</td>
+              <td>1</td>
+              <td class="duration" data-value="202137527">202ms</td>
+              <td class="duration" data-value="202137527">202ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_StaffCosts.iCanSeeTheFinalTotalColumnForColumnPEToBeColumnTEToBeAndColumnTotalToBe(String,String,String)</td>
+              <td>1</td>
+              <td class="duration" data-value="5132261677">5s 132ms</td>
+              <td class="duration" data-value="5132261677">5s 132ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_StaffCosts.iCanSeeTheFinalTotalColumnForColumnPEToBeNotColumnTEToBeNotAndColumnTotalToBeNot(String,String,String)</td>
+              <td>1</td>
+              <td class="duration" data-value="224956932">224ms</td>
+              <td class="duration" data-value="224956932">224ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_StaffCosts.iCanSeeTheTotalValueForRowASCToBe(String)</td>
+              <td>1</td>
+              <td class="duration" data-value="47807479">047ms</td>
+              <td class="duration" data-value="47807479">047ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_StaffCosts.iCanSeeTheTotalValueForRowASCToBeNot(String)</td>
+              <td>1</td>
+              <td class="duration" data-value="72244997">072ms</td>
+              <td class="duration" data-value="72244997">072ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_StaffCosts.iCanSeeTheTotalValueForRowLRToBe(String)</td>
+              <td>1</td>
+              <td class="duration" data-value="48023030">048ms</td>
+              <td class="duration" data-value="48023030">048ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_StaffCosts.iCanSeeTheTotalValueForRowLRToBeNot(String)</td>
+              <td>1</td>
+              <td class="duration" data-value="91413584">091ms</td>
+              <td class="duration" data-value="91413584">091ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_StaffCosts.iCanSeeTheTotalValueForRowORCToBe(String)</td>
+              <td>1</td>
+              <td class="duration" data-value="54568543">054ms</td>
+              <td class="duration" data-value="54568543">054ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_StaffCosts.iCanSeeTheTotalValueForRowORCToBeNot(String)</td>
+              <td>1</td>
+              <td class="duration" data-value="71986129">071ms</td>
+              <td class="duration" data-value="71986129">071ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_StaffCosts.iCanSeeTheTotalValueForRowPCToBe(String)</td>
+              <td>1</td>
+              <td class="duration" data-value="45198994">045ms</td>
+              <td class="duration" data-value="45198994">045ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_StaffCosts.iCanSeeTheTotalValueForRowPCToBeNot(String)</td>
+              <td>1</td>
+              <td class="duration" data-value="56694918">056ms</td>
+              <td class="duration" data-value="56694918">056ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_StaffCosts.iCanSeeTheTotalValueForRowRPToBe(String)</td>
+              <td>1</td>
+              <td class="duration" data-value="49776604">049ms</td>
+              <td class="duration" data-value="49776604">049ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_StaffCosts.iCanSeeTheTotalValueForRowRPToBeNot(String)</td>
+              <td>1</td>
+              <td class="duration" data-value="65099694">065ms</td>
+              <td class="duration" data-value="65099694">065ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_StaffCosts.iCanSeeTheTotalValueForRowSPToBe(String)</td>
+              <td>1</td>
+              <td class="duration" data-value="51461551">051ms</td>
+              <td class="duration" data-value="51461551">051ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_StaffCosts.iCanSeeTheTotalValueForRowSPToBeNot(String)</td>
+              <td>1</td>
+              <td class="duration" data-value="92797068">092ms</td>
+              <td class="duration" data-value="92797068">092ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_StaffCosts.iCanSeeTheTotalValueForRowSSCToBe(String)</td>
+              <td>1</td>
+              <td class="duration" data-value="54775475">054ms</td>
+              <td class="duration" data-value="54775475">054ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_StaffCosts.iCanSeeTheTotalValueForRowSSCToBeNot(String)</td>
+              <td>1</td>
+              <td class="duration" data-value="70552741">070ms</td>
+              <td class="duration" data-value="70552741">070ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_StaffCosts.iCanSeeTheTotalValueForRowWagesAndSalariesWSToBe(String)</td>
+              <td>1</td>
+              <td class="duration" data-value="62761677">062ms</td>
+              <td class="duration" data-value="62761677">062ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_StaffCosts.iCanSeeTheTotalValueForRowWagesAndSalariesWSToBeNot(String)</td>
+              <td>1</td>
+              <td class="duration" data-value="67888779">067ms</td>
+              <td class="duration" data-value="67888779">067ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_StaffCosts.iEnterValueInRowAgencyStaffCostsASCAndTEWith(String)</td>
+              <td>2</td>
+              <td class="duration" data-value="3243838409">3s 243ms</td>
+              <td class="duration" data-value="1621919204">1s 621ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_StaffCosts.iEnterValueInRowApprenticeshipLeveyAndColumnPermenantlyEmployedWith(String)</td>
+              <td>2</td>
+              <td class="duration" data-value="3199379867">3s 199ms</td>
+              <td class="duration" data-value="1599689933">1s 599ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_StaffCosts.iEnterValueInRowLessRecoveriesOfStaffCostsLRAndColumnPEWithAndColumnTEWith(String,String)</td>
+              <td>2</td>
+              <td class="duration" data-value="6450545471">6s 450ms</td>
+              <td class="duration" data-value="3225272735">3s 225ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_StaffCosts.iEnterValueInRowOtherRestructuringCostsORCAndColumnPEWithAndColumnTEWith(String,String)</td>
+              <td>2</td>
+              <td class="duration" data-value="6428507609">6s 428ms</td>
+              <td class="duration" data-value="3214253804">3s 214ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_StaffCosts.iEnterValueInRowPensionCostsPCAndColumnPEWithAndColumnTEWith(String,String)</td>
+              <td>2</td>
+              <td class="duration" data-value="6352332706">6s 352ms</td>
+              <td class="duration" data-value="3176166353">3s 176ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_StaffCosts.iEnterValueInRowRedundancyPaymentRPAndColumnPEWithAndColumnTEWith(String,String)</td>
+              <td>2</td>
+              <td class="duration" data-value="6442907348">6s 442ms</td>
+              <td class="duration" data-value="3221453674">3s 221ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_StaffCosts.iEnterValueInRowSeverancePaymentsSPAndColumnPEWithAndColumnTEWith(String,String)</td>
+              <td>2</td>
+              <td class="duration" data-value="6513404350">6s 513ms</td>
+              <td class="duration" data-value="3256702175">3s 256ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_StaffCosts.iEnterValueInRowSocialSecurityCostsSSCAndColumnPEWithAndColumnTEWith(String,String)</td>
+              <td>2</td>
+              <td class="duration" data-value="6718253002">6s 718ms</td>
+              <td class="duration" data-value="3359126501">3s 359ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_StaffCosts.iEnterValueInRowWagesAndSalariesWSAndColumnPEWithAndColumnTEWith(String,String)</td>
+              <td>2</td>
+              <td class="duration" data-value="6592270596">6s 592ms</td>
+              <td class="duration" data-value="3296135298">3s 296ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_StaffCosts.iNavigateToStaffCostsSection()</td>
+              <td>2</td>
+              <td class="duration" data-value="9893435790">9s 893ms</td>
+              <td class="duration" data-value="4946717895">4s 946ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_StaffCosts.iSeeTheValueInRowApprenticeshipLeveyAndColumnTotalIs(String)</td>
+              <td>1</td>
+              <td class="duration" data-value="45723626">045ms</td>
+              <td class="duration" data-value="45723626">045ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_StaffCosts.iSeeTheValueInRowApprenticeshipLeveyAndColumnTotalIsNot(String)</td>
+              <td>1</td>
+              <td class="duration" data-value="53259184">053ms</td>
+              <td class="duration" data-value="53259184">053ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                  </tbody>
+
+        <tfoot class="total">
+          <tr>
+            <td>398</td>
+            <td>1874</td>
+            <td class="duration">1h 32s 804ms</td>
+            <td class="duration">1s 938ms</td>
+            <td>Totals</td>
+          </tr>
+        </tfoot>
+
+      </table>
+    </div>
+  </div>
+</div>
+
+
+<nav class="navbar navbar-default" id="footer">
+  <div class="container-fluid">
+    <p class="navbar-text navbar-right">
+        <small>generate Cucumber HTML reports via:&nbsp;</small>
+        <a class="navbar-link" href="https://github.com/jenkinsci/cucumber-reports-plugin">Jenkins Plugin</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-reporting">Standalone</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-sandwich">Sandwich</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/maven-cucumber-reporting">Maven</a>
+        &nbsp;&nbsp;
+    </p>
+  </div>
+</nav>
+
+</body>
+</html>

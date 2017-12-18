@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html>
+<head>
+  
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery.tablesorter.min.js"></script>
+<script type="text/javascript" src="js/Chart.min.js"></script>
+<script type="text/javascript" src="js/moment.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css"/>
+<link rel="stylesheet" href="css/cucumber.css" type="text/css"/>
+<link rel="stylesheet" href="css/font-awesome.min.css"/>
+<link rel="shortcut icon" href="images/favicon.png"/>
+
+<script type="text/javascript">
+$(document).ready(function() {
+    // this will tell tablesorter to try looking for the data-value attribute
+    // if present, it'll sort by that instead
+    // otherwise, it'll sort by the text content of the table cell
+    $("#tablesorter").tablesorter({
+        textAttribute: 'data-value',
+        // ignores the first row of the header, the 'scenario', 'steps', since
+        // sorting those doesn't make sense
+        selectorHeaders: '> thead tr:not(.dont-sort) th',
+        // use a stable sort
+        sortStable: true
+    });
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+
+  
+<title>Cucumber Reports (no 1) - Steps Overview</title>
+
+</head>
+<body>
+
+<nav class="navbar navbar-default navbar-fixed-top" id="navigation">
+  <div class="container-fluid">
+    <div class="collapse navbar-collapse">
+      <p class="navbar-text navbar-left">Cucumber Report</p>
+      <ul class="nav navbar-nav navbar-right">
+                <li role="presentation" ><a href="overview-features.html">Features</a></li>
+        <li role="presentation" ><a href="overview-tags.html">Tags</a></li>
+        <li role="presentation"     class="active" ><a href="overview-steps.html">Steps</a></li>
+                <li role="presentation" ><a href="overview-failures.html">Failures</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<div class="container-fluid">
+  <div class="col-md-5 col-md-offset-1">
+    
+<table class="table table-bordered" id="build-info">
+  <thead>
+    <tr>
+      <th>Project</th>
+              <th>Number</th>
+            <th>Date</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="info">
+      <td>Academy Account Return - Framework by Aniket Wadkar</td>
+              <td>1</td>
+            <td>31 Oct 2017, 14:07</td>
+    </tr>
+  </tbody>
+</table>
+
+  </div>
+  <div class="col-md-3 col-md-offset-2">
+      </div>
+</div>
+
+
+<div id="report-lead" class="container-fluid">
+  <div class="col-md-10 col-md-offset-1">
+    <h2>Steps Statistics</h2>
+          <p>The following graph shows step statistics for this build. Below list is based on results.
+ step does not provide information about result then is not listed below.
+ Additionally @Before and @After are not counted because they are part of the scenarios, not steps.</p>
+      </div>
+</div>
+
+<div class="container-fluid" id="report">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+      <table id="tablesorter" class="stats-table table-hover">
+
+        <thead>
+          <tr class="header">
+            <th>Implementation</th>
+            <th>Occurrences</th>
+            <th>Duration</th>
+            <th>Average</th>
+            <th>Ratio</th>
+          </tr>
+        </thead>
+
+        <tbody>
+                      <tr>
+              <td class="location">Hooks.setup()</td>
+              <td>42</td>
+              <td class="duration" data-value="79049958592">1m 19s 049ms</td>
+              <td class="duration" data-value="1882141871">1s 882ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Hooks.teardown()</td>
+              <td>42</td>
+              <td class="duration" data-value="5413312881">5s 413ms</td>
+              <td class="duration" data-value="128888401">128ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_CharitableActivitiesSupportCosts.iCanSeeTheTotalIsNOTInCharitableActivitiesSupportCostPage(String)</td>
+              <td>16</td>
+              <td class="duration" data-value="3435499898">3s 435ms</td>
+              <td class="duration" data-value="214718743">214ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_CharitableActivitiesSupportCosts.iCanSeeTheTotalToBe(String)</td>
+              <td>16</td>
+              <td class="duration" data-value="3452362617">3s 452ms</td>
+              <td class="duration" data-value="215772663">215ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_CharitableActivitiesSupportCosts.iEnterGainOrLossOnDisposalOfIntangibleFixedAssets(String)</td>
+              <td>42</td>
+              <td class="duration" data-value="7643634840">7s 643ms</td>
+              <td class="duration" data-value="181991305">181ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_CharitableActivitiesSupportCosts.iEnterGainOrLossOnDisposalOfInvestments(String)</td>
+              <td>42</td>
+              <td class="duration" data-value="7478634933">7s 478ms</td>
+              <td class="duration" data-value="178062736">178ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_CharitableActivitiesSupportCosts.iEnterGainOrLossOnDisposalOfTangibleFixedAssets(String)</td>
+              <td>42</td>
+              <td class="duration" data-value="7741815239">7s 741ms</td>
+              <td class="duration" data-value="184328934">184ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_CharitableActivitiesSupportCosts.iEnterOtherSupportCostsWith(String)</td>
+              <td>42</td>
+              <td class="duration" data-value="7456373896">7s 456ms</td>
+              <td class="duration" data-value="177532711">177ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_CharitableActivitiesSupportCosts.iEnterValueInAmortisationFieldWith(String)</td>
+              <td>42</td>
+              <td class="duration" data-value="7293676809">7s 293ms</td>
+              <td class="duration" data-value="173658971">173ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_CharitableActivitiesSupportCosts.iEnterValueInAuditorCostsAuditFeesWith(String)</td>
+              <td>42</td>
+              <td class="duration" data-value="7441382651">7s 441ms</td>
+              <td class="duration" data-value="177175777">177ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_CharitableActivitiesSupportCosts.iEnterValueInAuditorCostsInternalAuditFeesWith(String)</td>
+              <td>42</td>
+              <td class="duration" data-value="7515342649">7s 515ms</td>
+              <td class="duration" data-value="178936729">178ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_CharitableActivitiesSupportCosts.iEnterValueInAuditorCostsOtherFeesWith(String)</td>
+              <td>42</td>
+              <td class="duration" data-value="7531222099">7s 531ms</td>
+              <td class="duration" data-value="179314811">179ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_CharitableActivitiesSupportCosts.iEnterValueInCateringWith(String)</td>
+              <td>42</td>
+              <td class="duration" data-value="7506626469">7s 506ms</td>
+              <td class="duration" data-value="178729201">178ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_CharitableActivitiesSupportCosts.iEnterValueInCleaningAndCareTakingWith(String)</td>
+              <td>42</td>
+              <td class="duration" data-value="7357508901">7s 357ms</td>
+              <td class="duration" data-value="175178783">175ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_CharitableActivitiesSupportCosts.iEnterValueInDepreciationFieldWith(String)</td>
+              <td>42</td>
+              <td class="duration" data-value="7277332143">7s 277ms</td>
+              <td class="duration" data-value="173269812">173ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_CharitableActivitiesSupportCosts.iEnterValueInEnergyWith(String)</td>
+              <td>42</td>
+              <td class="duration" data-value="7468251505">7s 468ms</td>
+              <td class="duration" data-value="177815512">177ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_CharitableActivitiesSupportCosts.iEnterValueInFinanceLeasesInterestWith(String)</td>
+              <td>42</td>
+              <td class="duration" data-value="7394584503">7s 394ms</td>
+              <td class="duration" data-value="176061535">176ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_CharitableActivitiesSupportCosts.iEnterValueInGovernorsReimbursementOtherWith(String)</td>
+              <td>42</td>
+              <td class="duration" data-value="7618925384">7s 618ms</td>
+              <td class="duration" data-value="181402985">181ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_CharitableActivitiesSupportCosts.iEnterValueInGovernorsReimbursementTravelAndSubsistenceWith(String)</td>
+              <td>42</td>
+              <td class="duration" data-value="7543958538">7s 543ms</td>
+              <td class="duration" data-value="179618060">179ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_CharitableActivitiesSupportCosts.iEnterValueInImpairmentFieldWith(String)</td>
+              <td>42</td>
+              <td class="duration" data-value="7508915315">7s 508ms</td>
+              <td class="duration" data-value="178783697">178ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_CharitableActivitiesSupportCosts.iEnterValueInLegalAndProfessionalWith(String)</td>
+              <td>42</td>
+              <td class="duration" data-value="7477802669">7s 477ms</td>
+              <td class="duration" data-value="178042920">178ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_CharitableActivitiesSupportCosts.iEnterValueInLoanInterestPaidToDfe_EFAFamilyWith(String)</td>
+              <td>42</td>
+              <td class="duration" data-value="7434964479">7s 434ms</td>
+              <td class="duration" data-value="177022963">177ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_CharitableActivitiesSupportCosts.iEnterValueInLoanInterestPaidToOthersWith(String)</td>
+              <td>42</td>
+              <td class="duration" data-value="7419533835">7s 419ms</td>
+              <td class="duration" data-value="176655567">176ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_CharitableActivitiesSupportCosts.iEnterValueInMaintenanceOfPremisesWith(String)</td>
+              <td>42</td>
+              <td class="duration" data-value="7397577146">7s 397ms</td>
+              <td class="duration" data-value="176132789">176ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_CharitableActivitiesSupportCosts.iEnterValueInNetMovementInProvisionsDuringTheYearWith(String)</td>
+              <td>42</td>
+              <td class="duration" data-value="7596190403">7s 596ms</td>
+              <td class="duration" data-value="180861676">180ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_CharitableActivitiesSupportCosts.iEnterValueInNonEducationalConsultancyWith(String)</td>
+              <td>42</td>
+              <td class="duration" data-value="7373868031">7s 373ms</td>
+              <td class="duration" data-value="175568286">175ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_CharitableActivitiesSupportCosts.iEnterValueInOperatingLeaseRentalsLandBWith(String)</td>
+              <td>42</td>
+              <td class="duration" data-value="7520692149">7s 520ms</td>
+              <td class="duration" data-value="179064098">179ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_CharitableActivitiesSupportCosts.iEnterValueInOperatingLeaseRentalsOthersWith(String)</td>
+              <td>42</td>
+              <td class="duration" data-value="7592175795">7s 592ms</td>
+              <td class="duration" data-value="180766090">180ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_CharitableActivitiesSupportCosts.iEnterValueInOtherPremisesCostWith(String)</td>
+              <td>42</td>
+              <td class="duration" data-value="7545622423">7s 545ms</td>
+              <td class="duration" data-value="179657676">179ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_CharitableActivitiesSupportCosts.iEnterValueInOtherStaffCostsWith(String)</td>
+              <td>42</td>
+              <td class="duration" data-value="7273528514">7s 273ms</td>
+              <td class="duration" data-value="173179250">173ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_CharitableActivitiesSupportCosts.iEnterValueInPFI_ServicesCostsWith(String)</td>
+              <td>42</td>
+              <td class="duration" data-value="7475335529">7s 475ms</td>
+              <td class="duration" data-value="177984179">177ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_CharitableActivitiesSupportCosts.iEnterValueInRatesWit(String)</td>
+              <td>42</td>
+              <td class="duration" data-value="7714468470">7s 714ms</td>
+              <td class="duration" data-value="183677820">183ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_CharitableActivitiesSupportCosts.iEnterValueInRiskProtectionArrangementFeesWith(String)</td>
+              <td>42</td>
+              <td class="duration" data-value="7318256992">7s 318ms</td>
+              <td class="duration" data-value="174244214">174ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_CharitableActivitiesSupportCosts.iEnterValueInSecurityWith(String)</td>
+              <td>42</td>
+              <td class="duration" data-value="7422556978">7s 422ms</td>
+              <td class="duration" data-value="176727547">176ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_CharitableActivitiesSupportCosts.iEnterValueInSpecialFacilitiesWith(String)</td>
+              <td>42</td>
+              <td class="duration" data-value="7330603392">7s 330ms</td>
+              <td class="duration" data-value="174538176">174ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_CharitableActivitiesSupportCosts.iEnterValueInStaffRelatedInsuranceFieldWith(String)</td>
+              <td>42</td>
+              <td class="duration" data-value="7342970172">7s 342ms</td>
+              <td class="duration" data-value="174832623">174ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_CharitableActivitiesSupportCosts.iEnterValueInSupportStaffPayCostsWith(String)</td>
+              <td>42</td>
+              <td class="duration" data-value="12876285790">12s 876ms</td>
+              <td class="duration" data-value="306578233">306ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_CharitableActivitiesSupportCosts.iEnterValueInTechnologyCostWith(String)</td>
+              <td>42</td>
+              <td class="duration" data-value="7605951286">7s 605ms</td>
+              <td class="duration" data-value="181094078">181ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_CharitableActivitiesSupportCosts.iEnterValueInTransportWith(String)</td>
+              <td>42</td>
+              <td class="duration" data-value="7507113045">7s 507ms</td>
+              <td class="duration" data-value="178740786">178ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_CharitableActivitiesSupportCosts.iEnterValueInTravelExpensesTravelAndSubsistenceWith(String)</td>
+              <td>42</td>
+              <td class="duration" data-value="7565439903">7s 565ms</td>
+              <td class="duration" data-value="180129521">180ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_CharitableActivitiesSupportCosts.iEnterValueInTrusteesExpensesOthersWith(String)</td>
+              <td>42</td>
+              <td class="duration" data-value="7436442429">7s 436ms</td>
+              <td class="duration" data-value="177058153">177ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_CharitableActivitiesSupportCosts.iNavigateToCharitableActivitiesSupportCostPage()</td>
+              <td>42</td>
+              <td class="duration" data-value="156520562977">2m 36s 520ms</td>
+              <td class="duration" data-value="3726680070">3s 726ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_Donations.iAmOnSoFASection()</td>
+              <td>42</td>
+              <td class="duration" data-value="731473352202">12m 11s 473ms</td>
+              <td class="duration" data-value="17416032195">17s 416ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_Donations.iSeeTheNumberOfErrorsStartingWithAllFinancialDataMustBeEnteredAre(String)</td>
+              <td>4</td>
+              <td class="duration" data-value="717523472">717ms</td>
+              <td class="duration" data-value="179380868">179ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_Donations.iSeeTheNumberOfErrorsStartingWithInvalidNumberFormatAre(String)</td>
+              <td>6</td>
+              <td class="duration" data-value="499189940">499ms</td>
+              <td class="duration" data-value="83198323">083ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                  </tbody>
+
+        <tfoot class="total">
+          <tr>
+            <td>45</td>
+            <td>1764</td>
+            <td class="duration">21m 2s 567ms</td>
+            <td class="duration">715ms</td>
+            <td>Totals</td>
+          </tr>
+        </tfoot>
+
+      </table>
+    </div>
+  </div>
+</div>
+
+
+<nav class="navbar navbar-default" id="footer">
+  <div class="container-fluid">
+    <p class="navbar-text navbar-right">
+        <small>generate Cucumber HTML reports via:&nbsp;</small>
+        <a class="navbar-link" href="https://github.com/jenkinsci/cucumber-reports-plugin">Jenkins Plugin</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-reporting">Standalone</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-sandwich">Sandwich</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/maven-cucumber-reporting">Maven</a>
+        &nbsp;&nbsp;
+    </p>
+  </div>
+</nav>
+
+</body>
+</html>

@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html>
+<head>
+  
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery.tablesorter.min.js"></script>
+<script type="text/javascript" src="js/Chart.min.js"></script>
+<script type="text/javascript" src="js/moment.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css"/>
+<link rel="stylesheet" href="css/cucumber.css" type="text/css"/>
+<link rel="stylesheet" href="css/font-awesome.min.css"/>
+<link rel="shortcut icon" href="images/favicon.png"/>
+
+<script type="text/javascript">
+$(document).ready(function() {
+    // this will tell tablesorter to try looking for the data-value attribute
+    // if present, it'll sort by that instead
+    // otherwise, it'll sort by the text content of the table cell
+    $("#tablesorter").tablesorter({
+        textAttribute: 'data-value',
+        // ignores the first row of the header, the 'scenario', 'steps', since
+        // sorting those doesn't make sense
+        selectorHeaders: '> thead tr:not(.dont-sort) th',
+        // use a stable sort
+        sortStable: true
+    });
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+
+  
+<title>Cucumber Reports (no 1) - Tags Overview</title>
+
+
+  <script type="text/javascript">
+  $(document).ready(function() {
+
+    var chartData = {
+        labels:  [ "@OtherIncome",  "@OtherTradingActivities",  "@capGrantsDFEESFATest",  "@capGrantsDfEGroupTest",  "@fullAndFinal",  "@otherCapitalGrantsPageTest",  "@otherIncomeTest",  "@otherTradingActivitiesSanityCheck",  "@ready",  "@regression",  "@regressionAR2",  "@regressionIncome",  "@revenueGrantDfEGroup",  "@revenueGrantsOthersTest",  "@sanity",  "@smoke",  "@sofaDonationsPageTest",  "@sprint1",  "@tony", ] ,
+        datasets: [
+            {
+                label: "Passed",
+                backgroundColor: "#92DD96",
+                data:  [ 100.00,  100.00,  99.66,  100.00,  99.06,  100.00,  100.00,  100.00,  100.00,  99.06,  100.00,  100.00,  84.86,  100.00,  99.06,  99.06,  100.00,  100.00,  100.00, ]             },
+            {
+                label: "Failed",
+                backgroundColor: "#F2928C",
+                data:  [ 0.00,  0.00,  0.34,  0.00,  0.35,  0.00,  0.00,  0.00,  0.00,  0.35,  0.00,  0.00,  2.73,  0.00,  0.35,  0.35,  0.00,  0.00,  0.00, ]             },
+            {
+                label: "Skipped",
+                backgroundColor: "#8AF",
+                data:  [ 0.00,  0.00,  0.00,  0.00,  0.60,  0.00,  0.00,  0.00,  0.00,  0.60,  0.00,  0.00,  12.41,  0.00,  0.60,  0.60,  0.00,  0.00,  0.00, ]             },
+            {
+                label: "Pending",
+                backgroundColor: "#F5F28F",
+                data:  [ 0.00,  0.00,  0.00,  0.00,  0.00,  0.00,  0.00,  0.00,  0.00,  0.00,  0.00,  0.00,  0.00,  0.00,  0.00,  0.00,  0.00,  0.00,  0.00, ]             },
+            {
+                label: "Undefined",
+                backgroundColor: "#F5B975",
+                data:  [ 0.00,  0.00,  0.00,  0.00,  0.00,  0.00,  0.00,  0.00,  0.00,  0.00,  0.00,  0.00,  0.00,  0.00,  0.00,  0.00,  0.00,  0.00,  0.00, ]             }
+        ]
+    };
+
+    var context = document.getElementById("tags-chart");
+    window.myBar = new Chart(context, {
+        type: "bar",
+        data: chartData,
+        options: {
+            tooltips: {
+                mode: "label"
+            },
+            responsive: true,
+            legend: {
+                display: false
+            },
+            scales: {
+                xAxes: [{
+                    stacked: true
+                }],
+                yAxes: [{
+                    stacked: true
+                }]
+            }
+        }
+    });
+
+});  </script>
+</head>
+<body>
+
+<nav class="navbar navbar-default navbar-fixed-top" id="navigation">
+  <div class="container-fluid">
+    <div class="collapse navbar-collapse">
+      <p class="navbar-text navbar-left">Cucumber Report</p>
+      <ul class="nav navbar-nav navbar-right">
+                <li role="presentation" ><a href="overview-features.html">Features</a></li>
+        <li role="presentation"      class="active" ><a href="overview-tags.html">Tags</a></li>
+        <li role="presentation" ><a href="overview-steps.html">Steps</a></li>
+                <li role="presentation" ><a href="overview-failures.html">Failures</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<div class="container-fluid">
+  <div class="col-md-5 col-md-offset-1">
+    
+<table class="table table-bordered" id="build-info">
+  <thead>
+    <tr>
+      <th>Project</th>
+              <th>Number</th>
+            <th>Date</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="info">
+      <td>Academy Account Return - Framework by Aniket Wadkar</td>
+              <td>1</td>
+            <td>07 Nov 2017, 17:15</td>
+    </tr>
+  </tbody>
+</table>
+
+  </div>
+  <div class="col-md-3 col-md-offset-2">
+      </div>
+</div>
+
+
+<div id="report-lead" class="container-fluid">
+  <div class="col-md-10 col-md-offset-1">
+    <h2>Tags Statistics</h2>
+          <p>The following graph shows passing and failing statistics for tags</p>
+      </div>
+</div>
+
+
+  <div class="container-fluid" id="charts">
+    <div class="row">
+      <div class="col-md-10 col-md-offset-1">
+        <canvas id="tags-chart" height="50"></canvas>
+      </div>
+    </div>
+  </div>
+
+<br>
+<div class="container-fluid" id="report">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+              
+<table id="tablesorter" class="stats-table table-hover">
+  
+<thead>
+  <tr class="header dont-sort">
+        <th></th>
+    <th colspan="6">Steps</th>
+    <th colspan="3">Scenarios</th>
+    <th colspan="2">Features</th>
+  </tr>
+  <tr>
+    <th>Tag</th>
+        <th class="passed">Passed</th>
+    <th class="failed">Failed</th>
+    <th class="skipped">Skipped</th>
+    <th class="pending">Pending</th>
+    <th class="undefined">Undefined</th>
+    <th class="total">Total</th>
+
+    <th class="passed">Passed</th>
+    <th class="failed">Failed</th>
+    <th class="total">Total</th>
+
+    <th>Duration</th>
+    <th>Status</th>
+  </tr>
+</thead>
+
+
+  <tbody>
+          <tr>
+        <td class="tagname"><a href="report-tag_OtherIncome.html">@OtherIncome</a></td>
+        
+        <td      class="passed"    >40</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">40</td>
+
+        <td  class="passed"    >4</td>
+        <td >0</td>
+        <td class="total">4</td>
+
+        <td class="duration" data-value="135821519873">2m 15s 821ms</td>
+        <td class="passed">Passed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-tag_OtherTradingActivities.html">@OtherTradingActivities</a></td>
+        
+        <td      class="passed"    >40</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">40</td>
+
+        <td  class="passed"    >4</td>
+        <td >0</td>
+        <td class="total">4</td>
+
+        <td class="duration" data-value="135821519873">2m 15s 821ms</td>
+        <td class="passed">Passed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-tag_capGrantsDFEESFATest.html">@capGrantsDFEESFATest</a></td>
+        
+        <td      class="passed"    >1451</td>
+        <td      class="failed"    >5</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">1456</td>
+
+        <td  class="passed"    >31</td>
+        <td  class="failed"    >5</td>
+        <td class="total">36</td>
+
+        <td class="duration" data-value="1483004296451">24m 43s 004ms</td>
+        <td class="failed">Failed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-tag_capGrantsDfEGroupTest.html">@capGrantsDfEGroupTest</a></td>
+        
+        <td      class="passed"    >564</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">564</td>
+
+        <td  class="passed"    >40</td>
+        <td >0</td>
+        <td class="total">40</td>
+
+        <td class="duration" data-value="1078562297845">17m 58s 562ms</td>
+        <td class="passed">Passed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-tag_fullAndFinal.html">@fullAndFinal</a></td>
+        
+        <td      class="passed"    >12303</td>
+        <td      class="failed"    >43</td>
+        <td     class="skipped"   >74</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">12420</td>
+
+        <td  class="passed"    >738</td>
+        <td  class="failed"    >43</td>
+        <td class="total">781</td>
+
+        <td class="duration" data-value="24013081701308">6h 40m 13s 081ms</td>
+        <td class="failed">Failed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-tag_otherCapitalGrantsPageTest.html">@otherCapitalGrantsPageTest</a></td>
+        
+        <td      class="passed"    >311</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">311</td>
+
+        <td  class="passed"    >47</td>
+        <td >0</td>
+        <td class="total">47</td>
+
+        <td class="duration" data-value="1225617320454">20m 25s 617ms</td>
+        <td class="passed">Passed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-tag_otherIncomeTest.html">@otherIncomeTest</a></td>
+        
+        <td      class="passed"    >368</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">368</td>
+
+        <td  class="passed"    >46</td>
+        <td >0</td>
+        <td class="total">46</td>
+
+        <td class="duration" data-value="1195780702434">19m 55s 780ms</td>
+        <td class="passed">Passed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-tag_otherTradingActivitiesSanityCheck.html">@otherTradingActivitiesSanityCheck</a></td>
+        
+        <td      class="passed"    >310</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">310</td>
+
+        <td  class="passed"    >34</td>
+        <td >0</td>
+        <td class="total">34</td>
+
+        <td class="duration" data-value="941550013505">15m 41s 550ms</td>
+        <td class="passed">Passed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-tag_ready.html">@ready</a></td>
+        
+        <td      class="passed"    >40</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">40</td>
+
+        <td  class="passed"    >4</td>
+        <td >0</td>
+        <td class="total">4</td>
+
+        <td class="duration" data-value="135821519873">2m 15s 821ms</td>
+        <td class="passed">Passed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-tag_regression.html">@regression</a></td>
+        
+        <td      class="passed"    >12303</td>
+        <td      class="failed"    >43</td>
+        <td     class="skipped"   >74</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">12420</td>
+
+        <td  class="passed"    >738</td>
+        <td  class="failed"    >43</td>
+        <td class="total">781</td>
+
+        <td class="duration" data-value="24013081701308">6h 40m 13s 081ms</td>
+        <td class="failed">Failed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-tag_regressionAR2.html">@regressionAR2</a></td>
+        
+        <td      class="passed"    >597</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">597</td>
+
+        <td  class="passed"    >49</td>
+        <td >0</td>
+        <td class="total">49</td>
+
+        <td class="duration" data-value="1298201740227">21m 38s 201ms</td>
+        <td class="passed">Passed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-tag_regressionIncome.html">@regressionIncome</a></td>
+        
+        <td      class="passed"    >597</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">597</td>
+
+        <td  class="passed"    >49</td>
+        <td >0</td>
+        <td class="total">49</td>
+
+        <td class="duration" data-value="1298201740227">21m 38s 201ms</td>
+        <td class="passed">Passed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-tag_revenueGrantDfEGroup.html">@revenueGrantDfEGroup</a></td>
+        
+        <td      class="passed"    >342</td>
+        <td      class="failed"    >11</td>
+        <td     class="skipped"   >50</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">403</td>
+
+        <td  class="passed"    >20</td>
+        <td  class="failed"    >11</td>
+        <td class="total">31</td>
+
+        <td class="duration" data-value="876801491913">14m 36s 801ms</td>
+        <td class="failed">Failed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-tag_revenueGrantsOthersTest.html">@revenueGrantsOthersTest</a></td>
+        
+        <td      class="passed"    >405</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">405</td>
+
+        <td  class="passed"    >49</td>
+        <td >0</td>
+        <td class="total">49</td>
+
+        <td class="duration" data-value="1289386542180">21m 29s 386ms</td>
+        <td class="passed">Passed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-tag_sanity.html">@sanity</a></td>
+        
+        <td      class="passed"    >12303</td>
+        <td      class="failed"    >43</td>
+        <td     class="skipped"   >74</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">12420</td>
+
+        <td  class="passed"    >738</td>
+        <td  class="failed"    >43</td>
+        <td class="total">781</td>
+
+        <td class="duration" data-value="24013081701308">6h 40m 13s 081ms</td>
+        <td class="failed">Failed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-tag_smoke.html">@smoke</a></td>
+        
+        <td      class="passed"    >12303</td>
+        <td      class="failed"    >43</td>
+        <td     class="skipped"   >74</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">12420</td>
+
+        <td  class="passed"    >738</td>
+        <td  class="failed"    >43</td>
+        <td class="total">781</td>
+
+        <td class="duration" data-value="24013081701308">6h 40m 13s 081ms</td>
+        <td class="failed">Failed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-tag_sofaDonationsPageTest.html">@sofaDonationsPageTest</a></td>
+        
+        <td      class="passed"    >504</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">504</td>
+
+        <td  class="passed"    >40</td>
+        <td >0</td>
+        <td class="total">40</td>
+
+        <td class="duration" data-value="1069749369835">17m 49s 749ms</td>
+        <td class="passed">Passed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-tag_sprint1.html">@sprint1</a></td>
+        
+        <td      class="passed"    >216</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">216</td>
+
+        <td  class="passed"    >36</td>
+        <td >0</td>
+        <td class="total">36</td>
+
+        <td class="duration" data-value="921191493019">15m 21s 191ms</td>
+        <td class="passed">Passed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-tag_tony.html">@tony</a></td>
+        
+        <td      class="passed"    >176</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">176</td>
+
+        <td  class="passed"    >16</td>
+        <td >0</td>
+        <td class="total">16</td>
+
+        <td class="duration" data-value="415068632147">6m 55s 068ms</td>
+        <td class="passed">Passed</td>
+      </tr>
+      </tbody>
+
+  <tfoot class="total">
+    <tr>
+      <td>19</td>
+            <td>55173</td>
+      <td>188</td>
+      <td>346</td>
+      <td>0</td>
+      <td>0</td>
+      <td>55707</td>
+
+      <td>2561</td>
+      <td>1048</td>
+      <td>3609</td>
+
+      <td class="duration">1d 6h 25m 52s 907ms</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td></td>
+            <td>99.04%</td>
+      <td>0.34%</td>
+      <td>0.62%</td>
+      <td>0.00%</td>
+      <td>0.00%</td>
+      <td></td>
+      <td>70.96%</td>
+      <td>29.04%</td>
+      <td></td>
+      <td></td>
+      <td>65.22%</td>
+    </tr>
+  </tfoot>
+</table>
+
+          </div>
+  </div>
+</div>
+
+<nav class="navbar navbar-default" id="footer">
+  <div class="container-fluid">
+    <p class="navbar-text navbar-right">
+        <small>generate Cucumber HTML reports via:&nbsp;</small>
+        <a class="navbar-link" href="https://github.com/jenkinsci/cucumber-reports-plugin">Jenkins Plugin</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-reporting">Standalone</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-sandwich">Sandwich</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/maven-cucumber-reporting">Maven</a>
+        &nbsp;&nbsp;
+    </p>
+  </div>
+</nav>
+
+</body>
+</html>

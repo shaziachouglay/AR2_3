@@ -1,0 +1,149 @@
+2017-12-14 11:46:46 INFO  Aniket Wadkar:21 - 
+Welcome to Online Forms for Application NameAcademyAR3
+2017-12-14 11:46:46 INFO  Aniket Wadkar:22 - Session started on : Thu 14-12-2017  11:46:46
+2017-12-14 11:46:49 INFO  Aniket Wadkar:51 - Opening Chrome Browser
+2017-12-14 11:46:50 INFO  Aniket Wadkar:87 - Running Driver : chrome version : 63.0.3239.84 on OS : mac os x of Family : ANY
+2017-12-14 11:46:50 INFO  Aniket Wadkar:26 - Element is cleaned : REFRESHED!
+2017-12-14 11:46:50 INFO  Aniket Wadkar:26 - element displayed status is : true
+2017-12-14 11:46:50 INFO  Aniket Wadkar:26 -  user name displayed status is : true
+2017-12-14 11:46:51 INFO  Aniket Wadkar:26 - Element is cleaned : REFRESHED!
+2017-12-14 11:46:52 INFO  Aniket Wadkar:26 - Element is cleaned : REFRESHED!
+2017-12-14 11:46:52 INFO  Aniket Wadkar:26 - element displayed status is : true
+2017-12-14 11:46:52 INFO  Aniket Wadkar:26 - The Header displayed status for Welcome Screen is : true
+2017-12-14 11:46:52 INFO  Aniket Wadkar:26 - Element is cleaned : REFRESHED!
+2017-12-14 11:46:52 INFO  Aniket Wadkar:26 - The extracted text from the user name field is : aniket
+2017-12-14 11:46:52 INFO  Aniket Wadkar:26 - Element is cleaned : REFRESHED!
+2017-12-14 11:46:52 INFO  Aniket Wadkar:26 - Accounts Return version 2.1.7 released on 15/12/2017.
+2017-12-14 11:46:52 INFO  Aniket Wadkar:26 - Element is cleaned : REFRESHED!
+2017-12-14 11:46:52 INFO  Aniket Wadkar:26 - Element is cleaned : REFRESHED!
+2017-12-14 11:46:52 INFO  Aniket Wadkar:26 - Clicked Yes in PREPARER .
+2017-12-14 11:46:53 INFO  Aniket Wadkar:26 - Scrolling to element in view
+2017-12-14 11:46:53 INFO  Aniket Wadkar:26 - Element is cleaned : REFRESHED!
+2017-12-14 11:46:54 INFO  Aniket Wadkar:26 - Element is cleaned : REFRESHED!
+2017-12-14 11:46:55 INFO  Aniket Wadkar:26 - Element is cleaned : REFRESHED!
+2017-12-14 11:46:55 INFO  Aniket Wadkar:26 - element displayed status is : true
+2017-12-14 11:46:55 INFO  Aniket Wadkar:26 - The Header displayed status for Academy Trust Information is : true
+2017-12-14 11:46:57 INFO  Aniket Wadkar:26 - Element is cleaned : REFRESHED!
+2017-12-14 11:46:57 INFO  Aniket Wadkar:26 - Selected value from drop down is :Multi Academy Trust (MAT)
+2017-12-14 11:46:58 INFO  Aniket Wadkar:26 - Scrolling to element in view
+2017-12-14 11:46:58 INFO  Aniket Wadkar:26 - Element is cleaned : REFRESHED!
+2017-12-14 11:46:59 INFO  Aniket Wadkar:26 - Element is cleaned : REFRESHED!
+2017-12-14 11:47:00 INFO  Aniket Wadkar:26 - Element is cleaned : REFRESHED!
+2017-12-14 11:47:00 INFO  Aniket Wadkar:26 - element displayed status is : true
+2017-12-14 11:47:00 INFO  Aniket Wadkar:26 - The Header displayed status for Academy is : true
+2017-12-14 11:47:03 INFO  Aniket Wadkar:26 - Scrolling to element in view
+2017-12-14 11:47:03 INFO  Aniket Wadkar:26 - Element is cleaned : REFRESHED!
+2017-12-14 11:47:03 INFO  Aniket Wadkar:26 - Element is cleaned : REFRESHED!
+2017-12-14 11:47:05 INFO  Aniket Wadkar:26 - Element is cleaned : REFRESHED!
+2017-12-14 11:47:05 INFO  Aniket Wadkar:26 - element displayed status is : true
+2017-12-14 11:47:05 INFO  Aniket Wadkar:26 - The Header displayed status for Academy Information is : true
+2017-12-14 11:47:07 INFO  Aniket Wadkar:26 - Element is cleaned : REFRESHED!
+2017-12-14 11:47:07 INFO  Aniket Wadkar:26 - Selected value from drop down is :In period transfer in
+2017-12-14 11:47:07 INFO  Aniket Wadkar:26 - Scrolling to element in view
+2017-12-14 11:47:08 INFO  Aniket Wadkar:26 - Element is cleaned : REFRESHED!
+2017-12-14 11:47:08 INFO  Aniket Wadkar:26 - Element is cleaned : REFRESHED!
+2017-12-14 11:47:10 INFO  Aniket Wadkar:26 - Element is cleaned : REFRESHED!
+2017-12-14 11:47:10 INFO  Aniket Wadkar:26 - element displayed status is : true
+2017-12-14 11:47:10 INFO  Aniket Wadkar:26 - The Header displayed status for Questionnaire is : true
+2017-12-14 11:47:10 INFO  Aniket Wadkar:26 - Scrolling to element in view
+2017-12-14 11:47:10 INFO  Aniket Wadkar:26 - Element is cleaned : REFRESHED!
+2017-12-14 11:47:11 INFO  Aniket Wadkar:26 - Element is cleaned : REFRESHED!
+2017-12-14 11:47:14 INFO  Aniket Wadkar:26 - Element is cleaned : REFRESHED!
+2017-12-14 11:47:15 INFO  Aniket Wadkar:26 - Element is cleaned : REFRESHED!
+2017-12-14 11:47:16 INFO  Aniket Wadkar:26 - Element is cleaned : REFRESHED!
+2017-12-14 11:47:17 INFO  Aniket Wadkar:26 - Element is cleaned : REFRESHED!
+2017-12-14 11:47:18 INFO  Aniket Wadkar:26 - Element is cleaned : REFRESHED!
+2017-12-14 11:47:18 INFO  Aniket Wadkar:26 - element displayed status is : true
+2017-12-14 11:47:18 INFO  Aniket Wadkar:26 - The Header displayed status for Debtors is : true
+2017-12-14 11:47:18 INFO  Aniket Wadkar:26 - The Ajax Call is now complete. 
+2017-12-14 11:47:18 INFO  Aniket Wadkar:26 - Element is cleaned : REFRESHED!
+2017-12-14 11:47:18 INFO  Aniket Wadkar:26 - clicked Tab button on Keyboard
+2017-12-14 11:47:19 INFO  Aniket Wadkar:26 - The value set in row : TradeDebtorsBeforeDabDebt and column : AmountDueWithin1Year is : 9999999 in Debtors
+2017-12-14 11:47:19 INFO  Aniket Wadkar:26 - The Ajax Call is now complete. 
+2017-12-14 11:47:19 INFO  Aniket Wadkar:26 - Element is cleaned : REFRESHED!
+2017-12-14 11:47:19 INFO  Aniket Wadkar:26 - clicked Tab button on Keyboard
+2017-12-14 11:47:19 INFO  Aniket Wadkar:26 - The value set in row : TradeDebtorsBeforeDabDebt and column : AmountDueAfter1Year is : 9999999 in Debtors
+2017-12-14 11:47:19 INFO  Aniket Wadkar:26 - The Ajax Call is now complete. 
+2017-12-14 11:47:19 INFO  Aniket Wadkar:26 - Element is cleaned : REFRESHED!
+2017-12-14 11:47:19 INFO  Aniket Wadkar:26 - clicked Tab button on Keyboard
+2017-12-14 11:47:19 INFO  Aniket Wadkar:26 - The value set in row : BadDebt and column : AmountDueWithin1Year is : 9999999 in Debtors
+2017-12-14 11:47:19 INFO  Aniket Wadkar:26 - The Ajax Call is now complete. 
+2017-12-14 11:47:19 INFO  Aniket Wadkar:26 - Element is cleaned : REFRESHED!
+2017-12-14 11:47:19 INFO  Aniket Wadkar:26 - clicked Tab button on Keyboard
+2017-12-14 11:47:20 INFO  Aniket Wadkar:26 - The value set in row : BadDebt and column : AmountDueAfter1Year is : 9999999 in Debtors
+2017-12-14 11:47:20 INFO  Aniket Wadkar:26 - The Ajax Call is now complete. 
+2017-12-14 11:47:20 INFO  Aniket Wadkar:26 - Element is cleaned : REFRESHED!
+2017-12-14 11:47:20 INFO  Aniket Wadkar:26 - clicked Tab button on Keyboard
+2017-12-14 11:47:20 INFO  Aniket Wadkar:26 - The value set in row : AccuredCapitalGrantDEESFA and column : AmountDueWithin1Year is : 9999999 in Debtors
+2017-12-14 11:47:20 INFO  Aniket Wadkar:26 - The Ajax Call is now complete. 
+2017-12-14 11:47:20 INFO  Aniket Wadkar:26 - Element is cleaned : REFRESHED!
+2017-12-14 11:47:20 INFO  Aniket Wadkar:26 - clicked Tab button on Keyboard
+2017-12-14 11:47:20 INFO  Aniket Wadkar:26 - The value set in row : AccuredCapitalGrantDEESFA and column : AmountDueAfter1Year is : 9999999 in Debtors
+2017-12-14 11:47:20 INFO  Aniket Wadkar:26 - The Ajax Call is now complete. 
+2017-12-14 11:47:20 INFO  Aniket Wadkar:26 - Element is cleaned : REFRESHED!
+2017-12-14 11:47:20 INFO  Aniket Wadkar:26 - clicked Tab button on Keyboard
+2017-12-14 11:47:21 INFO  Aniket Wadkar:26 - The value set in row : AccruedCapitalgrantOther and column : AmountDueWithin1Year is : 9999999 in Debtors
+2017-12-14 11:47:21 INFO  Aniket Wadkar:26 - The Ajax Call is now complete. 
+2017-12-14 11:47:21 INFO  Aniket Wadkar:26 - Element is cleaned : REFRESHED!
+2017-12-14 11:47:21 INFO  Aniket Wadkar:26 - clicked Tab button on Keyboard
+2017-12-14 11:47:21 INFO  Aniket Wadkar:26 - The value set in row : AccruedCapitalgrantOther and column : AmountDueAfter1Year is : 9999999 in Debtors
+2017-12-14 11:47:21 INFO  Aniket Wadkar:26 - The Ajax Call is now complete. 
+2017-12-14 11:47:21 INFO  Aniket Wadkar:26 - Element is cleaned : REFRESHED!
+2017-12-14 11:47:21 INFO  Aniket Wadkar:26 - clicked Tab button on Keyboard
+2017-12-14 11:47:21 INFO  Aniket Wadkar:26 - The value set in row : AccruedRevenueGrantOtherDFEESFA and column : AmountDueWithin1Year is : 9999999 in Debtors
+2017-12-14 11:47:21 INFO  Aniket Wadkar:26 - The Ajax Call is now complete. 
+2017-12-14 11:47:21 INFO  Aniket Wadkar:26 - Element is cleaned : REFRESHED!
+2017-12-14 11:47:21 INFO  Aniket Wadkar:26 - clicked Tab button on Keyboard
+2017-12-14 11:47:22 INFO  Aniket Wadkar:26 - The value set in row : AccruedRevenueGrantOtherDFEESFA and column : AmountDueAfter1Year is : 9999999 in Debtors
+2017-12-14 11:47:22 INFO  Aniket Wadkar:26 - The Ajax Call is now complete. 
+2017-12-14 11:47:22 INFO  Aniket Wadkar:26 - Element is cleaned : REFRESHED!
+2017-12-14 11:47:22 INFO  Aniket Wadkar:26 - clicked Tab button on Keyboard
+2017-12-14 11:47:22 INFO  Aniket Wadkar:26 - The value set in row : AccruedRevenueGrantOther and column : AmountDueWithin1Year is : 9999999 in Debtors
+2017-12-14 11:47:22 INFO  Aniket Wadkar:26 - The Ajax Call is now complete. 
+2017-12-14 11:47:22 INFO  Aniket Wadkar:26 - Element is cleaned : REFRESHED!
+2017-12-14 11:47:22 INFO  Aniket Wadkar:26 - clicked Tab button on Keyboard
+2017-12-14 11:47:22 INFO  Aniket Wadkar:26 - The value set in row : AccruedRevenueGrantOther and column : AmountDueAfter1Year is : 9999999 in Debtors
+2017-12-14 11:47:22 INFO  Aniket Wadkar:26 - The Ajax Call is now complete. 
+2017-12-14 11:47:22 INFO  Aniket Wadkar:26 - Element is cleaned : REFRESHED!
+2017-12-14 11:47:22 INFO  Aniket Wadkar:26 - clicked Tab button on Keyboard
+2017-12-14 11:47:23 INFO  Aniket Wadkar:26 - The value set in row : Prepayments and column : AmountDueWithin1Year is : 9999999 in Debtors
+2017-12-14 11:47:23 INFO  Aniket Wadkar:26 - The Ajax Call is now complete. 
+2017-12-14 11:47:23 INFO  Aniket Wadkar:26 - Element is cleaned : REFRESHED!
+2017-12-14 11:47:23 INFO  Aniket Wadkar:26 - clicked Tab button on Keyboard
+2017-12-14 11:47:23 INFO  Aniket Wadkar:26 - The value set in row : Prepayments and column : AmountDueAfter1Year is : 9999999 in Debtors
+2017-12-14 11:47:23 INFO  Aniket Wadkar:26 - The Ajax Call is now complete. 
+2017-12-14 11:47:23 INFO  Aniket Wadkar:26 - Element is cleaned : REFRESHED!
+2017-12-14 11:47:23 INFO  Aniket Wadkar:26 - clicked Tab button on Keyboard
+2017-12-14 11:47:23 INFO  Aniket Wadkar:26 - The value set in row : AccruedIncome and column : AmountDueWithin1Year is : 9999999 in Debtors
+2017-12-14 11:47:23 INFO  Aniket Wadkar:26 - The Ajax Call is now complete. 
+2017-12-14 11:47:23 INFO  Aniket Wadkar:26 - Element is cleaned : REFRESHED!
+2017-12-14 11:47:23 INFO  Aniket Wadkar:26 - clicked Tab button on Keyboard
+2017-12-14 11:47:23 INFO  Aniket Wadkar:26 - The value set in row : AccruedIncome and column : AmountDueAfter1Year is : 9999999 in Debtors
+2017-12-14 11:47:23 INFO  Aniket Wadkar:26 - The Ajax Call is now complete. 
+2017-12-14 11:47:24 INFO  Aniket Wadkar:26 - Element is cleaned : REFRESHED!
+2017-12-14 11:47:24 INFO  Aniket Wadkar:26 - clicked Tab button on Keyboard
+2017-12-14 11:47:24 INFO  Aniket Wadkar:26 - The value set in row : VATRecoverable and column : AmountDueWithin1Year is : 9999999 in Debtors
+2017-12-14 11:47:24 INFO  Aniket Wadkar:26 - The Ajax Call is now complete. 
+2017-12-14 11:47:24 INFO  Aniket Wadkar:26 - Element is cleaned : REFRESHED!
+2017-12-14 11:47:24 INFO  Aniket Wadkar:26 - clicked Tab button on Keyboard
+2017-12-14 11:47:24 INFO  Aniket Wadkar:26 - The value set in row : VATRecoverable and column : AmountDueAfter1Year is : 9999999 in Debtors
+2017-12-14 11:47:24 INFO  Aniket Wadkar:26 - The Ajax Call is now complete. 
+2017-12-14 11:47:24 INFO  Aniket Wadkar:26 - Element is cleaned : REFRESHED!
+2017-12-14 11:47:24 INFO  Aniket Wadkar:26 - clicked Tab button on Keyboard
+2017-12-14 11:47:25 INFO  Aniket Wadkar:26 - The value set in row : PFIpayments and column : AmountDueWithin1Year is : 9999999 in Debtors
+2017-12-14 11:47:25 INFO  Aniket Wadkar:26 - The Ajax Call is now complete. 
+2017-12-14 11:47:25 INFO  Aniket Wadkar:26 - Element is cleaned : REFRESHED!
+2017-12-14 11:47:25 INFO  Aniket Wadkar:26 - clicked Tab button on Keyboard
+2017-12-14 11:47:25 INFO  Aniket Wadkar:26 - The value set in row : PFIpayments and column : AmountDueAfter1Year is : 9999999 in Debtors
+2017-12-14 11:47:25 INFO  Aniket Wadkar:26 - The Ajax Call is now complete. 
+2017-12-14 11:47:25 INFO  Aniket Wadkar:26 - Element is cleaned : REFRESHED!
+2017-12-14 11:47:25 INFO  Aniket Wadkar:26 - clicked Tab button on Keyboard
+2017-12-14 11:47:25 INFO  Aniket Wadkar:26 - The value set in row : OtherDebtors and column : AmountDueWithin1Year is : 9999999 in Debtors
+2017-12-14 11:47:25 INFO  Aniket Wadkar:26 - The Ajax Call is now complete. 
+2017-12-14 11:47:25 INFO  Aniket Wadkar:26 - Element is cleaned : REFRESHED!
+2017-12-14 11:47:25 INFO  Aniket Wadkar:26 - clicked Tab button on Keyboard
+2017-12-14 11:47:25 INFO  Aniket Wadkar:26 - The value set in row : OtherDebtors and column : AmountDueAfter1Year is : 9999999 in Debtors
+2017-12-14 11:47:26 INFO  Aniket Wadkar:26 - The Ajax Call is now complete. 
+2017-12-14 11:47:26 INFO  Aniket Wadkar:26 - The number of elements on the Donations are : 20
+2017-12-14 11:47:26 INFO  Aniket Wadkar:31 - 
+Closing the session

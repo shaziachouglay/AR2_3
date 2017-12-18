@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html>
+<head>
+  
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery.tablesorter.min.js"></script>
+<script type="text/javascript" src="js/Chart.min.js"></script>
+<script type="text/javascript" src="js/moment.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css"/>
+<link rel="stylesheet" href="css/cucumber.css" type="text/css"/>
+<link rel="stylesheet" href="css/font-awesome.min.css"/>
+<link rel="shortcut icon" href="images/favicon.png"/>
+
+<script type="text/javascript">
+$(document).ready(function() {
+    // this will tell tablesorter to try looking for the data-value attribute
+    // if present, it'll sort by that instead
+    // otherwise, it'll sort by the text content of the table cell
+    $("#tablesorter").tablesorter({
+        textAttribute: 'data-value',
+        // ignores the first row of the header, the 'scenario', 'steps', since
+        // sorting those doesn't make sense
+        selectorHeaders: '> thead tr:not(.dont-sort) th',
+        // use a stable sort
+        sortStable: true
+    });
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+
+  
+<title>Cucumber Reports (no 1) - Steps Overview</title>
+
+</head>
+<body>
+
+<nav class="navbar navbar-default navbar-fixed-top" id="navigation">
+  <div class="container-fluid">
+    <div class="collapse navbar-collapse">
+      <p class="navbar-text navbar-left">Cucumber Report</p>
+      <ul class="nav navbar-nav navbar-right">
+                <li role="presentation" ><a href="overview-features.html">Features</a></li>
+        <li role="presentation" ><a href="overview-tags.html">Tags</a></li>
+        <li role="presentation"     class="active" ><a href="overview-steps.html">Steps</a></li>
+                <li role="presentation" ><a href="overview-failures.html">Failures</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<div class="container-fluid">
+  <div class="col-md-5 col-md-offset-1">
+    
+<table class="table table-bordered" id="build-info">
+  <thead>
+    <tr>
+      <th>Project</th>
+              <th>Number</th>
+            <th>Date</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="info">
+      <td>Academy Account Return - Framework by Aniket Wadkar</td>
+              <td>1</td>
+            <td>06 Nov 2017, 10:51</td>
+    </tr>
+  </tbody>
+</table>
+
+  </div>
+  <div class="col-md-3 col-md-offset-2">
+      </div>
+</div>
+
+
+<div id="report-lead" class="container-fluid">
+  <div class="col-md-10 col-md-offset-1">
+    <h2>Steps Statistics</h2>
+          <p>The following graph shows step statistics for this build. Below list is based on results.
+ step does not provide information about result then is not listed below.
+ Additionally @Before and @After are not counted because they are part of the scenarios, not steps.</p>
+      </div>
+</div>
+
+<div class="container-fluid" id="report">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+      <table id="tablesorter" class="stats-table table-hover">
+
+        <thead>
+          <tr class="header">
+            <th>Implementation</th>
+            <th>Occurrences</th>
+            <th>Duration</th>
+            <th>Average</th>
+            <th>Ratio</th>
+          </tr>
+        </thead>
+
+        <tbody>
+                      <tr>
+              <td class="location">Hooks.setup()</td>
+              <td>28</td>
+              <td class="duration" data-value="52887994611">52s 887ms</td>
+              <td class="duration" data-value="1888856950">1s 888ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Hooks.teardown()</td>
+              <td>28</td>
+              <td class="duration" data-value="3560706503">3s 560ms</td>
+              <td class="duration" data-value="127168089">127ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_Donations.iAmOnSoFASection()</td>
+              <td>28</td>
+              <td class="duration" data-value="564737922088">9m 24s 737ms</td>
+              <td class="duration" data-value="20169211503">20s 169ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_StaffCosts.iCanSeeTheFinalTotalColumnForColumnPEToBeColumnTEToBeAndColumnTotalToBe(String,String,String)</td>
+              <td>14</td>
+              <td class="duration" data-value="72662251101">1m 12s 662ms</td>
+              <td class="duration" data-value="5190160792">5s 190ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_StaffCosts.iCanSeeTheFinalTotalColumnForColumnPEToBeNotColumnTEToBeNotAndColumnTotalToBeNot(String,String,String)</td>
+              <td>14</td>
+              <td class="duration" data-value="2889263257">2s 889ms</td>
+              <td class="duration" data-value="206375946">206ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_StaffCosts.iCanSeeTheTotalValueForRowASCToBe(String)</td>
+              <td>14</td>
+              <td class="duration" data-value="748441044">748ms</td>
+              <td class="duration" data-value="53460074">053ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_StaffCosts.iCanSeeTheTotalValueForRowASCToBeNot(String)</td>
+              <td>14</td>
+              <td class="duration" data-value="710836091">710ms</td>
+              <td class="duration" data-value="50774006">050ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_StaffCosts.iCanSeeTheTotalValueForRowLRToBe(String)</td>
+              <td>14</td>
+              <td class="duration" data-value="802489812">802ms</td>
+              <td class="duration" data-value="57320700">057ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_StaffCosts.iCanSeeTheTotalValueForRowLRToBeNot(String)</td>
+              <td>14</td>
+              <td class="duration" data-value="926834874">926ms</td>
+              <td class="duration" data-value="66202491">066ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_StaffCosts.iCanSeeTheTotalValueForRowORCToBe(String)</td>
+              <td>14</td>
+              <td class="duration" data-value="758742910">758ms</td>
+              <td class="duration" data-value="54195922">054ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_StaffCosts.iCanSeeTheTotalValueForRowORCToBeNot(String)</td>
+              <td>14</td>
+              <td class="duration" data-value="759311253">759ms</td>
+              <td class="duration" data-value="54236518">054ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_StaffCosts.iCanSeeTheTotalValueForRowPCToBe(String)</td>
+              <td>14</td>
+              <td class="duration" data-value="762843274">762ms</td>
+              <td class="duration" data-value="54488805">054ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_StaffCosts.iCanSeeTheTotalValueForRowPCToBeNot(String)</td>
+              <td>14</td>
+              <td class="duration" data-value="721909078">721ms</td>
+              <td class="duration" data-value="51564934">051ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_StaffCosts.iCanSeeTheTotalValueForRowRPToBe(String)</td>
+              <td>14</td>
+              <td class="duration" data-value="781345052">781ms</td>
+              <td class="duration" data-value="55810360">055ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_StaffCosts.iCanSeeTheTotalValueForRowRPToBeNot(String)</td>
+              <td>14</td>
+              <td class="duration" data-value="709687774">709ms</td>
+              <td class="duration" data-value="50691983">050ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_StaffCosts.iCanSeeTheTotalValueForRowSPToBe(String)</td>
+              <td>14</td>
+              <td class="duration" data-value="1035592615">1s 035ms</td>
+              <td class="duration" data-value="73970901">073ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_StaffCosts.iCanSeeTheTotalValueForRowSPToBeNot(String)</td>
+              <td>14</td>
+              <td class="duration" data-value="1051964887">1s 051ms</td>
+              <td class="duration" data-value="75140349">075ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_StaffCosts.iCanSeeTheTotalValueForRowSSCToBe(String)</td>
+              <td>14</td>
+              <td class="duration" data-value="734608944">734ms</td>
+              <td class="duration" data-value="52472067">052ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_StaffCosts.iCanSeeTheTotalValueForRowSSCToBeNot(String)</td>
+              <td>14</td>
+              <td class="duration" data-value="705883368">705ms</td>
+              <td class="duration" data-value="50420240">050ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_StaffCosts.iCanSeeTheTotalValueForRowWagesAndSalariesWSToBe(String)</td>
+              <td>14</td>
+              <td class="duration" data-value="735086893">735ms</td>
+              <td class="duration" data-value="52506206">052ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_StaffCosts.iCanSeeTheTotalValueForRowWagesAndSalariesWSToBeNot(String)</td>
+              <td>14</td>
+              <td class="duration" data-value="778226602">778ms</td>
+              <td class="duration" data-value="55587614">055ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_StaffCosts.iEnterValueInRowAgencyStaffCostsASCAndTEWith(String)</td>
+              <td>28</td>
+              <td class="duration" data-value="45120990737">45s 120ms</td>
+              <td class="duration" data-value="1611463954">1s 611ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_StaffCosts.iEnterValueInRowApprenticeshipLeveyAndColumnPermenantlyEmployedWith(String)</td>
+              <td>28</td>
+              <td class="duration" data-value="45034776623">45s 034ms</td>
+              <td class="duration" data-value="1608384879">1s 608ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_StaffCosts.iEnterValueInRowLessRecoveriesOfStaffCostsLRAndColumnPEWithAndColumnTEWith(String,String)</td>
+              <td>28</td>
+              <td class="duration" data-value="91537112923">1m 31s 537ms</td>
+              <td class="duration" data-value="3269182604">3s 269ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_StaffCosts.iEnterValueInRowOtherRestructuringCostsORCAndColumnPEWithAndColumnTEWith(String,String)</td>
+              <td>28</td>
+              <td class="duration" data-value="90241751190">1m 30s 241ms</td>
+              <td class="duration" data-value="3222919685">3s 222ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_StaffCosts.iEnterValueInRowPensionCostsPCAndColumnPEWithAndColumnTEWith(String,String)</td>
+              <td>28</td>
+              <td class="duration" data-value="89945362018">1m 29s 945ms</td>
+              <td class="duration" data-value="3212334357">3s 212ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_StaffCosts.iEnterValueInRowRedundancyPaymentRPAndColumnPEWithAndColumnTEWith(String,String)</td>
+              <td>28</td>
+              <td class="duration" data-value="90029685016">1m 30s 029ms</td>
+              <td class="duration" data-value="3215345893">3s 215ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_StaffCosts.iEnterValueInRowSeverancePaymentsSPAndColumnPEWithAndColumnTEWith(String,String)</td>
+              <td>28</td>
+              <td class="duration" data-value="90670682158">1m 30s 670ms</td>
+              <td class="duration" data-value="3238238648">3s 238ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_StaffCosts.iEnterValueInRowSocialSecurityCostsSSCAndColumnPEWithAndColumnTEWith(String,String)</td>
+              <td>28</td>
+              <td class="duration" data-value="90163875875">1m 30s 163ms</td>
+              <td class="duration" data-value="3220138424">3s 220ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_StaffCosts.iEnterValueInRowWagesAndSalariesWSAndColumnPEWithAndColumnTEWith(String,String)</td>
+              <td>28</td>
+              <td class="duration" data-value="91118365101">1m 31s 118ms</td>
+              <td class="duration" data-value="3254227325">3s 254ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_StaffCosts.iNavigateToStaffCostsSection()</td>
+              <td>28</td>
+              <td class="duration" data-value="139142301126">2m 19s 142ms</td>
+              <td class="duration" data-value="4969367897">4s 969ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_StaffCosts.iSeeTheValueInRowApprenticeshipLeveyAndColumnTotalIs(String)</td>
+              <td>14</td>
+              <td class="duration" data-value="712230512">712ms</td>
+              <td class="duration" data-value="50873608">050ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_StaffCosts.iSeeTheValueInRowApprenticeshipLeveyAndColumnTotalIsNot(String)</td>
+              <td>14</td>
+              <td class="duration" data-value="711948992">711ms</td>
+              <td class="duration" data-value="50853499">050ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                  </tbody>
+
+        <tfoot class="total">
+          <tr>
+            <td>33</td>
+            <td>644</td>
+            <td class="duration">26m 13s 891ms</td>
+            <td class="duration">2s 443ms</td>
+            <td>Totals</td>
+          </tr>
+        </tfoot>
+
+      </table>
+    </div>
+  </div>
+</div>
+
+
+<nav class="navbar navbar-default" id="footer">
+  <div class="container-fluid">
+    <p class="navbar-text navbar-right">
+        <small>generate Cucumber HTML reports via:&nbsp;</small>
+        <a class="navbar-link" href="https://github.com/jenkinsci/cucumber-reports-plugin">Jenkins Plugin</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-reporting">Standalone</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-sandwich">Sandwich</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/maven-cucumber-reporting">Maven</a>
+        &nbsp;&nbsp;
+    </p>
+  </div>
+</nav>
+
+</body>
+</html>

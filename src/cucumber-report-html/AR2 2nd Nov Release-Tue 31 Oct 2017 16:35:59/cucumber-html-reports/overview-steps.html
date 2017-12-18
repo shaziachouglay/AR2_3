@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html>
+<head>
+  
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery.tablesorter.min.js"></script>
+<script type="text/javascript" src="js/Chart.min.js"></script>
+<script type="text/javascript" src="js/moment.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css"/>
+<link rel="stylesheet" href="css/cucumber.css" type="text/css"/>
+<link rel="stylesheet" href="css/font-awesome.min.css"/>
+<link rel="shortcut icon" href="images/favicon.png"/>
+
+<script type="text/javascript">
+$(document).ready(function() {
+    // this will tell tablesorter to try looking for the data-value attribute
+    // if present, it'll sort by that instead
+    // otherwise, it'll sort by the text content of the table cell
+    $("#tablesorter").tablesorter({
+        textAttribute: 'data-value',
+        // ignores the first row of the header, the 'scenario', 'steps', since
+        // sorting those doesn't make sense
+        selectorHeaders: '> thead tr:not(.dont-sort) th',
+        // use a stable sort
+        sortStable: true
+    });
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+
+  
+<title>Cucumber Reports (no 1) - Steps Overview</title>
+
+</head>
+<body>
+
+<nav class="navbar navbar-default navbar-fixed-top" id="navigation">
+  <div class="container-fluid">
+    <div class="collapse navbar-collapse">
+      <p class="navbar-text navbar-left">Cucumber Report</p>
+      <ul class="nav navbar-nav navbar-right">
+                <li role="presentation" ><a href="overview-features.html">Features</a></li>
+        <li role="presentation" ><a href="overview-tags.html">Tags</a></li>
+        <li role="presentation"     class="active" ><a href="overview-steps.html">Steps</a></li>
+                <li role="presentation" ><a href="overview-failures.html">Failures</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<div class="container-fluid">
+  <div class="col-md-5 col-md-offset-1">
+    
+<table class="table table-bordered" id="build-info">
+  <thead>
+    <tr>
+      <th>Project</th>
+              <th>Number</th>
+            <th>Date</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="info">
+      <td>Academy Account Return - Framework by Aniket Wadkar</td>
+              <td>1</td>
+            <td>31 Oct 2017, 16:50</td>
+    </tr>
+  </tbody>
+</table>
+
+  </div>
+  <div class="col-md-3 col-md-offset-2">
+      </div>
+</div>
+
+
+<div id="report-lead" class="container-fluid">
+  <div class="col-md-10 col-md-offset-1">
+    <h2>Steps Statistics</h2>
+          <p>The following graph shows step statistics for this build. Below list is based on results.
+ step does not provide information about result then is not listed below.
+ Additionally @Before and @After are not counted because they are part of the scenarios, not steps.</p>
+      </div>
+</div>
+
+<div class="container-fluid" id="report">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+      <table id="tablesorter" class="stats-table table-hover">
+
+        <thead>
+          <tr class="header">
+            <th>Implementation</th>
+            <th>Occurrences</th>
+            <th>Duration</th>
+            <th>Average</th>
+            <th>Ratio</th>
+          </tr>
+        </thead>
+
+        <tbody>
+                      <tr>
+              <td class="location">Hooks.setup()</td>
+              <td>25</td>
+              <td class="duration" data-value="45495180109">45s 495ms</td>
+              <td class="duration" data-value="1819807204">1s 819ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Hooks.teardown()</td>
+              <td>25</td>
+              <td class="duration" data-value="3210333718">3s 210ms</td>
+              <td class="duration" data-value="128413348">128ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_AverageStaffNumbers.iEnterValueInRowAdministrationAndSupportAndColumnPEWithAndColumnTEWith(String,String)</td>
+              <td>25</td>
+              <td class="duration" data-value="16767313702">16s 767ms</td>
+              <td class="duration" data-value="670692548">670ms</td>
+              <td class="failed">96.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_AverageStaffNumbers.iEnterValueInRowDaysLostToSicknessWith(String)</td>
+              <td>25</td>
+              <td class="duration" data-value="4112378340">4s 112ms</td>
+              <td class="duration" data-value="164495133">164ms</td>
+              <td class="failed">96.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_AverageStaffNumbers.iEnterValueInRowManagementAndColumnPEWithAndColumnTISWith(String,String)</td>
+              <td>25</td>
+              <td class="duration" data-value="16397016988">16s 397ms</td>
+              <td class="duration" data-value="655880679">655ms</td>
+              <td class="failed">96.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_AverageStaffNumbers.iEnterValueInRowPEGAAccountingOfficeAndColumnMaleWithAndFemalaeWith(String,String)</td>
+              <td>25</td>
+              <td class="duration" data-value="16257064623">16s 257ms</td>
+              <td class="duration" data-value="650282584">650ms</td>
+              <td class="failed">96.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_AverageStaffNumbers.iEnterValueInRowPEGAAdministrationAndSupportAndColumnMaleWithAndFemalaeWith(String,String)</td>
+              <td>25</td>
+              <td class="duration" data-value="16625088452">16s 625ms</td>
+              <td class="duration" data-value="665003538">665ms</td>
+              <td class="failed">96.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_AverageStaffNumbers.iEnterValueInRowPEGAManagementAndColumnMaleWithAndFemalaeWith(String,String)</td>
+              <td>25</td>
+              <td class="duration" data-value="16004985282">16s 004ms</td>
+              <td class="duration" data-value="640199411">640ms</td>
+              <td class="failed">96.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_AverageStaffNumbers.iEnterValueInRowPEGAStaffWhoServeAsTrusteesAndColumnMaleWithAndColumnFemaleWith(String,String)</td>
+              <td>25</td>
+              <td class="duration" data-value="15824974831">15s 824ms</td>
+              <td class="duration" data-value="632998993">632ms</td>
+              <td class="failed">96.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_AverageStaffNumbers.iEnterValueInRowPEGATeachersAndColumnMaleWithAndFemalaeWith(String,String)</td>
+              <td>25</td>
+              <td class="duration" data-value="16768199396">16s 768ms</td>
+              <td class="duration" data-value="670727975">670ms</td>
+              <td class="failed">96.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_AverageStaffNumbers.iEnterValueInRowTeachersAndColumnPEWithAndColumnTISWith(String,String)</td>
+              <td>25</td>
+              <td class="duration" data-value="18136657245">18s 136ms</td>
+              <td class="duration" data-value="725466289">725ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_AverageStaffNumbers.iMustSeeTheTotalValueForColumnPEIsNOTAndTISIsNOTAndTotalWith(String,String,String)</td>
+              <td>19</td>
+              <td class="duration" data-value="12458141405">12s 458ms</td>
+              <td class="duration" data-value="655691652">655ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_AverageStaffNumbers.iMustSeeTheTotalValueForColumnPEWithAndTISWithAndTotalWith(String,String,String)</td>
+              <td>6</td>
+              <td class="duration" data-value="3400387549">3s 400ms</td>
+              <td class="duration" data-value="566731258">566ms</td>
+              <td class="failed">83.33%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_AverageStaffNumbers.iMustSeeTheTotalValueForRowAdministrationAndSupportNOTToBe(String)</td>
+              <td>6</td>
+              <td class="duration" data-value="1250001801">1s 250ms</td>
+              <td class="duration" data-value="208333633">208ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_AverageStaffNumbers.iMustSeeTheTotalValueForRowAdministrationAndSupportToBe(String)</td>
+              <td>6</td>
+              <td class="duration" data-value="1088306690">1s 088ms</td>
+              <td class="duration" data-value="181384448">181ms</td>
+              <td class="failed">83.33%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_AverageStaffNumbers.iMustSeeTheTotalValueForRowManagementNOTToBe(String)</td>
+              <td>6</td>
+              <td class="duration" data-value="1284649298">1s 284ms</td>
+              <td class="duration" data-value="214108216">214ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_AverageStaffNumbers.iMustSeeTheTotalValueForRowManagementToBe(String)</td>
+              <td>6</td>
+              <td class="duration" data-value="1078799020">1s 078ms</td>
+              <td class="duration" data-value="179799836">179ms</td>
+              <td class="failed">83.33%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_AverageStaffNumbers.iMustSeeTheTotalValueForRowPEGAStaffWhoServeAsTrusteesIsNOT(String)</td>
+              <td>6</td>
+              <td class="duration" data-value="1301916198">1s 301ms</td>
+              <td class="duration" data-value="216986033">216ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_AverageStaffNumbers.iMustSeeTheTotalValueForRowPEGAStaffWhoServeAsTrusteesToBe(String)</td>
+              <td>6</td>
+              <td class="duration" data-value="1106878611">1s 106ms</td>
+              <td class="duration" data-value="184479768">184ms</td>
+              <td class="failed">83.33%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_AverageStaffNumbers.iMustSeeTheTotalValueForRowTeachersNOTToBe(String)</td>
+              <td>6</td>
+              <td class="duration" data-value="1244270919">1s 244ms</td>
+              <td class="duration" data-value="207378486">207ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_AverageStaffNumbers.iMustSeeTheTotalValueForRowTeachersToBe(String)</td>
+              <td>6</td>
+              <td class="duration" data-value="38322395350">38s 322ms</td>
+              <td class="duration" data-value="6387065891">6s 387ms</td>
+              <td class="failed">83.33%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_AverageStaffNumbers.iNavigateToAverageStaffNumbers()</td>
+              <td>25</td>
+              <td class="duration" data-value="95413011966">1m 35s 413ms</td>
+              <td class="duration" data-value="3816520478">3s 816ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_AverageStaffNumbers.iSeeTheValueInRowPEGAAccountingOfficerAndColumnTotalIs(String)</td>
+              <td>6</td>
+              <td class="duration" data-value="1158164564">1s 158ms</td>
+              <td class="duration" data-value="193027427">193ms</td>
+              <td class="failed">83.33%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_AverageStaffNumbers.iSeeTheValueInRowPEGAAccountingOfficerAndColumnTotalIsNOT(String)</td>
+              <td>6</td>
+              <td class="duration" data-value="1261827717">1s 261ms</td>
+              <td class="duration" data-value="210304619">210ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_AverageStaffNumbers.iSeeTheValueInRowPEGAAdministrationAndSupportAndColumnTotalIs(String)</td>
+              <td>6</td>
+              <td class="duration" data-value="1102963583">1s 102ms</td>
+              <td class="duration" data-value="183827263">183ms</td>
+              <td class="failed">83.33%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_AverageStaffNumbers.iSeeTheValueInRowPEGAAdministrationAndSupportAndColumnTotalIsNOT(String)</td>
+              <td>6</td>
+              <td class="duration" data-value="1267515237">1s 267ms</td>
+              <td class="duration" data-value="211252539">211ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_AverageStaffNumbers.iSeeTheValueInRowPEGAManagementAndColumnTotalIs(String)</td>
+              <td>6</td>
+              <td class="duration" data-value="1099726855">1s 099ms</td>
+              <td class="duration" data-value="183287809">183ms</td>
+              <td class="failed">83.33%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_AverageStaffNumbers.iSeeTheValueInRowPEGAManagementAndColumnTotalIsNOT(String)</td>
+              <td>6</td>
+              <td class="duration" data-value="1284175363">1s 284ms</td>
+              <td class="duration" data-value="214029227">214ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_AverageStaffNumbers.iSeeTheValueInRowPEGATeachersAndColumnTotalIs(String)</td>
+              <td>6</td>
+              <td class="duration" data-value="1105735584">1s 105ms</td>
+              <td class="duration" data-value="184289264">184ms</td>
+              <td class="failed">83.33%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_AverageStaffNumbers.iSeeTheValueInRowPEGATeachersAndColumnTotalIsNOT(String)</td>
+              <td>6</td>
+              <td class="duration" data-value="1284781261">1s 284ms</td>
+              <td class="duration" data-value="214130210">214ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_AverageStaffNumbers.iSeeTheValueInRowPEGATotalAndColumnMaleIsNOTAndFemaleIsNOTAndTotalWith(String,String,String)</td>
+              <td>6</td>
+              <td class="duration" data-value="3943960661">3s 943ms</td>
+              <td class="duration" data-value="657326776">657ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_AverageStaffNumbers.iSeeTheValueInRowPEGATotalAndColumnMaleWitAndFemaleWithAndTotalWith(String,String,String)</td>
+              <td>6</td>
+              <td class="duration" data-value="3352245010">3s 352ms</td>
+              <td class="duration" data-value="558707501">558ms</td>
+              <td class="failed">83.33%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_Donations.iAmOnSoFASection()</td>
+              <td>25</td>
+              <td class="duration" data-value="436240127500">7m 16s 240ms</td>
+              <td class="duration" data-value="17449605100">17s 449ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_Donations.iSeeTheNumberOfErrorsStartingWithAllFinancialDataMustBeEnteredAre(String)</td>
+              <td>6</td>
+              <td class="duration" data-value="90202582445">1m 30s 202ms</td>
+              <td class="duration" data-value="15033763740">15s 033ms</td>
+              <td class="failed">0.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_Donations.iSeeTheNumberOfErrorsStartingWithInvalidNumberFormatAre(String)</td>
+              <td>7</td>
+              <td class="duration" data-value="572536878">572ms</td>
+              <td class="duration" data-value="81790982">081ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_Donations.iWaitForPageToLoad()</td>
+              <td>13</td>
+              <td class="duration" data-value="784384948">784ms</td>
+              <td class="duration" data-value="60337303">060ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                  </tbody>
+
+        <tfoot class="total">
+          <tr>
+            <td>36</td>
+            <td>484</td>
+            <td class="duration">14m 48s 208ms</td>
+            <td class="duration">1s 835ms</td>
+            <td>Totals</td>
+          </tr>
+        </tfoot>
+
+      </table>
+    </div>
+  </div>
+</div>
+
+
+<nav class="navbar navbar-default" id="footer">
+  <div class="container-fluid">
+    <p class="navbar-text navbar-right">
+        <small>generate Cucumber HTML reports via:&nbsp;</small>
+        <a class="navbar-link" href="https://github.com/jenkinsci/cucumber-reports-plugin">Jenkins Plugin</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-reporting">Standalone</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-sandwich">Sandwich</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/maven-cucumber-reporting">Maven</a>
+        &nbsp;&nbsp;
+    </p>
+  </div>
+</nav>
+
+</body>
+</html>

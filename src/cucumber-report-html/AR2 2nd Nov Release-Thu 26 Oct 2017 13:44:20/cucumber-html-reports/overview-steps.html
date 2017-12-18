@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html>
+<head>
+  
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery.tablesorter.min.js"></script>
+<script type="text/javascript" src="js/Chart.min.js"></script>
+<script type="text/javascript" src="js/moment.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css"/>
+<link rel="stylesheet" href="css/cucumber.css" type="text/css"/>
+<link rel="stylesheet" href="css/font-awesome.min.css"/>
+<link rel="shortcut icon" href="images/favicon.png"/>
+
+<script type="text/javascript">
+$(document).ready(function() {
+    // this will tell tablesorter to try looking for the data-value attribute
+    // if present, it'll sort by that instead
+    // otherwise, it'll sort by the text content of the table cell
+    $("#tablesorter").tablesorter({
+        textAttribute: 'data-value',
+        // ignores the first row of the header, the 'scenario', 'steps', since
+        // sorting those doesn't make sense
+        selectorHeaders: '> thead tr:not(.dont-sort) th',
+        // use a stable sort
+        sortStable: true
+    });
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+
+  
+<title>Cucumber Reports (no 1) - Steps Overview</title>
+
+</head>
+<body>
+
+<nav class="navbar navbar-default navbar-fixed-top" id="navigation">
+  <div class="container-fluid">
+    <div class="collapse navbar-collapse">
+      <p class="navbar-text navbar-left">Cucumber Report</p>
+      <ul class="nav navbar-nav navbar-right">
+                <li role="presentation" ><a href="overview-features.html">Features</a></li>
+        <li role="presentation" ><a href="overview-tags.html">Tags</a></li>
+        <li role="presentation"     class="active" ><a href="overview-steps.html">Steps</a></li>
+                <li role="presentation" ><a href="overview-failures.html">Failures</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<div class="container-fluid">
+  <div class="col-md-5 col-md-offset-1">
+    
+<table class="table table-bordered" id="build-info">
+  <thead>
+    <tr>
+      <th>Project</th>
+              <th>Number</th>
+            <th>Date</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="info">
+      <td>Academy Account Return - Framework by Aniket Wadkar</td>
+              <td>1</td>
+            <td>26 Oct 2017, 13:59</td>
+    </tr>
+  </tbody>
+</table>
+
+  </div>
+  <div class="col-md-3 col-md-offset-2">
+      </div>
+</div>
+
+
+<div id="report-lead" class="container-fluid">
+  <div class="col-md-10 col-md-offset-1">
+    <h2>Steps Statistics</h2>
+          <p>The following graph shows step statistics for this build. Below list is based on results.
+ step does not provide information about result then is not listed below.
+ Additionally @Before and @After are not counted because they are part of the scenarios, not steps.</p>
+      </div>
+</div>
+
+<div class="container-fluid" id="report">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+      <table id="tablesorter" class="stats-table table-hover">
+
+        <thead>
+          <tr class="header">
+            <th>Implementation</th>
+            <th>Occurrences</th>
+            <th>Duration</th>
+            <th>Average</th>
+            <th>Ratio</th>
+          </tr>
+        </thead>
+
+        <tbody>
+                      <tr>
+              <td class="location">Hooks.setup()</td>
+              <td>25</td>
+              <td class="duration" data-value="42505274553">42s 505ms</td>
+              <td class="duration" data-value="1700210982">1s 700ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Hooks.teardown()</td>
+              <td>25</td>
+              <td class="duration" data-value="3123536110">3s 123ms</td>
+              <td class="duration" data-value="124941444">124ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_Donations.iAmOnSoFASection()</td>
+              <td>25</td>
+              <td class="duration" data-value="264744232892">4m 24s 744ms</td>
+              <td class="duration" data-value="10589769315">10s 589ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_Donations.iSeeTheNumberOfErrorsStartingWithAllFinancialDataMustBeEnteredAre(String)</td>
+              <td>7</td>
+              <td class="duration" data-value="45214176408">45s 214ms</td>
+              <td class="duration" data-value="6459168058">6s 459ms</td>
+              <td class="failed">57.14%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_Donations.iSeeTheNumberOfErrorsStartingWithInvalidNumberFormatAre(String)</td>
+              <td>3</td>
+              <td class="duration" data-value="245225927">245ms</td>
+              <td class="duration" data-value="81741975">081ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_Donations.iWaitForPageToLoad()</td>
+              <td>10</td>
+              <td class="duration" data-value="647436705">647ms</td>
+              <td class="duration" data-value="64743670">064ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_RelatedPartyTransactions.iCanSeeTheRowNamedTotalValueForPaidAsStaffIs(String)</td>
+              <td>4</td>
+              <td class="duration" data-value="418508179">418ms</td>
+              <td class="duration" data-value="104627044">104ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_RelatedPartyTransactions.iCanSeeTheRowNamedTotalValueForPaidAsStaffIsNot(String)</td>
+              <td>8</td>
+              <td class="duration" data-value="822562652">822ms</td>
+              <td class="duration" data-value="102820331">102ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_RelatedPartyTransactions.iCanSeeTheRowNamedTotalValueForPaidAsTrusteesIs(String)</td>
+              <td>4</td>
+              <td class="duration" data-value="1025448729">1s 025ms</td>
+              <td class="duration" data-value="256362182">256ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_RelatedPartyTransactions.iCanSeeTheRowNamedTotalValueForPaidAsTrusteesIsNot(String)</td>
+              <td>8</td>
+              <td class="duration" data-value="2048479684">2s 048ms</td>
+              <td class="duration" data-value="256059960">256ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_RelatedPartyTransactions.iClickOnAddInstanceButton()</td>
+              <td>44</td>
+              <td class="duration" data-value="31134175289">31s 134ms</td>
+              <td class="duration" data-value="707594892">707ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_RelatedPartyTransactions.iClickOnAddInstanceNumberOfTimesRelatedPartyTransactionsPage(String)</td>
+              <td>3</td>
+              <td class="duration" data-value="233339140665">3m 53s 339ms</td>
+              <td class="duration" data-value="77779713555">1m 17s 779ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_RelatedPartyTransactions.iClickOnRemoveLinkForInstanceInRelatedPartyTransactionsPage(String)</td>
+              <td>3</td>
+              <td class="duration" data-value="143275605902">2m 23s 275ms</td>
+              <td class="duration" data-value="47758535300">47s 758ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_RelatedPartyTransactions.iEnterValueInNumberPaidAsStaffWithForRowNumber(String,String)</td>
+              <td>66</td>
+              <td class="duration" data-value="30602244191">30s 602ms</td>
+              <td class="duration" data-value="463670366">463ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_RelatedPartyTransactions.iEnterValueInNumberPaidAsTrusteesWithForRowNumber(String,String)</td>
+              <td>66</td>
+              <td class="duration" data-value="31375353138">31s 375ms</td>
+              <td class="duration" data-value="475384138">475ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_RelatedPartyTransactions.iNavigateToRelatedPartyTransactionsSection()</td>
+              <td>25</td>
+              <td class="duration" data-value="59076110338">59s 076ms</td>
+              <td class="duration" data-value="2363044413">2s 363ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_RelatedPartyTransactions.iSeeTheNumberOfInstancesPresentAreInNumberOfInstancesToBeAdded(String)</td>
+              <td>3</td>
+              <td class="duration" data-value="206741322">206ms</td>
+              <td class="duration" data-value="68913774">068ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_RelatedPartyTransactions.iSeeTheNumberOfInstancesPresentAreInRelatedPartyTransactionsPage(String)</td>
+              <td>3</td>
+              <td class="duration" data-value="207084973">207ms</td>
+              <td class="duration" data-value="69028324">069ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_RelatedPartyTransactions.iSelectAValueFromTheDropDownMenuForRowNumber(String,String)</td>
+              <td>66</td>
+              <td class="duration" data-value="10738637681">10s 738ms</td>
+              <td class="duration" data-value="162706631">162ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                  </tbody>
+
+        <tfoot class="total">
+          <tr>
+            <td>19</td>
+            <td>398</td>
+            <td class="duration">15m 749ms</td>
+            <td class="duration">2s 263ms</td>
+            <td>Totals</td>
+          </tr>
+        </tfoot>
+
+      </table>
+    </div>
+  </div>
+</div>
+
+
+<nav class="navbar navbar-default" id="footer">
+  <div class="container-fluid">
+    <p class="navbar-text navbar-right">
+        <small>generate Cucumber HTML reports via:&nbsp;</small>
+        <a class="navbar-link" href="https://github.com/jenkinsci/cucumber-reports-plugin">Jenkins Plugin</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-reporting">Standalone</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-sandwich">Sandwich</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/maven-cucumber-reporting">Maven</a>
+        &nbsp;&nbsp;
+    </p>
+  </div>
+</nav>
+
+</body>
+</html>

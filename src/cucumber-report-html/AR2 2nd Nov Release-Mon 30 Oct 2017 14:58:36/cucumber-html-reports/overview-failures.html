@@ -1,0 +1,5347 @@
+<!DOCTYPE html>
+<html>
+<head>
+  
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery.tablesorter.min.js"></script>
+<script type="text/javascript" src="js/Chart.min.js"></script>
+<script type="text/javascript" src="js/moment.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css"/>
+<link rel="stylesheet" href="css/cucumber.css" type="text/css"/>
+<link rel="stylesheet" href="css/font-awesome.min.css"/>
+<link rel="shortcut icon" href="images/favicon.png"/>
+
+<script type="text/javascript">
+$(document).ready(function() {
+    // this will tell tablesorter to try looking for the data-value attribute
+    // if present, it'll sort by that instead
+    // otherwise, it'll sort by the text content of the table cell
+    $("#tablesorter").tablesorter({
+        textAttribute: 'data-value',
+        // ignores the first row of the header, the 'scenario', 'steps', since
+        // sorting those doesn't make sense
+        selectorHeaders: '> thead tr:not(.dont-sort) th',
+        // use a stable sort
+        sortStable: true
+    });
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+
+  
+<title>Cucumber Reports (no 1) - Failures Overview</title>
+
+</head>
+
+<body>
+
+<nav class="navbar navbar-default navbar-fixed-top" id="navigation">
+  <div class="container-fluid">
+    <div class="collapse navbar-collapse">
+      <p class="navbar-text navbar-left">Cucumber Report</p>
+      <ul class="nav navbar-nav navbar-right">
+                <li role="presentation" ><a href="overview-features.html">Features</a></li>
+        <li role="presentation" ><a href="overview-tags.html">Tags</a></li>
+        <li role="presentation" ><a href="overview-steps.html">Steps</a></li>
+                <li role="presentation"  class="active" ><a href="overview-failures.html">Failures</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<div class="container-fluid">
+  <div class="col-md-5 col-md-offset-1">
+    
+<table class="table table-bordered" id="build-info">
+  <thead>
+    <tr>
+      <th>Project</th>
+              <th>Number</th>
+            <th>Date</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="info">
+      <td>Academy Account Return - Framework by Aniket Wadkar</td>
+              <td>1</td>
+            <td>30 Oct 2017, 15:26</td>
+    </tr>
+  </tbody>
+</table>
+
+  </div>
+  <div class="col-md-3 col-md-offset-2">
+      </div>
+</div>
+
+
+<div id="report-lead" class="container-fluid">
+  <div class="col-md-10 col-md-offset-1">
+    <h2>Failures Overview</h2>
+          <p>The following summary displays scenarios that failed.</p>
+      </div>
+</div>
+
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-10">
+      <i class="fa fa-chevron-circle-down fa-2x collapsable-control"
+        onClick="javascript:$('#report .collapsable-details').collapse('show')"></i>
+      <i class="fa fa-chevron-circle-up fa-2x collapsable-control"
+        onClick="javascript:$('#report .collapsable-details').collapse('hide')"></i>
+    </div>
+  </div>
+</div>
+
+
+<div class="container-fluid" id="report">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+
+              <div class="elements">
+                      
+<div class="element">
+      <div class="indention">
+      <b>Feature:</b>
+      <a href="report-feature_src-test-resources-sofa_revenueGrants-RevenueGrants_DfEESFA-feature.html">testing the Revenue Grants DfEESFA page</a>
+    </div>
+  
+  
+<div class="tags indention">
+      <b>Tags:</b>
+           <a href="report-tag_RevenueGrantsDfEESFAPageTest.html">@RevenueGrantsDfEESFAPageTest</a>
+      </div>
+
+  
+  <span class="lead-duration duration">43s 700ms</span>
+
+
+    <span data-toggle="collapse" class=" collapsable-control" data-target="#element-1">
+    
+<div class="brief failed">
+  <span class="keyword indention">Scenario Outline</span>
+  <span class="name">Testing : SoFA &gt; Revenue Grants &gt; DfE and ESFA Page : Financial Data Errors</span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+  </span>
+  <div class="description indention"></div>
+
+  <div id="element-1" class="collapse collapsable-details  in ">
+    
+  <div class="inner-level hooks-before">
+        <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#before-2">
+      
+<div class="brief passed">
+  <span class="keyword indention">Hooks</span>
+  <span class="name"></span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+    </div>
+
+    <div id="before-2" class="inner-level collapse collapsable-details ">
+              <div class="hook">
+          <div class="brief passed">
+            <span class="keyword indention">Before</span>
+                          <span class="location name">Hooks.setup()</span>
+                        
+  <span class="lead-duration duration">1s 741ms</span>
+
+          </div>
+
+                      
+
+          
+          
+  
+        </div>
+          </div>
+  </div>
+
+
+    
+<div class="steps inner-level">
+    <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-3">
+    
+<div class="brief failed">
+  <span class="keyword indention">Steps</span>
+  <span class="name"></span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+  </div>
+
+  <div id="steps-3" class="inner-level collapse collapsable-details  in ">
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">Given</span>
+  <span class="name">I am on SoFA section</span>
+  
+  <span class="lead-duration duration">17s 502ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">When</span>
+  <span class="name">I have navigated to the Revenue Grants DfE and ESFA page</span>
+  
+  <span class="lead-duration duration">3s 802ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">I enter value in row General Annual Grant and Column Granst Value in Accounts with &quot;9999999&quot; in DFEESFA page</span>
+  
+  <span class="lead-duration duration">507ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">I enter value in row General Annual Grant and Column Cash received in period per DFE and ESFA record  with &quot;9999999&quot; in DFEESFA page</span>
+  
+  <span class="lead-duration duration">414ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">I enter value in row General Annual Grant and Column Cash Recieved in period per Academies record if different to DFE and ESFA record with &quot;9999999&quot;in DFEESFA page</span>
+  
+  <span class="lead-duration duration">444ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">I enter value in row General Annual Grant and Column Expenditure recorded in the accounts from this grant with &quot;9999999&quot; in DFEESFA page</span>
+  
+  <span class="lead-duration duration">426ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">I enter value in row Rates reclaim and Column Granst Value in Accounts with &quot;9999999&quot; in DFEESFA page</span>
+  
+  <span class="lead-duration duration">427ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">I enter value in row Rates reclaim and Column Cash received in period per DFE and ESFA record with &quot;9999999&quot; in DFEESFA page</span>
+  
+  <span class="lead-duration duration">419ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">I enter value in row Rates reclaim and Column Cash Recieved in period per Academies record if different to DFE and ESFA record with &quot;9999999&quot;in DFEESFA page</span>
+  
+  <span class="lead-duration duration">422ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">I enter value in row Rates reclaim and Column Expenditure recorded in the accounts from this grant with &quot;9999999&quot; in DFEESFA page</span>
+  
+  <span class="lead-duration duration">425ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">I enter value in row Student Support Services and Column Granst Value in Accounts with &quot;9999999&quot; in DFEESFA page</span>
+  
+  <span class="lead-duration duration">413ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">I enter value in row Student Support Services and Column Cash received in period per DFE and ESFA record with &quot;9999999&quot; in DFEESFA page</span>
+  
+  <span class="lead-duration duration">425ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">I enter value in row Student Support Services and Column Cash Recieved in period per Academies record if different to DFE and ESFA record with &quot;9999999&quot;in DFEESFA page</span>
+  
+  <span class="lead-duration duration">420ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">I enter value in row Student Support Services and Column Expenditure recorded in the accounts from this grant with &quot;9999999&quot; in DFEESFA page</span>
+  
+  <span class="lead-duration duration">418ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">I enter value in row Pupil Premium and Service Premium and Column Granst Value in Accounts with &quot;9999999&quot; in DFEESFA page</span>
+  
+  <span class="lead-duration duration">443ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">I enter value in row Pupil Premium and Service Premium and Column Cash received in period per DFE and ESFA record with &quot;9999999&quot; in DFEESFA page</span>
+  
+  <span class="lead-duration duration">414ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">I enter value in row Pupil Premium and Service Premium and Column Cash Recieved in period per Academies record if different to DFE and ESFA record with &quot;9999999&quot;in DFEESFA page</span>
+  
+  <span class="lead-duration duration">424ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">I enter value in row Pupil Premium and Service Premium and Column Expenditure recorded in the accounts from this grant with &quot;9999999&quot; in DFEESFA page</span>
+  
+  <span class="lead-duration duration">423ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">I enter value in row Pupil Number Adjustment  and Column Granst Value in Accounts with &quot;9999999&quot; in DFEESFA page</span>
+  
+  <span class="lead-duration duration">429ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">I enter value in row Pupil Number Adjustment  and Column Cash received in period per DFE and ESFA record with &quot;9999999&quot; in DFEESFA page</span>
+  
+  <span class="lead-duration duration">417ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">I enter value in row Pupil Number Adjustment  and Column Cash Recieved in period per Academies record if different to DFE and ESFA record with &quot;9999999&quot;in DFEESFA page</span>
+  
+  <span class="lead-duration duration">421ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">I enter value in row Pupil Number Adjustment  and Column Expenditure recorded in the accounts from this grant with &quot;9999999&quot; in DFEESFA page</span>
+  
+  <span class="lead-duration duration">418ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">I enter value in row Universal Infant Free School Meals and Column Granst Value in Accounts with &quot;9999999&quot; in DFEESFA page</span>
+  
+  <span class="lead-duration duration">421ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">I enter value in row Universal Infant Free School Meals and Column Cash received in period per DFE and ESFA record with &quot;9999999&quot; in DFEESFA page</span>
+  
+  <span class="lead-duration duration">415ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">I enter value in row Universal Infant Free School Meals and Column Cash Recieved in period per Academies record if different to DFE and ESFA record with &quot;9999999&quot;in DFEESFA page</span>
+  
+  <span class="lead-duration duration">438ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">I enter value in row Universal Infant Free School Meals and Column Expenditure recorded in the accounts from this grant with &quot;9999999&quot; in DFEESFA page</span>
+  
+  <span class="lead-duration duration">424ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">I enter value in row Insurance and Column Granst Value in Accounts with &quot;9999999&quot; in DFEESFA page</span>
+  
+  <span class="lead-duration duration">431ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">I enter value in row Insurance and Column Cash received in period per DFE and ESFA record with &quot;9999999&quot; in DFEESFA page</span>
+  
+  <span class="lead-duration duration">418ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">I enter value in row Insurance and Column Cash Recieved in period per Academies record if different to DFE and ESFA record with &quot;9999999&quot;in DFEESFA page</span>
+  
+  <span class="lead-duration duration">441ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">I enter value in row Insurance and Column Expenditure recorded in the accounts from this grant with &quot;9999999&quot; in DFEESFA page</span>
+  
+  <span class="lead-duration duration">455ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">I enter value in row Sponsor Capacity Grant and Column Granst Value in Accounts with &quot;9999999&quot; in DFEESFA page</span>
+  
+  <span class="lead-duration duration">445ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">I enter value in row Sponsor Capacity Grant and Column Cash received in period per DFE and ESFA record with &quot;9999999&quot; in DFEESFA page</span>
+  
+  <span class="lead-duration duration">425ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">I enter value in row Sponsor Capacity Grant and Column Cash Recieved in period per Academies record if different to DFE and ESFA record with &quot;9999999&quot;in DFEESFA page</span>
+  
+  <span class="lead-duration duration">440ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">I enter value in row Sponsor Capacity Grant and Column Expenditure recorded in the accounts from this grant with &quot;9999999&quot; in DFEESFA page</span>
+  
+  <span class="lead-duration duration">429ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">I enter value in row Start Up Grants and Column Granst Value in Accounts with &quot;9999999&quot; in DFEESFA page</span>
+  
+  <span class="lead-duration duration">421ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">I enter value in row Start Up Grants and Column Cash received in period per DFE and ESFA record with &quot;9999999&quot; in DFEESFA page</span>
+  
+  <span class="lead-duration duration">424ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">I enter value in row Start Up Grants and Column Cash Recieved in period per Academies record if different to DFE and ESFA record with &quot;9999999&quot;in DFEESFA page</span>
+  
+  <span class="lead-duration duration">423ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">I enter value in row Start Up Grants and Column Expenditure recorded in the accounts from this grant with &quot;9999999&quot; in DFEESFA page</span>
+  
+  <span class="lead-duration duration">424ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">I enter value in row PE and Sports Grant and Column Granst Value in Accounts with &quot;9999999&quot; in DFEESFA page</span>
+  
+  <span class="lead-duration duration">429ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">I enter value in row PE and Sports Grant and Column Cash received in period per DFE and ESFA record with &quot;9999999&quot; in DFEESFA page</span>
+  
+  <span class="lead-duration duration">422ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">I enter value in row PE and Sports Grant and Column Cash Recieved in period per Academies record if different to DFE and ESFA record with &quot;9999999&quot;in DFEESFA page</span>
+  
+  <span class="lead-duration duration">436ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">I enter value in row PE and Sports Grant and Column Expenditure recorded in the accounts from this grant with &quot;9999999&quot; in DFEESFA page</span>
+  
+  <span class="lead-duration duration">430ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">I enter value in row Year Seven Catch Up Grant and Column Granst Value in Accounts with &quot;9999999&quot; in DFEESFA page</span>
+  
+  <span class="lead-duration duration">422ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">I enter value in row Year Seven Catch Up Grant and Column Cash received in period per DFE and ESFA record with &quot;9999999&quot; in DFEESFA page</span>
+  
+  <span class="lead-duration duration">424ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">I enter value in row Year Seven Catch Up Grant  and Column Cash Recieved in period per Academies record if different to DFE and ESFA record with &quot;9999999&quot;in DFEESFA page</span>
+  
+  <span class="lead-duration duration">433ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">I enter value in row Year Seven Catch Up Grant  and Column Expenditure recorded in the accounts from this grant with &quot;9999999&quot; in DFEESFA page</span>
+  
+  <span class="lead-duration duration">424ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">I enter value in row Old Skills Funding Agency and Column Granst Value in Accounts with &quot;9999999&quot; in revenue grants DFEESFA page</span>
+  
+  <span class="lead-duration duration">436ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">I enter value in row Old Skills Funding Agency and Column Cash received in period per DFE and ESFA record with &quot;9999999&quot; in revenue grants DFEESFA page</span>
+  
+  <span class="lead-duration duration">422ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">I enter value in row Old Skills Funding Agency and Column Cash Recieved in period per Academies record if different to DFE and ESFA record with &quot;9999999&quot;in revenue grants DFEESFA page</span>
+  
+  <span class="lead-duration duration">422ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">I enter value in row Old Skills Funding Agency and Column Expenditure recorded in the accounts from this grant with &quot;9999999&quot; in revenue grants DFEESFA page</span>
+  
+  <span class="lead-duration duration">424ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">I enter value in row Other and Column Granst Value in Accounts with &quot;9999999&quot; in DFEESFA page in revenue grants</span>
+  
+  <span class="lead-duration duration">437ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">I enter value in row Other and Column Cash received in period per DFE and ESFA record with &quot;9999999&quot; in DFEESFA page in revenue grants</span>
+  
+  <span class="lead-duration duration">428ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">I enter value in row Other and Column Cash Recieved in period per Academies record if different to DFE and ESFA record with &quot;9999999&quot;in DFEESFA page in revenue grants</span>
+  
+  <span class="lead-duration duration">492ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">I enter value in row Other and Column Expenditure recorded in the accounts from this grant with &quot;9999999&quot; in DFEESFA page in revenue grants</span>
+  
+  <span class="lead-duration duration">444ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief failed">
+  <span class="keyword indention">Then</span>
+  <span class="name">I see the number of errors starting with  All financial data must be entered are &quot;52&quot;</span>
+  
+  <span class="lead-duration duration">021ms</span>
+
+  </div>
+
+        
+
+  <div class="inner-level">
+    <div class="message indention">
+      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-4">
+          <a>java.lang.AssertionError: expected [52] but found [39]</a>
+      </div>
+      <div id="msg-4" class="collapse collapsable-details  in ">
+        <pre>java.lang.AssertionError: expected [52] but found [39]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:513)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:135)
+	at org.testng.Assert.assertEquals(Assert.java:116)
+	at org.testng.Assert.assertEquals(Assert.java:389)
+	at org.testng.Assert.assertEquals(Assert.java:399)
+	at org.testng.asserts.Assertion$27.doAssert(Assertion.java:347)
+	at org.testng.asserts.Assertion.executeAssert(Assertion.java:30)
+	at org.testng.asserts.Assertion.doAssert(Assertion.java:15)
+	at org.testng.asserts.Assertion.assertEquals(Assertion.java:344)
+	at stepsDefinitions.steps_sofa_donations.Steps_Donations.iSeeTheNumberOfErrorsStartingWithAllFinancialDataMustBeEnteredAre(Steps_Donations.java:87)
+	at &#10045;.Then I see the number of errors starting with  All financial data must be entered are &quot;52&quot;(src/test/resources/sofa_revenueGrants/RevenueGrants_DfEESFA.feature:264)
+</pre>
+      </div>
+    </div>
+  </div>
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+      </div>
+</div>
+
+
+    
+  <div class="inner-level hooks-after">
+        <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#after-5">
+      
+<div class="brief passed">
+  <span class="keyword indention">Hooks</span>
+  <span class="name"></span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+    </div>
+
+    <div id="after-5" class="inner-level collapse collapsable-details ">
+              <div class="hook">
+          <div class="brief passed">
+            <span class="keyword indention">After</span>
+                          <span class="location name">Hooks.teardown()</span>
+                        
+  <span class="lead-duration duration">128ms</span>
+
+          </div>
+
+                      
+
+          
+          
+  
+        </div>
+          </div>
+  </div>
+
+  </div>
+</div>
+
+                      
+<div class="element">
+      <div class="indention">
+      <b>Feature:</b>
+      <a href="report-feature_src-test-resources-sofa_revenueGrants-RevenueGrants_DfEESFA-feature.html">testing the Revenue Grants DfEESFA page</a>
+    </div>
+  
+  
+<div class="tags indention">
+      <b>Tags:</b>
+           <a href="report-tag_RevenueGrantsDfEESFAPageTest.html">@RevenueGrantsDfEESFAPageTest</a>
+      </div>
+
+  
+  <span class="lead-duration duration">44s 586ms</span>
+
+
+    <span data-toggle="collapse" class=" collapsable-control" data-target="#element-6">
+    
+<div class="brief failed">
+  <span class="keyword indention">Scenario Outline</span>
+  <span class="name">Testing : SoFA &gt; Revenue Grants &gt; DfE and ESFA Page : Financial Data Errors</span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+  </span>
+  <div class="description indention"></div>
+
+  <div id="element-6" class="collapse collapsable-details  in ">
+    
+  <div class="inner-level hooks-before">
+        <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#before-7">
+      
+<div class="brief passed">
+  <span class="keyword indention">Hooks</span>
+  <span class="name"></span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+    </div>
+
+    <div id="before-7" class="inner-level collapse collapsable-details ">
+              <div class="hook">
+          <div class="brief passed">
+            <span class="keyword indention">Before</span>
+                          <span class="location name">Hooks.setup()</span>
+                        
+  <span class="lead-duration duration">1s 566ms</span>
+
+          </div>
+
+                      
+
+          
+          
+  
+        </div>
+          </div>
+  </div>
+
+
+    
+<div class="steps inner-level">
+    <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-8">
+    
+<div class="brief failed">
+  <span class="keyword indention">Steps</span>
+  <span class="name"></span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+  </div>
+
+  <div id="steps-8" class="inner-level collapse collapsable-details  in ">
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">Given</span>
+  <span class="name">I am on SoFA section</span>
+  
+  <span class="lead-duration duration">17s 340ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">When</span>
+  <span class="name">I have navigated to the Revenue Grants DfE and ESFA page</span>
+  
+  <span class="lead-duration duration">4s 036ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">I enter value in row General Annual Grant and Column Granst Value in Accounts with &quot;9999998&quot; in DFEESFA page</span>
+  
+  <span class="lead-duration duration">503ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">I enter value in row General Annual Grant and Column Cash received in period per DFE and ESFA record  with &quot;9999998&quot; in DFEESFA page</span>
+  
+  <span class="lead-duration duration">408ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">I enter value in row General Annual Grant and Column Cash Recieved in period per Academies record if different to DFE and ESFA record with &quot;9999998&quot;in DFEESFA page</span>
+  
+  <span class="lead-duration duration">429ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">I enter value in row General Annual Grant and Column Expenditure recorded in the accounts from this grant with &quot;9999998&quot; in DFEESFA page</span>
+  
+  <span class="lead-duration duration">414ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">I enter value in row Rates reclaim and Column Granst Value in Accounts with &quot;9999998&quot; in DFEESFA page</span>
+  
+  <span class="lead-duration duration">421ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">I enter value in row Rates reclaim and Column Cash received in period per DFE and ESFA record with &quot;9999998&quot; in DFEESFA page</span>
+  
+  <span class="lead-duration duration">413ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">I enter value in row Rates reclaim and Column Cash Recieved in period per Academies record if different to DFE and ESFA record with &quot;9999998&quot;in DFEESFA page</span>
+  
+  <span class="lead-duration duration">411ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">I enter value in row Rates reclaim and Column Expenditure recorded in the accounts from this grant with &quot;9999998&quot; in DFEESFA page</span>
+  
+  <span class="lead-duration duration">425ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">I enter value in row Student Support Services and Column Granst Value in Accounts with &quot;9999998&quot; in DFEESFA page</span>
+  
+  <span class="lead-duration duration">408ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">I enter value in row Student Support Services and Column Cash received in period per DFE and ESFA record with &quot;9999998&quot; in DFEESFA page</span>
+  
+  <span class="lead-duration duration">418ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">I enter value in row Student Support Services and Column Cash Recieved in period per Academies record if different to DFE and ESFA record with &quot;9999998&quot;in DFEESFA page</span>
+  
+  <span class="lead-duration duration">414ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">I enter value in row Student Support Services and Column Expenditure recorded in the accounts from this grant with &quot;9999998&quot; in DFEESFA page</span>
+  
+  <span class="lead-duration duration">418ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">I enter value in row Pupil Premium and Service Premium and Column Granst Value in Accounts with &quot;9999998&quot; in DFEESFA page</span>
+  
+  <span class="lead-duration duration">415ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">I enter value in row Pupil Premium and Service Premium and Column Cash received in period per DFE and ESFA record with &quot;9999998&quot; in DFEESFA page</span>
+  
+  <span class="lead-duration duration">423ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">I enter value in row Pupil Premium and Service Premium and Column Cash Recieved in period per Academies record if different to DFE and ESFA record with &quot;9999998&quot;in DFEESFA page</span>
+  
+  <span class="lead-duration duration">422ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">I enter value in row Pupil Premium and Service Premium and Column Expenditure recorded in the accounts from this grant with &quot;9999998&quot; in DFEESFA page</span>
+  
+  <span class="lead-duration duration">423ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">I enter value in row Pupil Number Adjustment  and Column Granst Value in Accounts with &quot;9999998&quot; in DFEESFA page</span>
+  
+  <span class="lead-duration duration">423ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">I enter value in row Pupil Number Adjustment  and Column Cash received in period per DFE and ESFA record with &quot;9999998&quot; in DFEESFA page</span>
+  
+  <span class="lead-duration duration">422ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">I enter value in row Pupil Number Adjustment  and Column Cash Recieved in period per Academies record if different to DFE and ESFA record with &quot;9999998&quot;in DFEESFA page</span>
+  
+  <span class="lead-duration duration">422ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">I enter value in row Pupil Number Adjustment  and Column Expenditure recorded in the accounts from this grant with &quot;9999998&quot; in DFEESFA page</span>
+  
+  <span class="lead-duration duration">412ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">I enter value in row Universal Infant Free School Meals and Column Granst Value in Accounts with &quot;9999998&quot; in DFEESFA page</span>
+  
+  <span class="lead-duration duration">415ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">I enter value in row Universal Infant Free School Meals and Column Cash received in period per DFE and ESFA record with &quot;9999998&quot; in DFEESFA page</span>
+  
+  <span class="lead-duration duration">431ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">I enter value in row Universal Infant Free School Meals and Column Cash Recieved in period per Academies record if different to DFE and ESFA record with &quot;9999998&quot;in DFEESFA page</span>
+  
+  <span class="lead-duration duration">421ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">I enter value in row Universal Infant Free School Meals and Column Expenditure recorded in the accounts from this grant with &quot;9999998&quot; in DFEESFA page</span>
+  
+  <span class="lead-duration duration">432ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">I enter value in row Insurance and Column Granst Value in Accounts with &quot;9999998&quot; in DFEESFA page</span>
+  
+  <span class="lead-duration duration">421ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">I enter value in row Insurance and Column Cash received in period per DFE and ESFA record with &quot;9999998&quot; in DFEESFA page</span>
+  
+  <span class="lead-duration duration">412ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">I enter value in row Insurance and Column Cash Recieved in period per Academies record if different to DFE and ESFA record with &quot;9999998&quot;in DFEESFA page</span>
+  
+  <span class="lead-duration duration">425ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">I enter value in row Insurance and Column Expenditure recorded in the accounts from this grant with &quot;9999998&quot; in DFEESFA page</span>
+  
+  <span class="lead-duration duration">420ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">I enter value in row Sponsor Capacity Grant and Column Granst Value in Accounts with &quot;9999998&quot; in DFEESFA page</span>
+  
+  <span class="lead-duration duration">424ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">I enter value in row Sponsor Capacity Grant and Column Cash received in period per DFE and ESFA record with &quot;9999998&quot; in DFEESFA page</span>
+  
+  <span class="lead-duration duration">419ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">I enter value in row Sponsor Capacity Grant and Column Cash Recieved in period per Academies record if different to DFE and ESFA record with &quot;9999998&quot;in DFEESFA page</span>
+  
+  <span class="lead-duration duration">427ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">I enter value in row Sponsor Capacity Grant and Column Expenditure recorded in the accounts from this grant with &quot;9999998&quot; in DFEESFA page</span>
+  
+  <span class="lead-duration duration">433ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">I enter value in row Start Up Grants and Column Granst Value in Accounts with &quot;9999998&quot; in DFEESFA page</span>
+  
+  <span class="lead-duration duration">414ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">I enter value in row Start Up Grants and Column Cash received in period per DFE and ESFA record with &quot;9999998&quot; in DFEESFA page</span>
+  
+  <span class="lead-duration duration">432ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">I enter value in row Start Up Grants and Column Cash Recieved in period per Academies record if different to DFE and ESFA record with &quot;9999998&quot;in DFEESFA page</span>
+  
+  <span class="lead-duration duration">416ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">I enter value in row Start Up Grants and Column Expenditure recorded in the accounts from this grant with &quot;9999998&quot; in DFEESFA page</span>
+  
+  <span class="lead-duration duration">422ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">I enter value in row PE and Sports Grant and Column Granst Value in Accounts with &quot;9999998&quot; in DFEESFA page</span>
+  
+  <span class="lead-duration duration">425ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">I enter value in row PE and Sports Grant and Column Cash received in period per DFE and ESFA record with &quot;9999998&quot; in DFEESFA page</span>
+  
+  <span class="lead-duration duration">423ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">I enter value in row PE and Sports Grant and Column Cash Recieved in period per Academies record if different to DFE and ESFA record with &quot;9999998&quot;in DFEESFA page</span>
+  
+  <span class="lead-duration duration">422ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">I enter value in row PE and Sports Grant and Column Expenditure recorded in the accounts from this grant with &quot;9999998&quot; in DFEESFA page</span>
+  
+  <span class="lead-duration duration">426ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">I enter value in row Year Seven Catch Up Grant and Column Granst Value in Accounts with &quot;9999998&quot; in DFEESFA page</span>
+  
+  <span class="lead-duration duration">491ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">I enter value in row Year Seven Catch Up Grant and Column Cash received in period per DFE and ESFA record with &quot;9999998&quot; in DFEESFA page</span>
+  
+  <span class="lead-duration duration">437ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">I enter value in row Year Seven Catch Up Grant  and Column Cash Recieved in period per Academies record if different to DFE and ESFA record with &quot;9999998&quot;in DFEESFA page</span>
+  
+  <span class="lead-duration duration">446ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">I enter value in row Year Seven Catch Up Grant  and Column Expenditure recorded in the accounts from this grant with &quot;9999998&quot; in DFEESFA page</span>
+  
+  <span class="lead-duration duration">449ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">I enter value in row Old Skills Funding Agency and Column Granst Value in Accounts with &quot;9999998&quot; in revenue grants DFEESFA page</span>
+  
+  <span class="lead-duration duration">429ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">I enter value in row Old Skills Funding Agency and Column Cash received in period per DFE and ESFA record with &quot;9999998&quot; in revenue grants DFEESFA page</span>
+  
+  <span class="lead-duration duration">421ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">I enter value in row Old Skills Funding Agency and Column Cash Recieved in period per Academies record if different to DFE and ESFA record with &quot;9999998&quot;in revenue grants DFEESFA page</span>
+  
+  <span class="lead-duration duration">429ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">I enter value in row Old Skills Funding Agency and Column Expenditure recorded in the accounts from this grant with &quot;9999998&quot; in revenue grants DFEESFA page</span>
+  
+  <span class="lead-duration duration">458ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">I enter value in row Other and Column Granst Value in Accounts with &quot;9999998&quot; in DFEESFA page in revenue grants</span>
+  
+  <span class="lead-duration duration">441ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">I enter value in row Other and Column Cash received in period per DFE and ESFA record with &quot;9999998&quot; in DFEESFA page in revenue grants</span>
+  
+  <span class="lead-duration duration">437ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">I enter value in row Other and Column Cash Recieved in period per Academies record if different to DFE and ESFA record with &quot;9999998&quot;in DFEESFA page in revenue grants</span>
+  
+  <span class="lead-duration duration">908ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">I enter value in row Other and Column Expenditure recorded in the accounts from this grant with &quot;9999998&quot; in DFEESFA page in revenue grants</span>
+  
+  <span class="lead-duration duration">910ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief failed">
+  <span class="keyword indention">Then</span>
+  <span class="name">I see the number of errors starting with  All financial data must be entered are &quot;52&quot;</span>
+  
+  <span class="lead-duration duration">022ms</span>
+
+  </div>
+
+        
+
+  <div class="inner-level">
+    <div class="message indention">
+      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-9">
+          <a>java.lang.AssertionError: expected [52] but found [39]</a>
+      </div>
+      <div id="msg-9" class="collapse collapsable-details  in ">
+        <pre>java.lang.AssertionError: expected [52] but found [39]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:513)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:135)
+	at org.testng.Assert.assertEquals(Assert.java:116)
+	at org.testng.Assert.assertEquals(Assert.java:389)
+	at org.testng.Assert.assertEquals(Assert.java:399)
+	at org.testng.asserts.Assertion$27.doAssert(Assertion.java:347)
+	at org.testng.asserts.Assertion.executeAssert(Assertion.java:30)
+	at org.testng.asserts.Assertion.doAssert(Assertion.java:15)
+	at org.testng.asserts.Assertion.assertEquals(Assertion.java:344)
+	at stepsDefinitions.steps_sofa_donations.Steps_Donations.iSeeTheNumberOfErrorsStartingWithAllFinancialDataMustBeEnteredAre(Steps_Donations.java:87)
+	at &#10045;.Then I see the number of errors starting with  All financial data must be entered are &quot;52&quot;(src/test/resources/sofa_revenueGrants/RevenueGrants_DfEESFA.feature:264)
+</pre>
+      </div>
+    </div>
+  </div>
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+      </div>
+</div>
+
+
+    
+  <div class="inner-level hooks-after">
+        <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#after-10">
+      
+<div class="brief passed">
+  <span class="keyword indention">Hooks</span>
+  <span class="name"></span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+    </div>
+
+    <div id="after-10" class="inner-level collapse collapsable-details ">
+              <div class="hook">
+          <div class="brief passed">
+            <span class="keyword indention">After</span>
+                          <span class="location name">Hooks.teardown()</span>
+                        
+  <span class="lead-duration duration">130ms</span>
+
+          </div>
+
+                      
+
+          
+          
+  
+        </div>
+          </div>
+  </div>
+
+  </div>
+</div>
+
+                      
+<div class="element">
+      <div class="indention">
+      <b>Feature:</b>
+      <a href="report-feature_src-test-resources-sofa_revenueGrants-RevenueGrants_DfEESFA-feature.html">testing the Revenue Grants DfEESFA page</a>
+    </div>
+  
+  
+<div class="tags indention">
+      <b>Tags:</b>
+           <a href="report-tag_RevenueGrantsDfEESFAPageTest.html">@RevenueGrantsDfEESFAPageTest</a>
+      </div>
+
+  
+  <span class="lead-duration duration">44s 068ms</span>
+
+
+    <span data-toggle="collapse" class=" collapsable-control" data-target="#element-11">
+    
+<div class="brief failed">
+  <span class="keyword indention">Scenario Outline</span>
+  <span class="name">Testing : SoFA &gt; Revenue Grants &gt; DfE and ESFA Page : Financial Data Errors</span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+  </span>
+  <div class="description indention"></div>
+
+  <div id="element-11" class="collapse collapsable-details  in ">
+    
+  <div class="inner-level hooks-before">
+        <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#before-12">
+      
+<div class="brief passed">
+  <span class="keyword indention">Hooks</span>
+  <span class="name"></span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+    </div>
+
+    <div id="before-12" class="inner-level collapse collapsable-details ">
+              <div class="hook">
+          <div class="brief passed">
+            <span class="keyword indention">Before</span>
+                          <span class="location name">Hooks.setup()</span>
+                        
+  <span class="lead-duration duration">1s 627ms</span>
+
+          </div>
+
+                      
+
+          
+          
+  
+        </div>
+          </div>
+  </div>
+
+
+    
+<div class="steps inner-level">
+    <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-13">
+    
+<div class="brief failed">
+  <span class="keyword indention">Steps</span>
+  <span class="name"></span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+  </div>
+
+  <div id="steps-13" class="inner-level collapse collapsable-details  in ">
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">Given</span>
+  <span class="name">I am on SoFA section</span>
+  
+  <span class="lead-duration duration">17s 436ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">When</span>
+  <span class="name">I have navigated to the Revenue Grants DfE and ESFA page</span>
+  
+  <span class="lead-duration duration">3s 721ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">I enter value in row General Annual Grant and Column Granst Value in Accounts with &quot;-9999999&quot; in DFEESFA page</span>
+  
+  <span class="lead-duration duration">503ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">I enter value in row General Annual Grant and Column Cash received in period per DFE and ESFA record  with &quot;-9999999&quot; in DFEESFA page</span>
+  
+  <span class="lead-duration duration">422ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">I enter value in row General Annual Grant and Column Cash Recieved in period per Academies record if different to DFE and ESFA record with &quot;-9999999&quot;in DFEESFA page</span>
+  
+  <span class="lead-duration duration">458ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">I enter value in row General Annual Grant and Column Expenditure recorded in the accounts from this grant with &quot;-9999999&quot; in DFEESFA page</span>
+  
+  <span class="lead-duration duration">429ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">I enter value in row Rates reclaim and Column Granst Value in Accounts with &quot;-9999999&quot; in DFEESFA page</span>
+  
+  <span class="lead-duration duration">431ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">I enter value in row Rates reclaim and Column Cash received in period per DFE and ESFA record with &quot;-9999999&quot; in DFEESFA page</span>
+  
+  <span class="lead-duration duration">424ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">I enter value in row Rates reclaim and Column Cash Recieved in period per Academies record if different to DFE and ESFA record with &quot;-9999999&quot;in DFEESFA page</span>
+  
+  <span class="lead-duration duration">417ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">I enter value in row Rates reclaim and Column Expenditure recorded in the accounts from this grant with &quot;-9999999&quot; in DFEESFA page</span>
+  
+  <span class="lead-duration duration">422ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">I enter value in row Student Support Services and Column Granst Value in Accounts with &quot;-9999999&quot; in DFEESFA page</span>
+  
+  <span class="lead-duration duration">427ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">I enter value in row Student Support Services and Column Cash received in period per DFE and ESFA record with &quot;-9999999&quot; in DFEESFA page</span>
+  
+  <span class="lead-duration duration">415ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">I enter value in row Student Support Services and Column Cash Recieved in period per Academies record if different to DFE and ESFA record with &quot;-9999999&quot;in DFEESFA page</span>
+  
+  <span class="lead-duration duration">421ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">I enter value in row Student Support Services and Column Expenditure recorded in the accounts from this grant with &quot;-9999999&quot; in DFEESFA page</span>
+  
+  <span class="lead-duration duration">429ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">I enter value in row Pupil Premium and Service Premium and Column Granst Value in Accounts with &quot;-9999999&quot; in DFEESFA page</span>
+  
+  <span class="lead-duration duration">431ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">I enter value in row Pupil Premium and Service Premium and Column Cash received in period per DFE and ESFA record with &quot;-9999999&quot; in DFEESFA page</span>
+  
+  <span class="lead-duration duration">414ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">I enter value in row Pupil Premium and Service Premium and Column Cash Recieved in period per Academies record if different to DFE and ESFA record with &quot;-9999999&quot;in DFEESFA page</span>
+  
+  <span class="lead-duration duration">423ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">I enter value in row Pupil Premium and Service Premium and Column Expenditure recorded in the accounts from this grant with &quot;-9999999&quot; in DFEESFA page</span>
+  
+  <span class="lead-duration duration">422ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">I enter value in row Pupil Number Adjustment  and Column Granst Value in Accounts with &quot;-9999999&quot; in DFEESFA page</span>
+  
+  <span class="lead-duration duration">425ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">I enter value in row Pupil Number Adjustment  and Column Cash received in period per DFE and ESFA record with &quot;-9999999&quot; in DFEESFA page</span>
+  
+  <span class="lead-duration duration">418ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">I enter value in row Pupil Number Adjustment  and Column Cash Recieved in period per Academies record if different to DFE and ESFA record with &quot;-9999999&quot;in DFEESFA page</span>
+  
+  <span class="lead-duration duration">426ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">I enter value in row Pupil Number Adjustment  and Column Expenditure recorded in the accounts from this grant with &quot;-9999999&quot; in DFEESFA page</span>
+  
+  <span class="lead-duration duration">422ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">I enter value in row Universal Infant Free School Meals and Column Granst Value in Accounts with &quot;-9999999&quot; in DFEESFA page</span>
+  
+  <span class="lead-duration duration">433ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">I enter value in row Universal Infant Free School Meals and Column Cash received in period per DFE and ESFA record with &quot;-9999999&quot; in DFEESFA page</span>
+  
+  <span class="lead-duration duration">422ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">I enter value in row Universal Infant Free School Meals and Column Cash Recieved in period per Academies record if different to DFE and ESFA record with &quot;-9999999&quot;in DFEESFA page</span>
+  
+  <span class="lead-duration duration">417ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">I enter value in row Universal Infant Free School Meals and Column Expenditure recorded in the accounts from this grant with &quot;-9999999&quot; in DFEESFA page</span>
+  
+  <span class="lead-duration duration">437ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">I enter value in row Insurance and Column Granst Value in Accounts with &quot;-9999999&quot; in DFEESFA page</span>
+  
+  <span class="lead-duration duration">427ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">I enter value in row Insurance and Column Cash received in period per DFE and ESFA record with &quot;-9999999&quot; in DFEESFA page</span>
+  
+  <span class="lead-duration duration">425ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">I enter value in row Insurance and Column Cash Recieved in period per Academies record if different to DFE and ESFA record with &quot;-9999999&quot;in DFEESFA page</span>
+  
+  <span class="lead-duration duration">492ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">I enter value in row Insurance and Column Expenditure recorded in the accounts from this grant with &quot;-9999999&quot; in DFEESFA page</span>
+  
+  <span class="lead-duration duration">487ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">I enter value in row Sponsor Capacity Grant and Column Granst Value in Accounts with &quot;-9999999&quot; in DFEESFA page</span>
+  
+  <span class="lead-duration duration">454ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">I enter value in row Sponsor Capacity Grant and Column Cash received in period per DFE and ESFA record with &quot;-9999999&quot; in DFEESFA page</span>
+  
+  <span class="lead-duration duration">428ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">I enter value in row Sponsor Capacity Grant and Column Cash Recieved in period per Academies record if different to DFE and ESFA record with &quot;-9999999&quot;in DFEESFA page</span>
+  
+  <span class="lead-duration duration">423ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">I enter value in row Sponsor Capacity Grant and Column Expenditure recorded in the accounts from this grant with &quot;-9999999&quot; in DFEESFA page</span>
+  
+  <span class="lead-duration duration">431ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">I enter value in row Start Up Grants and Column Granst Value in Accounts with &quot;-9999999&quot; in DFEESFA page</span>
+  
+  <span class="lead-duration duration">426ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">I enter value in row Start Up Grants and Column Cash received in period per DFE and ESFA record with &quot;-9999999&quot; in DFEESFA page</span>
+  
+  <span class="lead-duration duration">425ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">I enter value in row Start Up Grants and Column Cash Recieved in period per Academies record if different to DFE and ESFA record with &quot;-9999999&quot;in DFEESFA page</span>
+  
+  <span class="lead-duration duration">435ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">I enter value in row Start Up Grants and Column Expenditure recorded in the accounts from this grant with &quot;-9999999&quot; in DFEESFA page</span>
+  
+  <span class="lead-duration duration">430ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">I enter value in row PE and Sports Grant and Column Granst Value in Accounts with &quot;-9999999&quot; in DFEESFA page</span>
+  
+  <span class="lead-duration duration">430ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">I enter value in row PE and Sports Grant and Column Cash received in period per DFE and ESFA record with &quot;-9999999&quot; in DFEESFA page</span>
+  
+  <span class="lead-duration duration">476ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">I enter value in row PE and Sports Grant and Column Cash Recieved in period per Academies record if different to DFE and ESFA record with &quot;-9999999&quot;in DFEESFA page</span>
+  
+  <span class="lead-duration duration">589ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">I enter value in row PE and Sports Grant and Column Expenditure recorded in the accounts from this grant with &quot;-9999999&quot; in DFEESFA page</span>
+  
+  <span class="lead-duration duration">434ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">I enter value in row Year Seven Catch Up Grant and Column Granst Value in Accounts with &quot;-9999999&quot; in DFEESFA page</span>
+  
+  <span class="lead-duration duration">444ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">I enter value in row Year Seven Catch Up Grant and Column Cash received in period per DFE and ESFA record with &quot;-9999999&quot; in DFEESFA page</span>
+  
+  <span class="lead-duration duration">429ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">I enter value in row Year Seven Catch Up Grant  and Column Cash Recieved in period per Academies record if different to DFE and ESFA record with &quot;-9999999&quot;in DFEESFA page</span>
+  
+  <span class="lead-duration duration">439ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">I enter value in row Year Seven Catch Up Grant  and Column Expenditure recorded in the accounts from this grant with &quot;-9999999&quot; in DFEESFA page</span>
+  
+  <span class="lead-duration duration">431ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">I enter value in row Old Skills Funding Agency and Column Granst Value in Accounts with &quot;-9999999&quot; in revenue grants DFEESFA page</span>
+  
+  <span class="lead-duration duration">432ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">I enter value in row Old Skills Funding Agency and Column Cash received in period per DFE and ESFA record with &quot;-9999999&quot; in revenue grants DFEESFA page</span>
+  
+  <span class="lead-duration duration">426ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">I enter value in row Old Skills Funding Agency and Column Cash Recieved in period per Academies record if different to DFE and ESFA record with &quot;-9999999&quot;in revenue grants DFEESFA page</span>
+  
+  <span class="lead-duration duration">436ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">I enter value in row Old Skills Funding Agency and Column Expenditure recorded in the accounts from this grant with &quot;-9999999&quot; in revenue grants DFEESFA page</span>
+  
+  <span class="lead-duration duration">436ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">I enter value in row Other and Column Granst Value in Accounts with &quot;-9999999&quot; in DFEESFA page in revenue grants</span>
+  
+  <span class="lead-duration duration">455ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">I enter value in row Other and Column Cash received in period per DFE and ESFA record with &quot;-9999999&quot; in DFEESFA page in revenue grants</span>
+  
+  <span class="lead-duration duration">440ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">I enter value in row Other and Column Cash Recieved in period per Academies record if different to DFE and ESFA record with &quot;-9999999&quot;in DFEESFA page in revenue grants</span>
+  
+  <span class="lead-duration duration">509ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">I enter value in row Other and Column Expenditure recorded in the accounts from this grant with &quot;-9999999&quot; in DFEESFA page in revenue grants</span>
+  
+  <span class="lead-duration duration">487ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief failed">
+  <span class="keyword indention">Then</span>
+  <span class="name">I see the number of errors starting with  All financial data must be entered are &quot;52&quot;</span>
+  
+  <span class="lead-duration duration">021ms</span>
+
+  </div>
+
+        
+
+  <div class="inner-level">
+    <div class="message indention">
+      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-14">
+          <a>java.lang.AssertionError: expected [52] but found [39]</a>
+      </div>
+      <div id="msg-14" class="collapse collapsable-details  in ">
+        <pre>java.lang.AssertionError: expected [52] but found [39]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:513)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:135)
+	at org.testng.Assert.assertEquals(Assert.java:116)
+	at org.testng.Assert.assertEquals(Assert.java:389)
+	at org.testng.Assert.assertEquals(Assert.java:399)
+	at org.testng.asserts.Assertion$27.doAssert(Assertion.java:347)
+	at org.testng.asserts.Assertion.executeAssert(Assertion.java:30)
+	at org.testng.asserts.Assertion.doAssert(Assertion.java:15)
+	at org.testng.asserts.Assertion.assertEquals(Assertion.java:344)
+	at stepsDefinitions.steps_sofa_donations.Steps_Donations.iSeeTheNumberOfErrorsStartingWithAllFinancialDataMustBeEnteredAre(Steps_Donations.java:87)
+	at &#10045;.Then I see the number of errors starting with  All financial data must be entered are &quot;52&quot;(src/test/resources/sofa_revenueGrants/RevenueGrants_DfEESFA.feature:264)
+</pre>
+      </div>
+    </div>
+  </div>
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+      </div>
+</div>
+
+
+    
+  <div class="inner-level hooks-after">
+        <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#after-15">
+      
+<div class="brief passed">
+  <span class="keyword indention">Hooks</span>
+  <span class="name"></span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+    </div>
+
+    <div id="after-15" class="inner-level collapse collapsable-details ">
+              <div class="hook">
+          <div class="brief passed">
+            <span class="keyword indention">After</span>
+                          <span class="location name">Hooks.teardown()</span>
+                        
+  <span class="lead-duration duration">133ms</span>
+
+          </div>
+
+                      
+
+          
+          
+  
+        </div>
+          </div>
+  </div>
+
+  </div>
+</div>
+
+                      
+<div class="element">
+      <div class="indention">
+      <b>Feature:</b>
+      <a href="report-feature_src-test-resources-sofa_revenueGrants-RevenueGrants_DfEESFA-feature.html">testing the Revenue Grants DfEESFA page</a>
+    </div>
+  
+  
+<div class="tags indention">
+      <b>Tags:</b>
+           <a href="report-tag_RevenueGrantsDfEESFAPageTest.html">@RevenueGrantsDfEESFAPageTest</a>
+      </div>
+
+  
+  <span class="lead-duration duration">44s 313ms</span>
+
+
+    <span data-toggle="collapse" class=" collapsable-control" data-target="#element-16">
+    
+<div class="brief failed">
+  <span class="keyword indention">Scenario Outline</span>
+  <span class="name">Testing : SoFA &gt; Revenue Grants &gt; DfE and ESFA Page : Financial Data Errors</span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+  </span>
+  <div class="description indention"></div>
+
+  <div id="element-16" class="collapse collapsable-details  in ">
+    
+  <div class="inner-level hooks-before">
+        <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#before-17">
+      
+<div class="brief passed">
+  <span class="keyword indention">Hooks</span>
+  <span class="name"></span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+    </div>
+
+    <div id="before-17" class="inner-level collapse collapsable-details ">
+              <div class="hook">
+          <div class="brief passed">
+            <span class="keyword indention">Before</span>
+                          <span class="location name">Hooks.setup()</span>
+                        
+  <span class="lead-duration duration">1s 777ms</span>
+
+          </div>
+
+                      
+
+          
+          
+  
+        </div>
+          </div>
+  </div>
+
+
+    
+<div class="steps inner-level">
+    <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-18">
+    
+<div class="brief failed">
+  <span class="keyword indention">Steps</span>
+  <span class="name"></span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+  </div>
+
+  <div id="steps-18" class="inner-level collapse collapsable-details  in ">
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">Given</span>
+  <span class="name">I am on SoFA section</span>
+  
+  <span class="lead-duration duration">17s 395ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">When</span>
+  <span class="name">I have navigated to the Revenue Grants DfE and ESFA page</span>
+  
+  <span class="lead-duration duration">3s 783ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">I enter value in row General Annual Grant and Column Granst Value in Accounts with &quot;-9999998&quot; in DFEESFA page</span>
+  
+  <span class="lead-duration duration">517ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">I enter value in row General Annual Grant and Column Cash received in period per DFE and ESFA record  with &quot;-9999998&quot; in DFEESFA page</span>
+  
+  <span class="lead-duration duration">434ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">I enter value in row General Annual Grant and Column Cash Recieved in period per Academies record if different to DFE and ESFA record with &quot;-9999998&quot;in DFEESFA page</span>
+  
+  <span class="lead-duration duration">454ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">I enter value in row General Annual Grant and Column Expenditure recorded in the accounts from this grant with &quot;-9999998&quot; in DFEESFA page</span>
+  
+  <span class="lead-duration duration">433ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">I enter value in row Rates reclaim and Column Granst Value in Accounts with &quot;-9999998&quot; in DFEESFA page</span>
+  
+  <span class="lead-duration duration">448ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">I enter value in row Rates reclaim and Column Cash received in period per DFE and ESFA record with &quot;-9999998&quot; in DFEESFA page</span>
+  
+  <span class="lead-duration duration">430ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">I enter value in row Rates reclaim and Column Cash Recieved in period per Academies record if different to DFE and ESFA record with &quot;-9999998&quot;in DFEESFA page</span>
+  
+  <span class="lead-duration duration">438ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">I enter value in row Rates reclaim and Column Expenditure recorded in the accounts from this grant with &quot;-9999998&quot; in DFEESFA page</span>
+  
+  <span class="lead-duration duration">437ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">I enter value in row Student Support Services and Column Granst Value in Accounts with &quot;-9999998&quot; in DFEESFA page</span>
+  
+  <span class="lead-duration duration">433ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">I enter value in row Student Support Services and Column Cash received in period per DFE and ESFA record with &quot;-9999998&quot; in DFEESFA page</span>
+  
+  <span class="lead-duration duration">439ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">I enter value in row Student Support Services and Column Cash Recieved in period per Academies record if different to DFE and ESFA record with &quot;-9999998&quot;in DFEESFA page</span>
+  
+  <span class="lead-duration duration">433ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">I enter value in row Student Support Services and Column Expenditure recorded in the accounts from this grant with &quot;-9999998&quot; in DFEESFA page</span>
+  
+  <span class="lead-duration duration">433ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">I enter value in row Pupil Premium and Service Premium and Column Granst Value in Accounts with &quot;-9999998&quot; in DFEESFA page</span>
+  
+  <span class="lead-duration duration">450ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">I enter value in row Pupil Premium and Service Premium and Column Cash received in period per DFE and ESFA record with &quot;-9999998&quot; in DFEESFA page</span>
+  
+  <span class="lead-duration duration">428ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">I enter value in row Pupil Premium and Service Premium and Column Cash Recieved in period per Academies record if different to DFE and ESFA record with &quot;-9999998&quot;in DFEESFA page</span>
+  
+  <span class="lead-duration duration">432ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">I enter value in row Pupil Premium and Service Premium and Column Expenditure recorded in the accounts from this grant with &quot;-9999998&quot; in DFEESFA page</span>
+  
+  <span class="lead-duration duration">441ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">I enter value in row Pupil Number Adjustment  and Column Granst Value in Accounts with &quot;-9999998&quot; in DFEESFA page</span>
+  
+  <span class="lead-duration duration">434ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">I enter value in row Pupil Number Adjustment  and Column Cash received in period per DFE and ESFA record with &quot;-9999998&quot; in DFEESFA page</span>
+  
+  <span class="lead-duration duration">434ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">I enter value in row Pupil Number Adjustment  and Column Cash Recieved in period per Academies record if different to DFE and ESFA record with &quot;-9999998&quot;in DFEESFA page</span>
+  
+  <span class="lead-duration duration">436ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">I enter value in row Pupil Number Adjustment  and Column Expenditure recorded in the accounts from this grant with &quot;-9999998&quot; in DFEESFA page</span>
+  
+  <span class="lead-duration duration">440ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">I enter value in row Universal Infant Free School Meals and Column Granst Value in Accounts with &quot;-9999998&quot; in DFEESFA page</span>
+  
+  <span class="lead-duration duration">448ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">I enter value in row Universal Infant Free School Meals and Column Cash received in period per DFE and ESFA record with &quot;-9999998&quot; in DFEESFA page</span>
+  
+  <span class="lead-duration duration">437ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">I enter value in row Universal Infant Free School Meals and Column Cash Recieved in period per Academies record if different to DFE and ESFA record with &quot;-9999998&quot;in DFEESFA page</span>
+  
+  <span class="lead-duration duration">436ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">I enter value in row Universal Infant Free School Meals and Column Expenditure recorded in the accounts from this grant with &quot;-9999998&quot; in DFEESFA page</span>
+  
+  <span class="lead-duration duration">442ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">I enter value in row Insurance and Column Granst Value in Accounts with &quot;-9999998&quot; in DFEESFA page</span>
+  
+  <span class="lead-duration duration">437ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">I enter value in row Insurance and Column Cash received in period per DFE and ESFA record with &quot;-9999998&quot; in DFEESFA page</span>
+  
+  <span class="lead-duration duration">438ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">I enter value in row Insurance and Column Cash Recieved in period per Academies record if different to DFE and ESFA record with &quot;-9999998&quot;in DFEESFA page</span>
+  
+  <span class="lead-duration duration">435ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">I enter value in row Insurance and Column Expenditure recorded in the accounts from this grant with &quot;-9999998&quot; in DFEESFA page</span>
+  
+  <span class="lead-duration duration">441ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">I enter value in row Sponsor Capacity Grant and Column Granst Value in Accounts with &quot;-9999998&quot; in DFEESFA page</span>
+  
+  <span class="lead-duration duration">439ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">I enter value in row Sponsor Capacity Grant and Column Cash received in period per DFE and ESFA record with &quot;-9999998&quot; in DFEESFA page</span>
+  
+  <span class="lead-duration duration">441ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">I enter value in row Sponsor Capacity Grant and Column Cash Recieved in period per Academies record if different to DFE and ESFA record with &quot;-9999998&quot;in DFEESFA page</span>
+  
+  <span class="lead-duration duration">438ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">I enter value in row Sponsor Capacity Grant and Column Expenditure recorded in the accounts from this grant with &quot;-9999998&quot; in DFEESFA page</span>
+  
+  <span class="lead-duration duration">440ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">I enter value in row Start Up Grants and Column Granst Value in Accounts with &quot;-9999998&quot; in DFEESFA page</span>
+  
+  <span class="lead-duration duration">456ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">I enter value in row Start Up Grants and Column Cash received in period per DFE and ESFA record with &quot;-9999998&quot; in DFEESFA page</span>
+  
+  <span class="lead-duration duration">434ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">I enter value in row Start Up Grants and Column Cash Recieved in period per Academies record if different to DFE and ESFA record with &quot;-9999998&quot;in DFEESFA page</span>
+  
+  <span class="lead-duration duration">449ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">I enter value in row Start Up Grants and Column Expenditure recorded in the accounts from this grant with &quot;-9999998&quot; in DFEESFA page</span>
+  
+  <span class="lead-duration duration">447ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">I enter value in row PE and Sports Grant and Column Granst Value in Accounts with &quot;-9999998&quot; in DFEESFA page</span>
+  
+  <span class="lead-duration duration">452ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">I enter value in row PE and Sports Grant and Column Cash received in period per DFE and ESFA record with &quot;-9999998&quot; in DFEESFA page</span>
+  
+  <span class="lead-duration duration">440ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">I enter value in row PE and Sports Grant and Column Cash Recieved in period per Academies record if different to DFE and ESFA record with &quot;-9999998&quot;in DFEESFA page</span>
+  
+  <span class="lead-duration duration">440ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">I enter value in row PE and Sports Grant and Column Expenditure recorded in the accounts from this grant with &quot;-9999998&quot; in DFEESFA page</span>
+  
+  <span class="lead-duration duration">440ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">I enter value in row Year Seven Catch Up Grant and Column Granst Value in Accounts with &quot;-9999998&quot; in DFEESFA page</span>
+  
+  <span class="lead-duration duration">438ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">I enter value in row Year Seven Catch Up Grant and Column Cash received in period per DFE and ESFA record with &quot;-9999998&quot; in DFEESFA page</span>
+  
+  <span class="lead-duration duration">443ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">I enter value in row Year Seven Catch Up Grant  and Column Cash Recieved in period per Academies record if different to DFE and ESFA record with &quot;-9999998&quot;in DFEESFA page</span>
+  
+  <span class="lead-duration duration">458ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">I enter value in row Year Seven Catch Up Grant  and Column Expenditure recorded in the accounts from this grant with &quot;-9999998&quot; in DFEESFA page</span>
+  
+  <span class="lead-duration duration">453ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">I enter value in row Old Skills Funding Agency and Column Granst Value in Accounts with &quot;-9999998&quot; in revenue grants DFEESFA page</span>
+  
+  <span class="lead-duration duration">445ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">I enter value in row Old Skills Funding Agency and Column Cash received in period per DFE and ESFA record with &quot;-9999998&quot; in revenue grants DFEESFA page</span>
+  
+  <span class="lead-duration duration">441ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">I enter value in row Old Skills Funding Agency and Column Cash Recieved in period per Academies record if different to DFE and ESFA record with &quot;-9999998&quot;in revenue grants DFEESFA page</span>
+  
+  <span class="lead-duration duration">448ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">I enter value in row Old Skills Funding Agency and Column Expenditure recorded in the accounts from this grant with &quot;-9999998&quot; in revenue grants DFEESFA page</span>
+  
+  <span class="lead-duration duration">443ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">I enter value in row Other and Column Granst Value in Accounts with &quot;-9999998&quot; in DFEESFA page in revenue grants</span>
+  
+  <span class="lead-duration duration">455ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">I enter value in row Other and Column Cash received in period per DFE and ESFA record with &quot;-9999998&quot; in DFEESFA page in revenue grants</span>
+  
+  <span class="lead-duration duration">446ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">I enter value in row Other and Column Cash Recieved in period per Academies record if different to DFE and ESFA record with &quot;-9999998&quot;in DFEESFA page in revenue grants</span>
+  
+  <span class="lead-duration duration">507ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">I enter value in row Other and Column Expenditure recorded in the accounts from this grant with &quot;-9999998&quot; in DFEESFA page in revenue grants</span>
+  
+  <span class="lead-duration duration">457ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief failed">
+  <span class="keyword indention">Then</span>
+  <span class="name">I see the number of errors starting with  All financial data must be entered are &quot;52&quot;</span>
+  
+  <span class="lead-duration duration">023ms</span>
+
+  </div>
+
+        
+
+  <div class="inner-level">
+    <div class="message indention">
+      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-19">
+          <a>java.lang.AssertionError: expected [52] but found [39]</a>
+      </div>
+      <div id="msg-19" class="collapse collapsable-details  in ">
+        <pre>java.lang.AssertionError: expected [52] but found [39]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:513)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:135)
+	at org.testng.Assert.assertEquals(Assert.java:116)
+	at org.testng.Assert.assertEquals(Assert.java:389)
+	at org.testng.Assert.assertEquals(Assert.java:399)
+	at org.testng.asserts.Assertion$27.doAssert(Assertion.java:347)
+	at org.testng.asserts.Assertion.executeAssert(Assertion.java:30)
+	at org.testng.asserts.Assertion.doAssert(Assertion.java:15)
+	at org.testng.asserts.Assertion.assertEquals(Assertion.java:344)
+	at stepsDefinitions.steps_sofa_donations.Steps_Donations.iSeeTheNumberOfErrorsStartingWithAllFinancialDataMustBeEnteredAre(Steps_Donations.java:87)
+	at &#10045;.Then I see the number of errors starting with  All financial data must be entered are &quot;52&quot;(src/test/resources/sofa_revenueGrants/RevenueGrants_DfEESFA.feature:264)
+</pre>
+      </div>
+    </div>
+  </div>
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+      </div>
+</div>
+
+
+    
+  <div class="inner-level hooks-after">
+        <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#after-20">
+      
+<div class="brief passed">
+  <span class="keyword indention">Hooks</span>
+  <span class="name"></span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+    </div>
+
+    <div id="after-20" class="inner-level collapse collapsable-details ">
+              <div class="hook">
+          <div class="brief passed">
+            <span class="keyword indention">After</span>
+                          <span class="location name">Hooks.teardown()</span>
+                        
+  <span class="lead-duration duration">127ms</span>
+
+          </div>
+
+                      
+
+          
+          
+  
+        </div>
+          </div>
+  </div>
+
+  </div>
+</div>
+
+                  </div>
+      
+    </div>
+  </div>
+</div>
+
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-10">
+      <i class="fa fa-chevron-circle-down fa-2x collapsable-control"
+        onClick="javascript:$('#report .collapsable-details').collapse('show')"></i>
+      <i class="fa fa-chevron-circle-up fa-2x collapsable-control"
+        onClick="javascript:$('#report .collapsable-details').collapse('hide')"></i>
+    </div>
+  </div>
+</div>
+
+<br>
+
+<nav class="navbar navbar-default" id="footer">
+  <div class="container-fluid">
+    <p class="navbar-text navbar-right">
+        <small>generate Cucumber HTML reports via:&nbsp;</small>
+        <a class="navbar-link" href="https://github.com/jenkinsci/cucumber-reports-plugin">Jenkins Plugin</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-reporting">Standalone</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-sandwich">Sandwich</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/maven-cucumber-reporting">Maven</a>
+        &nbsp;&nbsp;
+    </p>
+  </div>
+</nav>
+
+</body>
+</html>

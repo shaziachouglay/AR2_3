@@ -1,0 +1,74 @@
+2017-12-14 09:20:52 INFO  Aniket Wadkar:21 - 
+Welcome to Online Forms for Application NameAcademyAR3
+2017-12-14 09:20:52 INFO  Aniket Wadkar:22 - Session started on : Thu 14-12-2017  09:20:52
+2017-12-14 09:20:55 INFO  Aniket Wadkar:51 - Opening Chrome Browser
+2017-12-14 09:20:56 INFO  Aniket Wadkar:87 - Running Driver : chrome version : 63.0.3239.84 on OS : mac os x of Family : ANY
+2017-12-14 09:21:02 INFO  Aniket Wadkar:26 - Element is cleaned : REFRESHED!
+2017-12-14 09:21:02 INFO  Aniket Wadkar:26 - element displayed status is : true
+2017-12-14 09:21:02 INFO  Aniket Wadkar:26 -  user name displayed status is : true
+2017-12-14 09:21:02 INFO  Aniket Wadkar:26 - Element is cleaned : REFRESHED!
+2017-12-14 09:21:04 INFO  Aniket Wadkar:26 - Element is cleaned : REFRESHED!
+2017-12-14 09:21:04 INFO  Aniket Wadkar:26 - element displayed status is : true
+2017-12-14 09:21:04 INFO  Aniket Wadkar:26 - The Header displayed status for Welcome Screen is : true
+2017-12-14 09:21:04 INFO  Aniket Wadkar:26 - Element is cleaned : REFRESHED!
+2017-12-14 09:21:04 INFO  Aniket Wadkar:26 - The extracted text from the user name field is : aniket
+2017-12-14 09:21:04 INFO  Aniket Wadkar:26 - Element is cleaned : REFRESHED!
+2017-12-14 09:21:04 INFO  Aniket Wadkar:26 - Accounts Return version 2.1.7 released on 15/12/2017.
+2017-12-14 09:21:04 INFO  Aniket Wadkar:26 - Element is cleaned : REFRESHED!
+2017-12-14 09:21:04 INFO  Aniket Wadkar:26 - Element is cleaned : REFRESHED!
+2017-12-14 09:21:04 INFO  Aniket Wadkar:26 - Clicked Yes in PREPARER .
+2017-12-14 09:21:04 INFO  Aniket Wadkar:26 - Scrolling to element in view
+2017-12-14 09:21:04 INFO  Aniket Wadkar:26 - Element is cleaned : REFRESHED!
+2017-12-14 09:21:05 INFO  Aniket Wadkar:26 - Element is cleaned : REFRESHED!
+2017-12-14 09:21:07 INFO  Aniket Wadkar:26 - Element is cleaned : REFRESHED!
+2017-12-14 09:21:07 INFO  Aniket Wadkar:26 - element displayed status is : true
+2017-12-14 09:21:07 INFO  Aniket Wadkar:26 - The Header displayed status for Academy Trust Information is : true
+2017-12-14 09:21:09 INFO  Aniket Wadkar:26 - Element is cleaned : REFRESHED!
+2017-12-14 09:21:09 INFO  Aniket Wadkar:26 - Selected value from drop down is :Multi Academy Trust (MAT)
+2017-12-14 09:21:09 INFO  Aniket Wadkar:26 - Scrolling to element in view
+2017-12-14 09:21:09 INFO  Aniket Wadkar:26 - Element is cleaned : REFRESHED!
+2017-12-14 09:21:10 INFO  Aniket Wadkar:26 - Element is cleaned : REFRESHED!
+2017-12-14 09:21:11 INFO  Aniket Wadkar:26 - Element is cleaned : REFRESHED!
+2017-12-14 09:21:11 INFO  Aniket Wadkar:26 - element displayed status is : true
+2017-12-14 09:21:11 INFO  Aniket Wadkar:26 - The Header displayed status for Academy is : true
+2017-12-14 09:21:14 INFO  Aniket Wadkar:26 - Scrolling to element in view
+2017-12-14 09:21:14 INFO  Aniket Wadkar:26 - Element is cleaned : REFRESHED!
+2017-12-14 09:21:15 INFO  Aniket Wadkar:26 - Element is cleaned : REFRESHED!
+2017-12-14 09:21:16 INFO  Aniket Wadkar:26 - Element is cleaned : REFRESHED!
+2017-12-14 09:21:16 INFO  Aniket Wadkar:26 - element displayed status is : true
+2017-12-14 09:21:16 INFO  Aniket Wadkar:26 - The Header displayed status for Academy Information is : true
+2017-12-14 09:21:18 INFO  Aniket Wadkar:26 - Element is cleaned : REFRESHED!
+2017-12-14 09:21:18 INFO  Aniket Wadkar:26 - Selected value from drop down is :In period transfer in
+2017-12-14 09:21:19 INFO  Aniket Wadkar:26 - Scrolling to element in view
+2017-12-14 09:21:19 INFO  Aniket Wadkar:26 - Element is cleaned : REFRESHED!
+2017-12-14 09:21:19 INFO  Aniket Wadkar:26 - Element is cleaned : REFRESHED!
+2017-12-14 09:21:21 INFO  Aniket Wadkar:26 - Element is cleaned : REFRESHED!
+2017-12-14 09:21:21 INFO  Aniket Wadkar:26 - element displayed status is : true
+2017-12-14 09:21:21 INFO  Aniket Wadkar:26 - The Header displayed status for Questionnaire is : true
+2017-12-14 09:21:21 INFO  Aniket Wadkar:26 - Scrolling to element in view
+2017-12-14 09:21:22 INFO  Aniket Wadkar:26 - Element is cleaned : REFRESHED!
+2017-12-14 09:21:22 INFO  Aniket Wadkar:26 - Element is cleaned : REFRESHED!
+2017-12-14 09:21:25 INFO  Aniket Wadkar:26 - Element is cleaned : REFRESHED!
+2017-12-14 09:21:26 INFO  Aniket Wadkar:26 - Element is cleaned : REFRESHED!
+2017-12-14 09:21:27 INFO  Aniket Wadkar:26 - Element is cleaned : REFRESHED!
+2017-12-14 09:21:28 INFO  Aniket Wadkar:26 - Element is cleaned : REFRESHED!
+2017-12-14 09:21:29 INFO  Aniket Wadkar:26 - Element is cleaned : REFRESHED!
+2017-12-14 09:21:29 INFO  Aniket Wadkar:26 - element displayed status is : true
+2017-12-14 09:21:29 INFO  Aniket Wadkar:26 - The Header displayed status for Cash is : true
+2017-12-14 09:21:29 INFO  Aniket Wadkar:26 - Element is cleaned : REFRESHED!
+2017-12-14 09:21:29 INFO  Aniket Wadkar:26 - Element is cleaned : REFRESHED!
+2017-12-14 09:21:29 INFO  Aniket Wadkar:26 - element displayed status is : true
+2017-12-14 09:21:29 INFO  Aniket Wadkar:26 - Element is cleaned : REFRESHED!
+2017-12-14 09:21:29 INFO  Aniket Wadkar:26 - Element is cleaned : REFRESHED!
+2017-12-14 09:21:29 INFO  Aniket Wadkar:26 - Set value in label :Cash balance with value 9999999
+2017-12-14 09:21:29 INFO  Aniket Wadkar:26 - clicked Tab button on Keyboard
+2017-12-14 09:21:29 INFO  Aniket Wadkar:26 - Element is cleaned : REFRESHED!
+2017-12-14 09:21:29 INFO  Aniket Wadkar:26 - Element is cleaned : REFRESHED!
+2017-12-14 09:21:30 INFO  Aniket Wadkar:26 - Set value in label :Cash balance with value 9999999
+2017-12-14 09:21:30 INFO  Aniket Wadkar:26 - clicked Tab button on Keyboard
+2017-12-14 09:21:30 INFO  Aniket Wadkar:26 - Scrolling to element in view
+2017-12-14 09:21:30 INFO  Aniket Wadkar:26 - Element is cleaned : REFRESHED!
+2017-12-14 09:21:31 INFO  Aniket Wadkar:26 - The Ajax Call is now complete. 
+2017-12-14 09:21:31 INFO  Aniket Wadkar:26 - The number of elements on the Donations are : 1
+2017-12-14 09:21:31 INFO  Aniket Wadkar:31 - 
+Closing the session

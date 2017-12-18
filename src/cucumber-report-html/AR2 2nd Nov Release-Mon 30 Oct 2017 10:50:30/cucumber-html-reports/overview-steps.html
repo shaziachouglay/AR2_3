@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html>
+<head>
+  
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery.tablesorter.min.js"></script>
+<script type="text/javascript" src="js/Chart.min.js"></script>
+<script type="text/javascript" src="js/moment.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css"/>
+<link rel="stylesheet" href="css/cucumber.css" type="text/css"/>
+<link rel="stylesheet" href="css/font-awesome.min.css"/>
+<link rel="shortcut icon" href="images/favicon.png"/>
+
+<script type="text/javascript">
+$(document).ready(function() {
+    // this will tell tablesorter to try looking for the data-value attribute
+    // if present, it'll sort by that instead
+    // otherwise, it'll sort by the text content of the table cell
+    $("#tablesorter").tablesorter({
+        textAttribute: 'data-value',
+        // ignores the first row of the header, the 'scenario', 'steps', since
+        // sorting those doesn't make sense
+        selectorHeaders: '> thead tr:not(.dont-sort) th',
+        // use a stable sort
+        sortStable: true
+    });
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+
+  
+<title>Cucumber Reports (no 1) - Steps Overview</title>
+
+</head>
+<body>
+
+<nav class="navbar navbar-default navbar-fixed-top" id="navigation">
+  <div class="container-fluid">
+    <div class="collapse navbar-collapse">
+      <p class="navbar-text navbar-left">Cucumber Report</p>
+      <ul class="nav navbar-nav navbar-right">
+                <li role="presentation" ><a href="overview-features.html">Features</a></li>
+        <li role="presentation" ><a href="overview-tags.html">Tags</a></li>
+        <li role="presentation"     class="active" ><a href="overview-steps.html">Steps</a></li>
+                <li role="presentation" ><a href="overview-failures.html">Failures</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<div class="container-fluid">
+  <div class="col-md-5 col-md-offset-1">
+    
+<table class="table table-bordered" id="build-info">
+  <thead>
+    <tr>
+      <th>Project</th>
+              <th>Number</th>
+            <th>Date</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="info">
+      <td>Academy Account Return - Framework by Aniket Wadkar</td>
+              <td>1</td>
+            <td>30 Oct 2017, 11:01</td>
+    </tr>
+  </tbody>
+</table>
+
+  </div>
+  <div class="col-md-3 col-md-offset-2">
+      </div>
+</div>
+
+
+<div id="report-lead" class="container-fluid">
+  <div class="col-md-10 col-md-offset-1">
+    <h2>Steps Statistics</h2>
+          <p>The following graph shows step statistics for this build. Below list is based on results.
+ step does not provide information about result then is not listed below.
+ Additionally @Before and @After are not counted because they are part of the scenarios, not steps.</p>
+      </div>
+</div>
+
+<div class="container-fluid" id="report">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+      <table id="tablesorter" class="stats-table table-hover">
+
+        <thead>
+          <tr class="header">
+            <th>Implementation</th>
+            <th>Occurrences</th>
+            <th>Duration</th>
+            <th>Average</th>
+            <th>Ratio</th>
+          </tr>
+        </thead>
+
+        <tbody>
+                      <tr>
+              <td class="location">Hooks.setup()</td>
+              <td>40</td>
+              <td class="duration" data-value="80660386373">1m 20s 660ms</td>
+              <td class="duration" data-value="2016509659">2s 016ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Hooks.teardown()</td>
+              <td>40</td>
+              <td class="duration" data-value="4905839754">4s 905ms</td>
+              <td class="duration" data-value="122645993">122ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_CapitalGrantsDfEGroup.iEnterValueInFieldConstructionIndustryTrainingBoardWith(String)</td>
+              <td>40</td>
+              <td class="duration" data-value="5767045078">5s 767ms</td>
+              <td class="duration" data-value="144176126">144ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_CapitalGrantsDfEGroup.iEnterValueInFieldEngineeringConstructionIndustryTrainingBoard(String)</td>
+              <td>40</td>
+              <td class="duration" data-value="5641072095">5s 641ms</td>
+              <td class="duration" data-value="141026802">141ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_CapitalGrantsDfEGroup.iEnterValueInFieldEqualityAndHumanRightsCommissionWith(String)</td>
+              <td>40</td>
+              <td class="duration" data-value="5743974083">5s 743ms</td>
+              <td class="duration" data-value="143599352">143ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_CapitalGrantsDfEGroup.iEnterValueInFieldHigherEducationFundingCouncilForEngland(String)</td>
+              <td>40</td>
+              <td class="duration" data-value="6223871974">6s 223ms</td>
+              <td class="duration" data-value="155596799">155ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_CapitalGrantsDfEGroup.iEnterValueInFieldNationalCollegeForTeachingAndLeadershipWith(String)</td>
+              <td>40</td>
+              <td class="duration" data-value="6877824082">6s 877ms</td>
+              <td class="duration" data-value="171945602">171ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_CapitalGrantsDfEGroup.iEnterValueInFieldOfficeForFairAccessWith(String)</td>
+              <td>40</td>
+              <td class="duration" data-value="6015843902">6s 015ms</td>
+              <td class="duration" data-value="150396097">150ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_CapitalGrantsDfEGroup.iEnterValueInFieldOfficeOfTheChildrenSCommissionerWith(String)</td>
+              <td>40</td>
+              <td class="duration" data-value="5775276329">5s 775ms</td>
+              <td class="duration" data-value="144381908">144ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_CapitalGrantsDfEGroup.iEnterValueInFieldSkillsFundingAgencyWith(String)</td>
+              <td>40</td>
+              <td class="duration" data-value="5750273541">5s 750ms</td>
+              <td class="duration" data-value="143756838">143ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_CapitalGrantsDfEGroup.iEnterValueInFieldStandardsAndTestingAgencyWith(String)</td>
+              <td>40</td>
+              <td class="duration" data-value="6066896544">6s 066ms</td>
+              <td class="duration" data-value="151672413">151ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_CapitalGrantsDfEGroup.iEnterValueInFieldStudentLoanCompanyWith(String)</td>
+              <td>40</td>
+              <td class="duration" data-value="6162349734">6s 162ms</td>
+              <td class="duration" data-value="154058743">154ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_CapitalGrantsDfEGroup.iHaveNavigatedToTheCapitalGrantsSection()</td>
+              <td>40</td>
+              <td class="duration" data-value="347470827">347ms</td>
+              <td class="duration" data-value="8686770">008ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_CapitalGrantsDfEGroup.iHaveNavigatedToTheDfEGroupPage()</td>
+              <td>40</td>
+              <td class="duration" data-value="98640134220">1m 38s 640ms</td>
+              <td class="duration" data-value="2466003355">2s 466ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_CapitalGrantsDfEGroup.iSeeTheValueInFieldTotalIsInFamilyCapitalGrantsPage(String)</td>
+              <td>16</td>
+              <td class="duration" data-value="3723329964">3s 723ms</td>
+              <td class="duration" data-value="232708122">232ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_CapitalGrantsDfEGroup.iSeeTheValueInFieldTotalIsNOTInFamilyCapitalGrantsPage(String)</td>
+              <td>16</td>
+              <td class="duration" data-value="3399648090">3s 399ms</td>
+              <td class="duration" data-value="212478005">212ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_Donations.iAmOnSoFASection()</td>
+              <td>40</td>
+              <td class="duration" data-value="423730593235">7m 3s 730ms</td>
+              <td class="duration" data-value="10593264830">10s 593ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_Donations.iSeeTheNumberOfErrorsStartingWithAllFinancialDataMustBeEnteredAre(String)</td>
+              <td>4</td>
+              <td class="duration" data-value="728546262">728ms</td>
+              <td class="duration" data-value="182136565">182ms</td>
+              <td class="failed">0.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_Donations.iSeeTheNumberOfErrorsStartingWithInvalidNumberFormatAre(String)</td>
+              <td>4</td>
+              <td class="duration" data-value="631689514">631ms</td>
+              <td class="duration" data-value="157922378">157ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_Donations.iWaitForPageToLoad()</td>
+              <td>4</td>
+              <td class="duration" data-value="258473495">258ms</td>
+              <td class="duration" data-value="64618373">064ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                  </tbody>
+
+        <tfoot class="total">
+          <tr>
+            <td>20</td>
+            <td>644</td>
+            <td class="duration">11m 17s 050ms</td>
+            <td class="duration">1s 051ms</td>
+            <td>Totals</td>
+          </tr>
+        </tfoot>
+
+      </table>
+    </div>
+  </div>
+</div>
+
+
+<nav class="navbar navbar-default" id="footer">
+  <div class="container-fluid">
+    <p class="navbar-text navbar-right">
+        <small>generate Cucumber HTML reports via:&nbsp;</small>
+        <a class="navbar-link" href="https://github.com/jenkinsci/cucumber-reports-plugin">Jenkins Plugin</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-reporting">Standalone</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-sandwich">Sandwich</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/maven-cucumber-reporting">Maven</a>
+        &nbsp;&nbsp;
+    </p>
+  </div>
+</nav>
+
+</body>
+</html>

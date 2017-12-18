@@ -1,0 +1,12 @@
+record any items for the framework.
+
+add wait when moving to next page after the Save and Next button.
+
+reduce wait when navigating to the main AR Menu Acount return.
+
+Introduce small waits in getting page header.
+
+commenting only for JavaDoc Purpose.
+
+
+ created for ESFA reporisotries on 17th dec 2017.

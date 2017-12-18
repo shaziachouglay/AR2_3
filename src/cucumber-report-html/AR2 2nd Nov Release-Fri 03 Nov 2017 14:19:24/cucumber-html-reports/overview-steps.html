@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html>
+<head>
+  
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery.tablesorter.min.js"></script>
+<script type="text/javascript" src="js/Chart.min.js"></script>
+<script type="text/javascript" src="js/moment.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css"/>
+<link rel="stylesheet" href="css/cucumber.css" type="text/css"/>
+<link rel="stylesheet" href="css/font-awesome.min.css"/>
+<link rel="shortcut icon" href="images/favicon.png"/>
+
+<script type="text/javascript">
+$(document).ready(function() {
+    // this will tell tablesorter to try looking for the data-value attribute
+    // if present, it'll sort by that instead
+    // otherwise, it'll sort by the text content of the table cell
+    $("#tablesorter").tablesorter({
+        textAttribute: 'data-value',
+        // ignores the first row of the header, the 'scenario', 'steps', since
+        // sorting those doesn't make sense
+        selectorHeaders: '> thead tr:not(.dont-sort) th',
+        // use a stable sort
+        sortStable: true
+    });
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+
+  
+<title>Cucumber Reports (no 1) - Steps Overview</title>
+
+</head>
+<body>
+
+<nav class="navbar navbar-default navbar-fixed-top" id="navigation">
+  <div class="container-fluid">
+    <div class="collapse navbar-collapse">
+      <p class="navbar-text navbar-left">Cucumber Report</p>
+      <ul class="nav navbar-nav navbar-right">
+                <li role="presentation" ><a href="overview-features.html">Features</a></li>
+        <li role="presentation" ><a href="overview-tags.html">Tags</a></li>
+        <li role="presentation"     class="active" ><a href="overview-steps.html">Steps</a></li>
+                <li role="presentation" ><a href="overview-failures.html">Failures</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<div class="container-fluid">
+  <div class="col-md-5 col-md-offset-1">
+    
+<table class="table table-bordered" id="build-info">
+  <thead>
+    <tr>
+      <th>Project</th>
+              <th>Number</th>
+            <th>Date</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="info">
+      <td>Academy Account Return - Framework by Aniket Wadkar</td>
+              <td>1</td>
+            <td>03 Nov 2017, 14:47</td>
+    </tr>
+  </tbody>
+</table>
+
+  </div>
+  <div class="col-md-3 col-md-offset-2">
+      </div>
+</div>
+
+
+<div id="report-lead" class="container-fluid">
+  <div class="col-md-10 col-md-offset-1">
+    <h2>Steps Statistics</h2>
+          <p>The following graph shows step statistics for this build. Below list is based on results.
+ step does not provide information about result then is not listed below.
+ Additionally @Before and @After are not counted because they are part of the scenarios, not steps.</p>
+      </div>
+</div>
+
+<div class="container-fluid" id="report">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+      <table id="tablesorter" class="stats-table table-hover">
+
+        <thead>
+          <tr class="header">
+            <th>Implementation</th>
+            <th>Occurrences</th>
+            <th>Duration</th>
+            <th>Average</th>
+            <th>Ratio</th>
+          </tr>
+        </thead>
+
+        <tbody>
+                      <tr>
+              <td class="location">Hooks.setup()</td>
+              <td>36</td>
+              <td class="duration" data-value="128763596204">2m 8s 763ms</td>
+              <td class="duration" data-value="3576766561">3s 576ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Hooks.teardown()</td>
+              <td>36</td>
+              <td class="duration" data-value="4833596689">4s 833ms</td>
+              <td class="duration" data-value="134266574">134ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_CapitalGrantsDfEESFA.iEnterValueInRowCentrallyManagedProgrammeFreeSchoolsAndColumnCashReceivedInPeriodPerDFEAndESFARecordWithInDFEESFAPage(String)</td>
+              <td>28</td>
+              <td class="duration" data-value="11658568798">11s 658ms</td>
+              <td class="duration" data-value="416377457">416ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_CapitalGrantsDfEESFA.iEnterValueInRowCentrallyManagedProgrammeFreeSchoolsAndColumnCashRecievedInPeriodPerAcademiesRecordIfDifferentToDFEAndESFARecordWithInDFEESFAPage(String)</td>
+              <td>36</td>
+              <td class="duration" data-value="14092811350">14s 092ms</td>
+              <td class="duration" data-value="391466981">391ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_CapitalGrantsDfEESFA.iEnterValueInRowCentrallyManagedProgrammeFreeSchoolsAndColumnExpenditureRecordedInTheAccountsFromThisGrantWithInDFEESFAPage(String)</td>
+              <td>36</td>
+              <td class="duration" data-value="13067225578">13s 067ms</td>
+              <td class="duration" data-value="362978488">362ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_CapitalGrantsDfEESFA.iEnterValueInRowCentrallyManagedProgrammeFreeSchoolsAndColumnGranstValueInAccountsWithInDFEESFAPage(String)</td>
+              <td>36</td>
+              <td class="duration" data-value="13792189563">13s 792ms</td>
+              <td class="duration" data-value="383116376">383ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_CapitalGrantsDfEESFA.iEnterValueInRowConditionalImprovementFundAndColumnCashReceivedInPeriodPerDFEAndESFARecordWithInDFEESFAPage(String)</td>
+              <td>28</td>
+              <td class="duration" data-value="11539661951">11s 539ms</td>
+              <td class="duration" data-value="412130783">412ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_CapitalGrantsDfEESFA.iEnterValueInRowConditionalImprovementFundAndColumnCashRecievedInPeriodPerAcademiesRecordIfDifferentToDFEAndESFARecordWithInDFEESFAPage(String)</td>
+              <td>36</td>
+              <td class="duration" data-value="13860839332">13s 860ms</td>
+              <td class="duration" data-value="385023314">385ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_CapitalGrantsDfEESFA.iEnterValueInRowConditionalImprovementFundAndColumnExpenditureRecordedInTheAccountsFromThisGrantWithInDFEESFAPage(String)</td>
+              <td>36</td>
+              <td class="duration" data-value="12513391114">12s 513ms</td>
+              <td class="duration" data-value="347594197">347ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_CapitalGrantsDfEESFA.iEnterValueInRowConditionalImprovementFundAndColumnGranstValueInAccountsWithInDFEESFAPage(String)</td>
+              <td>36</td>
+              <td class="duration" data-value="14982671723">14s 982ms</td>
+              <td class="duration" data-value="416185325">416ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_CapitalGrantsDfEESFA.iEnterValueInRowContinuingCommitmentsBuildingSchoolsForTheFutureAndColumnCashReceivedInPeriodPerDFEAndESFARecordWithInDFEESFAPage(String)</td>
+              <td>28</td>
+              <td class="duration" data-value="11083825917">11s 083ms</td>
+              <td class="duration" data-value="395850925">395ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_CapitalGrantsDfEESFA.iEnterValueInRowContinuingCommitmentsBuildingSchoolsForTheFutureAndColumnCashRecievedInPeriodPerAcademiesRecordIfDifferentToDFEAndESFARecordWithInDFEESFAPage(String)</td>
+              <td>36</td>
+              <td class="duration" data-value="14373749428">14s 373ms</td>
+              <td class="duration" data-value="399270817">399ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_CapitalGrantsDfEESFA.iEnterValueInRowContinuingCommitmentsBuildingSchoolsForTheFutureAndColumnExpenditureRecordedInTheAccountsFromThisGrantWithInDFEESFAPage(String)</td>
+              <td>36</td>
+              <td class="duration" data-value="12581514286">12s 581ms</td>
+              <td class="duration" data-value="349486507">349ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_CapitalGrantsDfEESFA.iEnterValueInRowContinuingCommitmentsBuildingSchoolsForTheFutureAndColumnGranstValueInAccountsWithInDFEESFAPage(String)</td>
+              <td>36</td>
+              <td class="duration" data-value="15613001552">15s 613ms</td>
+              <td class="duration" data-value="433694487">433ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_CapitalGrantsDfEESFA.iEnterValueInRowDevolvedFormulaCapitalGrantAndColumnCashReceivedInPeriodPerDFEAndESFARecordWithInDFEESFAPage(String)</td>
+              <td>28</td>
+              <td class="duration" data-value="12201839219">12s 201ms</td>
+              <td class="duration" data-value="435779972">435ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_CapitalGrantsDfEESFA.iEnterValueInRowDevolvedFormulaCapitalGrantAndColumnCashRecievedInPeriodPerAcademiesRecordIfDifferentToDFEAndESFARecordWithInDFEESFAPage(String)</td>
+              <td>36</td>
+              <td class="duration" data-value="14414378352">14s 414ms</td>
+              <td class="duration" data-value="400399398">400ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_CapitalGrantsDfEESFA.iEnterValueInRowDevolvedFormulaCapitalGrantAndColumnExpenditureRecordedInTheAccountsFromThisGrantWithInDFEESFAPage(String)</td>
+              <td>36</td>
+              <td class="duration" data-value="12767502970">12s 767ms</td>
+              <td class="duration" data-value="354652860">354ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_CapitalGrantsDfEESFA.iEnterValueInRowDevolvedFormulaCapitalGrantAndColumnGranstValueInAccountsWithInDFEESFAPage(String)</td>
+              <td>36</td>
+              <td class="duration" data-value="13937934592">13s 937ms</td>
+              <td class="duration" data-value="387164849">387ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_CapitalGrantsDfEESFA.iEnterValueInRowMATsSchoolConditionAllowanceAndColumnCashReceivedInPeriodPerDFEAndESFARecordWithInDFEESFAPage(String)</td>
+              <td>28</td>
+              <td class="duration" data-value="12290450363">12s 290ms</td>
+              <td class="duration" data-value="438944655">438ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_CapitalGrantsDfEESFA.iEnterValueInRowMATsSchoolConditionAllowanceAndColumnCashRecievedInPeriodPerAcademiesRecordIfDifferentToDFEAndESFARecordWithInDFEESFAPage(String)</td>
+              <td>36</td>
+              <td class="duration" data-value="14669454691">14s 669ms</td>
+              <td class="duration" data-value="407484852">407ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_CapitalGrantsDfEESFA.iEnterValueInRowMATsSchoolConditionAllowanceAndColumnExpenditureRecordedInTheAccountsFromThisGrantWithInDFEESFAPage(String)</td>
+              <td>36</td>
+              <td class="duration" data-value="12973146130">12s 973ms</td>
+              <td class="duration" data-value="360365170">360ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_CapitalGrantsDfEESFA.iEnterValueInRowMATsSchoolConditionAllowanceAndColumnGranstValueInAccountsWithInDFEESFAPage(String)</td>
+              <td>36</td>
+              <td class="duration" data-value="15049300967">15s 049ms</td>
+              <td class="duration" data-value="418036137">418ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_CapitalGrantsDfEESFA.iEnterValueInRowOldSkillsFundingAgencyAndColumnCashReceivedInPeriodPerDFEAndESFARecordWithInDFEESFAPage(String)</td>
+              <td>28</td>
+              <td class="duration" data-value="10984547546">10s 984ms</td>
+              <td class="duration" data-value="392305269">392ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_CapitalGrantsDfEESFA.iEnterValueInRowOldSkillsFundingAgencyAndColumnCashRecievedInPeriodPerAcademiesRecordIfDifferentToDFEAndESFARecordWithInDFEESFAPage(String)</td>
+              <td>36</td>
+              <td class="duration" data-value="13906950704">13s 906ms</td>
+              <td class="duration" data-value="386304186">386ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_CapitalGrantsDfEESFA.iEnterValueInRowOldSkillsFundingAgencyAndColumnExpenditureRecordedInTheAccountsFromThisGrantWithInDFEESFAPage(String)</td>
+              <td>36</td>
+              <td class="duration" data-value="13676943086">13s 676ms</td>
+              <td class="duration" data-value="379915085">379ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_CapitalGrantsDfEESFA.iEnterValueInRowOldSkillsFundingAgencyAndColumnGranstValueInAccountsWithInDFEESFAPage(String)</td>
+              <td>36</td>
+              <td class="duration" data-value="14376386909">14s 376ms</td>
+              <td class="duration" data-value="399344080">399ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_CapitalGrantsDfEESFA.iEnterValueInRowOtherAndColumnCashReceivedInPeriodPerDFEAndESFARecordWithInDFEESFAPage(String)</td>
+              <td>28</td>
+              <td class="duration" data-value="11797627016">11s 797ms</td>
+              <td class="duration" data-value="421343822">421ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_CapitalGrantsDfEESFA.iEnterValueInRowOtherAndColumnCashRecievedInPeriodPerAcademiesRecordIfDifferentToDFEAndESFARecordWithInDFEESFAPage(String)</td>
+              <td>36</td>
+              <td class="duration" data-value="15981784399">15s 981ms</td>
+              <td class="duration" data-value="443938455">443ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_CapitalGrantsDfEESFA.iEnterValueInRowOtherAndColumnExpenditureRecordedInTheAccountsFromThisGrantWithInDFEESFAPage(String)</td>
+              <td>36</td>
+              <td class="duration" data-value="13761613707">13s 761ms</td>
+              <td class="duration" data-value="382267047">382ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_CapitalGrantsDfEESFA.iEnterValueInRowOtherAndColumnGranstValueInAccountsWithInDFEESFAPage(String)</td>
+              <td>36</td>
+              <td class="duration" data-value="15099077300">15s 099ms</td>
+              <td class="duration" data-value="419418813">419ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_CapitalGrantsDfEESFA.iEnterValueInRowPrioritySchoolBuildingProgrammeAndColumnCashReceivedInPeriodPerDFEAndESFARecordWithInDFEESFAPage(String)</td>
+              <td>28</td>
+              <td class="duration" data-value="12474391644">12s 474ms</td>
+              <td class="duration" data-value="445513987">445ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_CapitalGrantsDfEESFA.iEnterValueInRowPrioritySchoolBuildingProgrammeAndColumnCashRecievedInPeriodPerAcademiesRecordIfDifferentToDFEAndESFARecordWithInDFEESFAPage(String)</td>
+              <td>36</td>
+              <td class="duration" data-value="14297343934">14s 297ms</td>
+              <td class="duration" data-value="397148442">397ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_CapitalGrantsDfEESFA.iEnterValueInRowPrioritySchoolBuildingProgrammeAndColumnExpenditureRecordedInTheAccountsFromThisGrantWithInDFEESFAPage(String)</td>
+              <td>36</td>
+              <td class="duration" data-value="12965688600">12s 965ms</td>
+              <td class="duration" data-value="360158016">360ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_CapitalGrantsDfEESFA.iEnterValueInRowPrioritySchoolBuildingProgrammeAndColumnGranstValueInAccountsWithInDFEESFAPage(String)</td>
+              <td>36</td>
+              <td class="duration" data-value="14764802083">14s 764ms</td>
+              <td class="duration" data-value="410133391">410ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_CapitalGrantsDfEESFA.iEnterValueInRowSchoolsSponsorshipDevelopmentFundAndColumnCashReceivedInPeriodPerDFEAndESFARecordWithInDFEESFAPage(String)</td>
+              <td>28</td>
+              <td class="duration" data-value="10971261781">10s 971ms</td>
+              <td class="duration" data-value="391830777">391ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_CapitalGrantsDfEESFA.iEnterValueInRowSchoolsSponsorshipDevelopmentFundAndColumnCashRecievedInPeriodPerAcademiesRecordIfDifferentToDFEAndESFARecordWithInDFEESFAPage(String)</td>
+              <td>36</td>
+              <td class="duration" data-value="14962709392">14s 962ms</td>
+              <td class="duration" data-value="415630816">415ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_CapitalGrantsDfEESFA.iEnterValueInRowSchoolsSponsorshipDevelopmentFundAndColumnExpenditureRecordedInTheAccountsFromThisGrantWithInDFEESFAPage(String)</td>
+              <td>36</td>
+              <td class="duration" data-value="13427249142">13s 427ms</td>
+              <td class="duration" data-value="372979142">372ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_CapitalGrantsDfEESFA.iEnterValueInRowSchoolsSponsorshipDevelopmentFundAndColumnGranstValueInAccountsWithInDFEESFAPage(String)</td>
+              <td>36</td>
+              <td class="duration" data-value="14556249882">14s 556ms</td>
+              <td class="duration" data-value="404340274">404ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_CapitalGrantsDfEESFA.iHaveNavigatedToTheDfEAndESFASection()</td>
+              <td>36</td>
+              <td class="duration" data-value="188175577277">3m 8s 175ms</td>
+              <td class="duration" data-value="5227099368">5s 227ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_CapitalGrantsDfEESFA.iSeeValueInRowAndTotalsCashReceivedInPeriodPerDFEAndESFARecordIsNOTInDFEESFAPage(String)</td>
+              <td>14</td>
+              <td class="duration" data-value="8564196952">8s 564ms</td>
+              <td class="duration" data-value="611728353">611ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_CapitalGrantsDfEESFA.iSeeValueInRowAndTotalsCashReceivedInPeriodPerDFEAndESFARecordWithInDFEESFAPage(String)</td>
+              <td>14</td>
+              <td class="duration" data-value="8578459199">8s 578ms</td>
+              <td class="duration" data-value="612747085">612ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_CapitalGrantsDfEESFA.iSeeValueInRowAndTotalsCashRecievedInPeriodPerAcademiesRecordIfDifferentToDFEAndESFARecordIsNOTInDFEESFAPage(String)</td>
+              <td>14</td>
+              <td class="duration" data-value="8570029514">8s 570ms</td>
+              <td class="duration" data-value="612144965">612ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_CapitalGrantsDfEESFA.iSeeValueInRowAndTotalsCashRecievedInPeriodPerAcademiesRecordIfDifferentToDFEAndESFARecordWithInDFEESFAPage(String)</td>
+              <td>14</td>
+              <td class="duration" data-value="8599995732">8s 599ms</td>
+              <td class="duration" data-value="614285409">614ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_CapitalGrantsDfEESFA.iSeeValueInRowAndTotalsExpenditureRecordedInTheAccountsFromThisGrantIsNOTInDFEESFAPage(String)</td>
+              <td>14</td>
+              <td class="duration" data-value="8536899880">8s 536ms</td>
+              <td class="duration" data-value="609778562">609ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_CapitalGrantsDfEESFA.iSeeValueInRowAndTotalsExpenditureRecordedInTheAccountsFromThisGrantWithInDFEESFAPage(String)</td>
+              <td>14</td>
+              <td class="duration" data-value="8609439141">8s 609ms</td>
+              <td class="duration" data-value="614959938">614ms</td>
+              <td class="failed">92.86%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_CapitalGrantsDfEESFA.iSeeValueInRowAndTotalsGranstValueInAccountsIsNOTInDFEESFAPage(String)</td>
+              <td>14</td>
+              <td class="duration" data-value="8502670678">8s 502ms</td>
+              <td class="duration" data-value="607333619">607ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_CapitalGrantsDfEESFA.iSeeValueInRowAndTotalsGranstValueInAccountsWithInDFEESFAPage(String)</td>
+              <td>14</td>
+              <td class="duration" data-value="8535258316">8s 535ms</td>
+              <td class="duration" data-value="609661308">609ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_CapitalGrantsDfEGroup.iHaveNavigatedToTheCapitalGrantsSection()</td>
+              <td>36</td>
+              <td class="duration" data-value="267466791">267ms</td>
+              <td class="duration" data-value="7429633">007ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_Donations.iAmOnSoFASection()</td>
+              <td>36</td>
+              <td class="duration" data-value="726420057777">12m 6s 420ms</td>
+              <td class="duration" data-value="20178334938">20s 178ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_Donations.iSeeTheNumberOfErrorsStartingWithAllFinancialDataMustBeEnteredAre(String)</td>
+              <td>8</td>
+              <td class="duration" data-value="45230957672">45s 230ms</td>
+              <td class="duration" data-value="5653869709">5s 653ms</td>
+              <td class="failed">50.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Steps_Donations.iWaitForPageToLoad()</td>
+              <td>4</td>
+              <td class="duration" data-value="247845431">247ms</td>
+              <td class="duration" data-value="61961357">061ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                  </tbody>
+
+        <tfoot class="total">
+          <tr>
+            <td>51</td>
+            <td>1528</td>
+            <td class="duration">27m 27s 904ms</td>
+            <td class="duration">1s 078ms</td>
+            <td>Totals</td>
+          </tr>
+        </tfoot>
+
+      </table>
+    </div>
+  </div>
+</div>
+
+
+<nav class="navbar navbar-default" id="footer">
+  <div class="container-fluid">
+    <p class="navbar-text navbar-right">
+        <small>generate Cucumber HTML reports via:&nbsp;</small>
+        <a class="navbar-link" href="https://github.com/jenkinsci/cucumber-reports-plugin">Jenkins Plugin</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-reporting">Standalone</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-sandwich">Sandwich</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/maven-cucumber-reporting">Maven</a>
+        &nbsp;&nbsp;
+    </p>
+  </div>
+</nav>
+
+</body>
+</html>
