@@ -283,4 +283,91 @@ public class Steps_TFA_Cost extends BaseTest{
     public void iSeeTheTotalForRowAtCloseOfPeriodIsInCostPage(String arg0)  {
         hardAssertion.assertEquals(tfa_cost.getValueByRowNameAndColumnNameInTFACostPage(TFA_Cost.rowName.AtCloseOfPeriod, TFA_Cost.columnName.Total),arg0);
     }
+
+    @Then("^I must see the total for row Original prior year closing balance is NOT\"([^\"]*)\" in Cost page$")
+    public void iMustSeeTheTotalForRowOriginalPriorYearClosingBalanceIsNOTInCostPage(String arg0) {
+        hardAssertion.assertNotEquals(tfa_cost.getValueByRowNameAndColumnNameInTFACostPage(TFA_Cost.rowName.OriginalPriorYearClosingBalance, TFA_Cost.columnName.Total),arg0);
+    }
+
+    @Then("^I must see the total for row Adjustments made to opening balance is NOT\"([^\"]*)\" in Cost page$")
+    public void iMustSeeTheTotalForRowAdjustmentsMadeToOpeningBalanceIsNOTInCostPage(String arg0) {
+        hardAssertion.assertNotEquals(tfa_cost.getValueByRowNameAndColumnNameInTFACostPage(TFA_Cost.rowName.AdjustmentsMadeToOpeningBalance, TFA_Cost.columnName.Total),arg0);
+    }
+
+    @Then("^I must see the total for row Additions funded from Free Schools Priority Schools Building programme is NOT\"([^\"]*)\" in Cost page$")
+    public void iMustSeeTheTotalForRowAdditionsFundedFromFreeSchoolsPrioritySchoolsBuildingProgrammeIsNOTInCostPage(String arg0) {
+        hardAssertion.assertNotEquals(tfa_cost.getValueByRowNameAndColumnNameInTFACostPage(TFA_Cost.rowName.AdditionsFundedFromFreeSchoolsPrioritySchoolsBuildingProgramme, TFA_Cost.columnName.Total),arg0);
+    }
+
+    @Then("^I must see the total for row Additions funded from other DFE and ESFA EFA capital grant is NOT\"([^\"]*)\" in Cost page$")
+    public void iMustSeeTheTotalForRowAdditionsFundedFromOtherDFEAndESFAEFACapitalGrantIsNOTInCostPage(String arg0) {
+        hardAssertion.assertNotEquals(tfa_cost.getValueByRowNameAndColumnNameInTFACostPage(TFA_Cost.rowName.AdditionsFundedFromOtherDFEAndESFACapitalGrant, TFA_Cost.columnName.Total),arg0);
+    }
+
+    @Then("^I must see the total for row Additions Other is NOT\"([^\"]*)\" in Cost page$")
+    public void iMustSeeTheTotalForRowAdditionsOtherIsNOTInCostPage(String arg0) {
+        hardAssertion.assertNotEquals(tfa_cost.getValueByRowNameAndColumnNameInTFACostPage(TFA_Cost.rowName.AdditionsOther, TFA_Cost.columnName.Total),arg0);
+    }
+
+    @Then("^I must see the total for row Transferred in on conversion local authority is NOT\"([^\"]*)\" in Cost page$")
+    public void iMustSeeTheTotalForRowTransferredInOnConversionLocalAuthorityIsNOTInCostPage(String arg0) {
+        hardAssertion.assertNotEquals(tfa_cost.getValueByRowNameAndColumnNameInTFACostPage(TFA_Cost.rowName.TransferredInOnConversionLocalAuthority, TFA_Cost.columnName.Total),arg0);
+    }
+
+    @Then("^I must see the total for row Transferred in on conversion elsewhere is NOT\"([^\"]*)\" in Cost page$")
+    public void iMustSeeTheTotalForRowTransferredInOnConversionElsewhereIsNOTInCostPage(String arg0) {
+        hardAssertion.assertNotEquals(tfa_cost.getValueByRowNameAndColumnNameInTFACostPage(TFA_Cost.rowName.TransferredInOnConversionElsewhere, TFA_Cost.columnName.Total),arg0);
+    }
+
+    @Then("^I must see the total for row Transferred in on existing academies joining the trust is NOT\"([^\"]*)\" in Cost page$")
+    public void iMustSeeTheTotalForRowTransferredInOnExistingAcademiesJoiningTheTrustIsNOTInCostPage(String arg0) {
+        hardAssertion.assertNotEquals(tfa_cost.getValueByRowNameAndColumnNameInTFACostPage(TFA_Cost.rowName.TransferredInOnExistingAcademiesJoiningTheTrust, TFA_Cost.columnName.Total),arg0);
+    }
+
+    @Then("^I must see the total for row Transferred out on existing academies leaving the trust is NOT\"([^\"]*)\" in Cost page$")
+    public void iMustSeeTheTotalForRowTransferredOutOnExistingAcademiesLeavingTheTrustIsNOTInCostPage(String arg0) {
+        hardAssertion.assertNotEquals(tfa_cost.getValueByRowNameAndColumnNameInTFACostPage(TFA_Cost.rowName.TransferredOutOnExistingAcademiesLeavingTheTrust, TFA_Cost.columnName.Total),arg0);
+    }
+
+    @Then("^I must see the total for row Donations DFEESFA is NOT\"([^\"]*)\" in Cost page$")
+    public void iMustSeeTheTotalForRowDonationsDFEESFAIsNOTInCostPage(String arg0) {
+        hardAssertion.assertNotEquals(tfa_cost.getValueByRowNameAndColumnNameInTFACostPage(TFA_Cost.rowName.DonationsDFEAndESFAEFA, TFA_Cost.columnName.Total),arg0);
+    }
+
+    @Then("^I must see the total for row Donations non DFEESFA is NOT\"([^\"]*)\" in Cost page$")
+    public void iMustSeeTheTotalForRowDonationsNonDFEESFAIsNOTInCostPage(String arg0) {
+        hardAssertion.assertEquals(tfa_cost.getValueByRowNameAndColumnNameInTFACostPage(TFA_Cost.rowName.DonationsNonDFEAndESFAEFA, TFA_Cost.columnName.Total),arg0);
+    }
+
+    @Then("^I must see the total for row Disposals is NOT\"([^\"]*)\" in Cost page$")
+    public void iMustSeeTheTotalForRowDisposalsIsNOTInCostPage(String arg0) {
+        hardAssertion.assertNotEquals(tfa_cost.getValueByRowNameAndColumnNameInTFACostPage(TFA_Cost.rowName.Disposals, TFA_Cost.columnName.Total),arg0);
+    }
+
+    @Then("^I must see the total for row Revaluations is NOT\"([^\"]*)\" in Cost page$")
+    public void iMustSeeTheTotalForRowRevaluationsIsNOTInCostPage(String arg0) {
+        hardAssertion.assertNotEquals(tfa_cost.getValueByRowNameAndColumnNameInTFACostPage(TFA_Cost.rowName.Revaluations, TFA_Cost.columnName.Total),arg0);
+    }
+
+    @Then("^I must see the total for row Reclassifications is NOT\"([^\"]*)\" in Cost page$")
+    public void iMustSeeTheTotalForRowReclassificationsIsNOTInCostPage(String arg0) {
+        hardAssertion.assertNotEquals(tfa_cost.getValueByRowNameAndColumnNameInTFACostPage(TFA_Cost.rowName.Reclassifications, TFA_Cost.columnName.Total),arg0);
+    }
+
+    @And("^I see  row At Close of Period and column values  are NOT\"([^\"]*)\" \"([^\"]*)\" \"([^\"]*)\" \"([^\"]*)\"\"([^\"]*)\"\"([^\"]*)\"\"([^\"]*)\"\"([^\"]*)\" in Cost page$")
+    public void iSeeRowAtCloseOfPeriodAndColumnValuesAreNOTInCostPage(String arg0, String arg1, String arg2, String arg3, String arg4, String arg5, String arg6, String arg7) {
+        hardAssertion.assertNotEquals(tfa_cost.getValueByRowNameAndColumnNameInTFACostPage(TFA_Cost.rowName.AtCloseOfPeriod, TFA_Cost.columnName.FreeholdLandAndBuildings),arg0);
+        hardAssertion.assertNotEquals(tfa_cost.getValueByRowNameAndColumnNameInTFACostPage(TFA_Cost.rowName.AtCloseOfPeriod, TFA_Cost.columnName.LeaseholdLandAndBuildings),arg0);
+        hardAssertion.assertNotEquals(tfa_cost.getValueByRowNameAndColumnNameInTFACostPage(TFA_Cost.rowName.AtCloseOfPeriod, TFA_Cost.columnName.LeaseholdImprovements),arg0);
+        hardAssertion.assertNotEquals(tfa_cost.getValueByRowNameAndColumnNameInTFACostPage(TFA_Cost.rowName.AtCloseOfPeriod, TFA_Cost.columnName.PlantAndMachinery),arg0);
+        hardAssertion.assertNotEquals(tfa_cost.getValueByRowNameAndColumnNameInTFACostPage(TFA_Cost.rowName.AtCloseOfPeriod, TFA_Cost.columnName.FurnitureAndEquipment),arg0);
+        hardAssertion.assertNotEquals(tfa_cost.getValueByRowNameAndColumnNameInTFACostPage(TFA_Cost.rowName.AtCloseOfPeriod, TFA_Cost.columnName.ComputerEquipment),arg0);
+        hardAssertion.assertNotEquals(tfa_cost.getValueByRowNameAndColumnNameInTFACostPage(TFA_Cost.rowName.AtCloseOfPeriod, TFA_Cost.columnName.MotorVehicles),arg0);
+        hardAssertion.assertNotEquals(tfa_cost.getValueByRowNameAndColumnNameInTFACostPage(TFA_Cost.rowName.AtCloseOfPeriod, TFA_Cost.columnName.AssetsUnderConstruction),arg0);
+    }
+
+    @Then("^I see the total for row At Close of Period is NOT\"([^\"]*)\" in Cost page$")
+    public void iSeeTheTotalForRowAtCloseOfPeriodIsNOTInCostPage(String arg0) {
+        hardAssertion.assertNotEquals(tfa_cost.getValueByRowNameAndColumnNameInTFACostPage(TFA_Cost.rowName.AtCloseOfPeriod, TFA_Cost.columnName.Total),arg0);
+    }
 }

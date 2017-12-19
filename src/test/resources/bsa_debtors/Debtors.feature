@@ -1,5 +1,5 @@
 Feature: testing the debtors page in BSA
-
+@smoke
   Scenario Outline: testing the BSA debtors for VALID credentials
 
     Given I am on Balance Sheet Asset Section
@@ -22,7 +22,7 @@ Feature: testing the debtors page in BSA
       | v1 | v2 | v3 | v4 | v5 | v6 | v7 | v8 | v9 | v10 | v11 | v12 | v13 | v14 | v15 | v16 | v17 | v18 | v19 | v20 | v21 | v22 | v23 | v24 |
       | 1  | 1  | 1  | 1  | 1  | 1  | 1  | 1  | 1  | 1   | 1   | 1   | 1   | 1   | 1   | 1   | 1   | 1   | 1   | 1   | 1   | 1   | 11  | 11  |
 
-
+  @smoke
   Scenario Outline: testing the BSA debtors for INVALID credentials
 
     Given I am on Balance Sheet Asset Section
@@ -45,7 +45,7 @@ Feature: testing the debtors page in BSA
       | v1 | v2 | v3 | v4 | v5 | v6 | v7 | v8 | v9 | v10 | v11 | v12 | v13 | v14 | v15 | v16 | v17 | v18 | v19 | v20 | v21 | v22 | v23 | v24 |
       | 1  | 1  | 1  | 1  | 1  | 1  | 1  | 1  | 1  | 1   | 1   | 1   | 1   | 1   | 1   | 1   | 1   | 1   | 1   | 1   | 1   | 1   | 12  | 12  |
 
-
+  @smoke
   Scenario Outline: testing the BSA debtors for All Financial Data Errors credentials
 
     Given I am on Balance Sheet Asset Section
@@ -68,7 +68,7 @@ Feature: testing the debtors page in BSA
       | v1      | v2      | v3      | v4      | v5      | v6      | v7      | v8      | v9      | v10     | v11     | v12     | v13     | v14     | v15     | v16     | v17     | v18     | v19     | v20     | v21     | v22     |error|
       | 9999999 | 9999999 | 9999999 | 9999999 | 9999999 | 9999999 | 9999999 | 9999999 | 9999999 | 9999999 | 9999999 | 9999999 | 9999999 | 9999999 | 9999999 | 9999999 | 9999999 | 9999999 | 9999999 | 9999999 | 9999999 | 9999999 |22   |
 
-
+  @smoke
   Scenario Outline: testing the BSA debtors for Invalid format Errors credentials
 
     Given I am on Balance Sheet Asset Section
