@@ -84,4 +84,10 @@ public class Steps_Debtors extends BaseTest {
         hardAssertion.assertEquals(debtors.getValueByRowNameAndColumnNameInBSADebtorsPage(Debtors.BSA_DebtorsRowLabels.Total, Debtors.BSA_DebtorsColumnLabels.AmountDueWithin1Year),arg0, "Values do nto match");
         hardAssertion.assertEquals(debtors.getValueByRowNameAndColumnNameInBSADebtorsPage(Debtors.BSA_DebtorsRowLabels.Total, Debtors.BSA_DebtorsColumnLabels.AmountDueAfter1Year),arg1, "Values do nto match");
     }
+
+    @Then("^I musts see the row Total and column Amt due within one year is not \"([^\"]*)\" and column Amt due after one year is not \"([^\"]*)\"$")
+    public void iMustsSeeTheRowTotalAndColumnAmtDueWithinOneYearIsNotAndColumnAmtDueAfterOneYearIsNot(String arg0, String arg1) throws Throwable {
+        hardAssertion.assertNotEquals(debtors.getValueByRowNameAndColumnNameInBSADebtorsPage(Debtors.BSA_DebtorsRowLabels.Total, Debtors.BSA_DebtorsColumnLabels.AmountDueWithin1Year),arg0, "Values do nto match");
+        hardAssertion.assertNotEquals(debtors.getValueByRowNameAndColumnNameInBSADebtorsPage(Debtors.BSA_DebtorsRowLabels.Total, Debtors.BSA_DebtorsColumnLabels.AmountDueAfter1Year),arg1, "Values do nto match");
+    }
 }
