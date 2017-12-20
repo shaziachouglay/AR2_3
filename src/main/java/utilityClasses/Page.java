@@ -663,7 +663,7 @@ public abstract class Page extends BrowserFactory {
             try{
                 e2=element;
                 e2.isDisplayed();
-                info("Element is cleaned : REFRESHED!");
+                info("refreshing element....");
                 break;
             }catch (StaleElementReferenceException sere){
                 e2=null;
@@ -691,7 +691,7 @@ public abstract class Page extends BrowserFactory {
             try{
                 e2=element;
                 e2.isDisplayed();
-                info("Element is cleaned : REFRESHED!");
+                info("refreshing element....");
                 break;
             }catch (StaleElementReferenceException sere){
                 e2=null;
@@ -716,7 +716,7 @@ public abstract class Page extends BrowserFactory {
             waitForAjax();
             waitForElementToBeVisibleloop(element);
             refreshWebElement(element);
-            info("Element cleaned and refreshed.");
+            info("refreshing element....");
         }catch (Exception e){
             e.printStackTrace();
             warn("Exception Occurred !!");
@@ -731,6 +731,6 @@ public abstract class Page extends BrowserFactory {
      */
     public void hitKeyboardButton(WebElement elementToTabOn, Keys keys){
         elementToTabOn.sendKeys(keys);
-        info("clicked Tab button on Keyboard"+keys.toString());
+        info("clicked Tab button on Keyboard"+keys.name().toString());
     }
 }
