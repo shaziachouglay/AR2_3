@@ -1,4 +1,4 @@
-package stepsDefinitions.stpes_sofa_staffAndTrustees;
+package stepsDefinitions.steps_sofa_staffAndTrustees;
 
 import baseTest.BaseTest;
 import cucumber.api.java.en.And;

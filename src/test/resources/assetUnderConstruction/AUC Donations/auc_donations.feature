@@ -1,6 +1,6 @@
 Feature: testing the AUC Donations Page
 
-
+  @smoke
   Scenario Outline: testing testing the AUC Donations Page VALID entries
 
     Given I am on Asset Under Construction
@@ -14,6 +14,8 @@ Feature: testing the AUC Donations Page
       | v1 | v2 |
       |1   |4   |
 
+
+  @smoke
   Scenario Outline: testing testing the AUC Donations Page INVALID entries
 
     Given I am on Asset Under Construction
@@ -28,6 +30,7 @@ Feature: testing the AUC Donations Page
       |1   |5   |
 
 
+  @smoke
   Scenario Outline: testing testing the AUC Donations Page All Financial data error
 
     Given I am on Asset Under Construction
@@ -42,6 +45,7 @@ Feature: testing the AUC Donations Page
       |9999999    |4      |
 
 
+  @smoke
   Scenario Outline: testing testing the AUC Donations Page Invalid Data Format
 
     Given I am on Asset Under Construction
@@ -54,3 +58,4 @@ Feature: testing the AUC Donations Page
     Examples:
       | v1        | error |
       |********   |4      |
+
