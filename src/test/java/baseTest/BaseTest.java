@@ -8,6 +8,8 @@ import pageObjects.accessOne.HomePage;
 import pageObjects.accessOne.LandingPage;
 import pageObjects.accessOne.LoginPage;
 import pageObjects.accessOne.ServicePortalPage;
+import pageObjects.assetUnderConstruction.auc_CapitalGranst.AUC_CapitalGranst;
+import pageObjects.assetUnderConstruction.auc_Donations.AUC_Donations;
 import pageObjects.balanceSheetAssets.cash.Cash;
 import pageObjects.balanceSheetAssets.currentInvestment.CurrentInvestments;
 import pageObjects.balanceSheetAssets.debtors.Debtors;
@@ -45,41 +47,35 @@ public class BaseTest {
     LandingPage landingPage = new LandingPage();
     LoginPage loginPage = new LoginPage();
     ServicePortalPage servicePortalPage = new ServicePortalPage();
-    /**
-     * All the page objects to be held here to be used in the step definitions.
-     */
-
     // Page Objects Common to both the environments.
+
     /**
      * objects for the SOFA Section
      */
-
-
-
-    public WelcomeScreen_dev welcomeScreen_dev = new WelcomeScreen_dev();
-    public AcademyTrustInformation academyTrustInformationPage = new AcademyTrustInformation();
-    public Academy academy = new Academy();
-    public AcademyInformation academyInformation = new AcademyInformation();
-    public Questionnaire questionnaire = new Questionnaire();
-    public Donations donations = new Donations();
-    public NavigationMenuBar navigationMenuBar = new NavigationMenuBar();
-    public CapitalGrantsDfEESFA dfeefa = new CapitalGrantsDfEESFA();
-    public CapitalGrantsDfEGroup dfeGroup = new CapitalGrantsDfEGroup();
-    public CapitalGrantsOther otherCapitalGrants = new CapitalGrantsOther();
-    public RevenueGrantsOther revenueGrantsOther = new RevenueGrantsOther();
-    public RevenueGrantsDfEESFA revenueGrantsDfEESFA = new RevenueGrantsDfEESFA();
-    public RevenueGrantsDfEGroup revenueGrantsDfEGroup = new RevenueGrantsDfEGroup();
-    public OtherIncome_OtherIncome otherIncome_otherIncome = new OtherIncome_OtherIncome();
-    public OtherIncome_OtherTradingActivities otherIncome_otherTradingActivities = new OtherIncome_OtherTradingActivities();
-    public CharitableActivities_DirectCosts charitableActivities_directCosts = new CharitableActivities_DirectCosts();
-    public CharitableActivities_SupportCost charitableActivities_supportCost = new CharitableActivities_SupportCost();
-    public CostOfRaisingFunds costOfRaisingFunds = new CostOfRaisingFunds();
-    public OtherExpenditure otherExpenditure = new OtherExpenditure();
-    public ProvisionOfBoardingActivities_Income income = new ProvisionOfBoardingActivities_Income();
-    public ProvisionOfBoardingActivitesExpenditure expenditure = new ProvisionOfBoardingActivitesExpenditure();
-    public AverageStaffNumbers averageStaffNumbers = new AverageStaffNumbers();
-    public StaffCosts staffCosts = new StaffCosts();
-    public RelatedPartyTransactions_TrusteeRemuneration relatedParty = new RelatedPartyTransactions_TrusteeRemuneration();
+    protected WelcomeScreen_dev welcomeScreen_dev = new WelcomeScreen_dev();
+    protected AcademyTrustInformation academyTrustInformationPage = new AcademyTrustInformation();
+    protected Academy academy = new Academy();
+    protected AcademyInformation academyInformation = new AcademyInformation();
+    protected Questionnaire questionnaire = new Questionnaire();
+    protected Donations donations = new Donations();
+    protected NavigationMenuBar navigationMenuBar = new NavigationMenuBar();
+    protected CapitalGrantsDfEESFA dfeefa = new CapitalGrantsDfEESFA();
+    protected CapitalGrantsDfEGroup dfeGroup = new CapitalGrantsDfEGroup();
+    protected CapitalGrantsOther otherCapitalGrants = new CapitalGrantsOther();
+    protected RevenueGrantsOther revenueGrantsOther = new RevenueGrantsOther();
+    protected RevenueGrantsDfEESFA revenueGrantsDfEESFA = new RevenueGrantsDfEESFA();
+    protected RevenueGrantsDfEGroup revenueGrantsDfEGroup = new RevenueGrantsDfEGroup();
+    protected OtherIncome_OtherIncome otherIncome_otherIncome = new OtherIncome_OtherIncome();
+    protected OtherIncome_OtherTradingActivities otherIncome_otherTradingActivities = new OtherIncome_OtherTradingActivities();
+    protected CharitableActivities_DirectCosts charitableActivities_directCosts = new CharitableActivities_DirectCosts();
+    protected CharitableActivities_SupportCost charitableActivities_supportCost = new CharitableActivities_SupportCost();
+    protected CostOfRaisingFunds costOfRaisingFunds = new CostOfRaisingFunds();
+    protected OtherExpenditure otherExpenditure = new OtherExpenditure();
+    protected ProvisionOfBoardingActivities_Income income = new ProvisionOfBoardingActivities_Income();
+    protected ProvisionOfBoardingActivitesExpenditure expenditure = new ProvisionOfBoardingActivitesExpenditure();
+    protected AverageStaffNumbers averageStaffNumbers = new AverageStaffNumbers();
+    protected StaffCosts staffCosts = new StaffCosts();
+    protected RelatedPartyTransactions_TrusteeRemuneration relatedParty = new RelatedPartyTransactions_TrusteeRemuneration();
     protected OffPayrollArrangements offPayroll = new OffPayrollArrangements();
     protected NumbersOfEmployeesWhoseEmolumentsExceed_60k numberExceedClass = new NumbersOfEmployeesWhoseEmolumentsExceed_60k();
     protected LossOfOfficePayments officePayments = new LossOfOfficePayments();
@@ -108,8 +104,11 @@ public class BaseTest {
     protected TFA_Cost tfa_cost = new TFA_Cost();
 
 
-
-
+    /**
+     * Objects for Asset Under Construction
+     */
+    protected AUC_CapitalGranst auc_capitalGranst = new AUC_CapitalGranst();
+    protected AUC_Donations auc_donations= new AUC_Donations();
 
 
 

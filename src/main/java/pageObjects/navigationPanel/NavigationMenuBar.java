@@ -13,13 +13,13 @@ import utilityClasses.CommonMethods;
 public class NavigationMenuBar extends CommonMethods {
 
     @FindBy(xpath = "//div[@id='ar-main-menu']")
-    WebElement ar_MainMenu;
+    private WebElement ar_MainMenu;
 
     @FindBy(xpath = "//div[@class='ar-menu-tab-bar']")
-    WebElement ar_TabMenuBar;
+    private WebElement ar_TabMenuBar;
 
     @FindBy(xpath = "//div[@class='ar-menu-sub-tab-bar']")
-    WebElement ar_SubTabMenuBar;
+    private WebElement ar_SubTabMenuBar;
 
     /**
      * These enums cater to the high level menu in the Navigation Pane.
@@ -34,7 +34,7 @@ public class NavigationMenuBar extends CommonMethods {
      */
     public enum ACCOUNTS_RETURN_HOVER_CONSTANTS{
         SoFA("SoFA"),
-        BalanceSheetAssets("Balance Sheet Assets") ,LandAndBuildings("Land and Buildings"), BalanceSheetLiabilities("Balance Sheet Liabilities"),
+        BalanceSheetAssets("Balance Sheet Assets") ,AssetUnderConstruction("Assets Under Construction"),LandAndBuildings("Land and Buildings"), BalanceSheetLiabilities("Balance Sheet Liabilities"),
         TransfersAndConversions("Transfers and Conversions"), CountepartyData("Counterparty Data"), Summary("Summary"), BalanceSheetFundAndOtherDisclosure("Balance Sheet Fund And Other Disclosure");
 
         private final String stringValue;
@@ -95,6 +95,29 @@ public class NavigationMenuBar extends CommonMethods {
         Amortisation("Amortisation"), AmortisationPeriods("Amortisation periods");
         private final String stringValue;
         BSA_TAB_SUBMENU_OPTIONS(String s) {
+            this.stringValue = s;
+        }
+        public String toString() {
+            return stringValue;
+        }
+    }
+
+    public enum AUC_TAB_MENU_OPTIONS implements MenuTabBarMarkerInterface{
+        CpaitalGrants("Capital Grants"), Donations("Donations"), Transfers("Transfers"), TangibelFixedAssets("Tangible"),Debtors("Debtors"), Other("Other");
+
+        private final String stringvalue;
+        AUC_TAB_MENU_OPTIONS(String s){
+            this.stringvalue=s;
+        }
+        public String toString(){
+            return stringvalue;
+        }
+    }
+
+    public enum AUC_TAB_SUBMENU_OPTIONS implements SubMenuMarketInterface {
+        Cost("Cost"),Depriciation("Depreciation"), Imparments("Impairment");
+        private final String stringValue;
+        AUC_TAB_SUBMENU_OPTIONS(String s) {
             this.stringValue = s;
         }
         public String toString() {
