@@ -16,6 +16,10 @@ public class AUC_TFA_Cost extends CommonMethods{
     private WebElement page_header;
 
 
+    public boolean isHeaderPresentAndDisplayedForAUC_CostPage(){
+        return isPageHeaderPresentAndDisplayed(page_header,pageName);
+    }
+
     public enum RowConstants{
         OriginalPriorYearClosingBalanceAsSubmittedInTheAccountsReturn,
         AdjustmentMadeToOpeningBalance,

@@ -1,26 +1,36 @@
 package stepsDefinitions.steps_auc_capitalGrants;
 
+import baseTest.BaseTest;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
+import pageObjects.assetUnderConstruction.auc_TangibleFixedAssets.AUC_TFA_Cost;
+import pageObjects.navigationPanel.NavigationMenuBar;
 
-public class Steps_auc_tfa_costs {
+public class Steps_auc_tfa_costs extends BaseTest{
 
 
     @When("^I navigate to Asset Under Construction Tangible Fixed Assets Cost page$")
     public void iNavigateToAssetUnderConstructionTangibleFixedAssetsCostPage() throws Throwable {
-
+        navigationMenuBar.click_MenuTabBarOptions(NavigationMenuBar.AUC_TAB_MENU_OPTIONS.CapitalGrants);
+        hardAssertion.assertTrue(auc_tfa_cost.isHeaderPresentAndDisplayedForAUC_CostPage(), "Failed to display the Header for AUC TFA Cost page");
     }
 
 
     @And("^I enter in row Original prior year closing balance as submitted in the Accounts Return and all columns with \"([^\"]*)\"$")
     public void iEnterInRowOriginalPriorYearClosingBalanceAsSubmittedInTheAccountsReturnAndAllColumnsWith(String arg0) {
-
+        auc_tfa_cost.setValueInFieldByRowNameAndColumnNameInAUC_TFA_CostPage(AUC_TFA_Cost.RowConstants.OriginalPriorYearClosingBalanceAsSubmittedInTheAccountsReturn, AUC_TFA_Cost.ColumnConstant.FreeholdLandAndBuildings,arg0);
+        auc_tfa_cost.setValueInFieldByRowNameAndColumnNameInAUC_TFA_CostPage(AUC_TFA_Cost.RowConstants.OriginalPriorYearClosingBalanceAsSubmittedInTheAccountsReturn, AUC_TFA_Cost.ColumnConstant.LeaseholdLandAndBuildings,arg0);
+        auc_tfa_cost.setValueInFieldByRowNameAndColumnNameInAUC_TFA_CostPage(AUC_TFA_Cost.RowConstants.OriginalPriorYearClosingBalanceAsSubmittedInTheAccountsReturn, AUC_TFA_Cost.ColumnConstant.LeaseholdImprovements,arg0);
+        auc_tfa_cost.setValueInFieldByRowNameAndColumnNameInAUC_TFA_CostPage(AUC_TFA_Cost.RowConstants.OriginalPriorYearClosingBalanceAsSubmittedInTheAccountsReturn, AUC_TFA_Cost.ColumnConstant.PlantAndMachinery,arg0);
+        auc_tfa_cost.setValueInFieldByRowNameAndColumnNameInAUC_TFA_CostPage(AUC_TFA_Cost.RowConstants.OriginalPriorYearClosingBalanceAsSubmittedInTheAccountsReturn, AUC_TFA_Cost.ColumnConstant.FurnitureAndEquipment,arg0);
+        auc_tfa_cost.setValueInFieldByRowNameAndColumnNameInAUC_TFA_CostPage(AUC_TFA_Cost.RowConstants.OriginalPriorYearClosingBalanceAsSubmittedInTheAccountsReturn, AUC_TFA_Cost.ColumnConstant.ComputerEquipment,arg0);
+        auc_tfa_cost.setValueInFieldByRowNameAndColumnNameInAUC_TFA_CostPage(AUC_TFA_Cost.RowConstants.OriginalPriorYearClosingBalanceAsSubmittedInTheAccountsReturn, AUC_TFA_Cost.ColumnConstant.AssetsUnderConstruction,arg0);
     }
 
     @Then("^I see the value in row Original prior year closing balance as submitted in the Accounts Return and column Total is \"([^\"]*)\"$")
     public void iSeeTheValueInRowOriginalPriorYearClosingBalanceAsSubmittedInTheAccountsReturnAndColumnTotalIs(String arg0) {
-
+        hardAssertion.assertEquals(auc_tfa_cost.getValueByRowNameAndColumnName(AUC_TFA_Cost.RowConstants.OriginalPriorYearClosingBalanceAsSubmittedInTheAccountsReturn, AUC_TFA_Cost.ColumnConstant.Total),arg0);
     }
 
     @And("^I enter in row Adjustments made to opening balance and all columns with \"([^\"]*)\"$")

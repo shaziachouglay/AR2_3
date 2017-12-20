@@ -10,6 +10,7 @@ import pageObjects.accessOne.LoginPage;
 import pageObjects.accessOne.ServicePortalPage;
 import pageObjects.assetUnderConstruction.auc_CapitalGranst.AUC_CapitalGranst;
 import pageObjects.assetUnderConstruction.auc_Donations.AUC_Donations;
+import pageObjects.assetUnderConstruction.auc_TangibleFixedAssets.AUC_TFA_Cost;
 import pageObjects.balanceSheetAssets.cash.Cash;
 import pageObjects.balanceSheetAssets.currentInvestment.CurrentInvestments;
 import pageObjects.balanceSheetAssets.debtors.Debtors;
@@ -104,11 +105,13 @@ public class BaseTest {
     protected TFA_Cost tfa_cost = new TFA_Cost();
 
 
+
     /**
      * Objects for Asset Under Construction
      */
     protected AUC_CapitalGranst auc_capitalGranst = new AUC_CapitalGranst();
     protected AUC_Donations auc_donations= new AUC_Donations();
+    protected AUC_TFA_Cost auc_tfa_cost = new AUC_TFA_Cost();
 
 
 
