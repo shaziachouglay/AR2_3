@@ -11,7 +11,7 @@ public class AUC_CapitalGranst extends CommonMethods{
     @FindBy(xpath = "//div[@class='opa-main-panel']")
     private WebElement page_body;
 
-    @FindBy(how= How.XPATH , using = "//div[@class='opa-screen-title'][contains(.,'DfE Group')]")
+    @FindBy(how= How.XPATH , using = "//div[@class='opa-screen-title'][contains(.,'Capital Grants')]")
     private WebElement page_header;
 
     public String pageName = "DfE Group";

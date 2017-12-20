@@ -14,12 +14,12 @@ public class Steps_auc_capitalGrants extends BaseTest {
     @Given("^I am on Asset Under Construction$")
     public void iAmOnAssetUnderConstruction() {
         standingDataForDev.iAmOnDevEnvironmentAsPreparer();
-        navigationMenuBar.hoverMainMenuAndClickOption(NavigationMenuBar.MAIN_MENU_OPTIONS.ACCOUNTS_RETURN, NavigationMenuBar.ACCOUNTS_RETURN_HOVER_CONSTANTS.BalanceSheetAssets);
+        navigationMenuBar.hoverMainMenuAndClickOption(NavigationMenuBar.MAIN_MENU_OPTIONS.ACCOUNTS_RETURN, NavigationMenuBar.ACCOUNTS_RETURN_HOVER_CONSTANTS.AssetUnderConstruction);
     }
 
     @And("^I have navigated to the Capital Grants Section for AUC$")
     public void iHaveNavigatedToTheCapitalGrantsSectionForAUC() {
-        navigationMenuBar.click_MenuTabBarOptions(NavigationMenuBar.BSA_TAB_MENU_OPTIONS.Stock);
+        navigationMenuBar.click_MenuTabBarOptions(NavigationMenuBar.AUC_TAB_MENU_OPTIONS.CapitalGrants);
         hardAssertion.assertTrue(auc_capitalGranst.isHeaderPresentAndDisplayedForCapitalGrantsAUCPage(), "Failed to display the Header for AUC Capital Grants page");
     }
 
@@ -81,5 +81,10 @@ public class Steps_auc_capitalGrants extends BaseTest {
     @And("^I must see  field Total with \"([^\"]*)\" in AUC$")
     public void iMustSeeFieldTotalWithInAUC(String arg0) {
         hardAssertion.assertEquals(auc_capitalGranst.getValueFromFieldByFieldsetInCapitalGrantsAUCPage(AUC_CapitalGranst.CapitalGrantsAUCLabelConstants.Total),arg0);
+    }
+
+    @And("^I must see  field Total is NOT \"([^\"]*)\" in AUC$")
+    public void iMustSeeFieldTotalIsNOTInAUC(String arg0) throws Throwable {
+        hardAssertion.assertNotEquals(auc_capitalGranst.getValueFromFieldByFieldsetInCapitalGrantsAUCPage(AUC_CapitalGranst.CapitalGrantsAUCLabelConstants.Total),arg0);
     }
 }

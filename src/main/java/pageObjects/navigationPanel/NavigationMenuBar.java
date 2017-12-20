@@ -103,7 +103,7 @@ public class NavigationMenuBar extends CommonMethods {
     }
 
     public enum AUC_TAB_MENU_OPTIONS implements MenuTabBarMarkerInterface{
-        CpaitalGrants("Capital Grants"), Donations("Donations"), Transfers("Transfers"), TangibelFixedAssets("Tangible"),Debtors("Debtors"), Other("Other");
+        CapitalGrants("Capital"), Donations("Donations"), Transfers("Transfers"), TangibelFixedAssets("Tangible"),Debtors("Debtors"), Other("Other");
 
         private final String stringvalue;
         AUC_TAB_MENU_OPTIONS(String s){
