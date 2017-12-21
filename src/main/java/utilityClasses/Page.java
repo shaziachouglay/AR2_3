@@ -733,4 +733,38 @@ public abstract class Page extends BrowserFactory {
         elementToTabOn.sendKeys(keys);
         info("clicked Tab button on Keyboard"+keys.name().toString());
     }
+
+
+
+    public boolean isElementNOTpresentAndDisplayed(WebElement elementToBeNotVisible){
+        List<WebElement> elementList = null;
+        elementList.add(elementToBeNotVisible);
+        boolean listStatus = elementList.isEmpty();
+        return listStatus;
+    }
+
+    public boolean isElementNotPresent(WebElement element){
+        Boolean result=false;
+        WebDriver dri = getDriver();
+        try {
+            dri.manage().timeouts().implicitlyWait(1, TimeUnit.SECONDS);
+            JavascriptExecutor js = (JavascriptExecutor) dri;
+            js.executeScript("argument[0].click()", element);
+        }catch (NoSuchElementException e){
+            result=true;
+        }
+        dri.manage().timeouts().implicitlyWait(15,TimeUnit.SECONDS);
+        return result;
+    }
+
+    public void getMeCurrentMethodInfo(){
+        Thread.currentThread().getContextClassLoader();
+        String methodName = Thread.currentThread().getStackTrace()[2].getMethodName();
+        String ClassFromWhereMethodCallIsMade = Thread.currentThread().getStackTrace()[2].getFileName();
+        info(   "\n-------------------------------------------------------------------------"+"" +
+                "\n|Information for the current running Method                      "+"" +
+                "\n|Method Name is             |"+methodName+"                             "+"" +
+                "\n|Class Calling this method  |"+ClassFromWhereMethodCallIsMade+"         "+"" +
+                "\n-------------------------------------------------------------------------");
+    }
 }
