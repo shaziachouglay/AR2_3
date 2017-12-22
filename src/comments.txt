@@ -10,3 +10,24 @@ commenting only for JavaDoc Purpose.
 
 
  created for ESFA reporisotries on 17th dec 2017.
+
+
+Notes as of the 22nd Dec 2017 : - start --
+
+- SoFA Section is completely automated -
+- Balance Sheet Assets complete happy path , some of the pages have been finished for all scenarios.
+            Started from the Cash page downwards for errors.
+
+- Asset Under Construction Started Capital granst and Donations is done remaining.
+
+- Created new Folders for VSTS repo : location |: ESFA_Repositories in Documents. In this the latest code resided for all the work.
+
+
+- Created VSTS Repository with credentais emailed in vedaitconsuling email id.
+
+- all working fine - check in and check out from single repo working fine for all the projects.
+
+- Knowledge transfer session for Avi , Manjit and Andrew - Shared Head First Java Book.
+
+- Start with Knowledge Transfer + Asset Under Construction.
+

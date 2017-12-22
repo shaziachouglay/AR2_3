@@ -734,26 +734,22 @@ public abstract class Page extends BrowserFactory {
         info("clicked Tab button on Keyboard"+keys.name().toString());
     }
 
-
-
-    public boolean isElementNOTpresentAndDisplayed(WebElement elementToBeNotVisible){
-        List<WebElement> elementList = null;
-        elementList.add(elementToBeNotVisible);
-        boolean listStatus = elementList.isEmpty();
-        return listStatus;
-    }
-
+    /**
+     *
+     * @param element the element that is not to be visible.
+     * @return the boolean status of the element invisiblity
+     */
     public boolean isElementNotPresent(WebElement element){
         Boolean result=false;
         WebDriver dri = getDriver();
         try {
             dri.manage().timeouts().implicitlyWait(1, TimeUnit.SECONDS);
-            JavascriptExecutor js = (JavascriptExecutor) dri;
-            js.executeScript("argument[0].click()", element);
+            element.click();
         }catch (NoSuchElementException e){
             result=true;
+        }finally {
+            dri.manage().timeouts().implicitlyWait(Integer.parseInt(FrameworkPropertyConfigurator.getPropertiesByFileName(FrameworkPropertyConfigurator.propertyFileName.config,"implicitWait")),TimeUnit.SECONDS);
         }
-        dri.manage().timeouts().implicitlyWait(15,TimeUnit.SECONDS);
         return result;
     }
 
