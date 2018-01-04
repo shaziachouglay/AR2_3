@@ -32,3 +32,5 @@ Notes as of the 22nd Dec 2017 : - start --
 - Start with Knowledge Transfer + Asset Under Construction.
 
 - passwords : tablet is awadkar and Winterof18
+
+- setup done in the new machine .
