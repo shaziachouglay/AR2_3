@@ -1,10 +1,12 @@
 package stepsDefinitions;
 
+import com.cucumber.listener.Reporter;
 import cucumber.api.java.After;
 import cucumber.api.java.Before;
 import utilityClasses.BrowserFactory;
 import utilityClasses.FrameworkPropertyConfigurator;
 
+import java.io.File;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -39,9 +41,18 @@ public class Hooks {
 
     @After
     public  void teardown() throws IOException {
-
-        goodByeMessage();
-        BrowserFactory.closeBrowser();
+        try {
+            Reporter.loadXMLConfig(new File("src/extent-config.xml"));
+            Reporter.setSystemInfo("user", System.getProperty("user.name"));
+            Reporter.setSystemInfo("os", "Mac OSX");
+            Reporter.setTestRunnerOutput("Sample test runner output message");
+        }
+        finally {
+            goodByeMessage();
+            BrowserFactory.closeBrowser();
+        }
+//        goodByeMessage();
+//        BrowserFactory.closeBrowser();
     }
 }
 

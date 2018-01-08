@@ -1,5 +1,5 @@
 Feature: testing the debtors page in BSA
-@smoke
+@smoke @test121
   Scenario Outline: testing the BSA debtors for VALID credentials
 
     Given I am on Balance Sheet Asset Section

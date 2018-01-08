@@ -184,8 +184,8 @@ public class NavigationMenuBar extends CommonMethods {
             Actions actions = getActionsInstance();
             waitForPageLoadToComplete();
             WebElement mainMenuElement = ar_MainMenu.findElement(By.xpath(".//li["+ mainMenuOptionsCounter +"]/p"));
-            cleanAndRebuildElement(mainMenuElement);
             waitForElementToBeVisibleloop(mainMenuElement);
+            cleanAndRebuildElement(mainMenuElement);
             actions.moveToElement(mainMenuElement).build().perform();
 
             WebElement mainMenuHoverElement = ar_MainMenu.findElement(By.xpath(".//li["+ mainMenuOptionsCounter +"]/p/following-sibling::div/a[contains(.,'"+arMainMenuHoverConstants+"')]"));
@@ -239,9 +239,12 @@ public class NavigationMenuBar extends CommonMethods {
     public void click_MenuTabBarOptions(MenuTabBarMarkerInterface options){
         try {
             waitForPageLoadToComplete();
-            cleanAndRebuildElement(ar_TabMenuBar);
-            //WebElement element = ar_TabMenuBar.findElement(By.xpath(".//div/a" + "[contains(.,'" + options.toString() + "')]"+"|.//div/span"+"[contains(.,'" + options.toString() + "')]"));
             explicitWait(500);
+            cleanAndRebuildElement(ar_TabMenuBar);
+            //WebElement element = ar_TabMenuBar.findElement(By.xpath(".//div/span" + "[contains(.,'" + options.toString() + "')]"+"|.//div/a"+"[contains(.,'" + options.toString() + "')]"));
+            //cleanAndRebuildElement(element);
+            explicitWait(500);
+            //WebElement element = ar_TabMenuBar.findElement(By.xpath(".//div/span" + "[contains(.//text()='" + options.toString() + "')]"+"|.//div/a"+"[contains(.//text()='" + options.toString() + "')]"));
             WebElement element = ar_TabMenuBar.findElement(By.xpath(".//div/span" + "[.//text()='" + options.toString() + "']"+"|.//div/a"+"[.//text()='" + options.toString() + "']"));
             explicitWait(500);
             cleanAndRebuildElement(element);
