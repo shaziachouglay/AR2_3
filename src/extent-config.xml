@@ -14,10 +14,10 @@
         <protocol>https</protocol>
 
         <!-- title of the document -->
-        <documentTitle>Extent</documentTitle>
+        <documentTitle>AR2</documentTitle>
 
         <!-- report name - displayed at top-nav -->
-        <reportName>Automation Report</reportName>
+        <reportName>Automation Report By Aniket Wadkar</reportName>
 
         <!-- location of charts in the test view -->
         <!-- top, bottom -->

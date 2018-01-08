@@ -3,6 +3,7 @@ package stepsDefinitions;
 import com.cucumber.listener.Reporter;
 import cucumber.api.java.After;
 import cucumber.api.java.Before;
+import org.junit.BeforeClass;
 import utilityClasses.BrowserFactory;
 import utilityClasses.FrameworkPropertyConfigurator;
 
@@ -32,6 +33,11 @@ public class Hooks {
     public static void goodByeMessage() throws IOException {
         getLogger().info("\nClosing the session");
     }
+    @BeforeClass
+    public void mainSetUp(){
+
+    }
+
 
     @Before
     public  void setup() throws IOException {
