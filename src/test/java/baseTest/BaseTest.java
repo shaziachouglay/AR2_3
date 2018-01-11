@@ -11,6 +11,7 @@ import pageObjects.accessOne.ServicePortalPage;
 import pageObjects.assetUnderConstruction.auc_CapitalGranst.AUC_CapitalGranst;
 import pageObjects.assetUnderConstruction.auc_Donations.AUC_Donations;
 import pageObjects.assetUnderConstruction.auc_TangibleFixedAssets.AUC_TFA_Cost;
+import pageObjects.assetUnderConstruction.auc_TangibleFixedAssets.AUC_TFA_Depreciation;
 import pageObjects.balanceSheetAssets.cash.Cash;
 import pageObjects.balanceSheetAssets.currentInvestment.CurrentInvestments;
 import pageObjects.balanceSheetAssets.debtors.Debtors;
@@ -112,6 +113,7 @@ public class BaseTest {
     protected AUC_CapitalGranst auc_capitalGranst = new AUC_CapitalGranst();
     protected AUC_Donations auc_donations= new AUC_Donations();
     protected AUC_TFA_Cost auc_tfa_cost = new AUC_TFA_Cost();
+    protected AUC_TFA_Depreciation auc_tfa_depreciation = new AUC_TFA_Depreciation();
 
 
 
