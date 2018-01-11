@@ -11,7 +11,7 @@ public class Steps_auc_tfa_costs extends BaseTest{
 
 
     @When("^I navigate to Asset Under Construction Tangible Fixed Assets Cost page$")
-    public void iNavigateToAssetUnderConstructionTangibleFixedAssetsCostPage() throws Throwable {
+    public void iNavigateToAssetUnderConstructionTangibleFixedAssetsCostPage() {
         navigationMenuBar.click_MenuTabBarOptions(NavigationMenuBar.AUC_TAB_MENU_OPTIONS.TangibelFixedAssets);
         navigationMenuBar.click_arMenuTabBarOptionsWithSubMenuOption(NavigationMenuBar.AUC_TAB_MENU_OPTIONS.TangibelFixedAssets, NavigationMenuBar.AUC_TAB_SUBMENU_OPTIONS.Cost );
         hardAssertion.assertTrue(auc_tfa_cost.isHeaderPresentAndDisplayedForAUC_CostPage(), "Failed to display the Header for AUC TFA Cost page");
@@ -258,4 +258,89 @@ public class Steps_auc_tfa_costs extends BaseTest{
         hardAssertion.assertEquals(auc_tfa_cost.getValueByRowNameAndColumnName(AUC_TFA_Cost.RowConstants.TotalClosingBalance, AUC_TFA_Cost.ColumnConstant.Total),arg0);
     }
 
+    @Then("^I see the value in row Original prior year closing balance as submitted in the Accounts Return and column Total is not \"([^\"]*)\"$")
+    public void iSeeTheValueInRowOriginalPriorYearClosingBalanceAsSubmittedInTheAccountsReturnAndColumnTotalIsNot(String arg0) {
+        hardAssertion.assertNotEquals(auc_tfa_cost.getValueByRowNameAndColumnName(AUC_TFA_Cost.RowConstants.OriginalPriorYearClosingBalanceAsSubmittedInTheAccountsReturn, AUC_TFA_Cost.ColumnConstant.Total),arg0);
+    }
+
+    @Then("^I see the value in row Adjustments made to opening balance and column Total is not \"([^\"]*)\"$")
+    public void iSeeTheValueInRowAdjustmentsMadeToOpeningBalanceAndColumnTotalIsNot(String arg0) {
+        hardAssertion.assertNotEquals(auc_tfa_cost.getValueByRowNameAndColumnName(AUC_TFA_Cost.RowConstants.AdjustmentMadeToOpeningBalance, AUC_TFA_Cost.ColumnConstant.Total),arg0);
+    }
+
+    @Then("^I see the value in row Additions funded from Free Schools Priority Schools Building programme and column Total is not \"([^\"]*)\"$")
+    public void iSeeTheValueInRowAdditionsFundedFromFreeSchoolsPrioritySchoolsBuildingProgrammeAndColumnTotalIsNot(String arg0) {
+        hardAssertion.assertNotEquals(auc_tfa_cost.getValueByRowNameAndColumnName(AUC_TFA_Cost.RowConstants.AdditionsFundedFromFreeSchoolsPrioritySchoolBuildingProgramme, AUC_TFA_Cost.ColumnConstant.Total),arg0);
+    }
+
+    @Then("^I see the value in row Additions funded from other DFEESFA capital grant and column Total is not \"([^\"]*)\"$")
+    public void iSeeTheValueInRowAdditionsFundedFromOtherDFEESFACapitalGrantAndColumnTotalIsNot(String arg0) {
+        hardAssertion.assertNotEquals(auc_tfa_cost.getValueByRowNameAndColumnName(AUC_TFA_Cost.RowConstants.AdditionsFundedFromOtherDFEESFACapitalGrants, AUC_TFA_Cost.ColumnConstant.Total),arg0);
+    }
+
+    @Then("^I see the value in row Additions Others and column Total is not \"([^\"]*)\"$")
+    public void iSeeTheValueInRowAdditionsOthersAndColumnTotalIsNot(String arg0) {
+        hardAssertion.assertNotEquals(auc_tfa_cost.getValueByRowNameAndColumnName(AUC_TFA_Cost.RowConstants.AdditionsOther, AUC_TFA_Cost.ColumnConstant.Total),arg0);
+    }
+
+    @Then("^I see the value in row Transferred in on conversion local authority and column Total is not \"([^\"]*)\"$")
+    public void iSeeTheValueInRowTransferredInOnConversionLocalAuthorityAndColumnTotalIsNot(String arg0) {
+        hardAssertion.assertNotEquals(auc_tfa_cost.getValueByRowNameAndColumnName(AUC_TFA_Cost.RowConstants.TransferredInOnConversionLocalAuthority, AUC_TFA_Cost.ColumnConstant.Total),arg0);
+    }
+
+    @Then("^I see the value in row Transferred in on conversion elsewhere and column Total is not\"([^\"]*)\"$")
+    public void iSeeTheValueInRowTransferredInOnConversionElsewhereAndColumnTotalIsNot(String arg0) {
+        hardAssertion.assertNotEquals(auc_tfa_cost.getValueByRowNameAndColumnName(AUC_TFA_Cost.RowConstants.TransferredInOnConversionLocalAuthority, AUC_TFA_Cost.ColumnConstant.Total),arg0);
+    }
+
+    @Then("^I see the value in row Transferred in on existing academies joining the trust and column Total is not\"([^\"]*)\"$")
+    public void iSeeTheValueInRowTransferredInOnExistingAcademiesJoiningTheTrustAndColumnTotalIsNot(String arg0) {
+        hardAssertion.assertNotEquals(auc_tfa_cost.getValueByRowNameAndColumnName(AUC_TFA_Cost.RowConstants.TransferredInOnExistingAcademiesJoiningTheTrust, AUC_TFA_Cost.ColumnConstant.Total),arg0);
+    }
+
+    @Then("^I see the value in row Transferred out on existing academies leaving the trust and column Total is not\"([^\"]*)\"$")
+    public void iSeeTheValueInRowTransferredOutOnExistingAcademiesLeavingTheTrustAndColumnTotalIsNot(String arg0) {
+        hardAssertion.assertNotEquals(auc_tfa_cost.getValueByRowNameAndColumnName(AUC_TFA_Cost.RowConstants.TransferredOutOnExistingAcademiesLeavingTheTrust, AUC_TFA_Cost.ColumnConstant.Total),arg0);
+    }
+
+    @Then("^I see the value in row Donations DFEESFA and column Total is not\"([^\"]*)\"$")
+    public void iSeeTheValueInRowDonationsDFEESFAAndColumnTotalIsNot(String arg0) {
+        hardAssertion.assertNotEquals(auc_tfa_cost.getValueByRowNameAndColumnName(AUC_TFA_Cost.RowConstants.DonationDFEESFA, AUC_TFA_Cost.ColumnConstant.Total),arg0);
+    }
+
+    @Then("^I see the value in row Donations Non DFEESFA and column Total is not \"([^\"]*)\"$")
+    public void iSeeTheValueInRowDonationsNonDFEESFAAndColumnTotalIsNot(String arg0) {
+        hardAssertion.assertNotEquals(auc_tfa_cost.getValueByRowNameAndColumnName(AUC_TFA_Cost.RowConstants.DonationsNonDFEESFA, AUC_TFA_Cost.ColumnConstant.Total),arg0);
+    }
+
+    @Then("^I see the value in row Disposals and column Total is not\"([^\"]*)\"$")
+    public void iSeeTheValueInRowDisposalsAndColumnTotalIsNot(String arg0) {
+        hardAssertion.assertNotEquals(auc_tfa_cost.getValueByRowNameAndColumnName(AUC_TFA_Cost.RowConstants.Disposals, AUC_TFA_Cost.ColumnConstant.Total),arg0);
+    }
+
+    @Then("^I see the value in row Revaluations and column Total is not\"([^\"]*)\"$")
+    public void iSeeTheValueInRowRevaluationsAndColumnTotalIsNot(String arg0) {
+        hardAssertion.assertNotEquals(auc_tfa_cost.getValueByRowNameAndColumnName(AUC_TFA_Cost.RowConstants.Revaluations, AUC_TFA_Cost.ColumnConstant.Total),arg0);
+    }
+
+    @Then("^I see the value in row Reclassifications and column Total is not\"([^\"]*)\"$")
+    public void iSeeTheValueInRowReclassificationsAndColumnTotalIsNot(String arg0) {
+        hardAssertion.assertNotEquals(auc_tfa_cost.getValueByRowNameAndColumnName(AUC_TFA_Cost.RowConstants.Reclassifications, AUC_TFA_Cost.ColumnConstant.Total),arg0);
+    }
+
+    @Then("^I see the value in row Total closing balance and column Total is not\"([^\"]*)\"$")
+    public void iSeeTheValueInRowTotalClosingBalanceAndColumnTotalIsNot(String arg0) {
+        hardAssertion.assertNotEquals(auc_tfa_cost.getValueByRowNameAndColumnName(AUC_TFA_Cost.RowConstants.TotalClosingBalance, AUC_TFA_Cost.ColumnConstant.Total),arg0);
+    }
+
+    @Then("^I see in row Total closing balance and all columns are not  \"([^\"]*)\"$")
+    public void iSeeInRowTotalClosingBalanceAndAllColumnsAreNot(String arg0)  {
+        hardAssertion.assertNotEquals(auc_tfa_cost.getValueByRowNameAndColumnName(AUC_TFA_Cost.RowConstants.TotalClosingBalance, AUC_TFA_Cost.ColumnConstant.FreeholdLandAndBuildings),arg0);
+        hardAssertion.assertNotEquals(auc_tfa_cost.getValueByRowNameAndColumnName(AUC_TFA_Cost.RowConstants.TotalClosingBalance, AUC_TFA_Cost.ColumnConstant.LeaseholdLandAndBuildings),arg0);
+        hardAssertion.assertNotEquals(auc_tfa_cost.getValueByRowNameAndColumnName(AUC_TFA_Cost.RowConstants.TotalClosingBalance, AUC_TFA_Cost.ColumnConstant.LeaseholdImprovements),arg0);
+        hardAssertion.assertNotEquals(auc_tfa_cost.getValueByRowNameAndColumnName(AUC_TFA_Cost.RowConstants.TotalClosingBalance, AUC_TFA_Cost.ColumnConstant.PlantAndMachinery),arg0);
+        hardAssertion.assertNotEquals(auc_tfa_cost.getValueByRowNameAndColumnName(AUC_TFA_Cost.RowConstants.TotalClosingBalance, AUC_TFA_Cost.ColumnConstant.FurnitureAndEquipment),arg0);
+        hardAssertion.assertNotEquals(auc_tfa_cost.getValueByRowNameAndColumnName(AUC_TFA_Cost.RowConstants.TotalClosingBalance, AUC_TFA_Cost.ColumnConstant.ComputerEquipment),arg0);
+        hardAssertion.assertNotEquals(auc_tfa_cost.getValueByRowNameAndColumnName(AUC_TFA_Cost.RowConstants.TotalClosingBalance, AUC_TFA_Cost.ColumnConstant.AssetsUnderConstruction),arg0);
+    }
 }
