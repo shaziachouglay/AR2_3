@@ -238,7 +238,7 @@ Feature: testing the AUC TFA Deprication page
     Then  I see the number of errors starting with  All financial data must be entered are "<errro>"
     Examples: All Financial Data Error
       | v1    | errro |
-      |9999999|48  |
+      |9999999|48     |
 
 
   Scenario Outline: testing the AUC TFA Deprication page for Invalid Number Format
