@@ -54,7 +54,7 @@ Feature: testing the AUC TFA Cost page
     Then  I see the value in row Total closing balance and column Total is "<v4>"
     Examples:
       | v1 | v2 |v3|v4  |
-      |1   |7   |14|108 |
+      |1   |7   |14|98  |
 
 
   Scenario Outline: testing the AUC TFA Cost page with INVALID entries

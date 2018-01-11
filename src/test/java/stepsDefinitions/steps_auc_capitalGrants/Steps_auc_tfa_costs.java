@@ -12,7 +12,8 @@ public class Steps_auc_tfa_costs extends BaseTest{
 
     @When("^I navigate to Asset Under Construction Tangible Fixed Assets Cost page$")
     public void iNavigateToAssetUnderConstructionTangibleFixedAssetsCostPage() throws Throwable {
-        navigationMenuBar.click_MenuTabBarOptions(NavigationMenuBar.AUC_TAB_MENU_OPTIONS.CapitalGrants);
+        navigationMenuBar.click_MenuTabBarOptions(NavigationMenuBar.AUC_TAB_MENU_OPTIONS.TangibelFixedAssets);
+        navigationMenuBar.click_arMenuTabBarOptionsWithSubMenuOption(NavigationMenuBar.AUC_TAB_MENU_OPTIONS.TangibelFixedAssets, NavigationMenuBar.AUC_TAB_SUBMENU_OPTIONS.Cost );
         hardAssertion.assertTrue(auc_tfa_cost.isHeaderPresentAndDisplayedForAUC_CostPage(), "Failed to display the Header for AUC TFA Cost page");
     }
 
