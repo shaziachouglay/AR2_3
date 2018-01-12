@@ -1,7 +1,7 @@
-Feature: testing the AUC TFA Deprication page
+Feature: testing the AUC TFA Deprecation page
 
 
-
+@auc_tfa_depreciation
   Scenario Outline: testing the AUC TFA Deprication page with VALID entries
 
     Given I am on Asset Under Construction

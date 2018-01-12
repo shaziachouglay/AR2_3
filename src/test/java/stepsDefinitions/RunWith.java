@@ -7,7 +7,7 @@ import cucumber.api.junit.Cucumber;
 @CucumberOptions(   dryRun = false ,
         strict = false ,
         features = ".",
-        tags = "@test121",
+        tags = "@auc_tfa_depreciation",
         plugin = {"com.cucumber.listener.ExtentCucumberFormatter:"},
         format = {"html:target/site/cucumber-pretty","json:target/cucumber.json"})
 @org.junit.runner.RunWith(Cucumber.class)
@@ -15,7 +15,7 @@ public class RunWith {
 
 
     /**
-     * This is the Runnner Class from where the Framework can be triggered.
+     * This is the Runner Class from where the Framework can be triggered.
      * To run an individual Scenario right click on the Scenario and hit run
      * To run as an individual Feature right click on the on the word 'Feature' in the feature file and hit run.
      * To run as a suite of test, tag the desired Scenarios or Features with a tag and place the tag in Cucumber Option in the RunWith.class (as above),

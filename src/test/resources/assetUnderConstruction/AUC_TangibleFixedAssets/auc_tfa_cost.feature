@@ -109,3 +109,80 @@ Feature: testing the AUC TFA Cost page
     Examples:
       | v1 | v2 |v3|v4  |
       |1   |6   |13|109 |
+
+
+  Scenario Outline: testing the AUC TFA Cost page for All Financial Data Error
+
+    Given I am on Asset Under Construction
+    When  I navigate to Asset Under Construction Tangible Fixed Assets Cost page
+
+    And   I enter in row Original prior year closing balance as submitted in the Accounts Return and all columns with "<v1>"
+
+    And   I enter in row Adjustments made to opening balance and all columns with "<v1>"
+
+    And   I enter in row Additions funded from Free Schools Priority Schools Building programme and all columns with "<v1>"
+
+    And   I enter in row Additions funded from other DFEESFA capital grant and all columns with "<v1>"
+
+    And   I enter in row Additions Others and all columns with "<v1>"
+
+    And   I enter in row Transferred in on conversion local authority and all columns with "<v1>"
+
+    And   I enter in row Transferred in on conversion elsewhere and all columns with "<v1>"
+
+    And   I enter in row Transferred in on existing academies joining the trust and all columns with "<v1>"
+
+    And   I enter in row Transferred out on existing academies leaving the trust and all columns with "<v1>"
+
+    And   I enter in row Donations DFEESFA and all columns with "<v1>"
+
+    And   I enter in row Donations Non DFEESFA and all columns with "<v1>"
+
+    And   I enter in row Disposals and all columns with "<v1>"
+
+    And   I enter in row Revaluations and all columns with "<v1>"
+
+    And   I enter in row Reclassifications and all columns with "<v1>"
+
+    Then  I see the number of errors starting with  All financial data must be entered are "<error>"
+    Examples:
+      | v1        |error|
+      |9999999    |98   |
+
+  Scenario Outline: testing the AUC TFA Cost page for All Financial Data Error
+
+    Given I am on Asset Under Construction
+    When  I navigate to Asset Under Construction Tangible Fixed Assets Cost page
+
+    And   I enter in row Original prior year closing balance as submitted in the Accounts Return and all columns with "<v1>"
+
+    And   I enter in row Adjustments made to opening balance and all columns with "<v1>"
+
+    And   I enter in row Additions funded from Free Schools Priority Schools Building programme and all columns with "<v1>"
+
+    And   I enter in row Additions funded from other DFEESFA capital grant and all columns with "<v1>"
+
+    And   I enter in row Additions Others and all columns with "<v1>"
+
+    And   I enter in row Transferred in on conversion local authority and all columns with "<v1>"
+
+    And   I enter in row Transferred in on conversion elsewhere and all columns with "<v1>"
+
+    And   I enter in row Transferred in on existing academies joining the trust and all columns with "<v1>"
+
+    And   I enter in row Transferred out on existing academies leaving the trust and all columns with "<v1>"
+
+    And   I enter in row Donations DFEESFA and all columns with "<v1>"
+
+    And   I enter in row Donations Non DFEESFA and all columns with "<v1>"
+
+    And   I enter in row Disposals and all columns with "<v1>"
+
+    And   I enter in row Revaluations and all columns with "<v1>"
+
+    And   I enter in row Reclassifications and all columns with "<v1>"
+
+    Then  I see the number of errors starting with  All financial data must be entered are "<error>"
+    Examples:
+      | v1        |error|
+      |9999999    |98   |

@@ -12,6 +12,7 @@ import pageObjects.assetUnderConstruction.auc_CapitalGranst.AUC_CapitalGranst;
 import pageObjects.assetUnderConstruction.auc_Donations.AUC_Donations;
 import pageObjects.assetUnderConstruction.auc_TangibleFixedAssets.AUC_TFA_Cost;
 import pageObjects.assetUnderConstruction.auc_TangibleFixedAssets.AUC_TFA_Depreciation;
+import pageObjects.assetUnderConstruction.auc_TangibleFixedAssets.AUC_TFA_Impairments;
 import pageObjects.balanceSheetAssets.cash.Cash;
 import pageObjects.balanceSheetAssets.currentInvestment.CurrentInvestments;
 import pageObjects.balanceSheetAssets.debtors.Debtors;
@@ -114,6 +115,7 @@ public class BaseTest {
     protected AUC_Donations auc_donations= new AUC_Donations();
     protected AUC_TFA_Cost auc_tfa_cost = new AUC_TFA_Cost();
     protected AUC_TFA_Depreciation auc_tfa_depreciation = new AUC_TFA_Depreciation();
+    protected AUC_TFA_Impairments auc_tfa_impairments = new AUC_TFA_Impairments();
 
 
 
@@ -129,9 +131,9 @@ public class BaseTest {
      */
     protected SoftAssert softAssert = new SoftAssert();
 
-   protected static Logger log = LoggingFactory.getLogger();
+   private static Logger log = LoggingFactory.getLogger();
 
-    public void info(Object message){
+    protected void info(Object message){
         if(FrameworkPropertyConfigurator.getPropertiesByFileName(FrameworkPropertyConfigurator.propertyFileName.config, FrameworkPropertyConfigurator.keys.LOG_SWITCH).equalsIgnoreCase("ON")){
         log.info(message);}
     }
