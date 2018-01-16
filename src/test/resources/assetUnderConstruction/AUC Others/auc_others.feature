@@ -21,6 +21,6 @@ Feature: Testing the AUC Others Page
       Given I am on Asset Under Construction
       And   I have navigated to the Others Section for AUC
 
-      And   I add 20 instances
-      And   I remove 20 instances
+      And   I add 10 instances
+      And   I remove 10 instances
       Then  I see I am left with 1 instance
