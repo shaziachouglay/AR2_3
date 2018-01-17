@@ -7,7 +7,6 @@ import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.*;
 
-import java.io.IOException;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
@@ -89,12 +88,11 @@ public abstract class Page extends BrowserFactory {
      */
     public enum timeUnitSeconds{S_SECONDS,M_SECONDS,L_SECONDS,Xl_SECONDS,XXl_SECONDS,XXXl_SECONDS,VARIBALE_SECONDS,
         S_MILLISECONDS,M_MILLISECONDS,L_MILLISECONDS,XL_MILLISECONDS,XXL_MILLISECONDS,XXXL_MILLISECONDS,VARIBALE_MILLISECONDS}
+
     /**
-     *
-     * @throws IOException
      *  this method reads from the Config file and sets the local variables
      */
-    public int getSyncTimeUnit(timeUnitSeconds timeUnitSeconds) throws IOException {
+    public int getSyncTimeUnit(timeUnitSeconds timeUnitSeconds){
         int seconds = 0;
 
         switch(timeUnitSeconds){
@@ -203,7 +201,7 @@ public abstract class Page extends BrowserFactory {
     }
 
     /**
-     * @param elementList
+     * @param elementList is the  list of elements
      * @param elementName name of the element
      * @param pageName used for logging message.
      * @return the count of WebElements present.
@@ -267,7 +265,7 @@ public abstract class Page extends BrowserFactory {
 
     /**
      * this is trial method
-     * @param elementInput
+     * @param elementInput is the element in which  the value needs to be input.
      * @param inputValue this standard Selenium method does not work as it is working on a hit text element.
      */
     public void setValueInElementInput1(WebElement elementInput , String inputValue){
