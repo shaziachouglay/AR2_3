@@ -17,6 +17,7 @@ ________________________________________________________________________________
     Testing Tool            : Cucumber JVM
     Logging                 : Log4J
     Reporting               : Extent Report, Cucumber Maven Report dashboard
+    Design Pattern          : Page Object Design Pattern using Page Factory
     Repository type         : Git (local git + remote VSTS git)
 
 ________________________________________________________________________________________________________________________________________________
@@ -54,13 +55,14 @@ ________________________________________________________________________________
     Archetecture: MavenArchetype@QuickStart
 
     Requirements:
-        Intellij Idea Community Edition Installed
-        Java Cucumebr Plugin in Intellij Idea
-        Gherkin Plugin in INtellij Idea
-        Java Devlopement Kit (JDK) installed.
-        Java Home Path Set in environment varibales
-        Apache Maven path set in environment varibales.
-        WebDriver executables required as per OS, placed in src/test/drivers.
+
+    Intellij Idea Community Edition Installed
+    Java Cucumebr Plugin in Intellij Idea
+    Gherkin Plugin in INtellij Idea
+    Java Devlopement Kit (JDK) installed.
+    Java Home Path Set in environment varibales
+    Apache Maven path set in environment varibales.
+    WebDriver executables required as per OS, placed in src/test/drivers.
 
 ________________________________________________________________________________________________________________________________________________
 
@@ -69,4 +71,18 @@ ________________________________________________________________________________
 
     FrameworkPropertyConfigurator.java contains paths to varios .properties files. For windows these paths need to be set in correct windows syntax.
 
+________________________________________________________________________________________________________________________________________________
 
+    Project Related Information:
+
+    Name: Academy Account Return 2018-19
+    Locator of choice: XPath (simple,position,dynamic and templated/paramterised)
+    Page.java is the generic Library Class of Functionality
+    CommomMethods.java is the Library of common functionality used within the application itself.
+
+    BaseTest.java holds commom methods and objects to be used in the test level.
+    All Step Definition classes to extend to BaseTest.java
+
+    Resources hold all the Feature Files for the project.
+
+________________________________________________________________________________________________________________________________________________

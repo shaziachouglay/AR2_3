@@ -16,6 +16,7 @@ public class Academy extends CommonMethods {
         clickOnSaveAndNextButtonInPage();
         this.waitForPageLoadToComplete();
     }
+
     public boolean isHeaderPresentAndDisplayedForAcademyPage(){
         return isPageHeaderPresentAndDisplayed(academyPage_header,pageName);
     }
