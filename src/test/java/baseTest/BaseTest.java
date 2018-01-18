@@ -22,6 +22,15 @@ import pageObjects.balanceSheetAssets.intangibleFixedAssets.*;
 import pageObjects.balanceSheetAssets.nonCurrentInvestment.NonCurrentInvestment;
 import pageObjects.balanceSheetAssets.stock.Stock;
 import pageObjects.balanceSheetAssets.tangibleFixedAssets.*;
+import pageObjects.landAndBuildings.academies.Academies_Cost;
+import pageObjects.landAndBuildings.academies.Academies_Depriciation;
+import pageObjects.landAndBuildings.academies.Academies_Impairments;
+import pageObjects.landAndBuildings.landAndBuildingsTotal.LBT_Cost;
+import pageObjects.landAndBuildings.landAndBuildingsTotal.LBT_Depreciation;
+import pageObjects.landAndBuildings.landAndBuildingsTotal.LBT_Impairments;
+import pageObjects.landAndBuildings.trustOwned.TO_Cost;
+import pageObjects.landAndBuildings.trustOwned.TO_Depreciation;
+import pageObjects.landAndBuildings.trustOwned.TO_Impairments;
 import pageObjects.navigationPanel.NavigationMenuBar;
 import pageObjects.sofa.capitalGrants.CapitalGrantsDfEESFA;
 import pageObjects.sofa.capitalGrants.CapitalGrantsDfEGroup;
@@ -120,6 +129,24 @@ public class BaseTest {
     protected AUC_TFA_Impairments auc_tfa_impairments = new AUC_TFA_Impairments();
     protected AUC_TFA_Debtors auc_debtors = new AUC_TFA_Debtors();
     protected AUC_Others auc_others= new AUC_Others();
+
+
+    /**
+     * Objects for Land and Buildings
+     */
+
+
+    protected TO_Cost to_cost = new TO_Cost();
+    protected TO_Depreciation to_depreciation= new TO_Depreciation();
+    protected TO_Impairments to_impairments = new TO_Impairments();
+
+    protected Academies_Cost academies_cost= new Academies_Cost();
+    protected Academies_Depriciation academies_depriciation= new Academies_Depriciation();
+    protected Academies_Impairments academies_impairments = new Academies_Impairments();
+
+    protected LBT_Cost lbt_cost = new LBT_Cost();
+    protected LBT_Depreciation lbt_depreciation = new LBT_Depreciation();
+    protected LBT_Impairments lbt_impairments= new LBT_Impairments();
 
 
 

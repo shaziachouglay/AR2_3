@@ -125,6 +125,30 @@ public class NavigationMenuBar extends CommonMethods {
         }
     }
 
+    public enum LNB_TAB_MENU_OPTIONS implements MenuTabBarMarkerInterface{
+        TrustOwned("Trust Owned"), Academies("Academies"), LandAndBuildingsTotal("Land and");
+
+        private final String stringvalue;
+        LNB_TAB_MENU_OPTIONS(String s){
+            this.stringvalue=s;
+        }
+        public String toString(){
+            return stringvalue;
+        }
+    }
+
+    public enum LNB_TAB_SUBMENU_OPTIONS implements SubMenuMarketInterface {
+        Cost("Cost"),Depriciation("Depreciation"), Imparments("Impairment");
+
+        private final String stringValue;
+        LNB_TAB_SUBMENU_OPTIONS(String s) {
+            this.stringValue = s;
+        }
+        public String toString() {
+            return stringValue;
+        }
+    }
+
 
     /**
      * use these enums when you need to choose sub tab menu option s in SoFA.

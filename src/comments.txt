@@ -34,3 +34,165 @@ Notes as of the 22nd Dec 2017 : - start --
 - passwords : tablet is awadkar and Winterof18
 
 - setup done in the new machine .
+
+
+- To Do List :
+
+
+        - Check the Access One class is still used and clean the code if not needed. I think it is incorporated in other classs.
+        - javadoc coments needed in most Page Objects.
+        - Readme needs to be completed.
+        - Extent Reporter throwing NullPointer at loadXML in Hooks @After. This is happening when single Scenario or single Feature File is run
+            as the call does not travel via the RunWith.java which holds the configuration command for the reporter to compile.
+                tested in test framework code for handling the Nullpointer when singular scenarios are run with a message.
+
+
+        - Start building the Ultimate Selenium Library
+            - mark sections for this library and support code from Seleniium WebDriver.
+                    - sections as top of my head.
+                        - selenium element commands like click, clickWithJS
+                        - browser settings commands
+                        - navigation commands
+                        - poopup handlers (browser and system)
+                        - alerts handlers (browser and system)
+                        - accordian
+                        - graphs
+                        - frame handlers
+                        - wait and synchronisation commands
+                        - webtables
+                        - datepicker
+                        - window commands
+                        - slider commands
+                        - drag and drop commands
+                        - resizable frames and elements commands
+                        - TinyMCE (Tiny Moxiecode Content Editor) - browser based.
+                        - CK Editor - browser based
+                        - File Download and Upload commands
+                        - JQuery Progress Bar Commands
+                        - Modals
+                        - Progress Bars
+        - Publishing to Maven Central - Nexus Plugin Issue
+                - Create a JIRA Sonatype Ticket
+                - Host a Public Repository like GitHub
+                - Check the Library in the repository
+                - Construct the POM.xml and Global Maven settings as per Apache Maven
+                    - staging servers
+                    - developer info
+                    - javadocs
+                    - gpg key generation for encrypting and decrypting
+                    - signing all the docs with gpg key signature
+                    - stage the docs and deploy
+                    - release version 0.1
+                    - pull from Maven Central
+
+        - Knowledge Tranasfer Sessions
+                - Framework Overview
+                - components of the frmaework and how do they talk to each other
+                - Cucumber Introduction
+                - Object Oriented Principles or OOP's concepts
+                    - Class
+                    - Object
+                    - Static
+                    - Instance
+                    - Data Types
+                    - Constructors
+                    - Methods
+                    - Interface
+                    - Enumerations
+                    - Inheritance
+                    - Polymorphism
+                    - Encapsulation
+                    - Loops
+                    - Operators
+                    - Loops
+                    - Conditional Statements
+                    - Static Block
+                    - Main Method in Java
+
+                - Maven Project Structure
+                    - Maven Architecture
+                    - POM.xml
+
+                - Cucumber JVM
+                    - Feature Files
+                    - Step Definitions
+                    - Configuring Runner class
+
+                -Page Objects
+                    - What are Page Objects
+                    - Page Object Design pattern
+                    - Understanding the Generic Page Library
+                    - Understanding and using the Commom Methods Class
+                    - Understanding Base Test Class
+                    - Understanding of Assertions
+                    - Understanding of Waits
+                    - Common Exceptions and how to handle them
+                    - How to name your methods
+                    - Locators (XPath)
+                    - How to parameterise XPaths and save effort
+                    - How to Debug your code
+                    - Compiling and Building your project
+                    - How to write javadoc comments
+
+                - Configurations in Framework
+                    - How to use config files in framework
+                    - How do they work - brief introduction
+
+
+                - External Libraries and API
+                    - How to maintain external libraries using POM.xml
+                    - How to fetch Maven Dependencies in POM.xml
+
+                - Intellij Idea IDE (Integrated Development Environment)
+                    - What is IDE
+                    - How to use Intellij - tips and tricks
+                    - Plugins for IJ
+
+                - Running Test
+                    - How to Run/Debug Individual Scenario
+                    - How to Run/Debug Individual Feature
+                    - How to create test packs
+                    - How to run test packs and see reports
+                    - How to run test packs via the command line as a maven project
+                    - How to run executable test files
+
+
+                - Version Control for test code
+                    - What is Version Control
+                    - Introduction to git
+                    - Creating git repositories in VSTS
+                    - Connecting local machine code to VSTS git
+                    - Introduction to Branching in Version Control
+                    - Commiting, Pushing and Pulling code
+                    - What needs to be ignored during chekins
+                    - Code Checkin Schedule OR when to check in OR how often
+
+
+                - How to work in a Technical Team
+                - reporting Bugs in JIRA with automation reports
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
