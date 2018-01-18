@@ -35,5 +35,7 @@ Feature: Testing the Land and Buildings Trust Owned Depreciation Page
 
     And   I enter in row At close of period and all column with "<v3>" in TO_Cost page
     Then  I see value in row At close of period and column Total is "<v4>" in TO_Cost page
+    Examples:
+      | v1 | v2 | v3 | v4 |
 
 
