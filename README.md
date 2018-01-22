@@ -88,3 +88,17 @@ ________________________________________________________________________________
 ________________________________________________________________________________________________________________________________________________
 
     Tips and Tricks
+
+    Issue 1: When running Cuucmber Test on Intellij Idea, if you get an error Undefined Step Definition then do the following.
+    Go to the feature file and edit the file with anything  and save, then revert the edit and save again. This helps clear the cache for cofiguration.
+
+    If the problem persis after that then do the following.
+
+    Around the menu bar for Intellij Idea there is a dropdown which shows Scenario Names, click open and choose Edit Configuration. Clear all the saved configuration
+    optiond and click Apply.
+
+    Rerun the Test : Works most times as the cache is not cleared or flushed.
+
+    Even after this there is no luck then code inspection is required.
+
+________________________________________________________________________________________________________________________________________________
