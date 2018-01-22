@@ -157,4 +157,21 @@ public class Steps_LNB_TO_Depreciation extends BaseTest {
     public void iSeeValueInRowAtCloseOfPeriodAndColumnTotalIsNOTInTO_DepreciationPage(String arg0) {
         hardAssertion.assertNotEquals(to_depreciation.getValueByRowNameAndColumnName(AtCloseOfPeriod,Total),arg0);
     }
+
+    @And("^I enter in row Transferred out on existing Academies joining the Trust and all column with \"([^\"]*)\" in TO_Depreciation page$")
+    public void iEnterInRowTransferredOutOnExistingAcademiesJoiningTheTrustAndAllColumnWithInTO_DepreciationPage(String arg0) {
+        to_depreciation.setValueInFieldByRowNameAndColumnName(TransferredInOnExistingAcademiesJoiningTheTrust,FreeholdLandAndBuildings,arg0);
+        to_depreciation.setValueInFieldByRowNameAndColumnName(TransferredInOnExistingAcademiesJoiningTheTrust,LeaseholdLandAndBuildings,arg0);
+        to_depreciation.setValueInFieldByRowNameAndColumnName(TransferredInOnExistingAcademiesJoiningTheTrust,LeaseholdImprovements,arg0);
+    }
+
+    @Then("^I see value in row Transferred out on existing Academies joining the Trust and column Total is \"([^\"]*)\" in TO_Depreciation page$")
+    public void iSeeValueInRowTransferredOutOnExistingAcademiesJoiningTheTrustAndColumnTotalIsInTO_DepreciationPage(String arg0) {
+        hardAssertion.assertEquals(to_depreciation.getValueByRowNameAndColumnName(TransferredInOnExistingAcademiesJoiningTheTrust,Total),arg0);
+    }
+
+    @Then("^I see value in row Transferred out on existing Academies joining the Trust and column Total is NOT \"([^\"]*)\" in TO_Depreciation page$")
+    public void iSeeValueInRowTransferredOutOnExistingAcademiesJoiningTheTrustAndColumnTotalIsNOTInTO_DepreciationPage(String arg0)  {
+        hardAssertion.assertNotEquals(to_depreciation.getValueByRowNameAndColumnName(TransferredInOnExistingAcademiesJoiningTheTrust,Total),arg0);
+    }
 }

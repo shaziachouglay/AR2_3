@@ -18,6 +18,9 @@ Feature: Testing the Land and Buildings Trust Owned Depreciation Page
     And   I enter in row Eliminated on disposal and all column with "<v1>" in TO_Depreciation page
     Then  I see value in row Eliminated on disposal and column Total is "<v2>" in TO_Depreciation page
 
+#    And   I enter in row Transferred out on existing Academies joining the Trust and all column with "<v1>" in TO_Depreciation page
+#    Then  I see value in row Transferred out on existing Academies joining the Trust and column Total is "<v2>" in TO_Depreciation page
+
     And   I enter in row Transferred out on existing Academies leaving the Trust and all column with "<v1>" in TO_Depreciation page
     Then  I see value in row Transferred out on existing Academies leaving the Trust and column Total is "<v2>" in TO_Depreciation page
 
@@ -50,6 +53,9 @@ Feature: Testing the Land and Buildings Trust Owned Depreciation Page
 
     And   I enter in row Eliminated on disposal and all column with "<v1>" in TO_Depreciation page
     Then  I see value in row Eliminated on disposal and column Total is NOT"<v2>" in TO_Depreciation page
+
+    And   I enter in row Transferred out on existing Academies joining the Trust and all column with "<v1>" in TO_Depreciation page
+    Then  I see value in row Transferred out on existing Academies joining the Trust and column Total is NOT "<v2>" in TO_Depreciation page
 
     And   I enter in row Transferred out on existing Academies leaving the Trust and all column with "<v1>" in TO_Depreciation page
     Then  I see value in row Transferred out on existing Academies leaving the Trust and column Total is NOT"<v2>" in TO_Depreciation page
