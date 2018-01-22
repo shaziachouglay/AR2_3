@@ -138,7 +138,7 @@ public class NavigationMenuBar extends CommonMethods {
     }
 
     public enum LNB_TAB_SUBMENU_OPTIONS implements SubMenuMarketInterface {
-        Cost("Cost"),Depriciation("Depreciation"), Imparments("Impairment");
+        Cost("Cost"), Depreciation("Depreciation"), Imparments("Impairment");
 
         private final String stringValue;
         LNB_TAB_SUBMENU_OPTIONS(String s) {

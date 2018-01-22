@@ -10,7 +10,7 @@ public class Steps_TFA_DepriciationPeriodsPerAccountingPolicies extends BaseTest
     public void iNavigateToBSATangibleFixedAssetsDepreciationPeriodsPerAccountingPoliciesPage(){
 
         navigationMenuBar.click_arMenuTabBarOptionsWithSubMenuOption(NavigationMenuBar.BSA_TAB_MENU_OPTIONS.TangibleFixedAssets, NavigationMenuBar.BSA_TAB_SUBMENU_OPTIONS.DepriciationPeriodsPerAcountingPolicies);
-        hardAssertion.assertTrue(tfa_depriciationPeriodsPerAccountingPolicies.isPageHeaderPresentAndDisplayedInTFADepreciationPeriodsPerAccountingPoliciesPage(), "Failed to display the Header for TFA Depriciation Periods Per Acounting Policies page");
+        hardAssertion.assertTrue(tfa_depriciationPeriodsPerAccountingPolicies.isPageHeaderPresentAndDisplayedInTFADepreciationPeriodsPerAccountingPoliciesPage(), "Failed to display the Header for TFA Depreciation Periods Per Acounting Policies page");
 
     }
 

@@ -763,4 +763,10 @@ public abstract class Page extends BrowserFactory {
                 "\n|Class Calling this method  |"+ClassFromWhereMethodCallIsMade+"         "+"" +
                 "\n-------------------------------------------------------------------------");
     }
+
+    public WebElement waitForElementVisibility(WebElement element){
+        element = new WebDriverWait(getDriver(),10).until(ExpectedConditions.visibilityOf(element));
+        info("Waiting on element visibility.");
+        return element;
+    }
 }
