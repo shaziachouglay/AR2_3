@@ -75,7 +75,7 @@ Feature: Testing Land and Building Trust Owned Impairments Page
 
 
   @smoke
-  Scenario Outline: Testing Land and Building Trust Owned Impairments Page for errro triggering All Fininacial Data Error
+  Scenario Outline: Testing Land and Building Trust Owned Impairments Page for errro triggering Invalid Data Format Error
 
     Given I am on Land and Buildings Section
     And   I have navigated to the Trust Owned Impiarments Page
