@@ -68,7 +68,8 @@ public class CommonMethods extends Page {
         String text = null;
         try {
             waitForAjax();
-            WebElement element = parentElement.findElement(By.xpath(".//div/label[contains(text(),'" + labelName + "')]/../..//input"));
+            //WebElement element = parentElement.findElement(By.xpath(".//div[contains(.,'" + labelName + "')]/../..//input"));
+            WebElement element = parentElement.findElement(By.xpath(".//div[contains(.,'" + labelName + "')]//div/input"));
             cleanAndRebuildElement(element);
             text = getElementAttributeValueWithRetry(element, "value");
             logger.info("\nThe Value extracted from the "+labelName+" input box is ' "+ text+" '.");

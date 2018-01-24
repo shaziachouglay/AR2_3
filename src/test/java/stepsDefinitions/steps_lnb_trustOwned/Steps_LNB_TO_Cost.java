@@ -303,4 +303,9 @@ public class Steps_LNB_TO_Cost extends BaseTest {
     public void iSeeTheValueInRowAdditionsAndColumnTotalsIsNOTInLNB_TO_C(String arg0) throws Throwable {
         hardAssertion.assertNotEquals(to_cost.getValueByRowNameAndColumnName(TO_Cost.RowConstants.AdditionsOther, TO_Cost.ColumnConstant.Total),arg0);
     }
+
+    @And("^I click on the Save And Next button in Cost page$")
+    public void iClickOnTheSaveAndNextButtonInCostPage() throws Throwable {
+        to_cost.clickOnSaveAndNextButtonInPage();
+    }
 }
