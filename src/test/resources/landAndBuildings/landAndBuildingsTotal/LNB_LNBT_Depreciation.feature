@@ -1,5 +1,5 @@
 Feature: Testing the Land And Building depreciation page.
-
+  @test222
   Scenario Outline: Testing the Land and Buildings Trust Owned Depreciation Page with Errors All Financial Data
 
 

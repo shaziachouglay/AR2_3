@@ -89,11 +89,11 @@
       <!--<artifactId>cucumber-extentsreport</artifactId>-->
       <!--<version>1.1.1</version>-->
     <!--</dependency>-->
-    <!--<dependency>-->
-      <!--<groupId>com.vimalselvam</groupId>-->
-      <!--<artifactId>cucumber-extentsreport</artifactId>-->
-      <!--<version>3.0.1</version>-->
-    <!--</dependency>-->
+    <dependency>
+      <groupId>com.vimalselvam</groupId>
+      <artifactId>cucumber-extentsreport</artifactId>
+      <version>3.0.1</version>
+    </dependency>
     <dependency>
       <groupId>com.vimalselvam</groupId>
       <artifactId>cucumber-extentsreport</artifactId>
@@ -103,7 +103,7 @@
     <dependency>
       <groupId>com.relevantcodes</groupId>
       <artifactId>extentreports</artifactId>
-      <version>2.41.2</version>
+      <version>2.40.2</version>
       <scope>test</scope>
     </dependency>
     <!--<dependency>-->
@@ -114,7 +114,7 @@
     <dependency>
       <groupId>com.aventstack</groupId>
       <artifactId>extentreports</artifactId>
-      <version>3.1.2</version>
+      <version>LATEST</version>
       <scope>provided</scope>
     </dependency>
     <dependency>

@@ -1,6 +1,6 @@
 Feature: Testing the Land and Buildings Totals Cost Page
 
-
+@test222
   Scenario Outline: Testing the Land and Buildings Cost Page
 
     Given I am on Land and Buildings Section

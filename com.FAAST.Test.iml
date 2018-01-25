@@ -122,7 +122,7 @@
     <orderEntry type="library" name="Maven: org.webbitserver:webbit:0.4.14" level="project" />
     <orderEntry type="library" name="Maven: io.netty:netty:3.5.2.Final" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: com.vimalselvam:cucumber-extentsreport:3.0.1" level="project" />
-    <orderEntry type="library" scope="TEST" name="Maven: com.relevantcodes:extentreports:2.41.2" level="project" />
+    <orderEntry type="library" scope="TEST" name="Maven: com.relevantcodes:extentreports:2.40.2" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Maven: com.aventstack:extentreports:3.1.2" level="project" />
     <orderEntry type="library" name="Maven: org.apache.httpcomponents:httpmime:4.5.2" level="project" />
     <orderEntry type="library" name="Maven: org.jsoup:jsoup:1.8.3" level="project" />
