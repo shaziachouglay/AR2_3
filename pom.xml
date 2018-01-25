@@ -115,7 +115,7 @@
       <groupId>com.aventstack</groupId>
       <artifactId>extentreports</artifactId>
       <version>LATEST</version>
-      <scope>provided</scope>
+      <!--<scope>provided</scope>-->
     </dependency>
     <dependency>
       <groupId>org.jsoup</groupId>
