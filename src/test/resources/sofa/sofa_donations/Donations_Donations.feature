@@ -1,7 +1,7 @@
 @fullAndFinal
 Feature: Testing Donations Page
 
-  @sanity  @evert
+  @sanity  @evert @test2122
   Scenario Outline: Checking Donations Page with Valid Credentials
     Given I am in Pre Production Environment as Test User
     Given I am on SoFA section

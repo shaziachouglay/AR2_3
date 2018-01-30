@@ -8,7 +8,7 @@ import utilityClasses.CommonMethods;
 public class Creditors extends CommonMethods{
 
 
-    private String pageName="LNB Totals Cost ";
+    private String pageName="BSL Creditors";
 
     @FindBy(xpath = "//div[@class='opa-main-panel']")
     private WebElement page_body;
