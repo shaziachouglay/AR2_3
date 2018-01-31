@@ -64,7 +64,7 @@ public class NavigationMenuBar extends CommonMethods {
     /**
      * Use this enum in the Tab Menu Bar level 1 Option. See the DOM for Tab Menu Bar class to understand more.
      */
-    public enum SOFA_TAB_MENU_OPTIONS{
+    public enum SOFA_TAB_MENU_OPTIONS {
         Donations("Donations"),CapitalGrants("Capital"), RevenueGrants("Revenue"), OtherIncome("Other Income"), Expenditure("Expenditure"), StaffAndTrustees("Staff"),
         ProvisionOfBoardingActivities("Provision");
 
@@ -148,6 +148,31 @@ public class NavigationMenuBar extends CommonMethods {
             return stringValue;
         }
     }
+
+    public enum BSL_MENU_OPTION implements MenuTabBarMarkerInterface{
+        Creditors("Creditors"), Loans("Loans"), Provisions("Provisions"), ContingentLiabilities("Contingent"), CommitmentUnderPFI("Comitment");
+        private final String strinValue;
+        BSL_MENU_OPTION(String s){
+            this.strinValue = s;
+        }
+        public String toString(){
+            return strinValue;
+        }
+    }
+
+    public enum BSL_TAB_SUBMENU_OPTIONS implements SubMenuMarketInterface {
+        LoansMovementTable("Loan movement table"), LoanAnalysis("Loan analysis"), Provisions("Provisions (Movement)"),
+        ProvisionsAgeing("Provisions (Ageing)");
+
+        private final String stringValue;
+        BSL_TAB_SUBMENU_OPTIONS(String s) {
+            this.stringValue = s;
+        }
+        public String toString() {
+            return stringValue;
+        }
+    }
+
 
 
     /**

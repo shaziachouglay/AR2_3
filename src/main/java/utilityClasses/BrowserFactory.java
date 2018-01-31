@@ -32,6 +32,8 @@ public class BrowserFactory extends LoggingFactory{
         browser = FrameworkPropertyConfigurator.getPropertiesByFileName(config,"browser");
         url     = FrameworkPropertyConfigurator.getPropertiesByFileName(config,"url");
 
+
+
         if(browser.equalsIgnoreCase("Firefox")){
             DesiredCapabilities capabilities =  DesiredCapabilities.firefox();
             capabilities.setCapability("marionette",true);
@@ -49,6 +51,17 @@ public class BrowserFactory extends LoggingFactory{
             System.setProperty("webdriver.chrome.driver" , (System.getProperty("user.dir")+"/src/test/drivers/chromedriver 3"));
             driver = new ChromeDriver();
             logger.info("Opening Chrome Browser");
+
+//            String deviceName = "Apple iPhone 5";
+//            Map<String, String> mobileEmulation = new HashMap<String, String>();
+//            mobileEmulation.put("deviceName", deviceName);
+//
+//            Map<String, Object> chromeOptions = new HashMap<String, Object>();
+//            chromeOptions.put("mobileEmulation", mobileEmulation);
+//            DesiredCapabilities  capabilities;
+//            capabilities = DesiredCapabilities.chrome();
+//            capabilities.setCapability(ChromeOptions.CAPABILITY, chromeOptions);
+//            WebDriver driver = new ChromeDriver(capabilities);
         }
         else if(browser.equalsIgnoreCase("safari")){
             driver= new SafariDriver();

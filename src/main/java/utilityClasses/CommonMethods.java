@@ -48,7 +48,7 @@ public class CommonMethods extends Page {
         return isPresentAndDisplayed;
     }
 
-    public void setValueInInputFieldByLabelName(WebElement parentElement, String labelName, String inputValue){
+    protected void setValueInInputFieldByLabelName(WebElement parentElement, String labelName, String inputValue){
         try{
             cleanAndRebuildElement(parentElement);
             WebElement element = parentElement.findElement(By.xpath(".//div/label[contains(.,'"+labelName+"')]/../..//input"));

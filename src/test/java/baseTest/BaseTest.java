@@ -22,6 +22,13 @@ import pageObjects.balanceSheetAssets.intangibleFixedAssets.*;
 import pageObjects.balanceSheetAssets.nonCurrentInvestment.NonCurrentInvestment;
 import pageObjects.balanceSheetAssets.stock.Stock;
 import pageObjects.balanceSheetAssets.tangibleFixedAssets.*;
+import pageObjects.balanceSheetLiabilities.commitmentUnderPFI.ComitmentUnderPFI;
+import pageObjects.balanceSheetLiabilities.contingentLiabilities.ContingentLiabilities;
+import pageObjects.balanceSheetLiabilities.creditors.Creditors;
+import pageObjects.balanceSheetLiabilities.loans.LoanAnalysis;
+import pageObjects.balanceSheetLiabilities.loans.LoanMovementTable;
+import pageObjects.balanceSheetLiabilities.provisions.ProvisionsAgeing;
+import pageObjects.balanceSheetLiabilities.provisions.ProvisionsMovement;
 import pageObjects.landAndBuildings.academies.Academies_Cost;
 import pageObjects.landAndBuildings.academies.Academies_Depriciation;
 import pageObjects.landAndBuildings.academies.Academies_Impairments;
@@ -62,6 +69,7 @@ public class BaseTest {
     LoginPage loginPage = new LoginPage();
     ServicePortalPage servicePortalPage = new ServicePortalPage();
     // Page Objects Common to both the environments.
+
 
     /**
      * objects for the SOFA Section
@@ -117,8 +125,6 @@ public class BaseTest {
     protected TFA_DepriciationPeriodsPerAccountingPolicies tfa_depriciationPeriodsPerAccountingPolicies = new TFA_DepriciationPeriodsPerAccountingPolicies();
     protected TFA_Cost tfa_cost = new TFA_Cost();
 
-
-
     /**
      * Objects for Asset Under Construction
      */
@@ -134,8 +140,6 @@ public class BaseTest {
     /**
      * Objects for Land and Buildings
      */
-
-
     protected TO_Cost to_cost = new TO_Cost();
     protected TO_Depreciation to_depreciation= new TO_Depreciation();
     protected TO_Impairments to_impairments = new TO_Impairments();
@@ -148,6 +152,17 @@ public class BaseTest {
     protected LBT_Depreciation lbt_depreciation = new LBT_Depreciation();
     protected LBT_Impairments lbt_impairments= new LBT_Impairments();
 
+
+    /**
+     * Objects for Balance Sheet Liabilities
+     */
+    protected Creditors creditors = new Creditors();
+    protected ContingentLiabilities contingentLiabilities = new ContingentLiabilities();
+    protected ComitmentUnderPFI comitmentUnderPFI= new ComitmentUnderPFI();
+    protected ProvisionsAgeing provisionsAgeing = new ProvisionsAgeing();
+    protected ProvisionsMovement provisionsMovement = new ProvisionsMovement();
+    protected LoanAnalysis loanAnalysis = new LoanAnalysis();
+    protected LoanMovementTable loanMovementTable = new LoanMovementTable();
 
 
     /**

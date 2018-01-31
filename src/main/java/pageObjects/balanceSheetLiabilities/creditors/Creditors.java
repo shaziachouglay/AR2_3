@@ -60,14 +60,26 @@ public class Creditors extends CommonMethods{
             case DeferredIncomeCapitalGrantsDFEAndESFA:
                 rowCount= rowIncrementer+10;
                 break;
-            case FinanceLeases:
+            case DeferredIncomeOtherCapitalGrants:
                 rowCount= rowIncrementer+11;
                 break;
-            case ImputedFinanceLeaseOfOnBalanceSheetPFIContracts:
+            case DeferredIncomeRevenueGrantsDFEandESFA:
                 rowCount= rowIncrementer+12;
                 break;
-            case Total:
+            case DeferredIncomeOtherRevenueGrants:
                 rowCount= rowIncrementer+13;
+                break;
+            case DeferredIncomeOther:
+                rowCount= rowIncrementer+14;
+                break;
+            case FinanceLeases:
+                rowCount= rowIncrementer+15;
+                break;
+            case ImputedFinanceLeaseOfOnBalanceSheetPFIContracts:
+                rowCount= rowIncrementer+16;
+                break;
+            case Total:
+                rowCount= rowIncrementer+17;
                 break;
         }
 
@@ -146,14 +158,26 @@ public class Creditors extends CommonMethods{
             case DeferredIncomeCapitalGrantsDFEAndESFA:
                 rowCount= rowIncrementer+10;
                 break;
-            case FinanceLeases:
+            case DeferredIncomeOtherCapitalGrants:
                 rowCount= rowIncrementer+11;
                 break;
-            case ImputedFinanceLeaseOfOnBalanceSheetPFIContracts:
+            case DeferredIncomeRevenueGrantsDFEandESFA:
                 rowCount= rowIncrementer+12;
                 break;
-            case Total:
+            case DeferredIncomeOtherRevenueGrants:
                 rowCount= rowIncrementer+13;
+                break;
+            case DeferredIncomeOther:
+                rowCount= rowIncrementer+14;
+                break;
+            case FinanceLeases:
+                rowCount= rowIncrementer+15;
+                break;
+            case ImputedFinanceLeaseOfOnBalanceSheetPFIContracts:
+                rowCount= rowIncrementer+16;
+                break;
+            case Total:
+                rowCount= rowIncrementer+17;
                 break;
         }
 
@@ -194,6 +218,8 @@ public class Creditors extends CommonMethods{
         OtherTaxationAndSocialSecurity, OtherCreditor,
         CorporationTax, UnusedHolidayAccrual,OtherAccruals,
         DeferredIncomeCapitalGrantsDFEAndESFA,
+        DeferredIncomeOtherCapitalGrants,
+        DeferredIncomeRevenueGrantsDFEandESFA, DeferredIncomeOtherRevenueGrants, DeferredIncomeOther,
         FinanceLeases, ImputedFinanceLeaseOfOnBalanceSheetPFIContracts,
         Total;
     }
