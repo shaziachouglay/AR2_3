@@ -15,7 +15,7 @@ public class ProvisionsMovement extends CommonMethods{
     private WebElement page_header;
 
 
-    public boolean isHeaderPresentAndDisplayedForAUC_CostPage(){
+    public boolean isHeaderPresentAndDisplayed(){
         return isPageHeaderPresentAndDisplayed(page_header,pageName);
     }
 

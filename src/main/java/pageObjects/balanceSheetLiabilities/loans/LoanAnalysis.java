@@ -21,7 +21,7 @@ public class LoanAnalysis extends CommonMethods{
 
     public void setValueInFieldByRowNameAndColumnName(RowConstants row, ColumnConstant column, String inputValue) {
 
-        int rowIncrementer = 1;
+        int rowIncrementer = 0;
         int rowCount = 0;
 
         int columnIncrementer = 0;
@@ -38,7 +38,10 @@ public class LoanAnalysis extends CommonMethods{
             case AfterMoreThanFiveYears:
                 rowCount = rowIncrementer + 3;
                 break;
-            default:
+            case Total:
+                rowCount = rowIncrementer + 4;
+                break;
+                default:
                 warn("No Case Statement Matched");
         }
 
@@ -81,7 +84,7 @@ public class LoanAnalysis extends CommonMethods{
 
     public String getValueByRowNameAndColumnName(RowConstants row, ColumnConstant column) {
         String extractedText = "Not Text Extracted !";
-        int rowIncrementer = 1;
+        int rowIncrementer = 0;
         int rowCount = 0;
 
         int columnIncrementer = 0;
@@ -97,6 +100,9 @@ public class LoanAnalysis extends CommonMethods{
                 break;
             case AfterMoreThanFiveYears:
                 rowCount = rowIncrementer + 3;
+                break;
+            case Total:
+                rowCount = rowIncrementer + 4;
                 break;
             default:
                 warn("No Case Statement Matched");
@@ -121,9 +127,8 @@ public class LoanAnalysis extends CommonMethods{
 
             WebElement tableElement = page_body.findElement(By.xpath(".//tr[" + rowCount + "]/td[" + columnCount + "]//div/input"));
             hitKeyboardButton(tableElement, Keys.TAB);
-            explicitWait(500);
+            //explicitWait(500);
             waitForJStoLoad();
-
             waitForElementToBeVisible(tableElement);
             waitForAjax();
             cleanAndRebuildElement(tableElement);
@@ -140,7 +145,7 @@ public class LoanAnalysis extends CommonMethods{
 
 
     public enum RowConstants {
-       WithinOneYear, BetweenTwoAndFiveYears, AfterMoreThanFiveYears
+       WithinOneYear, BetweenTwoAndFiveYears, AfterMoreThanFiveYears, Total
     }
 
 

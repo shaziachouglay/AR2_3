@@ -23,7 +23,7 @@ Feature: Testing the Provisions Ageing BSL
     And   I enter value in field Within one year with "<v1>" in BSL Provisions Ageing
     And   I enter value in field Between two and five years with "<v1>" in BSL Provisions Ageing
     And   I enter value in field MOre than five years with "<v1>" in BSL Provisions Ageing
-    Then  I see the field total is "<v2>" in BSL Provisions Ageing
+    Then  I see the field total is NOT "<v2>" in BSL Provisions Ageing
     Examples:
       | v1 | v2 |
       |1   |4   |
@@ -55,4 +55,4 @@ Feature: Testing the Provisions Ageing BSL
     Then  I see the number of errors starting with  Invalid Number Format are "<error>"
     Examples:
       | v1 | error |
-      | 1  | 3     |
+      | *  | 3     |
