@@ -173,8 +173,6 @@ public class NavigationMenuBar extends CommonMethods {
         }
     }
 
-
-
     /**
      * use these enums when you need to choose sub tab menu option s in SoFA.
      */
@@ -209,7 +207,6 @@ public class NavigationMenuBar extends CommonMethods {
             return stringValue;
         }
     }
-
 
 
     /**
@@ -256,7 +253,6 @@ public class NavigationMenuBar extends CommonMethods {
             warn("NoSuchElementException Occurred");
         }
     }
-
 
     /**
      *
@@ -312,7 +308,7 @@ public class NavigationMenuBar extends CommonMethods {
             warn("NoSuchElementException Occurred choosing SOFA_TAB_MENU_OPTIONS");
         }
     }
-//************************************************
+
     public void click_arMenuTabBarOptionsWithSubMenuOption(MenuTabBarMarkerInterface options, SubMenuMarketInterface subTabMenuOption){
 
         try {
@@ -405,8 +401,4 @@ public class NavigationMenuBar extends CommonMethods {
         }
         return isPresentAndDisplayed;
      }
-
-
-
-
 }
