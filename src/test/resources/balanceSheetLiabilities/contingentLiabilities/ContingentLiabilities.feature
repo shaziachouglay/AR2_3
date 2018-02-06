@@ -10,7 +10,6 @@ Feature: Testing the Contingent Liabilities BSL
     And   I enter value in row At Start of Period and all columns with "<v1>" in BSL Contingent Liabilities
     Then  I see the value in row At Start of period and column total is "<v2>" in BSL Contingent Liabilities
 
-
     And   I enter value in row Adjustments made to opening balance and all columns with "<v1>" in BSL Contingent Liabilities
     Then  I see the value in row Adjustments made to opening balance and column total is "<v2>" in BSL Contingent Liabilities
 

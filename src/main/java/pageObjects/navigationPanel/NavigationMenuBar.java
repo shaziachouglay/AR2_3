@@ -150,7 +150,7 @@ public class NavigationMenuBar extends CommonMethods {
     }
 
     public enum BSL_MENU_OPTION implements MenuTabBarMarkerInterface{
-        Creditors("Creditors"), Loans("Loans"), Provisions("Provisions"), ContingentLiabilities("Contingent"), CommitmentUnderPFI("Comitment");
+        Creditors("Creditors"), Loans("Loans"), Provisions("Provisions"), ContingentLiabilities("Contingent"), CommitmentUnderPFI("Commitment");
         private final String strinValue;
         BSL_MENU_OPTION(String s){
             this.strinValue = s;

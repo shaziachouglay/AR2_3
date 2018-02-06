@@ -11,7 +11,7 @@ public class ComitmentUnderPFI extends CommonMethods{
     @FindBy(xpath = "//div[@class='opa-main-panel']")
     private WebElement page_body;
 
-    @FindBy(how= How.XPATH , using = "//div[@class='opa-screen-title'][contains(.,'Contingent liabilities')]")
+    @FindBy(how= How.XPATH , using = "//div[@class='opa-screen-title'][contains(.,'Commitments under PFI contracts')]")
     private WebElement page_header;
 
     public boolean isHeaderPresentAndDisplayed(){
@@ -52,7 +52,7 @@ public class ComitmentUnderPFI extends CommonMethods{
                 columnCount=columnIncrementer+2;
                 break;
             case Total:
-                columnCount=columnIncrementer+1;
+                columnCount=columnIncrementer+3;
                 break;
         }
 
@@ -114,7 +114,7 @@ public class ComitmentUnderPFI extends CommonMethods{
                 columnCount=columnIncrementer+2;
                 break;
             case Total:
-                columnCount=columnIncrementer+1;
+                columnCount=columnIncrementer+3;
                 break;
         }
         try {

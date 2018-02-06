@@ -158,7 +158,7 @@ public class BaseTest {
      */
     protected Creditors creditors = new Creditors();
     protected ContingentLiabilities contingentLiabilities = new ContingentLiabilities();
-    protected ComitmentUnderPFI comitmentUnderPFI= new ComitmentUnderPFI();
+    protected ComitmentUnderPFI commitmentUnderPFI = new ComitmentUnderPFI();
     protected ProvisionsAgeing provisionsAgeing = new ProvisionsAgeing();
     protected ProvisionsMovement provisionsMovement = new ProvisionsMovement();
     protected LoanAnalysis loanAnalysis = new LoanAnalysis();

@@ -60,8 +60,8 @@ Feature: Testing the Commitment  Under PFI BSL page
 
     Then  I see the number of errors starting with  All financial data must be entered are "<error>"
     Examples:
-      | v1 | error|
-      |1   |6     |
+      | v1      | error|
+      |9999999   |6     |
 
 
 
@@ -82,4 +82,4 @@ Feature: Testing the Commitment  Under PFI BSL page
 
     Examples:
       | v1 | error|
-      |1   |6     |
+      |*   |6     |

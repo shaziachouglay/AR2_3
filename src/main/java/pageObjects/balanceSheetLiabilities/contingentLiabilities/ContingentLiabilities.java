@@ -59,19 +59,19 @@ public class ContingentLiabilities extends CommonMethods{
                 columnCount=columnIncrementer+2;
                 break;
             case DisputedInvoices:
-                columnCount=columnIncrementer+1;
+                columnCount=columnIncrementer+3;
                 break;
             case ContractTerminationCosts:
-                columnCount=columnIncrementer+2;
+                columnCount=columnIncrementer+4;
                 break;
             case UnrecoveredFees:
-                columnCount=columnIncrementer+1;
+                columnCount=columnIncrementer+5;
                 break;
             case Other:
-                columnCount=columnIncrementer+2;
+                columnCount=columnIncrementer+6;
                 break;
             case Total:
-                columnCount=columnIncrementer+2;
+                columnCount=columnIncrementer+7;
                 break;
         }
 
@@ -139,19 +139,19 @@ public class ContingentLiabilities extends CommonMethods{
                 columnCount=columnIncrementer+2;
                 break;
             case DisputedInvoices:
-                columnCount=columnIncrementer+1;
+                columnCount=columnIncrementer+3;
                 break;
             case ContractTerminationCosts:
-                columnCount=columnIncrementer+2;
+                columnCount=columnIncrementer+4;
                 break;
             case UnrecoveredFees:
-                columnCount=columnIncrementer+1;
+                columnCount=columnIncrementer+5;
                 break;
             case Other:
-                columnCount=columnIncrementer+2;
+                columnCount=columnIncrementer+6;
                 break;
             case Total:
-                columnCount=columnIncrementer+2;
+                columnCount=columnIncrementer+7;
                 break;
         }
         try {
