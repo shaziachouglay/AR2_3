@@ -19,7 +19,6 @@ import java.util.concurrent.TimeUnit;
 public abstract class Page extends BrowserFactory {
 
 
-
     protected Logger logger = LoggingFactory.getLogger();
 
     public  static void info(Object message){

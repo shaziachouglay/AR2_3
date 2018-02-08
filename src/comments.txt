@@ -71,7 +71,7 @@ Notes as of the 22nd Dec 2017 : - start --
                         - JQuery Progress Bar Commands
                         - Modals
                         - Progress Bars
-        - Publishing to Maven Central - Nexus Plugin Issue
+        - Publishing to Maven Central - Nexus Plugin Issue (Completed .....)
                 - Create a JIRA Sonatype Ticket
                 - Host a Public Repository like GitHub
                 - Check the Library in the repository
@@ -85,7 +85,7 @@ Notes as of the 22nd Dec 2017 : - start --
                     - release version 0.1
                     - pull from Maven Central
 
-        - Knowledge Tranasfer Sessions
+        - Knowledge Transfer Sessions
                 - Framework Overview
                 - components of the frmaework and how do they talk to each other
                 - Cucumber Introduction
