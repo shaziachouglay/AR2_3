@@ -40,7 +40,7 @@ Notes as of the 22nd Dec 2017 : - start --
 
 
         - Check the Access One class is still used and clean the code if not needed. I think it is incorporated in other classs.
-        - javadoc coments needed in most Page Objects.
+        - javadoc comments needed in most Page Objects. Review that!
         - Readme needs to be completed.
         - Extent Reporter throwing NullPointer at loadXML in Hooks @After. This is happening when single Scenario or single Feature File is run
             as the call does not travel via the RunWith.java which holds the configuration command for the reporter to compile.
@@ -48,12 +48,12 @@ Notes as of the 22nd Dec 2017 : - start --
 
 
         - Start building the Ultimate Selenium Library
-            - mark sections for this library and support code from Seleniium WebDriver.
+            - mark sections for this library and support code from Selenium WebDriver.
                     - sections as top of my head.
-                        - selenium element commands like click, clickWithJS
-                        - browser settings commands
+                        - selenium element commands like click, clickWithJS,wait and other tricky situations.
+                        - browser settings commands to configure browser spawn.
                         - navigation commands
-                        - poopup handlers (browser and system)
+                        - popup handlers (browser and system)
                         - alerts handlers (browser and system)
                         - accordian
                         - graphs
