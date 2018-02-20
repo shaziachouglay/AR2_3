@@ -5,6 +5,7 @@ import org.openqa.selenium.Capabilities;
 import org.openqa.selenium.Dimension;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.htmlunit.HtmlUnitDriver;
 import org.openqa.selenium.phantomjs.PhantomJSDriver;
@@ -51,17 +52,15 @@ public class BrowserFactory extends LoggingFactory{
             System.setProperty("webdriver.chrome.driver" , (System.getProperty("user.dir")+"/src/test/drivers/chromedriver 3"));
             driver = new ChromeDriver();
             logger.info("Opening Chrome Browser");
+        }
+        else if (browser.equalsIgnoreCase("chrome_headless")){
+            System.setProperty("webdriver.chrome.driver" , (System.getProperty("user.dir")+"/src/test/drivers/chromedriver 3"));
 
-//            String deviceName = "Apple iPhone 5";
-//            Map<String, String> mobileEmulation = new HashMap<String, String>();
-//            mobileEmulation.put("deviceName", deviceName);
-//
-//            Map<String, Object> chromeOptions = new HashMap<String, Object>();
-//            chromeOptions.put("mobileEmulation", mobileEmulation);
-//            DesiredCapabilities  capabilities;
-//            capabilities = DesiredCapabilities.chrome();
-//            capabilities.setCapability(ChromeOptions.CAPABILITY, chromeOptions);
-//            WebDriver driver = new ChromeDriver(capabilities);
+            ChromeOptions options = new ChromeOptions();
+            options.addArguments("headless");
+            options.addArguments("window-size=1200x600");
+            driver = new ChromeDriver(options);
+            logger.info("Opening Chrome Browser");
         }
         else if(browser.equalsIgnoreCase("safari")){
             driver= new SafariDriver();
