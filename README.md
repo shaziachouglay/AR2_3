@@ -32,7 +32,7 @@ ________________________________________________________________________________
     To run a single Featue file right-click on the Feature file tag and click run.
 
     To run more than on Scenario or Feature Files, create a custome tag i.e @regression and place this tag above the Feature tag or Scenario tag.
-    Go to class RunWith.java and in the Cucumbe Options where tags are quoted, place this tag and run the RunWith.java
+    Go to class RunWith.java and in the Cucumber Options where tags are quoted, place this tag and run the RunWith.java
 
     Framework can aslo be run via a command line with the verify command. Paramterens can be processed to set properties.
 
@@ -44,7 +44,7 @@ ________________________________________________________________________________
 
     Cucucmber HTMl reports are geenrated when RunWith is Run.
 
-    Maven cucumber reports are generated when project is run as a Maven Build from command line.
+    Maven Cucumber reports are generated when project is run as a Maven Build from command line.
 
     Extent reports are generated when RunWith is run.
 
@@ -93,9 +93,7 @@ ________________________________________________________________________________
     Go to the feature file and edit the file with anything  and save, then revert the edit and save again. This helps clear the cache for cofiguration.
 
     If the problem persis after that then do the following.
-
-    Around the menu bar for Intellij Idea there is a dropdown which shows Scenario Names, click open and choose Edit Configuration. Clear all the saved configuration
-    optiond and click Apply.
+    Go to Edit Configuration and clear any chached configuation.
 
     Rerun the Test : Works most times as the cache is not cleared or flushed.
 

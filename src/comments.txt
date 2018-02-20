@@ -44,7 +44,7 @@ Notes as of the 22nd Dec 2017 : - start --
         - Readme needs to be completed.
         - Extent Reporter throwing NullPointer at loadXML in Hooks @After. This is happening when single Scenario or single Feature File is run
             as the call does not travel via the RunWith.java which holds the configuration command for the reporter to compile.
-                tested in test framework code for handling the Nullpointer when singular scenarios are run with a message.
+                tested in test framework code for handling the Null pointer when singular scenarios are run with a message.
 
 
         - Start building the Ultimate Selenium Library
@@ -59,8 +59,8 @@ Notes as of the 22nd Dec 2017 : - start --
                         - graphs
                         - frame handlers
                         - wait and synchronisation commands
-                        - webtables
-                        - datepicker
+                        - web tables
+                        - date picker
                         - window commands
                         - slider commands
                         - drag and drop commands
@@ -87,7 +87,7 @@ Notes as of the 22nd Dec 2017 : - start --
 
         - Knowledge Transfer Sessions
                 - Framework Overview
-                - components of the frmaework and how do they talk to each other
+                - components of the framework and how do they talk to each other
                 - Cucumber Introduction
                 - Object Oriented Principles or OOP's concepts
                     - Class
@@ -129,7 +129,7 @@ Notes as of the 22nd Dec 2017 : - start --
                     - Common Exceptions and how to handle them
                     - How to name your methods
                     - Locators (XPath)
-                    - How to parameterise XPaths and save effort
+                    - How to parameterize XPaths and save effort
                     - How to Debug your code
                     - Compiling and Building your project
                     - How to write javadoc comments
@@ -164,20 +164,18 @@ Notes as of the 22nd Dec 2017 : - start --
                     - Connecting local machine code to VSTS git
                     - Introduction to Branching in Version Control
                     - Commiting, Pushing and Pulling code
-                    - What needs to be ignored during chekins
+                    - What needs to be ignored during check-in
                     - Code Checkin Schedule OR when to check in OR how often
 
 
                 - How to work in a Technical Team
                 - reporting Bugs in JIRA with automation reports
 
+to work : Firefox Driver , parallel testing.
 
 
 
 
-
-
-Adding this line here .
 
 
 
