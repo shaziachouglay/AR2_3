@@ -60,7 +60,7 @@ public class BrowserFactory extends LoggingFactory{
             options.addArguments("headless");
             options.addArguments("window-size=1200x600");
             driver = new ChromeDriver(options);
-            logger.info("Opening Chrome Browser");
+            logger.info("Opening Chrome Browser in headless mode");
         }
         else if(browser.equalsIgnoreCase("safari")){
             driver= new SafariDriver();

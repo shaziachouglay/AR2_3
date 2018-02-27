@@ -1,6 +1,6 @@
 Feature: Testing the Loan Analysis Table for BSL
 
-
+ @imran
   Scenario Outline:Testing the Loan Analysis Table for BSL with Valid Data
 
     Given I am on Balance Sheet Liabilities
