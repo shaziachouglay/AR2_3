@@ -5,15 +5,15 @@ Feature: Testing Donations Page
   Scenario Outline: Checking Donations Page with Valid Credentials
     Given I am in Pre Production Environment as Test User
     Given I am on SoFA section
-    When I navigate to Donations section
-    Then I enter value in Donated Fixed Assets with "<Donated Fixed Assets>"
-    Then I enter value in Fixed Assets Donated with "<Fixed Assets Donated>"
-    Then I enter value in Donated Intangible Assets with "<Donated Intangible Assets>"
-    Then I enter value in Other Donations Capital with "<Other Donations Capital>"
-    Then I enter value in Other Donations Revenue "<Other Donations Revenue>"
-    Then I see the Total Capital field is populated with "<Total Capital>"
-    And I see the Total Revenue field is populated with "<Total Revenue>"
-    And I see the Total field is populated with "<Total>"
+    When  I navigate to Donations section
+    Then  I enter value in Donated Fixed Assets with "<Donated Fixed Assets>"
+    Then  I enter value in Fixed Assets Donated with "<Fixed Assets Donated>"
+    Then  I enter value in Donated Intangible Assets with "<Donated Intangible Assets>"
+    Then  I enter value in Other Donations Capital with "<Other Donations Capital>"
+    Then  I enter value in Other Donations Revenue "<Other Donations Revenue>"
+    Then  I see the Total Capital field is populated with "<Total Capital>"
+    And   I see the Total Revenue field is populated with "<Total Revenue>"
+    And   I see the Total field is populated with "<Total>"
 
     Examples: Sanity testing with Boundary Value Analysis and Equivalence Class Partitioning Data Set (valid entries).
 
