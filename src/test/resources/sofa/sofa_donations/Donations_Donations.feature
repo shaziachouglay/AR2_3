@@ -14,6 +14,7 @@ Feature: Testing Donations Page
     Then  I see the Total Capital field is populated with "<Total Capital>"
     And   I see the Total Revenue field is populated with "<Total Revenue>"
     And   I see the Total field is populated with "<Total>"
+    And   I click on the next
 
     Examples: Sanity testing with Boundary Value Analysis and Equivalence Class Partitioning Data Set (valid entries).
 
