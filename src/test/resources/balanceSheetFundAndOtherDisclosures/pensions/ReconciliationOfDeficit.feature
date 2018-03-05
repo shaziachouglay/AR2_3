@@ -21,3 +21,7 @@ Feature: Testing the Reconciliation of Deficit in Pensions Page
     Then   I see value in field Transferred out on existing academies leaving the trust as "<v14>" in Pensions ROD
     Then   I see value in field Closing balance as "<v15>" in Pensions ROD
     Then   I click on the next
+    Examples:
+      | v1 | v2 | v3 | v4 | v5 | v6 | v7 | v8 | v9 | v10 | v11 | v12 | v13 | v14 | v15 |
+
+#     Data to be provided.
