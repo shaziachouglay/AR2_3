@@ -11,4 +11,4 @@ Feature: Testing the Amounts recognised in the Financial statement page in Pensi
     Then   I must see the value in field Total operating charge is "<v4>" in Pensions ARITFS
     Examples:
       | v1 | v2 | v3 | v4 |
-
+# Data to be provided.
