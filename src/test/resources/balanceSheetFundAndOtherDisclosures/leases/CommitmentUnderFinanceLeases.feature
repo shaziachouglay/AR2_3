@@ -91,14 +91,12 @@ Feature: Testing the Commitment  Under Finance Leases in Balance Sheet Funds and
     And   I navigate to Leases Commitment  Under Finance Leases page
 
 #  Pre Discounted Values
-
     When  I enter in pre discounted row Within one year and all columns with "<v1>" "<v2>"
     When  I enter in pre discounted row PLACEHOLDER and all columns with "<v3>" "<v4>"
     When  I enter in pre discounted row PLACEHOLDER and all columns with "<v5>" "<v6>"
     When  I enter in pre discounted row PLACEHOLDER and all columns with "<v7>" "<v8>"
 
 #  Discounted Values
-
     When  I enter in pre discounted row Within one year and all columns with "<dv1>" "<dv2>"
     When  I enter in pre discounted row PLACEHOLDER and all columns with "<dv3>" "<dv4>"
     When  I enter in pre discounted row PLACEHOLDER and all columns with "<dv5>" "<dv6>"
