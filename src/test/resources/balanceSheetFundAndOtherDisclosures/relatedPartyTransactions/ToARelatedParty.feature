@@ -2,7 +2,7 @@ Feature: Testing the To A Related Party Page
 
   Scenario Outline: testing the To a related party page with valid data
     Given  I am on Balance Sheet Funds and Other Disclosure Section
-    When   I navigate to Related Party Transactions section in BSFAOD
+    When   I navigate to Related Party Transactions To a related party section in BSFAOD
     When   I select from dropdown "<ddValue>" in BSFAOD
     And    I enter value in instance "<instance>" and column Number of related parties with "<v1>" and column Value with "<v2>" in BSFAOD
     And    I click on the Add New Instance
@@ -16,7 +16,7 @@ Feature: Testing the To A Related Party Page
 
   Scenario Outline: testing the To a related party page with invalid data
     Given  I am on Balance Sheet Funds and Other Disclosure Section
-    When   I navigate to Related Party Transactions section in BSFAOD
+    When   I navigate to Related Party Transactions To a related party section in BSFAOD
     When   I select from dropdown "<ddValue>" in BSFAOD
     And    I enter value in instance "<instance>" and column Number of related parties with "<v1>" and column Value with "<v2>" in BSFAOD
     And    I click on the Add New Instance
@@ -29,7 +29,7 @@ Feature: Testing the To A Related Party Page
 
   Scenario Outline: testing the To a related party page with All Financial Data Error
     Given  I am on Balance Sheet Funds and Other Disclosure Section
-    When   I navigate to Related Party Transactions section in BSFAOD
+    When   I navigate to Related Party Transactions To a related party section in BSFAOD
     When   I select from dropdown "<ddValue>" in BSFAOD
     And    I enter value in instance "<instance>" and column Number of related parties with "<v1>" and column Value with "<v2>" in BSFAOD
     And    I click on the Add New Instance
@@ -41,7 +41,7 @@ Feature: Testing the To A Related Party Page
 
   Scenario Outline: testing the To a related party page with Invalid Data  Error
     Given  I am on Balance Sheet Funds and Other Disclosure Section
-    When   I navigate to Related Party Transactions section in BSFAOD
+    When   I navigate to Related Party Transactions To a related party section in BSFAOD
     When   I select from dropdown "<ddValue>" in BSFAOD
     And    I enter value in instance "<instance>" and column Number of related parties with "<v1>" and column Value with "<v2>" in BSFAOD
     And    I click on the Add New Instance
