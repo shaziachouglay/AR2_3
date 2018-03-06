@@ -41,4 +41,3 @@ Feature: Testing the Major Assumptions for pension in Pensions Section
       | v1    | error |
       |*******|10     |
 
-# commit line test new migration
