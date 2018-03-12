@@ -27,16 +27,16 @@ public class TotalRestricted extends CommonMethods {
          ResourcesExpended("Resources Expended"),
          TransfersOnConversion("Transfers on conversion"),
          TransfersInOrOutOfExistingAcademies("Transfers in or out of existing academies"),
-         GrossTransferBetweenFunds("Gross transfer between funds"),
+         TransferBetweenFunds("Transfer between funds"),
          OtherGainsLossesANdTransfers("Other gains, losses and transfers"),
          OverallTotal("Overall Total");
 
-        private String stringvalue;
+        private String stringValue;
         LabelConstants(String s){
-            this.stringvalue = s;
+            this.stringValue = s;
         }
         public String toString(){
-            return stringvalue;
+            return stringValue;
         }
      }
 
