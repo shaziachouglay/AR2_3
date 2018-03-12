@@ -51,7 +51,9 @@ public class CommonMethods extends Page {
     protected void setValueInInputFieldByLabelName(WebElement parentElement, String labelName, String inputValue){
         try{
             cleanAndRebuildElement(parentElement);
-            WebElement element = parentElement.findElement(By.xpath(".//div/label[contains(.,'"+labelName+"')]/../..//input"));
+            // The below line was changed in AR2 . leaving this for debugging.
+            //WebElement element = parentElement.findElement(By.xpath(".//div/label[contains(.,'"+labelName+"')]/../..//input"));
+            WebElement element = parentElement.findElement(By.xpath(".//div[contains(.,'"+labelName+"')]/../..//input"));
             cleanAndRebuildElement(element);
             setValueInElementInputJS(element, inputValue);
             info("Set value in label :"+labelName+" with value "+inputValue);
@@ -64,11 +66,73 @@ public class CommonMethods extends Page {
         }
     }
 
+    /**
+     *
+     * @param page_body is the parent element for the Page
+     * @param rowCount  is the count / number of the row to point
+     * @param columnCount is the count / number of the column to point
+     * @param inputValue is the value to be set in the input field
+     * @param pageName is the name of the page operation to be carried out, reference to the class variable PageName
+     */
+    public void setValueByRowNumberAndColumnNumber(WebElement page_body, String rowCount, String columnCount, String inputValue,String pageName){
+
+        try {
+            waitForAjax();
+            WebElement tableElement = page_body.findElement(By.xpath(".//tr[" + rowCount + "]/td[" + columnCount + "]//div/input"));
+            waitForElementToBeVisible(tableElement);
+            cleanAndRebuildElement(tableElement);
+            setValueInElementInputJS(tableElement, inputValue);
+            hitKeyboardButton(tableElement, Keys.TAB);
+            explicitWait(150);
+        }
+        catch (StaleElementReferenceException sere){
+            warn("StaleElementReferenceException Occurred in"+pageName);
+            takeScreenshot();
+            sere.printStackTrace();
+        }
+        catch (NoSuchElementException nsee){
+            warn("NoSuchElementException Occurred in"+pageName);
+            nsee.printStackTrace();
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+
+    }
+
+    /**
+     *
+     * @param page_body is the parent element of the page
+     * @param rowCount is the row count of the table
+     * @param columnCount is the column count of the table
+     * @param pageName is the page name where the operation is carried out. use class variable pageName.
+     * @return the extracted text from the webElement.
+     */
+    protected String getValueByRowNumberAndColumnNumber(WebElement page_body, String rowCount, String columnCount, String pageName){
+        String extractedText = "Undefined !!  ";
+        try {
+
+            WebElement tableElement = page_body.findElement(By.xpath(".//tr[" + rowCount + "]/td[" + columnCount + "]//div/input"));
+            hitKeyboardButton(tableElement,Keys.TAB);
+            explicitWait(500);
+            waitForJStoLoad();
+            waitForElementToBeVisible(tableElement); waitForAjax();
+            cleanAndRebuildElement(tableElement);
+            extractedText = getElementAttributeValueWithRetry(tableElement, "value");
+        }
+        catch (NoSuchElementException nsee){
+            warn("NoSuchElementException Occurred in"+pageName);
+            nsee.printStackTrace();
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        return extractedText;
+    }
+
+
     public String getValueFromInputFieldByParentElementAndLabelName(WebElement parentElement , String labelName ){
         String text = null;
         try {
             waitForAjax();
-            //WebElement element = parentElement.findElement(By.xpath(".//div[contains(.,'" + labelName + "')]/../..//input"));
             WebElement element = parentElement.findElement(By.xpath(".//div[contains(.,'" + labelName + "')]//div/input"));
             cleanAndRebuildElement(element);
             text = getElementAttributeValueWithRetry(element, "value");

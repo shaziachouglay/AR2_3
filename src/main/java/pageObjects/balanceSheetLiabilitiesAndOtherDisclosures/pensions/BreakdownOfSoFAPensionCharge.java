@@ -36,14 +36,40 @@ public class BreakdownOfSoFAPensionCharge extends CommonMethods {
         }
     }
 
+    public int getRowNumber(LabelConstants labelConstant){
+        int incrementer = 0;
+        int rowNumber=0 ;
+
+        switch (labelConstant){
+
+            case LGPS: rowNumber = incrementer+1;
+                break;
+            case TeachersPensionScheme:rowNumber = incrementer+2;
+                break;
+            case IncomingResources:rowNumber = incrementer+3;
+                break;
+            case DefinedContributionScheme:rowNumber = incrementer+4;
+                break;
+            case StakeholderPrivatePensionProvision:rowNumber = incrementer+5;
+                break;
+            case Total:rowNumber = incrementer+6;
+                break;
+            case NumberOfPaidTrusteesWhoWereNOTPartOfAMainPensionScheme:rowNumber = incrementer+7;
+                break;
+        }
+
+        return rowNumber;
+    }
+
     public void setValueInFieldByLabelConstant(LabelConstants labelConstant, String inputValue){
-        setValueInInputFieldByLabelName(page_body,labelConstant.toString(), inputValue);
+        setValueByRowNumberAndColumnNumber(page_body,String.valueOf(getRowNumber(labelConstant)),"1",inputValue,pageName);
         info("value set in field "+labelConstant.toString()+" is "+inputValue);
     }
 
-    public String getValueByLabelName(LabelConstants label){
-        String text = getValueFromInputFieldByParentElementAndLabelName(page_body,label.toString());
-        info("Value present in field : "+label+" is : "+text);
-        return text;
+    public String getValueByLabelName(LabelConstants labelConstant){
+
+        String extractedText = getValueByRowNumberAndColumnNumber(page_body,String.valueOf(getRowNumber(labelConstant)),"1", pageName);
+        info("Value extracted from field : "+labelConstant+" is : "+extractedText);
+        return extractedText;
     }
 }

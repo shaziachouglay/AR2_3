@@ -46,14 +46,71 @@ public class ChnagesToThePresentValueOfTheDefinedBenefitObligation extends Commo
             return stringValue;
         }
     }
+    public int getRowNumber(LabelConstants labelConstants){
+        int rowNumber= 0;
+         int incrementer = 0 ;
+        switch (labelConstants){
+
+            case OpeningPresentValueOSchemeObligations:
+                rowNumber = incrementer+1;
+                break;
+            case AdjustmentMadetoTheOpeningBalance:
+                rowNumber = incrementer+2;
+                break;
+            case ConversionOfAcademyInPriorYear:
+                rowNumber = incrementer+3;
+                break;
+            case InYearConversionOfAcademy:
+                rowNumber = incrementer+4;
+                break;
+            case CurrentServiceCost:
+                rowNumber = incrementer+5;
+                break;
+            case InterestCost:
+                rowNumber = incrementer+6;
+                break;
+            case ActuarialGains:
+                rowNumber = incrementer+7;
+                break;
+            case EmployeeContribution:
+                rowNumber = incrementer+8;
+                break;
+            case BenefitsPaid:
+                rowNumber = incrementer+9;
+                break;
+            case LossesOrGainsOnCurtailments:
+                rowNumber = incrementer+10;
+                break;
+            case PastServiceCostOrGain:
+                rowNumber = incrementer+11;
+                break;
+            case UnfundedPensionPayments:
+                rowNumber = incrementer+12;
+                break;
+            case EffectOfNonRoutineSettlements:
+                rowNumber = incrementer+13;
+                break;
+            case TransferredInOnExistingAcademiesJoiningTheTrust:
+                rowNumber = incrementer+14;
+                break;
+            case TransferredOutOnExistingAcademiesLeavingTheTrust:
+                rowNumber = incrementer+15;
+                break;
+            case ClosingDefinedBenefitObligation:
+                rowNumber = incrementer+16;
+                break;
+        }
+
+         return rowNumber;
+    }
 
     public void setValueInFieldByLabelConstant(LabelConstants labelConstant, String inputValue){
-        setValueInInputFieldByLabelName(page_body,labelConstant.toString(), inputValue);
+        setValueByRowNumberAndColumnNumber(page_body,String.valueOf(getRowNumber(labelConstant)),"1",inputValue, pageName );
         info("value set in field "+labelConstant.toString()+" is "+inputValue);
     }
 
     public String getValueByLabelName(LabelConstants label){
-        String text = getValueFromInputFieldByParentElementAndLabelName(page_body,label.toString());
+        String text = getValueByRowNumberAndColumnNumber(page_body,String.valueOf(getRowNumber(label)),"1", pageName);
         info("Value present in field : "+label+" is : "+text);
         return text;
     }

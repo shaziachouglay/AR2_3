@@ -43,6 +43,53 @@ public class ChnagesToTheFairValueOfAssets extends CommonMethods {
         }
     }
 
+    public int getRowNumber(LabelConstants labelConstants){
+        int rowNumber= 0;
+        int incrementer = 0 ;
+
+        switch (labelConstants){
+
+            case OpeningFairValueOfSchemeAssets:
+                rowNumber = incrementer+1;
+                break;
+            case AdjustmentMadetoTheOpeningBalance:
+                rowNumber = incrementer+2;
+                break;
+            case ConversionOfAcademyTrustInPriorYear:
+                rowNumber = incrementer+3;
+                break;
+            case InYearConversionOfAcademyTrusts:
+                rowNumber = incrementer+4;
+                break;
+            case InterestIncome:
+                rowNumber = incrementer+5;
+                break;
+            case ActuarialGains:
+                rowNumber = incrementer+6;
+                break;
+            case EmployerContribution:
+                rowNumber = incrementer+7;
+                break;
+            case BenefitsPaid:
+                rowNumber = incrementer+8;
+                break;
+            case EffectOfNonRoutineSettlements:
+                rowNumber = incrementer+9;
+                break;
+            case TransferredInOnExistingAcademiesJoiningTheTrust:
+                rowNumber = incrementer+10;
+                break;
+            case TransferredOutOnExistingAcademiesLeavingTheTrust:
+                rowNumber = incrementer+11;
+                break;
+            case ClosingFairValueOfSchemeAssets:
+                rowNumber = incrementer+12;
+                break;
+        }
+
+        return rowNumber;
+    }
+
     public void setValueInFieldByLabelConstant(LabelConstants labelConstant, String inputValue){
         setValueInInputFieldByLabelName(page_body,labelConstant.toString(), inputValue);
         info("value set in field "+labelConstant.toString()+" is "+inputValue);
