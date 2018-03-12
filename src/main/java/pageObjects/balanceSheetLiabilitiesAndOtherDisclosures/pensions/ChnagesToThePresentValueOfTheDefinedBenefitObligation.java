@@ -3,7 +3,6 @@ package pageObjects.balanceSheetLiabilitiesAndOtherDisclosures.pensions;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
-import pageObjects.landAndBuildings.landAndBuildingsTotal.LBT_Cost;
 import utilityClasses.CommonMethods;
 
 public class ChnagesToThePresentValueOfTheDefinedBenefitObligation extends CommonMethods {
@@ -48,12 +47,12 @@ public class ChnagesToThePresentValueOfTheDefinedBenefitObligation extends Commo
         }
     }
 
-    public void setValueInFieldByLabelConstant(LBT_Cost.LabelConstant labelConstant, String inputValue){
+    public void setValueInFieldByLabelConstant(LabelConstants labelConstant, String inputValue){
         setValueInInputFieldByLabelName(page_body,labelConstant.toString(), inputValue);
         info("value set in field "+labelConstant.toString()+" is "+inputValue);
     }
 
-    public String getValueByLabelName(LBT_Cost.LabelConstant label){
+    public String getValueByLabelName(LabelConstants label){
         String text = getValueFromInputFieldByParentElementAndLabelName(page_body,label.toString());
         info("Value present in field : "+label+" is : "+text);
         return text;

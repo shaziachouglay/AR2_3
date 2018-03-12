@@ -3,7 +3,6 @@ package pageObjects.balanceSheetLiabilitiesAndOtherDisclosures.pensions;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
-import pageObjects.landAndBuildings.landAndBuildingsTotal.LBT_Cost;
 import utilityClasses.CommonMethods;
 
 public class EmployerContribution extends CommonMethods {
@@ -32,7 +31,7 @@ public class EmployerContribution extends CommonMethods {
         }
     }
 
-    public void setValueInFieldByLabelConstant(LBT_Cost.LabelConstant labelConstant, String inputValue){
+    public void setValueInFieldByLabelConstant(LabelConstants labelConstant, String inputValue){
         setValueInInputFieldByLabelName(page_body,labelConstant.toString(), inputValue);
         info("value set in field "+labelConstant.toString()+" is "+inputValue);
     }
