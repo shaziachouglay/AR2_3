@@ -1,10 +1,10 @@
 package pageObjects.balanceSheetLiabilitiesAndOtherDisclosures.pensions;
 
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.How;
-import pageObjects.landAndBuildings.landAndBuildingsTotal.LBT_Cost;
-import utilityClasses.CommonMethods;
+        import org.openqa.selenium.WebElement;
+        import org.openqa.selenium.support.FindBy;
+        import org.openqa.selenium.support.How;
+        import pageObjects.landAndBuildings.landAndBuildingsTotal.LBT_Cost;
+        import utilityClasses.CommonMethods;
 
 public class BreakdownOfSoFAPensionCharge extends CommonMethods {
     private String pageName="Breakdown of SoFA pension charge";
