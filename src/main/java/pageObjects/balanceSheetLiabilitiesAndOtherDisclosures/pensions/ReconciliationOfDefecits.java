@@ -46,6 +46,8 @@ public enum LabelConstants{
 
 
     public String getValueByLabelName(LabelConstants label){
+
+        String extractedText = getValueByRowNumberAndColumnNumber(page_body,"","",pageName);
         String text = getValueFromInputFieldByParentElementAndLabelName(page_body,label.toString());
         info("Value present in field : "+label+" is : "+text);
         return text;
