@@ -101,15 +101,13 @@ public class MajorAssumptionOfPension extends CommonMethods {
 
         switch (column){
             case SingleOrMinimumOfRange:
-                columnCount=columnCount+1;
+                columnCount=columnIncrementer+1;
                 break;
             case MaximumOfRange:
-                columnCount=columnCount+2;
+                columnCount=columnIncrementer+2;
                 break;
-
         }
         try {
-
             WebElement tableElement = page_body.findElement(By.xpath(".//tr[" + rowCount + "]/td[" + columnCount + "]//div/input"));
             hitKeyboardButton(tableElement,Keys.TAB);
             explicitWait(500);
@@ -130,7 +128,6 @@ public class MajorAssumptionOfPension extends CommonMethods {
 
 
     public enum RowConstants{
-
         RateODInflation, RateOfIncreasedInSalaries, RateOfIncreaseOfPensionsInPayment,DiscountRate,
     }
 
@@ -138,5 +135,4 @@ public class MajorAssumptionOfPension extends CommonMethods {
     public enum ColumnConstant{
         SingleOrMinimumOfRange, MaximumOfRange
     }
-
 }

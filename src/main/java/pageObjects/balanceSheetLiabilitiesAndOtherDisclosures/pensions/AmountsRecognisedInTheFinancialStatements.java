@@ -34,10 +34,31 @@ public enum LabelConstants{
     }
 }
 
+    public int getRowNumber(LabelConstants labelConstants){
+        int rowNumber= 0;
+        int incrementer = 0 ;
+
+        switch (labelConstants){
+
+            case CurrentServiceCost:
+                rowNumber = incrementer+1;
+                break;
+            case PastServiceCost:
+                rowNumber = incrementer+2;
+                break;
+            case CurtailmentAndSettlement:
+                rowNumber = incrementer+3;
+                break;
+            case TotalOperatingCharge:
+                rowNumber = incrementer+4;
+                break;
+        }
+        return rowNumber;
+    }
 
     public String getValueByLabelName(LabelConstants label){
-        String text = getValueFromInputFieldByParentElementAndLabelName(page_body,label.toString());
-        info("Value present in field : "+label+" is : "+text);
-        return text;
+        String extractedText = getValueByRowNumberAndColumnNumber(page_body,String.valueOf(getRowNumber(label)),"1",pageName);
+        info("Value present in field : "+label+" is : "+extractedText);
+        return extractedText;
     }
 }

@@ -91,13 +91,13 @@ public class ChnagesToTheFairValueOfAssets extends CommonMethods {
     }
 
     public void setValueInFieldByLabelConstant(LabelConstants labelConstant, String inputValue){
-        setValueInInputFieldByLabelName(page_body,labelConstant.toString(), inputValue);
+        setValueByRowNumberAndColumnNumber(page_body,String.valueOf(getRowNumber(labelConstant)),"1",inputValue,pageName);
         info("value set in field "+labelConstant.toString()+" is "+inputValue);
     }
 
     public String getValueByLabelName(LabelConstants label){
-        String text = getValueFromInputFieldByParentElementAndLabelName(page_body,label.toString());
-        info("Value present in field : "+label+" is : "+text);
-        return text;
+        String extractedText = getValueByRowNumberAndColumnNumber(page_body,String.valueOf(getRowNumber(label)),"1",pageName);
+        info("Value present in field : "+label+" is : "+extractedText);
+        return extractedText;
     }
 }

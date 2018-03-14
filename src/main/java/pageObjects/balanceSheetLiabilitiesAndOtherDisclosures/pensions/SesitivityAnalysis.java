@@ -42,6 +42,8 @@ public class SesitivityAnalysis extends CommonMethods {
         }
     }
 
+
+
     public void setValueInFieldByLabelConstant(LabelConstants labelConstant, String inputValue){
         setValueInInputFieldByLabelName(page_body,labelConstant.toString(), inputValue);
         info("value set in field "+labelConstant.toString()+" is "+inputValue);
