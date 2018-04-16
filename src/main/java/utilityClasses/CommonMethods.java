@@ -35,7 +35,6 @@ public class CommonMethods extends Page {
         scrollToElement(saveAndNextButton);
         cleanAndRebuildElement(saveAndNextButton);
         clickElementWithJS2(saveAndNextButton);
-
         explicitWait(500);
     }
 

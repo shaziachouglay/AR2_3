@@ -84,6 +84,33 @@ public class WelcomeScreen_dev extends CommonMethods {
         }
     }
 
+    public void clickYesOnUserRoleNO(USER_ROLE role){
+        int roleIndex = 0;
+        switch (role){
+            case PREPARER: roleIndex = 3;
+                break;
+            case APPROVER: roleIndex = 4;
+                break;
+            case EXTERNALAUDITOR: roleIndex = 5;
+                break;
+            case HELPDESK: roleIndex = 6;
+                break;
+        }
+        try{
+            WebElement element = welcomeScreenBody.findElement(By.xpath(".//div[@class='opa-container form-group']/div["+roleIndex+"]//fieldset/label[contains(.,'No')]/input"));
+            waitForElementToBeVisible(element);
+            cleanAndRebuildElement(element);
+            clickElementWithRetry(element);
+            info("Clicked Yes in "+role.toString()+" .");
+        }catch (StaleElementReferenceException sere){
+            info("StaleElementReferenceException occured on "+this.pageName);
+        }catch (NoSuchElementException nsee){
+            nsee.printStackTrace();
+            warn("NoSuchElementException occurred in "+this.pageName);
+        }
+    }
+
+
     public void getApplicationInformationFromWelcomeScreen(){
         String text = "";
         WebElement element1 = welcomeScreenBody.findElement(By.xpath(".//div[@id='global_global_g_4']/br[1]"));

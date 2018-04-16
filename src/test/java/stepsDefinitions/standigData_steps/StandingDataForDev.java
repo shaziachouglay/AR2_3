@@ -12,7 +12,12 @@ public class StandingDataForDev extends BaseTest {
         hardAssertion.assertTrue(welcomeScreen_dev.isWelcomePageHeaderPresentAndDisplayed(), "The Welcome Screen Page Header was not displayed");
         welcomeScreen_dev.getUserNameFromInputFieldInWelcomeScreenPage();
         welcomeScreen_dev.getAccountReturnVersionNumber();
+
         welcomeScreen_dev.clickYesOnUserRole(WelcomeScreen_dev.USER_ROLE.PREPARER);
+        welcomeScreen_dev.clickYesOnUserRoleNO(WelcomeScreen_dev.USER_ROLE.APPROVER);
+        welcomeScreen_dev.clickYesOnUserRoleNO(WelcomeScreen_dev.USER_ROLE.EXTERNALAUDITOR);
+        welcomeScreen_dev.clickYesOnUserRoleNO(WelcomeScreen_dev.USER_ROLE.HELPDESK);
+
         welcomeScreen_dev.clickOnSaveAndNextInWelcomePage();
         welcomeScreen_dev.waitForPageLoadToComplete();
         hardAssertion.assertTrue(academyTrustInformationPage.isHeaderPresentAndDisplayedForAcademyTrustInformationPage(),"The Academy Trust Information Page Header was not displayed");

@@ -49,7 +49,7 @@ public class BrowserFactory extends LoggingFactory{
             logger.info(" \nOperating on Headless Browser");
         }
         else if (browser.equalsIgnoreCase("Chrome")){
-            System.setProperty("webdriver.chrome.driver" , (System.getProperty("user.dir")+"/src/test/drivers/chromedriver 3"));
+            System.setProperty("webdriver.chrome.driver" , (System.getProperty("user.dir")+"/src/test/drivers/chromedriver"));
             driver = new ChromeDriver();
             logger.info("Opening Chrome Browser");
         }
