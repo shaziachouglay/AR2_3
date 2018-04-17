@@ -1,5 +1,6 @@
 Feature: Testing the Current investments page in BSA TFA
 
+  @aliSpecial
   Scenario Outline: Testing the Current investments page in BSA TFA
     Given I am on Balance Sheet Asset Section
     And   I navigate to BSA Current Investment page
