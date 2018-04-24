@@ -20,6 +20,15 @@ public class StandingDataForDev extends BaseTest {
 
         welcomeScreen_dev.clickOnSaveAndNextInWelcomePage();
         welcomeScreen_dev.waitForPageLoadToComplete();
+
+        // start adding the stuff here .
+        hardAssertion.assertTrue(externalAuditorDetails.isHeaderPresentAndDisplayedForExternalAuditorDetailsPage());
+        externalAuditorDetails.setValuesInInputFieldsInExternalAuditorDetailsPage();
+        welcomeScreen_dev.clickOnSaveAndNextInWelcomePage();
+        welcomeScreen_dev.waitForPageLoadToComplete();
+
+        // end of new code insertion
+
         hardAssertion.assertTrue(academyTrustInformationPage.isHeaderPresentAndDisplayedForAcademyTrustInformationPage(),"The Academy Trust Information Page Header was not displayed");
         academyTrustInformationPage.selectDropDownAcademyTrustTypeInAcademyTrustInformationPage();
         academyTrustInformationPage.clickOnSaveAndNextInAcademyTrustInformationPage();

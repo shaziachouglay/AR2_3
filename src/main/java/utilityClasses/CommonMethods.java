@@ -51,8 +51,8 @@ public class CommonMethods extends Page {
         try{
             cleanAndRebuildElement(parentElement);
             // The below line was changed in AR2 . leaving this for debugging.
-            //WebElement element = parentElement.findElement(By.xpath(".//div/label[contains(.,'"+labelName+"')]/../..//input"));
-            WebElement element = parentElement.findElement(By.xpath(".//div[contains(.,'"+labelName+"')]/../..//input"));
+            WebElement element = parentElement.findElement(By.xpath(".//div/label[contains(.,'"+labelName+"')]/../..//input"));
+//            WebElement element = parentElement.findElement(By.xpath(".//div[contains(.,'"+labelName+"')]/../..//input"));
             cleanAndRebuildElement(element);
             setValueInElementInputJS(element, inputValue);
             info("Set value in label :"+labelName+" with value "+inputValue);
@@ -132,10 +132,12 @@ public class CommonMethods extends Page {
         String text = null;
         try {
             waitForAjax();
+            waitForJStoLoad();
+            explicitWait(5000);
             WebElement element = parentElement.findElement(By.xpath(".//div[contains(.,'" + labelName + "')]//div/input"));
             cleanAndRebuildElement(element);
             text = getElementAttributeValueWithRetry(element, "value");
-            logger.info("\nThe Value extracted from the "+labelName+" input box is ' "+ text+" '.");
+            info("\nThe Value extracted from the "+labelName+" input box is ' "+ text+" '.");
         }
         catch (StaleElementReferenceException sere){
             sere.printStackTrace();

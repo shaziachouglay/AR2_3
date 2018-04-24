@@ -19,19 +19,19 @@ Feature: Testing Donations Page
     Examples: Sanity testing with Boundary Value Analysis and Equivalence Class Partitioning Data Set (valid entries).
 
       | Donated Fixed Assets | Fixed Assets Donated | Donated Intangible Assets | Other Donations Capital | Other Donations Revenue | Total Capital | Total Revenue | Total      |
-      | 10                   | 10                   | 10                        | 10                      | 10                      | 40            | 10            | 50         |
-      | 100                  | 100                  | 100                       | 100                     | 100                     | 400           | 100           | 500        |
-      | 1                    | 1                    | 1                         | 1                       | 1                       | 4             | 1             | 5          |
-      | 50                   | 50                   | 50                        | 50                      | 50                      | 200           | 50            | 250        |
-      | 500                  | 500                  | 500                       | 500                     | 500                     | 2,000         | 500           | 2,500      |
-      | 150                  | 150                  | 150                       | 150                     | 150                     | 600           | 150           | 750        |
-      | -10                  | -10                  | -10                       | -10                     | -10                     | -40           | -10           | -50        |
-      | -100                 | -100                 | -100                      | -100                    | -100                    | -400          | -100          | -500       |
-      | -1                   | -1                   | -1                        | -1                      | -1                      | -4            | -1            | -5         |
-      | -50                  | -50                  | -50                       | -50                     | -50                     | -200          | -50           | -250       |
-      | -500                 | -500                 | -500                      | -500                    | -500                    | -2,000        | -500          | -2,500     |
-      | -150                 | -150                 | -150                      | -150                    | -150                    | -600          | -150          | -750       |
-      | 999999               | 999999               | 999999                    | 999999                  | 999999                  | 3,999,996     | 999,999       | 4,999,995  |
+#      | 10                   | 10                   | 10                        | 10                      | 10                      | 40            | 10            | 50         |
+#      | 100                  | 100                  | 100                       | 100                     | 100                     | 400           | 100           | 500        |
+#      | 1                    | 1                    | 1                         | 1                       | 1                       | 4             | 1             | 5          |
+#      | 50                   | 50                   | 50                        | 50                      | 50                      | 200           | 50            | 250        |
+#      | 500                  | 500                  | 500                       | 500                     | 500                     | 2,000         | 500           | 2,500      |
+#      | 150                  | 150                  | 150                       | 150                     | 150                     | 600           | 150           | 750        |
+#      | -10                  | -10                  | -10                       | -10                     | -10                     | -40           | -10           | -50        |
+#      | -100                 | -100                 | -100                      | -100                    | -100                    | -400          | -100          | -500       |
+#      | -1                   | -1                   | -1                        | -1                      | -1                      | -4            | -1            | -5         |
+#      | -50                  | -50                  | -50                       | -50                     | -50                     | -200          | -50           | -250       |
+#      | -500                 | -500                 | -500                      | -500                    | -500                    | -2,000        | -500          | -2,500     |
+#      | -150                 | -150                 | -150                      | -150                    | -150                    | -600          | -150          | -750       |
+#      | 999999               | 999999               | 999999                    | 999999                  | 999999                  | 3,999,996     | 999,999       | 4,999,995  |
       | 999998               | 999998               | 999998                    | 999998                  | 999998                  | 3,999,992     | 999,998       | 4,999,990  |
       | -999999              | -999999              | -999999                   | -999999                 | -999999                 | -3,999,996    | -999,999      | -4,999,995 |
       | -999998              | -999998              | -999998                   | -999998                 | -999998                 | -3,999,992    | -999,998      | -4,999,990 |
@@ -227,3 +227,10 @@ Feature: Testing Donations Page
       | Donated Fixed Assets | Fixed Assets Donated | Donated Intangible Assets | Other Donations Capital | Other Donations Revenue | error1 | helpLinkCount |
       | SAMPLE               | sample               | 1sample                   | SAMPLE1                 | @*<>*                   | 5      | 5             |
 
+
+
+    Scenario: Testing the References for Donations Page
+      Given I am on SoFA section
+      When I navigate to Donations section
+      Then I see the correct references are displayed for "Donations" page
+      Then I must see correct references displayed for

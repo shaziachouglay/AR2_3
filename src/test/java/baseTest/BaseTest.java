@@ -75,6 +75,7 @@ public class BaseTest {
      * objects for the SOFA Section
      */
     protected WelcomeScreen_dev welcomeScreen_dev = new WelcomeScreen_dev();
+    protected ExternalAuditorDetails externalAuditorDetails = new ExternalAuditorDetails();
     protected AcademyTrustInformation academyTrustInformationPage = new AcademyTrustInformation();
     protected Academy academy = new Academy();
     protected AcademyInformation academyInformation = new AcademyInformation();
