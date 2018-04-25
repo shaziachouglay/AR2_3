@@ -36,7 +36,7 @@ public class Hooks {
     }
 
 
-    public void getSecnarioName(){
+    public Scenario getSecnarioName(){
         Scenario scenario = new Scenario() {
             @Override
             public Collection<String> getSourceTagNames() {
@@ -73,9 +73,7 @@ public class Hooks {
                 return null;
             }
         };
-        scenario.getName();
-
-
+        return scenario;
     }
 
 
@@ -83,7 +81,6 @@ public class Hooks {
     public  void setup() throws IOException {
         welcomeMessage();
         BrowserFactory.openBrowser();
-
     }
 
     @After
