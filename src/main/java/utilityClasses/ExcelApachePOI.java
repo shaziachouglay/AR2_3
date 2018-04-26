@@ -13,7 +13,7 @@ import java.util.ArrayList;
 public class ExcelApachePOI {
 
     private static ArrayList<String> readExcelSheet(String sheetName) throws IOException {
-        String excelFilePath = "/Users/poonamwadkar/Documents/ESFA_Repositories/AcademyAccountReturn/AR2_3/src/test/resources/DATA_SHEETS/AR3_DataSheetReferences.xlsx";
+        String excelFilePath = "/Users/poonamwadkar/Documents/ESFA_Repositories/AcademyAccountReturn/AR2_3/src/test/dataSheetsResources/AR_DataSheet/AR3_DataSheetReferences.xlsx";
         FileInputStream inputStream = new FileInputStream(new File(excelFilePath));
 
         XSSFWorkbook workbook = new XSSFWorkbook(inputStream);
@@ -42,6 +42,14 @@ public class ExcelApachePOI {
         return readExcelSheet(sheetName);
     }
 
+
+    /**
+     *
+     * @param sheetName is the name of the sheet to pick the data from
+     * @param columnNumber1 is the column number in the sheet
+     * @return the Arraylist of all the values in the column
+     * @throws IOException is the File IO exception if occurred. This is checked exception.
+     */
     private static ArrayList<String> readExcelSheetByColumnNumber(String sheetName, int columnNumber1) throws IOException {
         String excelFilePath = "/Users/poonamwadkar/Documents/ESFA_Repositories/AcademyAccountReturn/AR2_3/src/test/resources/DATA_SHEETS/AR3_DataSheetReferences.xlsx";
         FileInputStream inputStream = new FileInputStream(new File(excelFilePath));
@@ -52,7 +60,6 @@ public class ExcelApachePOI {
         ArrayList<String> extractedFromExcel = new ArrayList<String>();
         int rowNum = workSheet.getLastRowNum() + 1;
         int colNum = workSheet.getRow(0).getLastCellNum();
-
 
         String[][] data = new String[rowNum][columnNumber1];
 
@@ -70,4 +77,8 @@ public class ExcelApachePOI {
         return extractedFromExcel;
     }
 
+
+    public boolean areReferenceNumbersCorrectlyPresentAndDisplayed(String pageName){
+        return true;
+    }
 }

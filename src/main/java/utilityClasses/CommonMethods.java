@@ -3,6 +3,8 @@ package utilityClasses;
 import org.openqa.selenium.*;
 import org.openqa.selenium.support.FindBy;
 
+import java.io.IOException;
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -172,5 +174,63 @@ public class CommonMethods extends Page {
     public int getErrorsTheInputVAluMustBeaPositiveNumber(){
         waitForPageLoadToComplete();
         return getElementCount(positiveInputValueError,"Input Value Must be a Positive Number");
+    }
+
+    public ArrayList<WebElement> getPageReferenceWebElements(String sheetName) throws IOException {
+         ArrayList<WebElement> pageReferenceElementList = new ArrayList<>();
+
+         for(String s : ExcelApachePOI.getDataFromExcel(sheetName)){
+            try{
+                WebElement element = getDriver().findElement(By.xpath("//th/div[contains(.,\""+s+"\")]\n"));
+                pageReferenceElementList.add(element);
+            }catch (NoSuchElementException nsee){
+                nsee.printStackTrace();
+                info(nsee.getMessage());
+            }catch (Exception e){
+                info(e.getMessage());
+                e.printStackTrace();
+            }
+         }
+         info("\nExtracted Reference Values from the page are: ");
+         for(String s: ExcelApachePOI.getDataFromExcel(sheetName)){
+             info("\n"+s);
+         }
+         return pageReferenceElementList;
+    }
+
+    /**
+     *
+     * @param sheetName is the sheet name from the csv / excel file where the reference label comes from.
+     * @return the boolean status if all the reference number against the correct label names have been displayed.
+     * @throws IOException throws IO as it s reading form a file. This exception has been declared by this method and is passed down from its calling method.
+     * @throws InterruptedException this is when the AJAX Call is checked for completion and throws and Interrupted Exception which is declared.
+     */
+    public boolean isPageReferencesPresentAndDisplayedByPageName(String sheetName) throws IOException, InterruptedException {
+
+         boolean isPresentAndDispalyed = false;
+
+         ArrayList<Boolean> displayedReferenceList  = new ArrayList<>();
+
+        /**
+         * iterating over the list of WebElements and adding to the list of Boolean.
+         */
+         for(WebElement e: getPageReferenceWebElements(sheetName)){
+            waitForJStoLoad();
+            waitForAjax();
+            isPresentAndDispalyed = isElementPresentAndDisplayed(e);
+            info("The displayed status of the element is : "+isPresentAndDispalyed);
+            displayedReferenceList.add(isPresentAndDispalyed);
+         }
+
+        /**
+         * iterating over the List of Boolean and checking for false values.
+         */
+        for(boolean b : displayedReferenceList){
+                if(b==false){
+                   isPresentAndDispalyed = false;
+                    break;
+                }
+         }
+         return isPresentAndDispalyed;
     }
 }
