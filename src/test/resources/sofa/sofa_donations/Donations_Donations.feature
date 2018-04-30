@@ -232,5 +232,7 @@ Feature: Testing Donations Page
     Scenario: Testing the References for Donations Page
       Given I am on SoFA section
       When I navigate to Donations section
-      Then I see the correct references are displayed for "Donations" page
-      Then I must see correct references displayed for
+#      Then I see the correct references are displayed for "Donations" page
+      Then I see the correct references are displayed for "s_Donations" page of type "Label"
+
+

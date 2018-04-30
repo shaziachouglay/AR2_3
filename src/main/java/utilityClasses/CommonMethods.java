@@ -176,12 +176,25 @@ public class CommonMethods extends Page {
         return getElementCount(positiveInputValueError,"Input Value Must be a Positive Number");
     }
 
-    public ArrayList<WebElement> getPageReferenceWebElements(String sheetName) throws IOException {
-         ArrayList<WebElement> pageReferenceElementList = new ArrayList<>();
+    public ArrayList<WebElement> getPageReferenceWebElements(String sheetName, String pageType) throws IOException {
+
+
+
+        ArrayList<WebElement> pageReferenceElementList = new ArrayList<>();
 
          for(String s : ExcelApachePOI.getDataFromExcel(sheetName)){
-            try{
-                WebElement element = getDriver().findElement(By.xpath("//th/div[contains(.,\""+s+"\")]\n"));
+
+             WebElement element= null;
+             try{
+                if(pageType.equalsIgnoreCase("Label")){
+                    element = getDriver().findElement(By.xpath("//div/label[contains(.,\""+s+"\")]"));
+                }
+
+                else if (pageType.equalsIgnoreCase("Table")){
+                    element = getDriver().findElement(By.xpath("//th/div[contains(.,\""+s+"\")]\n"));
+                }
+                //WebElement element = getDriver().findElement(By.xpath("//th/div[contains(.,\""+s+"\")]\n"));
+                //WebElement element = getDriver().findElement(By.xpath("//div/label[contains(.,\""+s+"\")]"));
                 pageReferenceElementList.add(element);
             }catch (NoSuchElementException nsee){
                 nsee.printStackTrace();
@@ -205,7 +218,7 @@ public class CommonMethods extends Page {
      * @throws IOException throws IO as it s reading form a file. This exception has been declared by this method and is passed down from its calling method.
      * @throws InterruptedException this is when the AJAX Call is checked for completion and throws and Interrupted Exception which is declared.
      */
-    public boolean isPageReferencesPresentAndDisplayedByPageName(String sheetName) throws IOException, InterruptedException {
+    public boolean isPageReferencesPresentAndDisplayedByPageName(String sheetName,String pageType) throws IOException, InterruptedException {
 
          boolean isPresentAndDispalyed = false;
 
@@ -214,7 +227,7 @@ public class CommonMethods extends Page {
         /**
          * iterating over the list of WebElements and adding to the list of Boolean.
          */
-         for(WebElement e: getPageReferenceWebElements(sheetName)){
+         for(WebElement e: getPageReferenceWebElements(sheetName, pageType)){
             waitForJStoLoad();
             waitForAjax();
             isPresentAndDispalyed = isElementPresentAndDisplayed(e);

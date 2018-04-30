@@ -13,7 +13,7 @@ import java.util.ArrayList;
 public class ExcelApachePOI {
 
     private static ArrayList<String> readExcelSheet(String sheetName) throws IOException {
-        String excelFilePath = "/Users/poonamwadkar/Documents/ESFA_Repositories/AcademyAccountReturn/AR2_3/src/test/dataSheetsResources/AR_DataSheet/AR3_DataSheetReferences.xlsx";
+        String excelFilePath = "src/test/dataSheetsResources/AR_DataSheet/AR3_DataSheetReferences.xlsx";
         FileInputStream inputStream = new FileInputStream(new File(excelFilePath));
 
         XSSFWorkbook workbook = new XSSFWorkbook(inputStream);
