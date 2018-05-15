@@ -218,6 +218,13 @@ Feature: Testing the Capital Grants DfE Group page
 
 
 
+  Scenario: Testing the References for Capital Grants DfE Group.
+
+    Given I am on SoFA section
+    And   I have navigated to the Capital Grants Section
+    And   I have navigated to the DfE Group page
+    Then I see the correct references are displayed for "s_cg_DfEGroup" page of type "Table"
+
 
 
 

@@ -1,5 +1,6 @@
 package utilityClasses;
 
+import customExceptions.IncorrectReferenceException;
 import org.openqa.selenium.*;
 import org.openqa.selenium.support.FindBy;
 
@@ -176,7 +177,7 @@ public class CommonMethods extends Page {
         return getElementCount(positiveInputValueError,"Input Value Must be a Positive Number");
     }
 
-    public ArrayList<WebElement> getPageReferenceWebElements(String sheetName, String pageType) throws IOException {
+    public ArrayList<WebElement> getPageReferenceWebElements(String sheetName, String pageType) throws Exception {
 
 
 
@@ -185,24 +186,27 @@ public class CommonMethods extends Page {
          for(String s : ExcelApachePOI.getDataFromExcel(sheetName)){
 
              WebElement element= null;
-             try{
+//             try{
                 if(pageType.equalsIgnoreCase("Label")){
                     element = getDriver().findElement(By.xpath("//div/label[contains(.,\""+s+"\")]"));
                 }
 
                 else if (pageType.equalsIgnoreCase("Table")){
-                    element = getDriver().findElement(By.xpath("//th/div[contains(.,\""+s+"\")]\n"));
+                    try {
+                        element = getDriver().findElement(By.xpath("//th/div[contains(.,\"" + s + "\")]\n"));
+                    }catch (NoSuchElementException nsee){
+                        throw new IncorrectReferenceException(nsee);
+                    }
                 }
-                //WebElement element = getDriver().findElement(By.xpath("//th/div[contains(.,\""+s+"\")]\n"));
-                //WebElement element = getDriver().findElement(By.xpath("//div/label[contains(.,\""+s+"\")]"));
+
                 pageReferenceElementList.add(element);
-            }catch (NoSuchElementException nsee){
-                nsee.printStackTrace();
-                info(nsee.getMessage());
-            }catch (Exception e){
-                info(e.getMessage());
-                e.printStackTrace();
-            }
+//            }catch (NoSuchElementException nsee){
+//                nsee.printStackTrace();
+//                info(nsee.getMessage());
+//            }catch (Exception e){
+//                info(e.getMessage());
+//                e.printStackTrace();
+//            }
          }
          info("\nExtracted Reference Values from the page are: ");
          for(String s: ExcelApachePOI.getDataFromExcel(sheetName)){
@@ -218,7 +222,7 @@ public class CommonMethods extends Page {
      * @throws IOException throws IO as it s reading form a file. This exception has been declared by this method and is passed down from its calling method.
      * @throws InterruptedException this is when the AJAX Call is checked for completion and throws and Interrupted Exception which is declared.
      */
-    public boolean isPageReferencesPresentAndDisplayedByPageName(String sheetName,String pageType) throws IOException, InterruptedException {
+    public boolean isPageReferencesPresentAndDisplayedByPageName(String sheetName,String pageType) throws Exception {
 
          boolean isPresentAndDispalyed = false;
 

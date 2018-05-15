@@ -476,3 +476,11 @@ Feature: Testing the DfE and ESFA Page in Capital Grants
       | sample    | 9999er999 | 9999()99   | £999999  | q999999  | 9y99999  | 99a9999  | 99@9999  | 99@9999  | 99@9999  | AND      | ACADEMY  | 100a000   | 100a000  | 100a000    | 100a000  | 100**000   | test1234   | 9999r99   | 999999%  | 9&99o99  | 99999o9  | 9999O99  | 99O9999  | 10O0000  | 10O0000  | 10O0000  | 27    |
 
 
+
+  @checkReference
+  Scenario: Checking the references for Capital Grants DfeESFA
+
+    Given I am on SoFA section
+    When  I have navigated to the Capital Grants Section
+    When  I have navigated to the DfE and ESFA section
+    Then I see the correct references are displayed for "s_cg_DfEAndESFA" page of type "Table"
