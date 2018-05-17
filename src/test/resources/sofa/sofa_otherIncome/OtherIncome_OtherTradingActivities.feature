@@ -166,3 +166,9 @@ Feature: Testing Other Income Section > Other Trading Activities Page > Sanity C
       | v1       | v2       | v3       | v4       | v5       | v6       | errors |
       | *******  | &&&&&&&  | ££££     | !!!!     | @@@@     | 123wer   | 6      |
 
+
+  @sofa_references
+    Scenario: Testing references for the SOFA Other Income Other Trading Activites page
+      Given I am on SoFA section
+      And   I have navigated to Other Trading Activities section
+      Then I see the correct references are displayed for "s_oi_OtherTradingActivities" page of type "Table"

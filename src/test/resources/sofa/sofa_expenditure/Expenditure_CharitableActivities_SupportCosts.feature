@@ -429,3 +429,10 @@ Feature: Testing the Charitable Activities Support Cost page
     Examples: Financial Data Range Error Checking Data Set
       | SSPC     | SRI      | OSC      | Depri    | Amor     | Impa     | MOP      | SpFaci   | CAC      | OpLR_LB  | OpLR_Other | Rates    | energy   | RPAF     | Security | Transport | cat      | TC       | OPC      | PFI      | LI_Fam   | LI_Oth   | FLI      | NEC      | LAP      | ACAF     | ACIAF    | ACOAF    | GRTS     | TE_TS    | GRO      | TEO      | NMP      | GL_TFA   | GL_IFA   | GL_I     | OSP      | error    |
       | 9999999  | 9999999  | 9999999  | 9999999  | 9999999  | 9999999  | 9999999  | 9999999  | 9999999  | 9999999  | 9999999    | 9999999  | 9999999  | 9999999  | 9999999  | 9999999   | 9999999  | 9999999  | 9999999  | 9999999  | 9999999  | 9999999  | 9999999  | 9999999  | 9999999  | 9999999  | 9999999  | 9999999  | 9999999  | 9999999  | 9999999  | 9999999  | 9999999  | 9999999  | 9999999  | 9999999  | 9999999  | 37  |
+
+  @sofa_references
+  Scenario: Testing References for SoFA Expenditure Charitable Activity Support Cost Page
+
+    Given I am on SoFA section
+    When  I navigate to Charitable Activities Support Cost Page
+    Then  I see the correct references are displayed for "s_ex_CharActSupport" page of type "Label"

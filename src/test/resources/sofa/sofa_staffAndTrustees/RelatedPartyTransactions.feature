@@ -262,3 +262,10 @@ Feature: testing Related Party Transactions Page
     Examples:
       | numberOfInstancesToBeAdded | oneInstance |
       | 2                          | 1           |
+
+
+    Scenario: testing references for SOFA Staff and Trustees Related Party Transactions
+      Given I am on SoFA section
+      Then  I navigate to Related Party Transactions section
+      Then I see the correct references are displayed for "s_st_RelatedPartyTransc" page of type "Table"
+

@@ -139,3 +139,11 @@ Feature: testing the Staff and Trustees Off Payroll Arrangements page
       | v1      | v2      | v3       | v4       | errors |
       | test    | &&&&&   | *****    | aasas123 | 4      |
 
+
+  @sofa_references
+  Scenario: testing the references for SoFA Staff and Trustees off payroll arrangements
+
+    Given I am on SoFA section
+    And   I navigate to Off Payroll Arrangements page
+    Then I see the correct references are displayed for "s_st_OffPayrollArr" page of type "Table"
+

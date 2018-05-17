@@ -237,3 +237,10 @@ Feature: Testing the Charitable Activities Direct Cost Page
       | sample            | test      | 123£123         | £sample      | 1234&&45     | ^^^^^^^    | sample          | test            | 123£123               | £sample         | 1234&&45               | £sample          | £sample        | 13    |
 
 
+
+  @sofa_references
+  Scenario: testing the reference for SoFa Expenditure Cost of Raising Funds
+
+    Given I am on SoFA section
+    When  I navigate to Charitable Activities Direct Cost Page
+    Then I see the correct references are displayed for "s_ex_CharActDirect" page of type "Label"

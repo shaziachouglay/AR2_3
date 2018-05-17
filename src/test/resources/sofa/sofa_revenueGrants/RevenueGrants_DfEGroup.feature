@@ -192,3 +192,9 @@ Feature:Testing the Revenue Grants DfE Group page
       | v1     | v2     | v3     | v4     | v5     | v6     | v7     | v8     | v9     | v10    | numberOfErrors |
       | test!  | test!  | test!  | test!  | test!  | test!  | test!  | test!  | test!  | test!  | 10             |
 
+
+
+    Scenario: Testing the references for SoFA Revenue Grants DfE Group page
+      Given I am on SoFA section
+      And   I have navigated to Family Capital Grants section
+      Then  I see the correct references are displayed for "s_rg_DfEGroup" page of type "Table"

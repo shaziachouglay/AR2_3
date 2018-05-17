@@ -202,3 +202,11 @@ Feature: testing the Loss Of Office Payment section
     Examples:Data: Invalid Data Format
       | v1       | v2        | v3        | v4        | v5  | v6        | v7        | v8        | v9        | v10 | error |
       | &&&&&&&  | &&&&&&&   | &&&&&&&   | &&&&&&&   | Yes | &&&&&&&   | &&&&&&&   | &&&&&&&   | &&&&&&&   | No  | 8     |
+
+
+  @sofa_references
+  Scenario: Testing References for SoFA Staff and Trustees Loss Of Office Payments
+
+    Given I am on SoFA section
+    When  I have navigated to Loss Of Office Payments section
+    Then I see the correct references are displayed for "s_st_LossOfOfficePay" page of type "Table"

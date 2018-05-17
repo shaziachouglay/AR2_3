@@ -228,7 +228,7 @@ Feature: Testing Donations Page
       | SAMPLE               | sample               | 1sample                   | SAMPLE1                 | @*<>*                   | 5      | 5             |
 
 
-
+    @sofa_references
     Scenario: Testing the References for Donations Page
       Given I am on SoFA section
       When I navigate to Donations section

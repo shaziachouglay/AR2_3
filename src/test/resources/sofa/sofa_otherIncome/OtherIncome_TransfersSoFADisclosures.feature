@@ -94,3 +94,9 @@ Feature: testing the Other Income - Transfers SoFA Disclosures page
       | v1        |
       | test      |
 
+
+  @sofa_references
+  Scenario: Testing the Other Income - Transfers SoFA Disclosures page  Errors:
+    Given I am on SoFA section
+    When  I navigate to the Transfers SoFA Disclosures
+    Then I see the correct references are displayed for "s_oi_TransfersSoFADisclosre" page of type "Table"

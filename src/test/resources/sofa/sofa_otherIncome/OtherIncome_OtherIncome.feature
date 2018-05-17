@@ -171,8 +171,11 @@ Feature: Testing Other Income Page
 
 
 
-
-
+  @sofa_references
+    Scenario: Testing SOFA Other Income Page
+      Given  I am on SoFA section
+      When   I navigate to the Other Income Page
+      Then I see the correct references are displayed for "s_oi_OtherIncome" page of type "Table"
 
 
 

@@ -217,7 +217,7 @@ Feature: Testing the Capital Grants DfE Group page
 
 
 
-
+  @sofa_references
   Scenario: Testing the References for Capital Grants DfE Group.
 
     Given I am on SoFA section

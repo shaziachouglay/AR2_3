@@ -179,3 +179,9 @@ Feature: Testing the Capital Grants Others Page
 
 
 
+
+  @sofa_references
+  Scenario: Check the reference for Capital Grants Others Page
+    Given I am on SoFA section
+    When  I navigate to Other Capital Grants page
+    Then I see the correct references are displayed for "s_cg_Other" page of type "Table"

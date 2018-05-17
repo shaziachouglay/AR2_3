@@ -278,3 +278,10 @@ Feature: testing the Average Staff Numbers (Full time Equivalent)section in SoFA
     Examples:
       | TE_PE    | TE_TIS   | MA_PE    | MA_TIS   | AS_PE    | AS_TE    | PE_T     | TIS_T    | TO_T     | v1       | v2       | Staff_MA | Staff_FE | v4       | v5       | v7       | v8       | v10      | v11      | Stf_Sick | error |
       | 9999999  | 9999999  | 9999999  | 9999999  | 9999999  | 9999999  | 9999999  | 9999999  | 9999999  | 9999999  | 9999999  | 9999999  | 9999999  | 9999999  | 9999999  | 9999999  | 9999999  | 9999999  | 9999999  | 9999999  | 17    |
+
+
+  @sofa_references
+  Scenario: Testing References SoFA Staff and Trustees Staff Cost Page
+      Given I am on SoFA section
+      When  I navigate to Average Staff Numbers
+      Then I see the correct references are displayed for "s_st_StaffCost" page of type "Table"

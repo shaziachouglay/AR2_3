@@ -171,6 +171,14 @@ Feature: Testing Cost Of Raising Funds Page
       | 10000o0  | sample       | $%%$%      | 3      |
 
 
+  @sofa_references
+  Scenario: testing References for SoFA Expenditure Cost of Raising Funds
+
+      Given I am on SoFA section
+      And   I have navigated to Cost Of Raising Funds section
+      Then I see the correct references are displayed for "s_ex_CostOfRaisingFunds" page of type "Label"
+
+
 
 
 

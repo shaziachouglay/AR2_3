@@ -1329,3 +1329,8 @@ Feature: testing the Revenue Grants DfEESFA page
 
 
 
+
+    Scenario: Testing the refrences for SoFA Revenue Grants DfE and ESFA page
+      Given I am on SoFA section
+      When  I have navigated to the Revenue Grants DfE and ESFA page
+      Then I see the correct references are displayed for "s_rg_DfEAndESFA" page of type "Table"

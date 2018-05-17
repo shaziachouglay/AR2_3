@@ -191,3 +191,11 @@ Feature: testing SoFA>> Revenue Grants>> Other page
     Examples: testing errors : invalid data format
       | LA_SpecialEducationalNeeds | LA_EarlyYears | OtherLARevenueGrants | OtherGovernmentRevenueGrants | NonGovernment_RevenueGrants | error |
       | sample                     | test@1        | 123&&123             | £12345                       | £1.00                       | 5     |
+
+
+
+  @sofa_references
+    Scenario: Testing the reference for SoFA Revenue Grants Others Page
+      Given I am on SoFA section
+      When  I navigate to the Other Revenue Grants page
+      Then I see the correct references are displayed for "s_rg_Other" page of type "Table"

@@ -82,3 +82,10 @@ Feature: Testing the Expenditure > Other Expenditure Page
     Examples:
       | v1        | error |
       | a99999    | 1     |
+
+  @sofa_references
+  Scenario: Testing Reference SoFA Expenditure Other Expenditure
+      Given I am on SoFA section
+      And   I navigate to the Other Expenditure Page
+      Then I see the correct references are displayed for "s_ex_OtherExpenditure" page of type "Label"
+

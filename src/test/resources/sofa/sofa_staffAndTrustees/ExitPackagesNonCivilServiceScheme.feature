@@ -78,3 +78,10 @@ Feature: Testing the Exit Package Non Civil Service Scheme section
     Examples:
       | numberOfTimes | instance |
       | 5             | 1        |
+
+
+  @sofa_references
+  Scenario: Testing References SoFA Staff and Trustees Exit Packages Non Civil Service Scheme
+      Given  I am on SoFA section
+      And    I navigate to Exit Package Non Civil Service Scheme  section
+      Then I see the correct references are displayed for "s_st_ExitPack" page of type "Table"

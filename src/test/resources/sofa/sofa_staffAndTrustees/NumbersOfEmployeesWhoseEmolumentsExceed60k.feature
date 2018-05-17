@@ -41,3 +41,11 @@ Feature: Testing the Numbers of Employees Whose Emoluments Exceed £60k section
     Examples:
       | R1_AEB            | number  | Total    |
       |£170,001-£180,000| 1       | 1        |
+
+
+  @sofa_references
+  Scenario: Testing the references for SoFA Staff and Trustees Numbers of Employees Whose Emoluments Exceed £60k
+
+    Given  I am on SoFA section
+    When   I navigate to Numbers of Employees Whose Emoluments Exceed £60k section
+    Then I see the correct references are displayed for "s_st_NoOfEmp" page of type "Table"
