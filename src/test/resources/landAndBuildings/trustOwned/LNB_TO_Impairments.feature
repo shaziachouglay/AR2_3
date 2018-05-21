@@ -1,5 +1,14 @@
 Feature: Testing Land and Building Trust Owned Impairments Page
 
+  @LandAndBuilding_References
+  Scenario: Reference Testing Land and Building Trust Owned Impairments Page
+
+    Given I am on Land and Buildings Section
+    And   I have navigated to the Trust Owned Impiarments Page
+    Then I see the correct references are displayed for "lnb_to_Impairment" page of type "Table"
+
+
+
   @smoke
   Scenario Outline: Testing Land and Building Trust Owned Impairments Page with valid data
 

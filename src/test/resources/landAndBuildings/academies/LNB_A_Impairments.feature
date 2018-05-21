@@ -1,5 +1,15 @@
 Feature: Testing Land and Building Academies Impairments Page
 
+
+
+  @LandAndBuilding_References
+  Scenario: Reference Testing Land and Building Academies Impairments Page
+
+    Given I am on Land and Buildings Section
+    And   I have navigated to the Academies Impiarments Page
+    Then I see the correct references are displayed for "lnb_a_Impairment" page of type "Table"
+
+
   @smoke
   Scenario Outline: Testing Land and Building Academies Impairments Page with valid data
 

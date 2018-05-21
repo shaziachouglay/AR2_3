@@ -1,5 +1,14 @@
 Feature: Testing the Land and Buildings Academies Cost Page
 
+
+  @LandAndBuilding_References
+  Scenario: Reference Testing the Land and Buildings Academies Cost Page
+
+    Given I am on Land and Buildings Section
+    And   I have navigated to the Academies Cost Page
+    Then I see the correct references are displayed for "lnb_a_Cost" page of type "Table"
+
+
   @smoke @LNBacademiesCost
   Scenario Outline: Testing the Land and Buildings Academies Cost Page with Valid Credentials
 
