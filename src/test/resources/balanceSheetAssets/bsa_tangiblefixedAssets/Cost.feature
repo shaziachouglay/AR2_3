@@ -110,3 +110,10 @@ Feature: testing the BSA Tangible Fixed Assets Cost page
       | c1 | c2 | c3 | c4 | c5 | c6 | c7 | c8 | c9 | c10 | c11 | c12 | c13 | c14 | c15 | c16 | c17 | c18 |
       |1   |1   |1   |1   |1   |1   |1   |1   |8   |14   |14   |14   |14   |14   |14   |14   |14   |112  |
 
+
+  @bsa_references
+  Scenario: Reference testing the BSA TFA Cost page
+
+    Given I am on Balance Sheet Asset Section
+    And   I navigate to BSA Tangible Fixed Assets Cost page
+    Then I see the correct references are displayed for "bsa_tfa_Cost" page of type "Table"

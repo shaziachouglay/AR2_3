@@ -127,3 +127,9 @@ Feature: Testing the Current investments page in BSA TFA
 #    Examples:
 #      | c1 | c2 | c3 | c4 |
 #      |1   |9   |8   |117 |
+
+  @bsa_references
+  Scenario: Reference Check for
+    Given I am on Balance Sheet Asset Section
+    And   I navigate to BSA Non Non Current Investment page
+    Then I see the correct references are displayed for "bsa_nci" page of type "Table"

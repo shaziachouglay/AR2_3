@@ -22,4 +22,4 @@ Feature: Testing the IFA Impairments page
 
     Given I am on Balance Sheet Asset Section
     And   I navigate to IFA Impairments page
-    Then I see the correct references are displayed for "lnb_lnbt_Impairment" page of type "Table"
+    Then I see the correct references are displayed for "bsa_ifa_Impairments" page of type "Table"
