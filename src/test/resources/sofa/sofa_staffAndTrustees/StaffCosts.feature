@@ -185,6 +185,7 @@ Feature: testing the Staff Costs section in SoFA
 
 
 
+  @sofa_references
   Scenario: testing references for SOFA Staff and Trustees Staff Costs
     Given I am on SoFA section
     When  I navigate to Staff Costs section

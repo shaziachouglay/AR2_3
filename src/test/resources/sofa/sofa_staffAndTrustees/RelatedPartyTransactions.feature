@@ -264,6 +264,7 @@ Feature: testing Related Party Transactions Page
       | 2                          | 1           |
 
 
+  @sofa_references
     Scenario: testing references for SOFA Staff and Trustees Related Party Transactions
       Given I am on SoFA section
       Then  I navigate to Related Party Transactions section

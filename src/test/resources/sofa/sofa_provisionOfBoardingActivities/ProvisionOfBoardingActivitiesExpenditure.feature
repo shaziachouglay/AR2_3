@@ -223,8 +223,9 @@ Feature: Testing the provision of baording activites expenditure page
 
 
 
-  Scenario: Testing References for SOFA Provision Of Boarding Activities Income Page
+  @sofa_references
+  Scenario: Testing References for SOFA Provision Of Boarding Activities Expenditure Page
 
     Given I am on SoFA section
-    And    I have navigates to the Provision Of Activities Expenditure page
-
+    And   I have navigates to the Provision Of Activities Expenditure page
+    Then I see the correct references are displayed for "s_pba_Exp" page of type "Label"

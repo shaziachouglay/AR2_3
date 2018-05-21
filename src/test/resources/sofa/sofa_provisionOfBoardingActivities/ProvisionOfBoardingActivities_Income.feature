@@ -213,3 +213,11 @@ Feature: Testing Sofa Provision Of Boarding Activities Income Page
     Examples: DATA Errors Invalid Data Format SoFa > Provision Of Boarding Activities Income
       | v1      | v2      | v3      | v4      | v5      | v6      | v7      | v8      | v9      |error|
       | 1a00000 | 1*00000 | £000000 | 100000e | 1o00000 | 1000*00 | 100%000 | 10!0000 | 1&00000 |9    |
+
+
+  @sofa_references
+  Scenario: Testing References for SOFA Provision Of Boarding Activities Income Page
+
+    Given I am on SoFA section
+    And   I have navigates to the Provision Of Activities Expenditure page
+    Then I see the correct references are displayed for "s_pba_Exp" page of type "Label"

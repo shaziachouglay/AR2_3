@@ -28,3 +28,10 @@ Feature: Testing the IFA Amortisation Page
     Examples:
       | software | other | total | software1 | other1 | total1 |
       |1         |1      |2      |8          |8       |16      |
+
+  @bsa_references
+  Scenario: Testing References IFA Cost Page
+
+    Given I am on Balance Sheet Asset Section
+    And   I navigate to IFA Amortisation page
+    Then I see the correct references are displayed for "bsa_ifa_Amortisation" page of type "Table"
