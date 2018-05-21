@@ -47,3 +47,10 @@ Feature: Testing BSA TFA Asset Financing page
       |1   |7   |7   |2   |7   |3    |3    |2    |3    |3    |3    |3    |3    |23   |
 
 
+
+  @bsa_references
+  Scenario: reference Testing BSA TFA Asset Financing page
+
+    Given I am on Balance Sheet Asset Section
+    And   I navigate to BSA Tangible Fixed Assets Asset Financing page
+    Then I see the correct references are displayed for "bsa_tfa_AssetsFinancing" page of type "Table"
