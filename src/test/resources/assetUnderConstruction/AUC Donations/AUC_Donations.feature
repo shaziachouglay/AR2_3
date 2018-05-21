@@ -1,7 +1,7 @@
 Feature: testing the AUC Donations Page
 
   @smoke
-  Scenario Outline: testing testing the AUC Donations Page VALID entries
+  Scenario Outline: testing the AUC Donations Page VALID entries
 
     Given I am on Asset Under Construction
     And   I have navigated to the Donations Section for AUC
@@ -59,3 +59,10 @@ Feature: testing the AUC Donations Page
       | v1        | error |
       |********   |4      |
 
+
+  @bsa_references
+  Scenario: reference testing the AUC Donations Page
+
+    Given I am on Asset Under Construction
+    And   I have navigated to the Donations Section for AUC
+    Then I see the correct references are displayed for "auc_Donations" page of type "Label"
