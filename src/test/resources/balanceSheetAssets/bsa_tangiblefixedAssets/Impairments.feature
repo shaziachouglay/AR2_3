@@ -31,3 +31,11 @@ Feature: Testing the BSA TFA Impairments page
     Examples:
       | c1 | c2 | c3 | c4 | c5 | c6 | c7 | c8 | c9 | c10 | c11 | c12 | c13 | c14 | c15 | c16 | c17 | c18 |
       |1   |1   |1   |1   |1   |1   |1   |1   |8   |6    |6    |6    |6    |6    |6    |6    |6    |48   |
+
+
+  @bsa_references
+  Scenario: reference testing the BSA TFA impairments page
+
+    Given I am on Balance Sheet Asset Section
+    And   I navigate to BSA Tangible Fixed Assets Impairments page
+    Then I see the correct references are displayed for "bsa_tfa_Impairments" page of type "Table"
