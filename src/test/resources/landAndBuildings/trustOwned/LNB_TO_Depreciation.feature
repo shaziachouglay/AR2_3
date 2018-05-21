@@ -1,5 +1,15 @@
 Feature: Testing the Land and Buildings Trust Owned Depreciation Page
 
+
+  @LandAndBuilding_References
+  Scenario: Reference Testing the Land and Buildings Trust Owned Depreciation Page
+
+    Given I am on Land and Buildings Section
+    And   I have navigated to the Trust Owned Depreciation Page
+    Then I see the correct references are displayed for "lnb_to_Depriciation" page of type "Table"
+
+
+
   @smoke
   Scenario Outline: Testing the Land and Buildings Trust Owned Depreciation Page with Valid Credentials
 

@@ -1,6 +1,14 @@
 @auc_debtors
 Feature: Testing the Debtors Page in AUC
 
+  @bsa_references
+  Scenario: reference Testing the Debtors Page
+
+    Given I am on Asset Under Construction
+    And   I have navigated to the Debtors Section for AUC
+    Then I see the correct references are displayed for "auc_Debtors" page of type "Table"
+
+
 
   Scenario Outline: Testing the Debtors Page in AUC VALID scenario
 

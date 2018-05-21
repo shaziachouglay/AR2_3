@@ -1,5 +1,15 @@
 Feature: Testing the AUC TFA Impairments Page
 
+
+  @bsa_references
+  Scenario: reference Testing the AUC TFA Impairments
+
+    Given I am on Asset Under Construction
+    When  I navigate to Asset Under Construction Tangible Fixed Assets Impairments page
+    Then I see the correct references are displayed for "auc_tfa_Impairments" page of type "Table"
+
+
+
   Scenario Outline:Testing the AUC TFA Impairments Page with Valid Credentials
 
     Given I am on Asset Under Construction

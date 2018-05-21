@@ -192,4 +192,4 @@ Feature: testing the AUC TFA Cost page
 
     Given I am on Asset Under Construction
     When  I navigate to Asset Under Construction Tangible Fixed Assets Cost page
-    Then I see the correct references are displayed for "auc_tfa_Cost" page of type "Label"
+    Then I see the correct references are displayed for "auc_tfa_Cost" page of type "Table"

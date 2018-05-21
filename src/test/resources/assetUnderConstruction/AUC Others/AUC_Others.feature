@@ -1,5 +1,15 @@
 Feature: Testing the AUC Others Page
 
+
+  @bsa_references
+  Scenario: reference Testing the AUC Others
+
+    Given I am on Asset Under Construction
+    And   I have navigated to the Others Section for AUC
+    Then I see the correct references are displayed for "auc_Debtors" page of type "Table"
+
+
+
   Scenario Outline: Testing the AUC Others with valid credentials
 
     Given I am on Asset Under Construction

@@ -312,3 +312,11 @@ Feature: testing the AUC TFA Deprecation page
     Examples: Invlaid Number format
       | v1    | errro |
       |*******|48  |
+
+
+  @bsa_references
+  Scenario: reference testing the AUC TFA Deprication
+
+    Given I am on Asset Under Construction
+    When  I navigate to Asset Under Construction Tangible Fixed Assets Depriciaton page
+    Then I see the correct references are displayed for "auc_tfa_Depriciation" page of type "Table"

@@ -1,5 +1,14 @@
 Feature: Testing the Land and Buildings Trust Owned Cost Page
 
+  @LandAndBuilding_References
+  Scenario: Reference Testing the Land and Buildings Trust Owned Cost Page
+
+    Given I am on Land and Buildings Section
+    And   I have navigated to the Trust Owned Cost Page
+    Then I see the correct references are displayed for "lnb_to_Cost" page of type "Table"
+
+
+
   @smoke @LNBTOCost
   Scenario Outline: Testing the Land and Buildings Trust Owned Cost Page with Valid Credentials
 
