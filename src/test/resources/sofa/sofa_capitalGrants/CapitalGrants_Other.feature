@@ -108,7 +108,7 @@ Feature: Testing the Capital Grants Others Page
       | %%%%%%%                        | %%%%%%%%                        | %%%%%%%%%                     | 3     |
       | &&&&&&&&                       | &&&&&&&&                        | &&&&&&&&&                     | 3     |
 
-#-----------------
+
 
   @smoke
   Scenario Outline: Checking Other Capital Grants with Valid Credentials

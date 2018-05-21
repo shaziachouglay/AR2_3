@@ -1,4 +1,30 @@
 Feature: Testing the Land And Building depreciation page.
+
+
+  @LandAndBuilding_References
+  Scenario: Reference Testing the Land and Buildings Totals Cost Page
+
+    Given I am on Land and Buildings Section
+
+    And   I have navigated to the Trust Owned Depreciation Page
+
+    And   I enter in row Reclassifications and all column with "1" in TO_Depreciation page
+
+    And   I click on the Save And Next button in Cost page
+
+    And   I have navigated to the Academies Depreciation Page
+
+    And   I enter in row Original prior year closing balance  and all column with "1" in TO_Depreciation page
+
+    And   I click on the Save And Next button in Cost page
+
+    And   I have navigated to the Land and Buildings Total Depreciation Page
+
+    Then I see the correct references are displayed for "lnb_lnbt_Depriciation" page of type "Label"
+
+
+
+
   @test222
   Scenario Outline: Testing the Land and Buildings Trust Owned Depreciation Page with Errors All Financial Data
 
