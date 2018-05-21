@@ -19,3 +19,10 @@ Feature: testing the BSA TFA depreciation page
       |1   |1   |1   |1   |1   |1   |1   |7   |8   |8    |8    |8    |8    |8    |56   |
 
 
+
+  @bsa_references
+  Scenario: Reference testing the BSA TFA depreciation page
+
+    Given I am on Balance Sheet Asset Section
+    And   I navigate to BSA Tangible Fixed Assets Depreciation page
+    Then I see the correct references are displayed for "bsa_tfa_Depriciation" page of type "Table"
