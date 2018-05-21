@@ -41,10 +41,9 @@ Feature: testing the stock page in BSA
 
 
 
-
   @bsa_references
   Scenario: reference testing the stock page in BSA
 
     Given I am on Balance Sheet Asset Section
     And   I navigate to BSA Stock page
-    Then I see the correct references are displayed for "bsa_Stock" page of type "Table"
+    Then I see the correct references are displayed for "bsa_Stock" page of type "Label"

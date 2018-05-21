@@ -85,3 +85,12 @@ Feature: testing the AUC Capital Grants Page
     Examples:
       | v1      | error |
       |******   |11     |
+
+
+
+  @bsa_references
+  Scenario: reference the AUC Capital Grants Page
+
+    Given I am on Asset Under Construction
+    And   I have navigated to the Capital Grants Section for AUC
+    Then I see the correct references are displayed for "auc_CapitalGrants" page of type "Label"

@@ -40,3 +40,11 @@ Feature: testing the Cash page in BSA
     Examples: All Financial Error
       | cashBalance  |error|
       |@£$%$%*       |1    |
+
+
+  @bsa_references
+  Scenario: reference testing the Cash page in BSA
+
+    Given I am on Balance Sheet Asset Section
+    When  I navigate to BSA Cash page
+    Then I see the correct references are displayed for "bsa_Cash" page of type "Label"
