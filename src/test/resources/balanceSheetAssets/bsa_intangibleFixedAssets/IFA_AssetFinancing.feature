@@ -21,3 +21,11 @@ Feature: Testing the IFA Asset Financing page
     Examples:
       | software | other | Total | software1 | other1 | Total1 |
       |1         |1      |2      |3          |3       |6       |
+
+
+  @bsa_references
+  Scenario: Testing References for IFA Assets Financing page
+
+    Given I am on Balance Sheet Asset Section
+    And   I navigate to IFA Asset Financing page
+    Then I see the correct references are displayed for "bsa_ifa_AssetFinancing" page of type "Table"
