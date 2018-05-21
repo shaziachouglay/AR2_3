@@ -182,3 +182,11 @@ Feature: testing the Staff Costs section in SoFA
 
       | WS_PE   | WS_TE   | WS_T       | SSC_PE  | SSC_TE  | SSC_T      | PC_PE   | PC_TE   | PC_T       | ASC_TE  | ASC_T   | RP_PE   | RP_TE   | RP_T       | SP_PE   | SP_TE   | SP_T       | ORC_PE  | ORC_TE  | ORC_T      | LR_PE   | LR_TE   | LR_T       | T_PE       | T_TE       | T_T         | v1      | v2      |
       | 1       | 1       | 1          | 1       | 1       | 3          | 1       | 1       | 1          | 1       | 2       | 1       | 1       | 1          | 1       | 1       | 3          | 1       | 1       | 1          | 1       | 1       | 1          | 5          | 5          | 15          | 1       | 2       |
+
+
+
+  Scenario: testing references for SOFA Staff and Trustees Staff Costs
+    Given I am on SoFA section
+    When  I navigate to Staff Costs section
+    Then I see the correct references are displayed for "s_st_StaffCost" page of type "Table"
+

@@ -219,3 +219,12 @@ Feature: Testing the provision of baording activites expenditure page
 
       | v1      | v2       | v3      | v5        | v6      | v7      | v8      | v9       | v10      | error |
       | sample  | @@@99999 | &&&9999 | %6799999  | 9£99999 | 3£99999 | £999999 | 999*()99 | 96^99999 | 10    |
+
+
+
+
+  Scenario: Testing References for SOFA Provision Of Boarding Activities Income Page
+
+    Given I am on SoFA section
+    And    I have navigates to the Provision Of Activities Expenditure page
+
