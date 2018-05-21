@@ -11,3 +11,12 @@ Feature: Testing the Amortisation periods page
     Examples:
       | software | other |
       |1         |1      |
+
+
+
+  @bsa_references
+  Scenario: Testing References for IFA  Amortisation periods page
+
+    Given I am on Balance Sheet Asset Section
+    And   I navigate to BSA Intangible Fixed Assets Amortisation Periods page
+    Then  I see the correct references are displayed for "bsa_ifa_AmortisationPeriods" page of type "Table"
