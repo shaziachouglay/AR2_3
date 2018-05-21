@@ -186,3 +186,10 @@ Feature: testing the AUC TFA Cost page
     Examples:
       | v1        |error|
       |9999999    |98   |
+
+  @bsa_references
+  Scenario: reference Testing the AUC TFA Cost page
+
+    Given I am on Asset Under Construction
+    When  I navigate to Asset Under Construction Tangible Fixed Assets Cost page
+    Then I see the correct references are displayed for "auc_tfa_Cost" page of type "Label"
